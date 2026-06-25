@@ -275,7 +275,7 @@ const HomeV1 = () => {
 
       {/* JOURNAL */}
       <Section bg={FNX.parchment} padding="120px 40px">
-        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 48, borderBottom: `1px solid ${fnxRule(0.2)}`, paddingBottom: 22 }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 48 }}>
           <div>
             <RuleLabel align="left" color={FNX.tan}>07 — Journal</RuleLabel>
             <h2 style={{ margin: '18px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 48, letterSpacing: '0.02em' }}>
