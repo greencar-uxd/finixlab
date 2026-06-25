@@ -604,32 +604,6 @@
     background: var(--lab-red);
   }
 
-  /* ============== EXPORT BUTTON ============== */
-  .export-btn{
-    position: fixed;
-    bottom: 24px; right: 24px;
-    display: inline-flex; align-items: center; gap: 10px;
-    padding: 12px 18px;
-    background: var(--pine-ink);
-    color: var(--cream);
-    font-family: var(--serif);
-    font-weight: 300;
-    font-size: 11px;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    z-index: 100;
-    transition: opacity 0.2s ease, transform 0.2s ease;
-    box-shadow: 0 2px 12px rgba(23,56,48,0.18);
-  }
-  .export-btn:hover{ opacity: 0.92; transform: translateY(-1px); }
-  .export-btn:disabled{ opacity: 0.5; cursor: wait; }
-  .export-btn .dot{
-    width: 6px; height: 6px; border-radius: 50%;
-    background: var(--lab-red);
-  }
-  @media print{ .export-btn{ display: none; } }
 </style>
 </head>
 <body>
@@ -842,45 +816,5 @@
     </footer>
 
   </main>
-
-  <button class="export-btn" id="exportBtn" type="button">
-    <span class="dot"></span>
-    <span class="label">Export PNG</span>
-  </button>
-
-  <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.13/dist/html-to-image.min.js"></script>
-  <script>
-    (function(){
-      const btn = document.getElementById('exportBtn');
-      const label = btn.querySelector('.label');
-      btn.addEventListener('click', async () => {
-        if (!window.htmlToImage){ label.textContent = 'Library loading…'; return; }
-        const board = document.querySelector('.board');
-        const original = label.textContent;
-        btn.disabled = true;
-        label.textContent = 'Rendering…';
-        try{
-          const dataUrl = await window.htmlToImage.toPng(board, {
-            pixelRatio: 2,
-            backgroundColor: '#F4EFE0',
-            width: board.offsetWidth,
-            height: board.offsetHeight
-          });
-          const a = document.createElement('a');
-          a.href = dataUrl;
-          a.download = 'finixlab-concept-board.png';
-          document.body.appendChild(a);
-          a.click();
-          a.remove();
-          label.textContent = 'Downloaded ✓';
-          setTimeout(() => { label.textContent = original; btn.disabled = false; }, 1800);
-        }catch(e){
-          console.error(e);
-          label.textContent = 'Failed — retry';
-          setTimeout(() => { label.textContent = original; btn.disabled = false; }, 2200);
-        }
-      });
-    })();
-  </script>
 </body>
 </html>

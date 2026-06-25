@@ -3,19 +3,8 @@
 const HomeMobile = () => {
   return (
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300, fontSize: 14 }}>
-      {/* Mobile Header — hamburger left, logo center, bag right */}
-      <header style={{ background: FNX.cream, padding: '14px 24px', display: 'grid', gridTemplateColumns: '24px 1fr 24px', alignItems: 'center', borderBottom: `1px solid ${fnxRule(0.14)}`, position: 'sticky', top: 0, zIndex: 5 }}>
-        <button style={{ background: 'none', border: 'none', padding: 0, color: FNX.pineInk, fontSize: 18, lineHeight: 1, cursor: 'pointer' }}>≡</button>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <img src="assets/fnxlab-logo.png" alt="Finixlab" style={{ height: 16 }} />
-        </div>
-        <a href="#/cart" aria-label="Bag · 2 items" style={{ color: FNX.pineInk, textDecoration: 'none', fontFamily: FNX.serif, fontSize: 11, letterSpacing: '0.18em', textAlign: 'right' }}>2</a>
-      </header>
-
-      {/* Language strip */}
-      <div style={{ padding: '8px 24px', borderBottom: `1px solid ${fnxRule(0.1)}`, fontFamily: FNX.mono, fontSize: 10, letterSpacing: '0.18em', color: FNX.sage, textAlign: 'center' }}>
-        EN · JP ▾  ·  Ships globally from Korea
-      </div>
+      {/* Mobile Header — shared component with a working hamburger menu */}
+      <MHeader />
 
       {/* HERO */}
       <section style={{ padding: '32px 24px 40px' }}>
@@ -196,17 +185,8 @@ const HomeMobile = () => {
 
       
 
-      {/* Mini footer */}
-      <footer style={{ background: FNX.pineInk, color: 'rgba(244,239,224,0.55)', padding: '32px 24px', borderTop: '1px solid rgba(244,239,224,0.1)', fontSize: 11, lineHeight: 1.8, fontFamily: FNX.serif, letterSpacing: '0.08em' }}>
-        <img src="assets/fnxlab-logo.png" alt="Finixlab" style={{ height: 18, filter: 'brightness(0) invert(1)', opacity: 0.9, marginBottom: 16 }} />
-        <div>Finixlab · Real Efficacy, Quietly Delivered.</div>
-        <div style={{ marginTop: 16, display: 'flex', flexWrap: 'wrap', gap: '6px 14px' }}>
-          {['About','Science','Shop','Journal','Care','Account'].map(l => <span key={l}>{l}</span>)}
-        </div>
-        <div style={{ marginTop: 18, paddingTop: 12, borderTop: '1px solid rgba(244,239,224,0.1)', fontSize: 10 }}>
-          © 2026 Finixlab Co., Ltd. · Paju, Gyeonggi · Ships globally
-        </div>
-      </footer>
+      {/* Mini footer — shared component with clickable nav */}
+      <MFooter />
     </div>
   );
 };
