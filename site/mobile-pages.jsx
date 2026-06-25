@@ -6,12 +6,11 @@ const MHeader = ({ title }) => {
   const [open, setOpen] = React.useState(false);
   return (
   <React.Fragment>
-    <header style={{ background: FNX.cream, padding: '14px 24px', display: 'grid', gridTemplateColumns: '24px 1fr 24px', alignItems: 'center', borderBottom: `1px solid ${fnxRule(0.14)}`, position: 'sticky', top: 0, zIndex: 5 }}>
-      <button onClick={() => setOpen(true)} style={{ background: 'none', border: 'none', padding: 0, color: FNX.pineInk, fontSize: 18, lineHeight: 1, cursor: 'pointer' }}>≡</button>
-      <a href="#/home" style={{ display: 'flex', justifyContent: 'center', textDecoration: 'none' }}>
+    <header style={{ background: FNX.cream, padding: '14px 24px', display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'center', borderBottom: `1px solid ${fnxRule(0.14)}`, position: 'sticky', top: 0, zIndex: 5 }}>
+      <a href="#/home" style={{ display: 'flex', justifyContent: 'flex-start', textDecoration: 'none' }}>
         <img src="assets/fnxlab-logo.png" alt="Finixlab" style={{ height: 16 }} />
       </a>
-      <a href="#/cart" aria-label="Bag · 2 items" style={{ color: FNX.pineInk, textDecoration: 'none', fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.18em', textAlign: 'right' }}>2</a>
+      <button onClick={() => setOpen(true)} aria-label="Menu" style={{ background: 'none', border: 'none', padding: 0, color: FNX.pineInk, fontSize: 20, lineHeight: 1, cursor: 'pointer', justifySelf: 'end' }}>≡</button>
     </header>
     <div style={{ padding: '8px 24px', borderBottom: `1px solid ${fnxRule(0.1)}`, fontFamily: FNX.mono, fontSize: 10, letterSpacing: '0.18em', color: FNX.sage, textAlign: 'center' }}>
       EN · JP ▾  ·  Ships globally from Korea
@@ -47,7 +46,7 @@ const MHeader = ({ title }) => {
         <div style={{ paddingTop: 24, borderTop: '1px solid rgba(244,239,224,0.18)', display: 'flex', justifyContent: 'space-between', fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.18em', color: 'rgba(244,239,224,0.82)' }}>
           <a href="#/search" style={{ color: 'inherit', textDecoration: 'none' }}>SEARCH</a>
           <a href="#/account" style={{ color: 'inherit', textDecoration: 'none' }}>ACCOUNT</a>
-          <a href="#" style={{ color: 'inherit', textDecoration: 'none' }}>Bag · 2</a>
+          <a href="#/cart" onClick={() => setOpen(false)} style={{ color: 'inherit', textDecoration: 'none' }}>CART</a>
         </div>
       </div>
     )}
