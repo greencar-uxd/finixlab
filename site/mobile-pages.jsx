@@ -116,8 +116,6 @@ const ShopMobile = () => {
           <a key={p.n} href="#/shop/peptosome" style={{ textDecoration: 'none', color: 'inherit', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}`, opacity: p.muted ? 0.7 : 1 }}>
             <div style={{ aspectRatio: '4/3', overflow: 'hidden', background: FNX.cream, position: 'relative' }}>
               <img src={p.img} alt={p.t} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: p.pos }} />
-              <span style={{ position: 'absolute', top: 12, left: 12, fontFamily: FNX.mono, fontSize: 10, color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '4px 8px', letterSpacing: '0.16em' }}>{p.n}</span>
-              {p.tag && <span style={{ position: 'absolute', top: 12, right: 12, fontFamily: FNX.serif, fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: FNX.cream, background: p.tag === 'Hero' ? FNX.labRed : FNX.pineInk, padding: '4px 8px' }}>{p.tag}</span>}
             </div>
             <div style={{ padding: 18 }}>
               <h3 style={{ margin: 0, fontFamily: FNX.serif, fontSize: 18, fontWeight: 300, lineHeight: 1.2 }}>{p.t}</h3>
@@ -238,7 +236,6 @@ const ProductMobile = () => (
         {['assets/serum-pump.png','assets/serum-roller-green.png','assets/serum-shadow.png'].map((src, i) => (
           <div key={i} style={{ aspectRatio: '3/4', overflow: 'hidden', background: FNX.bone, border: `1px solid ${fnxRule(0.18)}`, position: 'relative' }}>
             <img src={src} alt=""  role="presentation"  style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-            <span style={{ position: 'absolute', top: 8, left: 8, fontFamily: FNX.mono, fontSize: 10, background: 'rgba(244,239,224,0.92)', color: FNX.pineInk, padding: '3px 6px', letterSpacing: '0.14em' }}>0{i+1}</span>
           </div>
         ))}
       </div>

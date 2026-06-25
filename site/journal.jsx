@@ -70,9 +70,6 @@ const JournalPage = () => {
           <div style={{ height: 600, overflow: 'hidden', position: 'relative', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
             <img src={featured.img} alt={featured.h}
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: featured.pos }} />
-            <div style={{ position: 'absolute', top: 18, left: 18 }}>
-              <MonoTag>FEATURED · {featured.n}</MonoTag>
-            </div>
           </div>
           <div>
             <div style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.labRed, letterSpacing: '0.24em', marginBottom: 18 }}>
@@ -111,9 +108,6 @@ const JournalPage = () => {
             <article key={a.n} style={{ display: 'flex', flexDirection: 'column' }}>
               <div style={{ aspectRatio: '4/5', overflow: 'hidden', position: 'relative', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
                 <img src={a.img} alt={a.h} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: a.pos }} />
-                <span style={{ position: 'absolute', bottom: 12, left: 12, fontFamily: FNX.mono, fontSize: 12, color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '4px 8px', letterSpacing: '0.14em' }}>
-                  {a.n}
-                </span>
               </div>
               <div style={{ marginTop: 18, fontFamily: FNX.mono, fontSize: 12, color: FNX.tan, letterSpacing: '0.14em' }}>
                 {a.cat.toUpperCase()} · {a.date.toUpperCase()}

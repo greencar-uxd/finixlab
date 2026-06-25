@@ -53,14 +53,7 @@ const HomeV1 = () => {
 
           {/* Hero image — duo on stone */}
           <div style={{ position: 'relative' }}>
-            <ProductShot src="assets/booster-hero.png" alt="Peptosome Skin Booster collection" height={720} objectPosition="50% 40%" bg={FNX.bone}>
-              <div style={{ position:'absolute', top: 18, left: 18 }}>
-                <MonoTag>THE COLLECTION · N°02 / FW 25</MonoTag>
-              </div>
-              <div style={{ position:'absolute', bottom: 18, right: 18 }}>
-                <MonoTag bg="rgba(23,56,48,0.92)" color={FNX.cream}>BOOSTER · 50ML</MonoTag>
-              </div>
-            </ProductShot>
+            <ProductShot src="assets/booster-hero.png" alt="Peptosome Skin Booster collection" height={720} objectPosition="50% 40%" bg={FNX.bone} />
           </div>
         </div>
       </section>
@@ -68,11 +61,7 @@ const HomeV1 = () => {
       {/* MOOD STATEMENT + decorative pair shot */}
       <Section bg={FNX.parchment} padding="120px 40px">
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'center' }}>
-          <ProductShot src="assets/peptosome-pair.jpg" alt="Peptosome on stone" height={540} objectPosition="50% center" bg={FNX.parchment}>
-            <div style={{ position:'absolute', bottom: 16, left: 16 }}>
-              <MonoTag>STILL · N°04 — PEPTOSOME, A PAIR</MonoTag>
-            </div>
-          </ProductShot>
+          <ProductShot src="assets/peptosome-pair.jpg" alt="Peptosome on stone" height={540} objectPosition="50% center" bg={FNX.parchment} />
           <div>
             <RuleLabel align="left" color={FNX.sage}>The Premise</RuleLabel>
             <p style={{ marginTop: 22, fontFamily: FNX.serif, fontWeight: 300, fontSize: 32, lineHeight: 1.35, letterSpacing: '-0.01em', color: FNX.pineInk }}>
@@ -180,9 +169,6 @@ const HomeV1 = () => {
           <div style={{ height: 580, overflow: 'hidden', position: 'relative', background: FNX.cream, border: `1px solid ${fnxRule(0.12)}` }}>
             <img src="assets/serum-grid.png" alt="Spicule Serum boxes grid"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
-            <div style={{ position: 'absolute', top: 18, left: 18 }}>
-              <MonoTag>FIG. 03 · SERUM · GRID</MonoTag>
-            </div>
           </div>
 
           <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
@@ -251,19 +237,12 @@ const HomeV1 = () => {
               <div style={{ position: 'relative', overflow: 'hidden' }}>
                 <img src="assets/model-a-before.png" alt="Model A — before"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
-                <span style={{ position: 'absolute', top: 16, left: 16, fontFamily: FNX.mono, fontSize: 12, letterSpacing: '0.14em', color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '4px 8px' }}>BEFORE</span>
-                <span style={{ position: 'absolute', bottom: 16, left: 16, fontFamily: FNX.serif, fontSize: 12, color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '4px 8px' }}>Before</span>
               </div>
               <div style={{ background: fnxRule(0.25) }}/>
               <div style={{ position: 'relative', overflow: 'hidden' }}>
                 <img src="assets/model-a-after.png" alt="Model A — after"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
-                <span style={{ position: 'absolute', top: 16, left: 16, fontFamily: FNX.mono, fontSize: 12, letterSpacing: '0.14em', color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '4px 8px' }}>AFTER</span>
-                <span style={{ position: 'absolute', bottom: 16, left: 16, fontFamily: FNX.serif, fontSize: 12, color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '4px 8px' }}>After consistent use</span>
               </div>
-            </div>
-            <div style={{ position: 'absolute', bottom: 14, right: 14, fontFamily: FNX.mono, fontSize: 12, letterSpacing: '0.14em', color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '6px 10px' }}>
-              TESTER · MODEL A
             </div>
           </div>
         </div>
@@ -345,7 +324,6 @@ const HomeV1 = () => {
               <div style={{ aspectRatio: '4/5', overflow: 'hidden', position: 'relative', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
                 <img src={j.imgSrc} alt={j.h}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: j.pos, display: 'block' }} />
-                <span style={{ position: 'absolute', bottom: 14, left: 14, fontFamily: FNX.mono, fontSize: 12, letterSpacing: '0.14em', color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '4px 8px' }}>{j.t}</span>
               </div>
               <div style={{ marginTop: 18, fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: FNX.sage }}>
                 {j.t} · {j.cat}
@@ -395,21 +373,6 @@ const HomeV1 = () => {
           <div style={{ height: 320, position: 'relative', border: '1px solid rgba(244,239,224,0.18)', overflow: 'hidden' }}>
             <img src="assets/peptosome-pair.jpg" alt="Clinic partners"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(23,56,48,0.25), rgba(23,56,48,0.55))' }}/>
-            <div style={{ position: 'absolute', inset: 0, display: 'flex', flexWrap: 'wrap', gap: 12, padding: 28, alignContent: 'space-between' }}>
-              {[
-                { c: 'Seoul', n: '14 partners' },
-                { c: 'Shanghai', n: '6 partners' },
-                { c: 'Tokyo', n: '5 partners' },
-                { c: 'Ho Chi Minh', n: '3 partners' },
-              ].map(p => (
-                <div key={p.c} style={{ background: 'rgba(244,239,224,0.95)', color: FNX.pineInk, padding: '10px 14px', fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.06em' }}>
-                  <span style={{ display:'inline-block', width: 6, height: 6, borderRadius:'50%', background: FNX.labRed, marginRight: 8 }}/>
-                  {p.c} <span style={{ color: FNX.sage, marginLeft: 8 }}>{p.n}</span>
-                </div>
-              ))}
-            </div>
-            <span style={{ position: 'absolute', bottom: 14, right: 14, fontFamily: FNX.mono, fontSize: 12, color: 'rgba(244,239,224,0.9)', letterSpacing: '0.14em' }}>NETWORK · 28 PARTNERS</span>
           </div>
         </div>
       </Section>

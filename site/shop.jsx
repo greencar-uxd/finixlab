@@ -130,17 +130,6 @@ const ShopPage = () => {
               <div style={{ aspectRatio: '3/4', overflow: 'hidden', position: 'relative', background: FNX.cream }}>
                 <img src={p.img} alt={p.t}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: p.pos }} />
-                <div style={{ position: 'absolute', top: 16, left: 16 }}>
-                  <MonoTag>{p.n} · {p.cat.toUpperCase()}</MonoTag>
-                </div>
-                {p.tags[0] && (
-                  <div style={{
-                    position: 'absolute', top: 16, right: 16,
-                    fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase',
-                    background: p.tags[0] === 'Hero' ? FNX.labRed : FNX.pineInk,
-                    color: FNX.cream, padding: '5px 10px',
-                  }}>{p.tags[0]}</div>
-                )}
               </div>
               <div style={{ padding: '24px 24px 28px' }}>
                 <h3 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 24, lineHeight: 1.15, letterSpacing: '-0.01em' }}>{p.t}</h3>

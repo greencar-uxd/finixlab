@@ -18,9 +18,6 @@ const ProductPage = () => {
             <div style={{ height: 720, background: FNX.bone, position: 'relative', overflow: 'hidden', border: `1px solid ${fnxRule(0.12)}` }}>
               <img src="assets/booster-hero.png" alt="Peptosome Skin Booster"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 40%' }} />
-              <div style={{ position: 'absolute', top: 18, left: 18 }}>
-                <MonoTag>FIG. 01 · PEPTOSOME · 50ML</MonoTag>
-              </div>
             </div>
             <div style={{ marginTop: 16, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
               {[
@@ -241,8 +238,6 @@ const ProductPage = () => {
               }}>
                 <img src={p.src} alt={p.c}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: p.pos }} />
-                <span style={{ position: 'absolute', top: 12, left: 12, fontFamily: FNX.mono, fontSize: 12, color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '4px 8px', letterSpacing: '0.16em' }}>STEP {p.l}</span>
-                <span style={{ position: 'absolute', bottom: 12, left: 12, fontFamily: FNX.serif, fontSize: 12, color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '4px 8px' }}>{p.c}</span>
               </div>
             ))}
           </div>
@@ -277,14 +272,10 @@ const ProductPage = () => {
             <div style={{ position: 'relative', overflow: 'hidden', border: `1px solid ${fnxRule(0.18)}` }}>
               <img src="assets/model-b-before.png" alt="Model B — before"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
-              <span style={{ position: 'absolute', top: 14, left: 14, fontFamily: FNX.mono, fontSize: 12, letterSpacing: '0.14em', color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '4px 8px' }}>BEFORE</span>
-              <span style={{ position: 'absolute', bottom: 14, left: 14, fontFamily: FNX.serif, fontSize: 12, color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '4px 8px' }}>Before</span>
             </div>
             <div style={{ position: 'relative', overflow: 'hidden', border: `1px solid ${fnxRule(0.18)}` }}>
               <img src="assets/model-b-after.png" alt="Model B — after"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
-              <span style={{ position: 'absolute', top: 14, left: 14, fontFamily: FNX.mono, fontSize: 12, letterSpacing: '0.14em', color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '4px 8px' }}>AFTER</span>
-              <span style={{ position: 'absolute', bottom: 14, left: 14, fontFamily: FNX.serif, fontSize: 12, color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '4px 8px' }}>After consistent use</span>
             </div>
           </div>
         </div>
@@ -340,7 +331,6 @@ const ProductPage = () => {
             <article key={p.t} style={{ background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
               <div style={{ aspectRatio: '4/5', overflow: 'hidden', position: 'relative' }}>
                 <img src={p.src} alt={p.t} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: p.pos }} />
-                <div style={{ position:'absolute', top: 14, left: 14 }}><MonoTag>{p.n}</MonoTag></div>
               </div>
               <div style={{ padding: 24 }}>
                 <h3 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 22, lineHeight: 1.2 }}>{p.t}</h3>

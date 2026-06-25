@@ -20,9 +20,7 @@ const HomeMobile = () => {
         </p>
 
         <div style={{ marginTop: 28 }}>
-          <ProductShot src="assets/booster-hero.png" alt="Peptosome Skin Booster" height={460} bg={FNX.bone} objectPosition="50% 40%">
-            <div style={{ position:'absolute', top: 12, left: 12 }}><MonoTag>PEPTOSOME · 50ML</MonoTag></div>
-          </ProductShot>
+          <ProductShot src="assets/booster-hero.png" alt="Peptosome Skin Booster" height={460} bg={FNX.bone} objectPosition="50% 40%" />
         </div>
 
         <p style={{ marginTop: 22, fontSize: 14, lineHeight: 1.8, color: FNX.pineInk }}>
@@ -137,12 +135,10 @@ const HomeMobile = () => {
           <div style={{ aspectRatio: '1/1', position: 'relative', overflow: 'hidden', border: `1px solid ${fnxRule(0.18)}` }}>
             <img src="assets/model-c-before.png" alt="Model C — before"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
-            <span style={{ position: 'absolute', top: 10, left: 10, fontFamily: FNX.mono, fontSize: 10, letterSpacing: '0.16em', color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '3px 6px' }}>BEFORE</span>
           </div>
           <div style={{ aspectRatio: '1/1', position: 'relative', overflow: 'hidden', border: `1px solid ${fnxRule(0.18)}` }}>
             <img src="assets/model-c-after.png" alt="Model C — after"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
-            <span style={{ position: 'absolute', top: 10, left: 10, fontFamily: FNX.mono, fontSize: 10, letterSpacing: '0.16em', color: FNX.pineInk, background: 'rgba(244,239,224,0.92)', padding: '3px 6px' }}>AFTER</span>
           </div>
         </div>
 

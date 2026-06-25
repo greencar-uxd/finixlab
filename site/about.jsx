@@ -42,9 +42,6 @@ const AboutPage = () => {
           <div style={{ height: 680, overflow: 'hidden', position: 'relative', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
             <img src="assets/peptosome-pair.jpg" alt="Peptosome pair"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
-            <div style={{ position: 'absolute', bottom: 18, left: 18 }}>
-              <MonoTag>STILL · N°04 — SEOUL STUDIO, 2025</MonoTag>
-            </div>
           </div>
         </div>
       </section>
@@ -106,9 +103,6 @@ const AboutPage = () => {
           <div style={{ position: 'relative', overflow: 'hidden' }}>
             <img src="assets/serum-trio.png" alt="Lab collection"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
-            <div style={{ position: 'absolute', bottom: 24, left: 24 }}>
-              <MonoTag>STILL · N°07 — LAB SHELF, SEOUL</MonoTag>
-            </div>
           </div>
           <div style={{ padding: '88px 64px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <RuleLabel align="left" color={FNX.tan}>03 — The Lab</RuleLabel>
