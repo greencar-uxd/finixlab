@@ -38,21 +38,22 @@ const MHeader = ({ title }) => {
           <div/>
           <button onClick={() => setOpen(false)} style={{ background: 'none', border: 'none', padding: 0, color: FNX.cream, fontSize: 24, lineHeight: 1, cursor: 'pointer' }}>×</button>
         </div>
-        <nav style={{ display: 'flex', flexDirection: 'column', marginTop: 'clamp(8px, 3vw, 24px)' }}>
+        <nav style={{ display: 'flex', flexDirection: 'column', flex: 1, marginTop: 'clamp(8px, 3vw, 24px)' }}>
           {[
             { l:'About',   h:'#/about' },
             { l:'Science', h:'#/science' },
             { l:'Shop',    h:'#/shop' },
             { l:'Journal', h:'#/journal' },
-          ].map(it => (
+          ].map((it, i, arr) => (
             <a key={it.l} href={it.h} onClick={() => setOpen(false)} style={{
               fontFamily: FNX.serif, fontWeight: 200, fontSize: 'clamp(28px, 8vw, 40px)', letterSpacing: '0.02em',
               color: FNX.cream, textDecoration: 'none',
-              padding: 'clamp(13px, 3.6vw, 20px) 0', borderBottom: '1px solid rgba(244,239,224,0.18)',
+              padding: 'clamp(13px, 3.6vw, 20px) 0',
+              borderBottom: i < arr.length - 1 ? '1px solid rgba(244,239,224,0.18)' : 'none',
             }}>{it.l}</a>
           ))}
         </nav>
-        <div style={{ marginTop: 'clamp(22px, 7vw, 40px)', paddingTop: 22, borderTop: '1px solid rgba(244,239,224,0.18)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.18em', color: 'rgba(244,239,224,0.82)' }}>
+        <div style={{ paddingTop: 22, borderTop: '1px solid rgba(244,239,224,0.18)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.18em', color: 'rgba(244,239,224,0.82)' }}>
           <span>EN · JP ▾</span>
           <span style={{ fontSize: 11, letterSpacing: '0.06em', color: 'rgba(244,239,224,0.6)' }}>Ships globally from Korea</span>
         </div>
