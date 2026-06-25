@@ -179,6 +179,7 @@ function Btn({ children, kind = 'primary', size = 'md', style = {}, full = false
   const [hover, setHover] = React.useState(false);
   const base = {
     display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8,
+    whiteSpace: 'nowrap',
     fontFamily: FNX.serif, fontWeight: 400, letterSpacing: '0.16em',
     textTransform: 'uppercase', cursor: 'pointer', border: '1px solid currentColor',
     transition: 'background-color .22s, color .22s, transform .22s, opacity .22s',

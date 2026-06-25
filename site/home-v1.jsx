@@ -90,8 +90,7 @@ const HomeV1 = () => {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
           {/* Card 1 — Peptosome */}
           <article style={{ background: FNX.bone, padding: 36, border: `1px solid ${fnxRule(0.12)}` }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-              <MonoTag>N°01 · BOOSTER</MonoTag>
+            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'flex-start' }}>
               <span style={{ fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: FNX.labRed }}>Hero</span>
             </div>
             <div style={{ marginTop: 24, height: 480, overflow: 'hidden', position: 'relative', background: FNX.cream }}>
@@ -121,8 +120,7 @@ const HomeV1 = () => {
 
           {/* Card 2 — Spicule serum */}
           <article style={{ background: FNX.bone, padding: 36, border: `1px solid ${fnxRule(0.12)}` }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-              <MonoTag>N°02 · GLOW SERUM</MonoTag>
+            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'flex-start' }}>
               <span style={{ fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: FNX.sage }}>New</span>
             </div>
             <div style={{ marginTop: 24, height: 480, overflow: 'hidden', position: 'relative', background: FNX.cream }}>
