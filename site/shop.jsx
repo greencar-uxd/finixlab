@@ -122,8 +122,8 @@ const ShopPage = () => {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
           {products.map(p => (
-            <a key={p.n} href="#/shop/peptosome" style={{
-              textDecoration: 'none', color: 'inherit',
+            <div key={p.n} data-go="shop/peptosome" style={{
+              textDecoration: 'none', color: 'inherit', cursor: 'pointer',
               background: FNX.bone, border: `1px solid ${fnxRule(0.12)}`,
               opacity: p.muted ? 0.78 : 1, position: 'relative', display: 'block',
             }}>
@@ -175,7 +175,7 @@ const ShopPage = () => {
                   )}
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </Section>
