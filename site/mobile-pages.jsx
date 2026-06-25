@@ -166,7 +166,6 @@ const ProductMobile = () => (
     </section>
 
     <section style={{ padding: '24px 24px 40px' }}>
-      <div style={{ fontFamily: FNX.mono, fontSize: 10, color: FNX.tan, letterSpacing: '0.24em' }}>N°01 · BOOSTER</div>
       <h1 style={{ margin: '10px 0 0', fontFamily: FNX.serif, fontWeight: 200, fontSize: 38, lineHeight: 1.02 }}>Peptosome Skin Booster.</h1>
       <div style={{ marginTop: 14, display: 'flex', alignItems: 'center', gap: 12, fontSize: 12 }}>
         <span style={{ color: FNX.labRed, letterSpacing: '0.36em' }}>★★★★★</span>
@@ -290,7 +289,6 @@ const ScienceMobile = () => (
         { n:'04', t:'Skin Stillness',   d:'The surface settles.' },
       ].map(s => (
         <div key={s.n} style={{ padding: '14px 0', borderTop: `1px solid ${fnxRule(0.18)}` }}>
-          <div style={{ fontFamily: FNX.mono, fontSize: 11, color: FNX.labRed, letterSpacing: '0.18em' }}>STEP {s.n}</div>
           <h3 style={{ margin: '8px 0 4px', fontFamily: FNX.serif, fontSize: 18, fontWeight: 300 }}>{s.t}</h3>
           <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: FNX.sage }}>{s.d}</p>
         </div>
@@ -429,7 +427,6 @@ const AboutMobile = () => (
         { n:'04', t:'Slow Asia', k:'Slow Asia' },
       ].map(p => (
         <div key={p.n} style={{ padding: '14px 0', borderTop: `1px solid ${fnxRule(0.18)}` }}>
-          <span style={{ fontFamily: FNX.mono, fontSize: 11, color: FNX.labRed, letterSpacing: '0.18em' }}>PRINCIPLE {p.n}</span>
           <h3 style={{ margin: '8px 0 4px', fontFamily: FNX.serif, fontSize: 18, fontWeight: 300 }}>{p.t}</h3>
           <p style={{ margin: 0, fontSize: 12, color: FNX.sage }}>{p.k}</p>
         </div>

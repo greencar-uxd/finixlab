@@ -27,18 +27,12 @@ const JournalPage = () => {
 
       {/* MASTHEAD */}
       <section style={{ background: FNX.cream, padding: '64px 40px 32px', borderBottom: `1px solid ${fnxRule(0.18)}` }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', fontFamily: FNX.mono, fontSize: 12, letterSpacing: '0.14em', color: FNX.sage, marginBottom: 24 }}>
-          <span>FINIXLAB · JOURNAL</span>
-          <span>VOL. 01 / 2026</span>
-          <span>SEOUL · SHANGHAI · TOKYO · HCMC</span>
-        </div>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'end' }}>
           <h1 style={{ ...T.hero, margin: 0, color: FNX.pineInk }}>
             The Journal.
           </h1>
           <div style={{ textAlign: 'right' }}>
             <div style={{ fontFamily: FNX.serif, fontSize: 13, color: FNX.sage, lineHeight: 1.7, letterSpacing: '0.04em' }}>
-              Quiet dispatches, once a month.<br/>
               Quiet dispatches, once a month.
             </div>
             <div style={{ marginTop: 18 }}>

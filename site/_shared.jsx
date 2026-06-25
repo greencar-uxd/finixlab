@@ -264,7 +264,11 @@ function Tag({ children, accent = false }) {
   );
 }
 
-function RuleLabel({ children, color, align = 'left' }) {
+function RuleLabel() {
+  // eyebrow/section labels removed per design — render nothing site-wide
+  return null;
+}
+function RuleLabelOld({ children, color, align = 'left' }) {
   return (
     <div style={{
       fontFamily: FNX.serif, fontSize: 12, fontWeight: 300,

@@ -7,9 +7,6 @@ const SciencePage = () => {
 
       {/* HERO */}
       <section style={{ background: FNX.pineInk, color: FNX.cream, padding: '88px 56px 100px', position: 'relative' }}>
-        <div style={{ position: 'absolute', top: 28, right: 80, fontFamily: FNX.mono, fontSize: 12, letterSpacing: '0.24em', color: 'rgba(244,239,224,0.55)' }}>
-          SCIENCE · DOC N°02 · VAMTOXIN™ PATENT
-        </div>
         <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 56, alignItems: 'end', paddingTop: 24 }}>
           <div>
             <RuleLabel align="left" color="rgba(244,239,224,0.55)">The Science</RuleLabel>
@@ -66,7 +63,6 @@ const SciencePage = () => {
             { n:'04', t:'Skin Stillness',   d:'Wrinkle depth measurably softens; the surface settles.' },
           ].map(s => (
             <div key={s.n} style={{ paddingTop: 24, borderTop: `1px solid ${fnxRule(0.18)}` }}>
-              <div style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.labRed, letterSpacing: '0.24em' }}>STEP {s.n}</div>
               <h3 style={{ margin: '14px 0 8px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 22 }}>{s.t}</h3>
               <p style={{ margin: 0, fontSize: 13, lineHeight: 1.7, color: FNX.sage }}>{s.d}</p>
             </div>
@@ -108,7 +104,6 @@ const SciencePage = () => {
             <h2 style={{ ...T.h2, margin: '14px 0 0', color: FNX.pineInk }}>Sole patent, single source.</h2>
             <p style={{ margin: '12px 0 0', color: FNX.sage, fontSize: 14 }}>VAMTOXIN™ is an ingredient held exclusively by Supadelixir.</p>
           </div>
-          <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>SOLE LICENSE · SUPADELIXIR</span>
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'start' }}>

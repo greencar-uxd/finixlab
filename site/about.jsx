@@ -87,7 +87,6 @@ const AboutPage = () => {
           {pillars.map(p => (
             <div key={p.n} style={{ paddingTop: 28, borderTop: `1px solid ${fnxRule(0.18)}` }}>
               <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-                <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.labRed, letterSpacing: '0.24em' }}>PRINCIPLE {p.n}</span>
                 <span style={{ fontSize: 12, color: FNX.sage, letterSpacing: '0.06em' }}>{p.k}</span>
               </div>
               <h3 style={{ margin: '16px 0 14px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 32, lineHeight: 1.15 }}>{p.t}</h3>

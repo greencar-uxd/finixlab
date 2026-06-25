@@ -8,10 +8,6 @@ const HomeMobile = () => {
 
       {/* HERO */}
       <section style={{ padding: '32px 24px 40px' }}>
-        <div style={{ fontFamily: FNX.serif, fontSize: 10, letterSpacing: '0.14em', textTransform: 'uppercase', color: FNX.sage, marginBottom: 18 }}>
-          <span style={{ display:'inline-block', width:5, height:5, borderRadius:'50%', background: FNX.labRed, marginRight: 10, verticalAlign: 'middle' }}/>
-          Notox · Vol. 01
-        </div>
         <h1 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 200, fontSize: 44, lineHeight: 1.02, letterSpacing: '-0.02em' }}>
           Real Efficacy, Quietly Delivered.
         </h1>

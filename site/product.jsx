@@ -39,7 +39,6 @@ const ProductPage = () => {
 
           {/* Buy block */}
           <aside style={{ position: 'sticky', top: 24 }}>
-            <div style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.tan, letterSpacing: '0.24em' }}>N°01 · BOOSTER</div>
             <h1 style={{ ...T.h1, margin: '14px 0 0', color: FNX.pineInk }}>
               Peptosome Skin Booster.
             </h1>
@@ -137,7 +136,6 @@ const ProductPage = () => {
             <RuleLabel align="left" color={FNX.tan}>02 — Formulation</RuleLabel>
             <h2 style={{ ...T.h2, margin: '14px 0 0', color: FNX.pineInk }}>The full prescription.</h2>
           </div>
-          <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>06 ACTIVES · 23 INCI</span>
         </div>
 
         <table style={{ width: '100%', borderCollapse: 'collapse', fontFamily: FNX.sans, fontSize: 14 }}>
@@ -192,7 +190,6 @@ const ProductPage = () => {
               padding: '24px 20px', borderTop: `1px solid ${s.active ? FNX.labRed : 'rgba(244,239,224,0.25)'}`,
               background: s.active ? 'rgba(244,239,224,0.06)' : 'transparent',
             }}>
-              <div style={{ fontFamily: FNX.mono, fontSize: 12, color: s.active ? FNX.labRed : FNX.tan, letterSpacing: '0.24em' }}>STEP {s.n}</div>
               <h3 style={{ margin: '14px 0 4px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 26 }}>{s.t}</h3>
               <div style={{ color: 'rgba(244,239,224,0.55)', fontSize: 12, letterSpacing: '0.04em', marginBottom: 12 }}>{s.k}</div>
               <p style={{ fontSize: 13, lineHeight: 1.7, color: 'rgba(244,239,224,0.85)', margin: 0 }}>{s.d}</p>
