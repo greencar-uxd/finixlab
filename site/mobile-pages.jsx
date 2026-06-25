@@ -38,7 +38,7 @@ const MHeader = ({ title }) => {
           <div/>
           <button onClick={() => setOpen(false)} style={{ background: 'none', border: 'none', padding: 0, color: FNX.cream, fontSize: 24, lineHeight: 1, cursor: 'pointer' }}>×</button>
         </div>
-        <nav style={{ display: 'grid', gap: 4, flex: 1 }}>
+        <nav style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', flex: 1 }}>
           {[
             { l:'About',   h:'#/about' },
             { l:'Science', h:'#/science' },
@@ -46,9 +46,9 @@ const MHeader = ({ title }) => {
             { l:'Journal', h:'#/journal' },
           ].map(it => (
             <a key={it.l} href={it.h} onClick={() => setOpen(false)} style={{
-              fontFamily: FNX.serif, fontWeight: 200, fontSize: 40, letterSpacing: '0.02em',
+              fontFamily: FNX.serif, fontWeight: 200, fontSize: 38, letterSpacing: '0.02em',
               color: FNX.cream, textDecoration: 'none',
-              padding: '20px 0', borderBottom: '1px solid rgba(244,239,224,0.18)',
+              padding: '16px 0', borderBottom: '1px solid rgba(244,239,224,0.18)',
             }}>{it.l}</a>
           ))}
         </nav>
