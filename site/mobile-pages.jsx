@@ -289,7 +289,7 @@ const ScienceMobile = () => (
         { n:'04', t:'Skin Stillness',   d:'The surface settles.' },
       ].map(s => (
         <div key={s.n} style={{ padding: '14px 0', borderTop: `1px solid ${fnxRule(0.18)}` }}>
-          <h3 style={{ margin: '8px 0 4px', fontFamily: FNX.serif, fontSize: 18, fontWeight: 300 }}>{s.t}</h3>
+          <h3 style={{ margin: '0 0 4px', fontFamily: FNX.serif, fontSize: 18, fontWeight: 300 }}>{s.t}</h3>
           <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: FNX.sage }}>{s.d}</p>
         </div>
       ))}
@@ -427,7 +427,7 @@ const AboutMobile = () => (
         { n:'04', t:'Slow Asia', k:'Slow Asia' },
       ].map(p => (
         <div key={p.n} style={{ padding: '14px 0', borderTop: `1px solid ${fnxRule(0.18)}` }}>
-          <h3 style={{ margin: '8px 0 4px', fontFamily: FNX.serif, fontSize: 18, fontWeight: 300 }}>{p.t}</h3>
+          <h3 style={{ margin: '0 0 4px', fontFamily: FNX.serif, fontSize: 18, fontWeight: 300 }}>{p.t}</h3>
           <p style={{ margin: 0, fontSize: 12, color: FNX.sage }}>{p.k}</p>
         </div>
       ))}
