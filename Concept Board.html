@@ -34,7 +34,7 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   em, i{ font-style: normal; }
-  html,body{background:var(--paper);color:var(--ink)}
+  html,body{background:var(--cream);color:var(--ink)}
   body{
     font-family: var(--sans-ko);
     font-weight: 300;
@@ -865,7 +865,7 @@
         try{
           const dataUrl = await window.htmlToImage.toPng(board, {
             pixelRatio: 2,
-            backgroundColor: '#ffffff',
+            backgroundColor: '#F4EFE0',
             width: board.offsetWidth,
             height: board.offsetHeight
           });
