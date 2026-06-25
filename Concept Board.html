@@ -604,6 +604,30 @@
     background: var(--lab-red);
   }
 
+  /* ============== MOBILE (phone) ============== */
+  @media (max-width: 640px){
+    /* masthead → single column */
+    .mast{ grid-template-columns: 1fr; gap: 20px; align-items: start; }
+    .wordmark img{ width: clamp(200px, 62vw, 300px); }
+    .mast-right{
+      text-align: left;
+      border-left: none; padding-left: 0;
+      border-top: 1px solid var(--rule); padding-top: 16px;
+      align-self: start;
+    }
+    /* palette: 3-up with shorter chips so they aren't tall slivers */
+    .palette{ grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .sw .chip{ height: 104px; }
+    .sw .name{ font-size: 11px; }
+    /* colophon → stacked + centered */
+    .colophon{ grid-template-columns: 1fr; gap: 10px; justify-items: center; text-align: center; }
+    .colophon .center{ justify-content: center; }
+    .colophon .right{ text-align: center; }
+  }
+  @media (max-width: 420px){
+    .palette{ grid-template-columns: repeat(2, 1fr); }
+  }
+
 </style>
 </head>
 <body>
