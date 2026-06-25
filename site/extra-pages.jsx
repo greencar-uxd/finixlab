@@ -236,13 +236,15 @@ const NotFoundPage = () => (
   </div>
 );
 
-// ============ MOBILE CART ============
+// ============ MOBILE CART — aligned to CartPage ============
 const CartMobile = () => {
   const items = [
-    { n:'N°01', t:'Peptosome Skin Booster', s:'50ml', p:96000, qty:1, img:'assets/booster-bottle-front.png' },
-    { n:'N°02', t:'Spicule Glow Serum', s:'20ml', p:58000, qty:1, img:'assets/serum-quartet.png' },
+    { n:'N°01', t:'Peptosome Skin Booster', s:'50ml · Standard', p:96000, qty:1, img:'assets/booster-bottle-front.png' },
+    { n:'N°02', t:'Spicule Wrinkle-Free Glow Serum', s:'20ml', p:58000, qty:1, img:'assets/serum-quartet.png' },
   ];
   const sub = items.reduce((a,i) => a + i.p * i.qty, 0);
+  const ship = 0;
+  const total = sub + ship;
   const krw = (n) => `₩${n.toLocaleString('ko-KR')}`;
   return (
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300, fontSize: 14, display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
@@ -257,12 +259,19 @@ const CartMobile = () => {
       }}>
         <div style={{ flex: 1 }}>
           <div style={{ ...T.eyebrow, color: FNX.sage }}>Total · {items.length} items</div>
-          <div style={{ ...T.h4, marginTop: 2 }}>{krw(sub)}</div>
+          <div style={{ ...T.h4, marginTop: 2 }}>{krw(total)}</div>
         </div>
         <Btn kind="primary">Checkout →</Btn>
       </div>
 
       <section style={{ padding: '24px', flex: 1 }}>
+        {/* heading + count · subtotal */}
+        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 18 }}>
+          <h1 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 200, fontSize: 40, lineHeight: 1, letterSpacing: '-0.02em' }}>Your Bag.</h1>
+          <span style={{ ...T.eyebrow, color: FNX.sage, fontSize: 11 }}>{items.length} items · {krw(sub)}</span>
+        </div>
+
+        {/* line items */}
         {items.map((it, i) => (
           <div key={it.n} style={{ display: 'grid', gridTemplateColumns: '96px 1fr', gap: 16, padding: '16px 0', borderTop: i === 0 ? `1px solid ${fnxRule(0.18)}` : `1px dashed ${fnxRule(0.14)}` }}>
             <div style={{ aspectRatio: '4/5', overflow: 'hidden', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
@@ -280,11 +289,39 @@ const CartMobile = () => {
                 </div>
                 <span style={{ fontFamily: FNX.serif, fontSize: 16 }}>{krw(it.p * it.qty)}</span>
               </div>
+              <a href="#" style={{ display: 'inline-block', marginTop: 8, ...T.caption, color: FNX.sage, textDecoration: 'underline' }}>Remove</a>
             </div>
           </div>
         ))}
-        <div style={{ marginTop: 24, paddingTop: 18, borderTop: `1px solid ${fnxRule(0.18)}`, display: 'flex', justifyContent: 'space-between', fontSize: 13, color: FNX.sage }}>
-          <span>Shipping</span><span>Free · KR/JP/CN/VN</span>
+
+        {/* continue shopping + samples note */}
+        <div style={{ marginTop: 18, paddingTop: 16, borderTop: `1px solid ${fnxRule(0.18)}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12 }}>
+          <Btn kind="ghost" size="sm" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }}>← Continue</Btn>
+          <span style={{ ...T.caption, color: FNX.sage }}>Free samples included.</span>
+        </div>
+
+        {/* order summary */}
+        <div style={{ marginTop: 24, background: FNX.bone, border: `1px solid ${fnxRule(0.12)}`, padding: 20 }}>
+          <h3 style={{ margin: 0, fontFamily: FNX.serif, fontSize: 16, fontWeight: 400 }}>Order Summary</h3>
+          <div style={{ marginTop: 16, display: 'grid', gap: 12 }}>
+            {[['Subtotal', krw(sub)], ['Shipping', 'Free'], ['Estimated tax', 'Calculated at checkout']].map(r => (
+              <div key={r[0]} style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13, color: FNX.pineInk }}>
+                <span style={{ color: FNX.sage }}>{r[0]}</span><span>{r[1]}</span>
+              </div>
+            ))}
+            <div style={{ paddingTop: 14, borderTop: `1px solid ${fnxRule(0.2)}`, display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+              <span style={{ fontFamily: FNX.serif, fontSize: 16, fontWeight: 400 }}>Total</span>
+              <span style={{ fontFamily: FNX.serif, fontSize: 24, letterSpacing: '0.01em' }}>{krw(total)}</span>
+            </div>
+          </div>
+          <p style={{ margin: '14px 0 0', ...T.caption, color: FNX.sage, textAlign: 'center' }}>
+            Free shipping over ₩60,000 · KR · JP · CN · VN
+          </p>
+          <div style={{ marginTop: 16, paddingTop: 14, borderTop: `1px solid ${fnxRule(0.14)}`, display: 'grid', gap: 8, fontSize: 12, color: FNX.sage }}>
+            <div>↳ 30-day return on unopened</div>
+            <div>↳ Discreet packaging</div>
+            <div>↳ Carbon-offset shipping</div>
+          </div>
         </div>
       </section>
 
@@ -295,13 +332,14 @@ const CartMobile = () => {
   );
 };
 
-// ============ MOBILE ACCOUNT ============
+// ============ MOBILE ACCOUNT — aligned to AccountPage ============
 const AccountMobile = () => (
   <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300, fontSize: 14 }}>
     <MHeader title="Account" />
+    {/* Returning — Sign in */}
     <section style={{ padding: '32px 24px' }}>
-      <RuleLabel align="left" color={FNX.tan}>Sign In</RuleLabel>
-      <h1 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontSize: 36, fontWeight: 300 }}>Welcome back.</h1>
+      <RuleLabel align="left" color={FNX.tan}>Returning</RuleLabel>
+      <h1 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontSize: 36, fontWeight: 300 }}>Sign in.</h1>
       <form style={{ marginTop: 24, display: 'grid', gap: 14 }}>
         <label style={{ display: 'grid', gap: 6 }}>
           <span style={{ ...T.eyebrow, color: FNX.sage, fontSize: 11 }}>Email</span>
@@ -312,17 +350,18 @@ const AccountMobile = () => (
           <input aria-label="Password" type="password" placeholder="••••••••" style={inputStyle} />
         </label>
         <Btn kind="primary" full size="lg">Sign In →</Btn>
+        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, color: FNX.sage }}>
+          <a href="#" style={{ color: 'inherit' }}>Forgot password?</a>
+          <a href="#" style={{ color: 'inherit' }}>Magic link login</a>
+        </div>
       </form>
-      <div style={{ marginTop: 14, display: 'flex', justifyContent: 'space-between', fontSize: 12, color: FNX.sage }}>
-        <a href="#" style={{ color: 'inherit' }}>Forgot password?</a>
-        <a href="#" style={{ color: 'inherit' }}>Magic link</a>
-      </div>
     </section>
+    {/* New here — Create an account */}
     <section style={{ background: FNX.parchment, padding: '32px 24px' }}>
       <RuleLabel align="left" color={FNX.tan}>New here</RuleLabel>
       <h2 style={{ margin: '12px 0 14px', fontFamily: FNX.serif, fontSize: 26, fontWeight: 300 }}>Create an account.</h2>
       <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 22px', display: 'grid', gap: 8 }}>
-        {['Order tracking · quick reorder','Subscribe & save 15%','Priority clinic partner access','Member-only sample trials'].map(b => (
+        {['Order tracking · quick reorder','Monthly subscription · save 15%','Priority clinic partner access','Member-only sample trials'].map(b => (
           <li key={b} style={{ fontSize: 13, color: FNX.pineInk, paddingLeft: 14, position: 'relative' }}>
             <span style={{ position: 'absolute', left: 0, top: 9, width: 6, height: 1, background: FNX.labRed }}/>
             {b}
@@ -330,37 +369,40 @@ const AccountMobile = () => (
         ))}
       </ul>
       <Btn kind="primary" full size="lg">Create Account →</Btn>
+      <p style={{ margin: '14px 0 0', ...T.caption, color: FNX.sage, textAlign: 'center' }}>Sign up with Email · Kakao · Apple</p>
     </section>
     <MFooter />
   </div>
 );
 
-// ============ MOBILE SEARCH ============
+// ============ MOBILE SEARCH — aligned to SearchPage ============
 const SearchMobile = () => {
   const results = [
     { t:'Peptosome Skin Booster', cat:'Product · Booster', img:'assets/booster-bottle-front.png', href:'#/shop/peptosome' },
-    { t:'Spicule Glow Serum', cat:'Product · Serum', img:'assets/serum-quartet.png', href:'#/shop' },
-    { t:'Quiet Discipline of Peptides', cat:'Journal', img:'assets/serum-pump.png', href:'#/journal' },
+    { t:'Spicule Wrinkle-Free Glow Serum', cat:'Product · Serum', img:'assets/serum-quartet.png', href:'#/shop' },
+    { t:'On the Quiet Discipline of Peptides', cat:'Journal · Slow Aging', img:'assets/serum-pump.png', href:'#/journal' },
+    { t:'VAMTOXIN™ Patent Story', cat:'Science', img:'assets/booster-box-front.png', href:'#/science' },
   ];
   return (
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300, fontSize: 14 }}>
       <MHeader title="Search" />
       <section style={{ padding: '24px' }}>
-        <div style={{ position: 'relative' }}>
-          <input type="search" aria-label="Search" defaultValue="peptide" style={{
-            ...inputStyle, fontSize: 20, padding: '14px 14px 14px 44px', fontWeight: 300,
+        <RuleLabel align="left" color={FNX.tan}>Search</RuleLabel>
+        <div style={{ marginTop: 12, position: 'relative' }}>
+          <input type="search" aria-label="Search" defaultValue="peptide" placeholder="Search for prescriptions, journal entries…" style={{
+            ...inputStyle, fontSize: 20, padding: '14px 44px 14px 44px', fontWeight: 300,
           }} />
           <span style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', color: FNX.sage }}>⌕</span>
           <span role="button" aria-label="Clear search" style={{ position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)', color: FNX.sage, cursor: 'pointer' }}>✕</span>
         </div>
         <div style={{ marginTop: 12, display: 'flex', gap: 6, overflowX: 'auto' }}>
-          {['All','Products','Journal','Science'].map((f, i) => (
+          {['All','Products','Journal','Science','Ingredients'].map((f, i) => (
             <span key={f} style={{ padding: '6px 12px', borderRadius: 999, border: `1px solid ${i === 0 ? FNX.pineInk : fnxRule(0.18)}`, color: i === 0 ? FNX.pineInk : FNX.sage, background: i === 0 ? FNX.bone : 'transparent', fontSize: 11, whiteSpace: 'nowrap' }}>{f}</span>
           ))}
         </div>
         <h2 style={{ margin: '24px 0 12px', fontSize: 13, color: FNX.sage }}>"peptide" — {results.length} results</h2>
         {results.map((r, i) => (
-          <a key={i} href={r.href} style={{ display: 'grid', gridTemplateColumns: '64px 1fr', gap: 14, padding: '14px 0', borderTop: `1px solid ${fnxRule(0.18)}`, color: 'inherit', textDecoration: 'none' }}>
+          <a key={i} href={r.href} style={{ display: 'grid', gridTemplateColumns: '64px 1fr auto', gap: 14, padding: '14px 0', borderTop: `1px solid ${fnxRule(0.18)}`, color: 'inherit', textDecoration: 'none' }}>
             <div style={{ aspectRatio: '1/1', overflow: 'hidden', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
               <img src={r.img} alt={r.t} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
@@ -368,6 +410,7 @@ const SearchMobile = () => {
               <div style={{ fontFamily: FNX.serif, fontSize: 10, color: FNX.tan, letterSpacing: '0.14em', textTransform: 'uppercase' }}>{r.cat}</div>
               <h3 style={{ margin: '6px 0 0', fontFamily: FNX.serif, fontSize: 15, fontWeight: 400 }}>{r.t}</h3>
             </div>
+            <span style={{ alignSelf: 'center', ...T.caption, color: FNX.sage }}>→</span>
           </a>
         ))}
       </section>
@@ -384,7 +427,8 @@ const NotFoundMobile = () => (
       <div style={{ ...T.eyebrow, color: FNX.labRed, fontSize: 11 }}>Error · 404</div>
       <h1 style={{ margin: '18px 0 0', fontFamily: FNX.serif, fontSize: 56, fontWeight: 200, lineHeight: 1 }}>Quietly, not here.</h1>
       <p style={{ marginTop: 18, fontSize: 14, lineHeight: 1.7, color: FNX.sage }}>
-        The page you're looking for isn't on this shelf.
+        The page you're looking for isn't on this shelf.<br/>
+        Return home, or browse the collection.
       </p>
       <div style={{ marginTop: 28, display: 'grid', gap: 10 }}>
         <Btn kind="primary" full>← Back to Home</Btn>
