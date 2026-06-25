@@ -77,7 +77,6 @@ const HomeMobile = () => {
               <div>
                 <div style={{ fontFamily: FNX.serif, fontSize: 15, letterSpacing: '0.02em' }}>
                   {x.n}
-                  {idx === 0 && <span style={{ marginLeft: 8, fontSize: 10, color: FNX.labRed, letterSpacing: '0.14em', textTransform: 'uppercase' }}>Hero</span>}
                 </div>
                 <div style={{ marginTop: 2, fontSize: 12, color: FNX.sage }}>{x.r}</div>
               </div>
@@ -147,9 +146,6 @@ const HomeMobile = () => {
             <li key={i} style={{ fontFamily: FNX.serif, fontSize: 12, lineHeight: 1.65, color: FNX.pineInk, paddingLeft: 12, borderLeft: `1px solid ${FNX.tan}` }}>{q}</li>
           ))}
         </ul>
-        <p style={{ marginTop: 14, fontSize: 10, color: FNX.sage }}>
-          * Individual results vary. Tester records, not certified efficacy data.
-        </p>
       </section>
 
       {/* JOURNAL */}
@@ -168,7 +164,6 @@ const HomeMobile = () => {
               <img src={j.img} alt={j.h} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: j.pos }} />
             </div>
             <div>
-              <div style={{ fontFamily: FNX.mono, fontSize: 10, color: FNX.tan, letterSpacing: '0.18em' }}>{j.t} · {j.cat}</div>
               <h4 style={{ margin: '6px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 16, lineHeight: 1.25 }}>{j.h}</h4>
             </div>
           </article>

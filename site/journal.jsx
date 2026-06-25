@@ -5,7 +5,7 @@ const JournalPage = () => {
     n:'N°012', cat:'Slow Aging', date:'May 2026',
     h:'On the Quiet Discipline of Peptides',
     sub:"Peptides' quiet practice — how a single molecule softens the texture of expression.",
-    author:'Hyejin Yoon · Founder',
+    author:'Hyungju Park · Founder',
     minutes:'7 min',
     img:'assets/serum-pump.png', pos: '50% center',
   };
@@ -66,9 +66,6 @@ const JournalPage = () => {
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: featured.pos }} />
           </div>
           <div>
-            <div style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.labRed, letterSpacing: '0.24em', marginBottom: 18 }}>
-              {featured.n} · {featured.cat} · {featured.date}
-            </div>
             <h2 style={{ ...T.h2, margin: 0, color: FNX.pineInk }}>
               {featured.h}
             </h2>
@@ -102,9 +99,6 @@ const JournalPage = () => {
             <article key={a.n} style={{ display: 'flex', flexDirection: 'column' }}>
               <div style={{ aspectRatio: '4/5', overflow: 'hidden', position: 'relative', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
                 <img src={a.img} alt={a.h} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: a.pos }} />
-              </div>
-              <div style={{ marginTop: 18, fontFamily: FNX.mono, fontSize: 12, color: FNX.tan, letterSpacing: '0.14em' }}>
-                {a.cat.toUpperCase()} · {a.date.toUpperCase()}
               </div>
               <h3 style={{ margin: '10px 0 8px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 24, lineHeight: 1.2, letterSpacing: '-0.01em' }}>{a.h}</h3>
               <span style={{ fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.14em', color: FNX.sage, textTransform: 'uppercase', marginTop: 8 }}>Read →</span>

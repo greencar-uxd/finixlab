@@ -199,7 +199,6 @@ const ProductMobile = () => (
             <div>
               <div style={{ fontFamily: FNX.serif, fontSize: 15 }}>
                 {x.n}
-                {idx === 0 && <span style={{ marginLeft: 8, fontSize: 10, color: FNX.labRed, letterSpacing: '0.14em', textTransform: 'uppercase' }}>Hero</span>}
               </div>
               <div style={{ marginTop: 2, fontSize: 12, color: FNX.sage }}>{x.r}</div>
             </div>
@@ -369,7 +368,6 @@ const JournalMobile = () => {
               <img src={a.img} alt={a.h} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div>
-              <div style={{ fontFamily: FNX.mono, fontSize: 10, color: FNX.tan, letterSpacing: '0.18em' }}>{a.n} · {a.cat}</div>
               <h3 style={{ margin: '8px 0 0', fontFamily: FNX.serif, fontSize: 17, fontWeight: 300, lineHeight: 1.25 }}>{a.h}</h3>
             </div>
           </article>
@@ -412,7 +410,7 @@ const AboutMobile = () => (
         While a single prescription stays with the skin each day, we prescribe the quietest possible ritual.
       </p>
       <div style={{ marginTop: 18, paddingTop: 14, borderTop: `1px solid ${fnxRule(0.18)}`, fontSize: 12 }}>
-        <div style={{ fontFamily: FNX.serif, fontSize: 14 }}>Hyejin Yoon</div>
+        <div style={{ fontFamily: FNX.serif, fontSize: 14 }}>Hyungju Park</div>
         <div style={{ marginTop: 2, color: FNX.sage }}>Founder</div>
       </div>
     </section>
@@ -428,7 +426,6 @@ const AboutMobile = () => (
       ].map(p => (
         <div key={p.n} style={{ padding: '14px 0', borderTop: `1px solid ${fnxRule(0.18)}` }}>
           <h3 style={{ margin: '0 0 4px', fontFamily: FNX.serif, fontSize: 18, fontWeight: 300 }}>{p.t}</h3>
-          <p style={{ margin: 0, fontSize: 12, color: FNX.sage }}>{p.k}</p>
         </div>
       ))}
     </section>

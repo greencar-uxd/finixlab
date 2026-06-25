@@ -55,7 +55,7 @@ const AboutPage = () => {
               The bottle, in lower case.
             </h2>
             <div style={{ marginTop: 28, paddingTop: 18, borderTop: `1px solid ${fnxRule(0.18)}` }}>
-              <div style={{ fontFamily: FNX.serif, fontSize: 16 }}>Hyejin Yoon</div>
+              <div style={{ fontFamily: FNX.serif, fontSize: 16 }}>Hyungju Park</div>
               <div style={{ marginTop: 4, fontSize: 12, color: FNX.sage, letterSpacing: '0.06em' }}>Founder</div>
               <div style={{ marginTop: 14, fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>Seoul · April 2024</div>
             </div>
@@ -86,9 +86,6 @@ const AboutPage = () => {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '48px 64px' }}>
           {pillars.map(p => (
             <div key={p.n} style={{ paddingTop: 28, borderTop: `1px solid ${fnxRule(0.18)}` }}>
-              <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-                <span style={{ fontSize: 12, color: FNX.sage, letterSpacing: '0.06em' }}>{p.k}</span>
-              </div>
               <h3 style={{ margin: '16px 0 14px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 32, lineHeight: 1.15 }}>{p.t}</h3>
               <p style={{ margin: 0, fontSize: 14, lineHeight: 1.85, color: FNX.pineInk, maxWidth: '52ch' }}>{p.d}</p>
             </div>
@@ -136,7 +133,6 @@ const AboutPage = () => {
             <h2 style={{ ...T.h2, margin: '14px 0 0', color: FNX.pineInk }}>
               Quietly considered for the earth.
             </h2>
-            <p style={{ marginTop: 14, fontSize: 13, color: FNX.sage }}>Quietly considered for the earth.</p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 32 }}>
             {[
@@ -174,9 +170,6 @@ const AboutPage = () => {
               </ul>
             </div>
           ))}
-        </div>
-        <div style={{ marginTop: 48 }}>
-          <Btn kind="inverse">Find a Clinic →</Btn>
         </div>
       </Section>
 

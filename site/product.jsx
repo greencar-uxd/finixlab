@@ -5,11 +5,6 @@ const ProductPage = () => {
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300 }}>
       <SiteHeader variant="cream" />
 
-      {/* Breadcrumb */}
-      <div style={{ padding: '20px 40px', borderBottom: `1px solid ${fnxRule(0.12)}`, fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: FNX.sage, display: 'flex', gap: 12 }}>
-        <span>Shop</span><span>/</span><span>Boosters</span><span>/</span><span style={{ color: FNX.pineInk }}>Peptosome Skin Booster</span>
-      </div>
-
       {/* HERO — gallery left, buy block right */}
       <section style={{ background: FNX.cream, padding: '56px 40px 96px' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 64, alignItems: 'start' }}>
@@ -131,7 +126,7 @@ const ProductPage = () => {
 
       {/* INGREDIENTS — full INCI */}
       <Section bg={FNX.cream} padding="120px 40px">
-        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 32, paddingBottom: 22, borderBottom: `1px solid ${fnxRule(0.2)}` }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 32 }}>
           <div>
             <RuleLabel align="left" color={FNX.tan}>02 — Formulation</RuleLabel>
             <h2 style={{ ...T.h2, margin: '14px 0 0', color: FNX.pineInk }}>The full prescription.</h2>
@@ -160,7 +155,6 @@ const ProductPage = () => {
                 <td style={{ padding: '20px 0', fontFamily: FNX.mono, fontSize: 12, color: FNX.tan, letterSpacing: '0.14em' }}>{f.i}</td>
                 <td style={{ padding: '20px 0', fontFamily: FNX.serif, fontSize: 18, letterSpacing: '0.04em', color: FNX.pineInk }}>
                   {f.n}
-                  {f.hero && <span style={{ marginLeft: 12, fontSize: 12, color: FNX.labRed, letterSpacing: '0.16em', textTransform: 'uppercase', verticalAlign: 2 }}>Hero</span>}
                 </td>
                 <td style={{ padding: '20px 0', fontSize: 13, color: FNX.sage }}>{f.r}</td>
                 <td style={{ padding: '20px 0', fontFamily: FNX.serif, fontSize: 18, textAlign: 'right', letterSpacing: '0.06em' }}>{f.p}</td>
@@ -168,9 +162,6 @@ const ProductPage = () => {
             ))}
           </tbody>
         </table>
-        <div style={{ marginTop: 18, fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>
-          * Full INCI of 23 ingredients — Water, Glycerin, Butylene Glycol, Niacinamide, … See PDF below for full ingredient dictionary.
-        </div>
       </Section>
 
       {/* HOW TO USE — ritual */}
@@ -261,9 +252,6 @@ const ProductPage = () => {
                 <li key={i} style={{ fontFamily: FNX.serif, fontSize: 14, lineHeight: 1.7, color: FNX.pineInk, paddingLeft: 16, borderLeft: `1px solid ${FNX.tan}` }}>{q}</li>
               ))}
             </ul>
-            <p style={{ marginTop: 22, fontSize: 12, color: FNX.sage, letterSpacing: '0.04em' }}>
-              * Individual experiences vary. These are user testimonies, not certified efficacy data.
-            </p>
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12, height: 480 }}>
             <div style={{ position: 'relative', overflow: 'hidden', border: `1px solid ${fnxRule(0.18)}` }}>

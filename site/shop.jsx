@@ -63,11 +63,6 @@ const ShopPage = () => {
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300 }}>
       <SiteHeader variant="cream" />
 
-      {/* Breadcrumb */}
-      <div style={{ padding: '20px 40px', borderBottom: `1px solid ${fnxRule(0.12)}`, fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: FNX.sage, display: 'flex', gap: 12 }}>
-        <span>Home</span><span>/</span><span style={{ color: FNX.pineInk }}>Shop</span>
-      </div>
-
       {/* MASTHEAD */}
       <section style={{ background: FNX.cream, padding: '64px 40px 48px', borderBottom: `1px solid ${fnxRule(0.18)}` }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'end' }}>

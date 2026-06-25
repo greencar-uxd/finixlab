@@ -112,9 +112,6 @@ const SciencePage = () => {
               <img src="assets/booster-box-front.png" alt="VAMTOXIN™ Patent"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
             </div>
-            <p style={{ marginTop: 16, fontSize: 12, color: FNX.sage, letterSpacing: '0.04em', lineHeight: 1.6 }}>
-              Supadelixir's exclusive ingredient — applied under Finixlab's exclusive license.
-            </p>
           </div>
 
           <div>

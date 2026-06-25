@@ -82,7 +82,6 @@ const HomeV1 = () => {
             <h2 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 56, letterSpacing: '-0.01em', lineHeight: 1.05 }}>
               Two prescriptions, one ritual.
             </h2>
-            <p style={{ margin: '12px 0 0', color: FNX.sage, fontSize: 14, letterSpacing: '0.02em' }}>Two prescriptions, one ritual.</p>
           </div>
           <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }}>Shop All →</Btn>
         </div>
@@ -90,9 +89,6 @@ const HomeV1 = () => {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
           {/* Card 1 — Peptosome */}
           <article style={{ background: FNX.bone, padding: 36, border: `1px solid ${fnxRule(0.12)}` }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'flex-start' }}>
-              <span style={{ fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: FNX.labRed }}>Hero</span>
-            </div>
             <div style={{ marginTop: 24, height: 480, overflow: 'hidden', position: 'relative', background: FNX.cream }}>
               <img src="assets/booster-bottle-front.png" alt="Peptosome Skin Booster"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
@@ -120,9 +116,6 @@ const HomeV1 = () => {
 
           {/* Card 2 — Spicule serum */}
           <article style={{ background: FNX.bone, padding: 36, border: `1px solid ${fnxRule(0.12)}` }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'flex-start' }}>
-              <span style={{ fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: FNX.sage }}>New</span>
-            </div>
             <div style={{ marginTop: 24, height: 480, overflow: 'hidden', position: 'relative', background: FNX.cream }}>
               <img src="assets/serum-shadow.png" alt="Spicule Wrinkle-Free Glow Serum"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
@@ -157,7 +150,6 @@ const HomeV1 = () => {
             <h2 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 56, letterSpacing: '-0.01em', lineHeight: 1.05 }}>
               Concentration before narrative.
             </h2>
-            <p style={{ margin: '12px 0 0', color: FNX.sage, fontSize: 14, letterSpacing: '0.02em' }}>Concentration before narrative.</p>
           </div>
           <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }}>View Full Formula →</Btn>
         </div>
@@ -180,7 +172,6 @@ const HomeV1 = () => {
                 <div>
                   <div style={{ fontFamily: FNX.serif, fontSize: 22, fontWeight: 300, letterSpacing: '0.02em' }}>
                     {x.n}
-                    {idx === 0 && <span style={{ marginLeft: 12, fontSize: 12, color: FNX.labRed, letterSpacing: '0.16em', textTransform: 'uppercase', verticalAlign: 3 }}>Hero</span>}
                   </div>
                   <div style={{ marginTop: 6, fontSize: 13, color: FNX.sage, lineHeight: 1.55 }}>{x.r}</div>
                 </div>
@@ -198,7 +189,6 @@ const HomeV1 = () => {
           <h2 style={{ margin: '18px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 56, letterSpacing: '0.02em', color: FNX.cream }}>
             Four steps, eight minutes.
           </h2>
-          <p style={{ margin: '12px 0 0', color: 'rgba(244,239,224,0.82)', fontSize: 14 }}>Four steps, eight minutes.</p>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
           {ritual.map(r => (
@@ -222,9 +212,6 @@ const HomeV1 = () => {
             </h2>
             <p style={{ marginTop: 22, color: FNX.pineInk, fontSize: 15, lineHeight: 1.85, maxWidth: '46ch' }}>
               A record from real users in their thirties and beyond. Instead of promising numbers, we present what time has left behind, in their own words.
-            </p>
-            <p style={{ marginTop: 14, color: FNX.sage, fontSize: 12, letterSpacing: '0.04em' }}>
-              * Individual results vary. These are user experiences, not certified efficacy data.
             </p>
             <div style={{ marginTop: 32 }}>
               <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }}>View all reviews →</Btn>
@@ -323,9 +310,6 @@ const HomeV1 = () => {
                 <img src={j.imgSrc} alt={j.h}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: j.pos, display: 'block' }} />
               </div>
-              <div style={{ marginTop: 18, fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: FNX.sage }}>
-                {j.t} · {j.cat}
-              </div>
               <h3 style={{ margin: '10px 0 8px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 24, letterSpacing: '-0.01em', lineHeight: 1.2 }}>{j.h}</h3>
               <p style={{ margin: 0, fontSize: 13, color: FNX.sage, lineHeight: 1.7 }}>{j.d}</p>
             </article>
@@ -366,7 +350,6 @@ const HomeV1 = () => {
             <p style={{ marginTop: 22, ...T.body, color: FNX.pineInk, maxWidth: '40ch' }}>
               Clinical partner network — Seoul · Shanghai · Tokyo · Ho Chi Minh. As a post-procedure prescription, or a daily slow-aging ritual.
             </p>
-            <Btn kind="primary" style={{ marginTop: 28 }}>Find a Clinic →</Btn>
           </div>
           <div style={{ height: 320, position: 'relative', border: '1px solid rgba(244,239,224,0.18)', overflow: 'hidden' }}>
             <img src="assets/peptosome-pair.jpg" alt="Clinic partners"

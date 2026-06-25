@@ -183,6 +183,7 @@ const SearchPage = () => {
             fontFamily: '"Pretendard Variable", system-ui, sans-serif', fontWeight: 300,
           }} />
           <span style={{ position: 'absolute', left: 22, top: '50%', transform: 'translateY(-50%)', fontSize: 18, color: FNX.sage }}>⌕</span>
+          <span role="button" aria-label="Clear search" style={{ position: 'absolute', right: 22, top: '50%', transform: 'translateY(-50%)', fontSize: 18, color: FNX.sage, cursor: 'pointer' }}>✕</span>
         </div>
         <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
           {['All', 'Products', 'Journal', 'Science', 'Ingredients'].map((f, i) => (
@@ -244,7 +245,7 @@ const CartMobile = () => {
   const sub = items.reduce((a,i) => a + i.p * i.qty, 0);
   const krw = (n) => `₩${n.toLocaleString('ko-KR')}`;
   return (
-    <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300, fontSize: 14, paddingBottom: 90 }}>
+    <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300, fontSize: 14, display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <MHeader title="Your Bag" />
 
       {/* sticky checkout */}
@@ -261,7 +262,7 @@ const CartMobile = () => {
         <Btn kind="primary">Checkout →</Btn>
       </div>
 
-      <section style={{ padding: '24px' }}>
+      <section style={{ padding: '24px', flex: 1 }}>
         {items.map((it, i) => (
           <div key={it.n} style={{ display: 'grid', gridTemplateColumns: '96px 1fr', gap: 16, padding: '16px 0', borderTop: i === 0 ? `1px solid ${fnxRule(0.18)}` : `1px dashed ${fnxRule(0.14)}` }}>
             <div style={{ aspectRatio: '4/5', overflow: 'hidden', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
@@ -287,7 +288,9 @@ const CartMobile = () => {
         </div>
       </section>
 
-      <MFooter />
+      <div style={{ paddingBottom: 72, background: FNX.pineInk }}>
+        <MFooter />
+      </div>
     </div>
   );
 };
@@ -348,6 +351,7 @@ const SearchMobile = () => {
             ...inputStyle, fontSize: 20, padding: '14px 14px 14px 44px', fontWeight: 300,
           }} />
           <span style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', color: FNX.sage }}>⌕</span>
+          <span role="button" aria-label="Clear search" style={{ position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)', color: FNX.sage, cursor: 'pointer' }}>✕</span>
         </div>
         <div style={{ marginTop: 12, display: 'flex', gap: 6, overflowX: 'auto' }}>
           {['All','Products','Journal','Science'].map((f, i) => (
