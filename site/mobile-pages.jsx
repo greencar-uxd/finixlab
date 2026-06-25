@@ -6,15 +6,24 @@ const MHeader = ({ title }) => {
   const [open, setOpen] = React.useState(false);
   return (
   <React.Fragment>
-    <header style={{ background: FNX.cream, padding: '14px 24px', display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'center', borderBottom: `1px solid ${fnxRule(0.14)}`, position: 'sticky', top: 0, zIndex: 5 }}>
-      <a href="#/home" style={{ display: 'flex', justifyContent: 'flex-start', textDecoration: 'none' }}>
+    <header style={{ background: FNX.cream, padding: '14px 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: `1px solid ${fnxRule(0.14)}`, position: 'sticky', top: 0, zIndex: 5 }}>
+      <a href="#/home" aria-label="Finixlab — Home" style={{ display: 'flex', textDecoration: 'none' }}>
         <img src="assets/fnxlab-logo.png" alt="Finixlab" style={{ height: 16 }} />
       </a>
-      <button onClick={() => setOpen(true)} aria-label="Menu" style={{ background: 'none', border: 'none', padding: 0, color: FNX.pineInk, fontSize: 20, lineHeight: 1, cursor: 'pointer', justifySelf: 'end' }}>≡</button>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 18, color: FNX.pineInk }}>
+        <a href="#/search" aria-label="Search" style={{ color: 'inherit', display: 'inline-flex' }}>
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg>
+        </a>
+        <a href="#/account" aria-label="Account" style={{ color: 'inherit', display: 'inline-flex' }}>
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><circle cx="8" cy="5.5" r="2.5"/><path d="M3 14c0-2.5 2.2-4.5 5-4.5s5 2 5 4.5"/></svg>
+        </a>
+        <a href="#/cart" aria-label="Bag" style={{ color: 'inherit', display: 'inline-flex', position: 'relative' }}>
+          <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4"><path d="M3 5h10l-1 9H4L3 5z"/><path d="M6 5V3.5a2 2 0 014 0V5"/></svg>
+          <span style={{ position: 'absolute', top: -1, right: -1, width: 5, height: 5, borderRadius: '50%', background: FNX.labRed }}/>
+        </a>
+        <button onClick={() => setOpen(true)} aria-label="Menu" style={{ background: 'none', border: 'none', padding: 0, color: FNX.pineInk, fontSize: 20, lineHeight: 1, cursor: 'pointer', display: 'inline-flex' }}>≡</button>
+      </div>
     </header>
-    <div style={{ padding: '8px 24px', borderBottom: `1px solid ${fnxRule(0.1)}`, fontFamily: FNX.mono, fontSize: 10, letterSpacing: '0.18em', color: FNX.sage, textAlign: 'center' }}>
-      EN · JP ▾  ·  Ships globally from Korea
-    </div>
     {title && <div style={{ padding: '14px 24px', borderBottom: `1px solid ${fnxRule(0.1)}`, fontFamily: FNX.serif, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: FNX.pineInk }}>{title}</div>}
 
     {/* Full-screen mobile menu overlay */}
@@ -43,10 +52,9 @@ const MHeader = ({ title }) => {
             }}>{it.l}</a>
           ))}
         </nav>
-        <div style={{ paddingTop: 24, borderTop: '1px solid rgba(244,239,224,0.18)', display: 'flex', justifyContent: 'space-between', fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.18em', color: 'rgba(244,239,224,0.82)' }}>
-          <a href="#/search" style={{ color: 'inherit', textDecoration: 'none' }}>SEARCH</a>
-          <a href="#/account" style={{ color: 'inherit', textDecoration: 'none' }}>ACCOUNT</a>
-          <a href="#/cart" onClick={() => setOpen(false)} style={{ color: 'inherit', textDecoration: 'none' }}>CART</a>
+        <div style={{ paddingTop: 24, borderTop: '1px solid rgba(244,239,224,0.18)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.18em', color: 'rgba(244,239,224,0.82)' }}>
+          <span>EN · JP ▾</span>
+          <span style={{ fontSize: 11, letterSpacing: '0.06em', color: 'rgba(244,239,224,0.6)' }}>Ships globally from Korea</span>
         </div>
       </div>
     )}
