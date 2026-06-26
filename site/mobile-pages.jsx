@@ -35,7 +35,7 @@ const MHeader = ({ title }) => {
         height: '100dvh', overflowY: 'auto',
       }}>
         <div style={{ display: 'grid', gridTemplateColumns: '24px 1fr 24px', alignItems: 'center', marginBottom: 'clamp(16px, 5vw, 32px)' }}>
-          <span style={{ fontFamily: FNX.mono, fontSize: 11, color: 'rgba(244,239,224,0.72)', letterSpacing: '0.18em' }}>MENU</span>
+          <span style={{ fontFamily: FNX.mono, fontSize: 11, color: fnxCream(0.72), letterSpacing: '0.18em' }}>MENU</span>
           <div/>
           <button onClick={() => setOpen(false)} aria-label="Close menu" style={{ background: 'none', border: 'none', padding: 0, color: FNX.cream, fontSize: 24, lineHeight: 1, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', minWidth: 44, minHeight: 44, margin: '-10px -10px -10px auto' }}>×</button>
         </div>
@@ -50,13 +50,13 @@ const MHeader = ({ title }) => {
               fontFamily: FNX.serif, fontWeight: 200, fontSize: 'clamp(28px, 8vw, 40px)', letterSpacing: '0.02em',
               color: FNX.cream, textDecoration: 'none',
               padding: 'clamp(13px, 3.6vw, 20px) 0',
-              borderBottom: i < arr.length - 1 ? '1px solid rgba(244,239,224,0.18)' : 'none',
+              borderBottom: i < arr.length - 1 ? `1px solid ${fnxCream(0.18)}` : 'none',
             }}>{it.l}</a>
           ))}
         </nav>
-        <div style={{ paddingTop: 22, borderTop: '1px solid rgba(244,239,224,0.18)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.18em', color: 'rgba(244,239,224,0.82)' }}>
+        <div style={{ paddingTop: 22, borderTop: `1px solid ${fnxCream(0.18)}`, display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.18em', color: fnxCream(0.82) }}>
           <span>EN · JP ▾</span>
-          <span style={{ fontSize: 11, letterSpacing: '0.06em', color: 'rgba(244,239,224,0.72)' }}>Ships globally from Korea</span>
+          <span style={{ fontSize: 11, letterSpacing: '0.06em', color: fnxCream(0.72) }}>Ships globally from Korea</span>
         </div>
       </div>
     )}
@@ -65,15 +65,15 @@ const MHeader = ({ title }) => {
 };
 
 const MFooter = () => (
-  <footer style={{ background: FNX.pineInk, color: 'rgba(244,239,224,0.72)', padding: '32px 24px', fontSize: 11, lineHeight: 1.8, fontFamily: FNX.serif, letterSpacing: '0.08em' }}>
+  <footer style={{ background: FNX.pineInk, color: fnxCream(0.72), padding: '32px 24px', fontSize: 11, lineHeight: 1.8, fontFamily: FNX.serif, letterSpacing: '0.08em' }}>
     <img src="assets/fnxlab-logo.png" alt="Finixlab" style={{ height: 18, filter: 'brightness(0) invert(1)', opacity: 0.9, marginBottom: 16 }} />
     <div>Finixlab · Real Efficacy, Quietly Delivered.</div>
     <div style={{ marginTop: 16, display: 'flex', flexWrap: 'wrap', gap: '6px 14px' }}>
       {['About','Science','Shop','Journal','Care','Account'].map(l =>
-        <a key={l} href={`#/${l.toLowerCase()}`} style={{ color: 'rgba(244,239,224,0.72)', textDecoration: 'none' }}>{l}</a>
+        <a key={l} href={`#/${l.toLowerCase()}`} style={{ color: fnxCream(0.72), textDecoration: 'none' }}>{l}</a>
       )}
     </div>
-    <div style={{ marginTop: 18, paddingTop: 12, borderTop: '1px solid rgba(244,239,224,0.1)', fontSize: 10 }}>
+    <div style={{ marginTop: 18, paddingTop: 12, borderTop: `1px solid ${fnxCream(0.1)}`, fontSize: 10 }}>
       © 2026 Finixlab Co., Ltd. · Paju, Gyeonggi · Ships globally
     </div>
   </footer>
@@ -225,9 +225,9 @@ const ShopMobile = () => {
 
       {/* BEFORE YOU COMMIT — sample trial */}
       <section style={{ background: FNX.olive, color: FNX.cream, padding: '40px 24px' }}>
-        <RuleLabel align="left" color="rgba(244,239,224,0.55)">03 — Before You Commit</RuleLabel>
+        <RuleLabel align="left" color={fnxCream(0.55)}>03 — Before You Commit</RuleLabel>
         <h2 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 28, lineHeight: 1.1 }}>Try the ritual at sample size.</h2>
-        <p style={{ marginTop: 16, fontSize: 14, lineHeight: 1.85, color: 'rgba(244,239,224,0.85)' }}>
+        <p style={{ marginTop: 16, fontSize: 14, lineHeight: 1.85, color: fnxCream(0.85) }}>
           Two weeks of booster and serum at 5ml each — to see which prescription suits your skin first.
         </p>
         <div style={{ marginTop: 22, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
@@ -237,9 +237,9 @@ const ShopMobile = () => {
             { k:'KR ₩0', v:'Shipping included' },
             { k:'−15%', v:'Credit on next order' },
           ].map((b, i) => (
-            <div key={i} style={{ padding: 18, border: '1px solid rgba(244,239,224,0.2)' }}>
+            <div key={i} style={{ padding: 18, border: `1px solid ${fnxCream(0.2)}` }}>
               <div style={{ fontFamily: FNX.serif, fontSize: 22, letterSpacing: '0.02em' }}>{b.k}</div>
-              <div style={{ marginTop: 6, fontSize: 11, color: 'rgba(244,239,224,0.82)', letterSpacing: '0.06em' }}>{b.v}</div>
+              <div style={{ marginTop: 6, fontSize: 11, color: fnxCream(0.82), letterSpacing: '0.06em' }}>{b.v}</div>
             </div>
           ))}
         </div>
@@ -262,7 +262,7 @@ const ProductMobile = () => (
     {/* Sticky bottom Add-to-Bag bar — mobile-only functional pattern */}
     <div style={{
       position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 90,
-      background: 'rgba(244,239,224,0.96)', borderTop: `1px solid ${fnxRule(0.2)}`,
+      background: fnxCream(0.96), borderTop: `1px solid ${fnxRule(0.2)}`,
       padding: '12px 24px', display: 'flex', alignItems: 'center', gap: 12,
       backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)',
     }}>
@@ -398,7 +398,7 @@ const ProductMobile = () => (
 
     {/* HOW TO USE — 03 */}
     <section style={{ background: FNX.pineInk, color: FNX.cream, padding: '40px 24px' }}>
-      <RuleLabel align="left" color="rgba(244,239,224,0.82)">03 — How to Use</RuleLabel>
+      <RuleLabel align="left" color={fnxCream(0.82)}>03 — How to Use</RuleLabel>
       <h2 style={{ margin: '12px 0 18px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 26, lineHeight: 1.1 }}>One step in a four-step ritual.</h2>
       {[
         { n:'01', t:'Cleanse', k:'Cleanse', d:'Morning and evening, a gentle cleanser.' },
@@ -406,15 +406,15 @@ const ProductMobile = () => (
         { n:'03', t:'Prescribe', k:'Prescribe', d:'Two to three pumps of Peptosome, with the grain of skin.', active:true },
         { n:'04', t:'Seal', k:'Seal', d:'Seal with a light cream.' },
       ].map(s => (
-        <div key={s.n} style={{ padding: '18px 0', borderTop: `1px solid ${s.active ? FNX.labRed : 'rgba(244,239,224,0.25)'}`, background: s.active ? 'rgba(244,239,224,0.06)' : 'transparent' }}>
+        <div key={s.n} style={{ padding: '18px 0', borderTop: `1px solid ${s.active ? FNX.labRed : fnxCream(0.25)}`, background: s.active ? fnxCream(0.06) : 'transparent' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
             <div style={{ display: 'flex', gap: 12 }}>
               <span style={{ fontFamily: FNX.mono, fontSize: 11, color: s.active ? FNX.labRed : FNX.tan, letterSpacing: '0.18em' }}>{s.n}</span>
               <span style={{ fontFamily: FNX.serif, fontSize: 20 }}>{s.t}</span>
             </div>
-            <span style={{ fontSize: 11, color: 'rgba(244,239,224,0.72)' }}>{s.k}</span>
+            <span style={{ fontSize: 11, color: fnxCream(0.72) }}>{s.k}</span>
           </div>
-          <p style={{ margin: '8px 0 0', fontSize: 12, lineHeight: 1.7, color: 'rgba(244,239,224,0.85)' }}>{s.d}</p>
+          <p style={{ margin: '8px 0 0', fontSize: 12, lineHeight: 1.7, color: fnxCream(0.85) }}>{s.d}</p>
         </div>
       ))}
     </section>
@@ -549,11 +549,11 @@ const ScienceMobile = () => (
 
     {/* HERO */}
     <section style={{ background: FNX.pineInk, color: FNX.cream, padding: '40px 24px' }}>
-      <RuleLabel align="left" color="rgba(244,239,224,0.55)">The Science</RuleLabel>
+      <RuleLabel align="left" color={fnxCream(0.55)}>The Science</RuleLabel>
       <h1 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontWeight: 200, fontSize: 44, lineHeight: 0.98, letterSpacing: '-0.02em' }}>
         VAMTOXIN™ 2.0% — a quiet molecule.
       </h1>
-      <p style={{ marginTop: 18, fontSize: 14, lineHeight: 1.85, color: 'rgba(244,239,224,0.85)' }}>
+      <p style={{ marginTop: 18, fontSize: 14, lineHeight: 1.85, color: fnxCream(0.85) }}>
         A SNARE-inhibiting hexapeptide that acts on micro-contractions in expression muscles. An injection-free prescription — the exact work of a molecule that quiets the surface.
       </p>
       <div style={{ marginTop: 24, display: 'grid', gap: 10 }}>
@@ -561,9 +561,9 @@ const ScienceMobile = () => (
         <Btn kind="ghost" full style={{ color: FNX.cream, borderColor: FNX.cream }}>Shop Peptosome →</Btn>
       </div>
       {/* SNARE diagram */}
-      <div style={{ marginTop: 28, aspectRatio: '1/1', background: 'repeating-linear-gradient(135deg, rgba(244,239,224,0.06) 0 14px, transparent 14px 28px)', border: '1px solid rgba(244,239,224,0.18)', position: 'relative' }}>
+      <div style={{ marginTop: 28, aspectRatio: '1/1', background: `repeating-linear-gradient(135deg, ${fnxCream(0.06)} 0 14px, transparent 14px 28px)`, border: `1px solid ${fnxCream(0.18)}`, position: 'relative' }}>
         <div style={{ position: 'absolute', inset: 20, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-          <div style={{ fontFamily: FNX.mono, fontSize: 10, color: 'rgba(244,239,224,0.72)', letterSpacing: '0.14em' }}>FIG. 01 — VAMTOXIN™ ON SNARE</div>
+          <div style={{ fontFamily: FNX.mono, fontSize: 10, color: fnxCream(0.72), letterSpacing: '0.14em' }}>FIG. 01 — VAMTOXIN™ ON SNARE</div>
           <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <svg viewBox="0 0 280 280" style={{ width: '85%', height: '85%' }}>
               <circle cx="140" cy="140" r="110" fill="none" stroke={FNX.cream} strokeWidth="0.6" opacity="0.3" />
@@ -572,13 +572,13 @@ const ScienceMobile = () => (
               <circle cx="140" cy="140" r="10"  fill={FNX.labRed} />
               <line x1="40" y1="140" x2="240" y2="140" stroke={FNX.cream} strokeWidth="0.4" opacity="0.3" />
               <line x1="140" y1="40" x2="140" y2="240" stroke={FNX.cream} strokeWidth="0.4" opacity="0.3" />
-              <text x="155" y="138" fontFamily="ui-monospace" fontSize="6" fill="rgba(244,239,224,0.82)">VAMTOXIN™</text>
-              <text x="36" y="265" fontFamily="ui-monospace" fontSize="6" fill="rgba(244,239,224,0.55)">Synaptic Membrane</text>
-              <text x="36" y="80" fontFamily="ui-monospace" fontSize="6" fill="rgba(244,239,224,0.55)">Synaptic Vesicle</text>
-              <text x="180" y="80" fontFamily="ui-monospace" fontSize="6" fill="rgba(244,239,224,0.55)">SNAP-25</text>
+              <text x="155" y="138" fontFamily="ui-monospace" fontSize="6" fill={fnxCream(0.82)}>VAMTOXIN™</text>
+              <text x="36" y="265" fontFamily="ui-monospace" fontSize="6" fill={fnxCream(0.55)}>Synaptic Membrane</text>
+              <text x="36" y="80" fontFamily="ui-monospace" fontSize="6" fill={fnxCream(0.55)}>Synaptic Vesicle</text>
+              <text x="180" y="80" fontFamily="ui-monospace" fontSize="6" fill={fnxCream(0.55)}>SNAP-25</text>
             </svg>
           </div>
-          <div style={{ fontFamily: FNX.mono, fontSize: 10, color: 'rgba(244,239,224,0.72)', letterSpacing: '0.14em', textAlign: 'right' }}>Schematic · not to scale</div>
+          <div style={{ fontFamily: FNX.mono, fontSize: 10, color: fnxCream(0.72), letterSpacing: '0.14em', textAlign: 'right' }}>Schematic · not to scale</div>
         </div>
       </div>
     </section>
@@ -655,9 +655,9 @@ const ScienceMobile = () => (
 
     {/* NOTOX METHOD — 04 */}
     <section style={{ background: FNX.olive, color: FNX.cream, padding: '40px 24px' }}>
-      <RuleLabel align="left" color="rgba(244,239,224,0.55)">04 — Notox Method</RuleLabel>
+      <RuleLabel align="left" color={fnxCream(0.55)}>04 — Notox Method</RuleLabel>
       <h2 style={{ margin: '12px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 28, lineHeight: 1.1 }}>Notox — a verb, not a substitute.</h2>
-      <p style={{ marginTop: 18, fontSize: 14, lineHeight: 1.85, color: 'rgba(244,239,224,0.85)' }}>
+      <p style={{ marginTop: 18, fontSize: 14, lineHeight: 1.85, color: fnxCream(0.85) }}>
         We never claim to replace procedures. We simply fill the days between them with a daily prescription. Alongside clinical treatments, or as a daily slow-aging ritual — both in the same place.
       </p>
       <div style={{ marginTop: 24 }}>
@@ -670,10 +670,10 @@ const ScienceMobile = () => (
           { t:'Layered',    d:'High-concentration peptide layered with hydration and soothing actives.', tag:'LAYERING' },
           { t:'Quiet',      d:"Doesn't interfere with whatever comes next.", tag:'LIGHTWEIGHT' },
         ].map((c, i) => (
-          <div key={i} style={{ padding: 18, border: '1px solid rgba(244,239,224,0.2)' }}>
+          <div key={i} style={{ padding: 18, border: `1px solid ${fnxCream(0.2)}` }}>
             <div style={{ fontFamily: FNX.mono, fontSize: 10, color: FNX.tan, letterSpacing: '0.14em' }}>{c.tag}</div>
             <h3 style={{ margin: '12px 0 8px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 18 }}>{c.t}</h3>
-            <p style={{ margin: 0, fontSize: 12, lineHeight: 1.7, color: 'rgba(244,239,224,0.82)' }}>{c.d}</p>
+            <p style={{ margin: 0, fontSize: 12, lineHeight: 1.7, color: fnxCream(0.82) }}>{c.d}</p>
           </div>
         ))}
       </div>
@@ -935,7 +935,7 @@ const AboutMobile = () => {
 
       {/* CLINIC PARTNERS — 05 */}
       <section style={{ background: FNX.olive, color: FNX.cream, padding: '40px 24px' }}>
-        <RuleLabel align="left" color="rgba(244,239,224,0.55)">05 — Clinic Partners</RuleLabel>
+        <RuleLabel align="left" color={fnxCream(0.55)}>05 — Clinic Partners</RuleLabel>
         <h2 style={{ margin: '12px 0 24px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 28, lineHeight: 1.1 }}>A network of slow-thinking clinics.</h2>
         {[
           { c:'Seoul · 14', n:['Cheongdam Skin Lab', 'Hannam-dong Clinic', 'Yongsan Dermal', 'Yeoksam Aesthetics', '+ 10 partners'] },
@@ -943,9 +943,9 @@ const AboutMobile = () => {
           { c:'Tokyo · 5', n:['Aoyama Clinic', 'Daikanyama Skin', 'Ginza Dermal', '+ 2 partners'] },
           { c:'HCMC · 3', n:['District 1 Skin Studio', 'Thao Dien Clinic', '+ 1 partner'] },
         ].map(city => (
-          <div key={city.c} style={{ padding: '20px 0', borderTop: '1px solid rgba(244,239,224,0.18)' }}>
+          <div key={city.c} style={{ padding: '20px 0', borderTop: `1px solid ${fnxCream(0.18)}` }}>
             <h3 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 20, letterSpacing: '0.04em' }}>{city.c}</h3>
-            <ul style={{ listStyle: 'none', margin: '14px 0 0', padding: 0, display: 'grid', gap: 8, fontSize: 12, color: 'rgba(244,239,224,0.82)' }}>
+            <ul style={{ listStyle: 'none', margin: '14px 0 0', padding: 0, display: 'grid', gap: 8, fontSize: 12, color: fnxCream(0.82) }}>
               {city.n.map(p => <li key={p}>· {p}</li>)}
             </ul>
           </div>

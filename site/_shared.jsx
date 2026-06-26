@@ -20,6 +20,17 @@ const FNX = {
   mono:     'ui-monospace, "SF Mono", Menlo, Consolas, monospace',
 };
 
+// — semantic roles (layer 2) + scales, built on the primitives above
+Object.assign(FNX, {
+  labRedDark:      '#D5232F',                 // accent button hover
+  textMuted:       FNX.sage,                  // muted text on light surfaces
+  textOnDark:      'rgba(244,239,224,0.85)',  // body text on pine/olive
+  textOnDarkMuted: 'rgba(244,239,224,0.72)',  // meta/labels on pine/olive
+  surface:         FNX.bone,                  // card / input surface
+  surfaceAlt:      FNX.parchment,             // alternate section surface
+  space:           { xs: 8, sm: 12, md: 16, lg: 24, xl: 32, xxl: 48, xxxl: 64, huge: 96, section: 120 },
+});
+
 // ============ TYPE SCALE — single source of truth ============
 // One ladder used across every page. Rule of thumb:
 //   hero    — exactly 1 per page (96)
@@ -51,6 +62,7 @@ const T = {
 
 // — global helpers
 const fnxRule  = (alpha = 0.18) => `rgba(23,56,48,${alpha})`;
+const fnxCream = (alpha = 1)    => `rgba(244,239,224,${alpha})`;   // cream on dark surfaces
 const ucLetters = (s) => s.split('').join(' ');
 
 // ============ HEADER ============
@@ -58,8 +70,8 @@ const ucLetters = (s) => s.split('').join(' ');
 function SiteHeader({ variant = 'cream', sticky = false, lang = 'EN' }) {
   const isPine = variant === 'pine';
   const fg = isPine ? FNX.cream : FNX.pineInk;
-  const subFg = isPine ? 'rgba(244,239,224,0.82)' : FNX.sage;
-  const ruleColor = isPine ? 'rgba(244,239,224,0.18)' : fnxRule(0.14);
+  const subFg = isPine ? fnxCream(0.82) : FNX.sage;
+  const ruleColor = isPine ? fnxCream(0.18) : fnxRule(0.14);
   const bg = isPine ? FNX.pine : (variant === 'transparent' ? 'transparent' : FNX.cream);
 
   return (
@@ -119,8 +131,8 @@ function SiteFooter({ variant = 'pine' }) {
   const isPine = variant === 'pine';
   const bg = isPine ? FNX.pineInk : FNX.cream;
   const fg = isPine ? FNX.cream : FNX.pineInk;
-  const subFg = isPine ? 'rgba(244,239,224,0.72)' : FNX.sage;
-  const rule = isPine ? 'rgba(244,239,224,0.12)' : fnxRule(0.14);
+  const subFg = isPine ? fnxCream(0.72) : FNX.sage;
+  const rule = isPine ? fnxCream(0.12) : fnxRule(0.14);
 
   const cols = [
     { t:'Shop',  items:['Peptosome Skin Booster','Notox Cream · FW 26','Sets & Rituals','Sample Trials'] },
@@ -191,9 +203,9 @@ function Btn({ children, kind = 'primary', size = 'md', style = {}, full = false
   };
   const variants = {
     primary:  { background: hover ? FNX.pine : FNX.pineInk, color: FNX.cream, borderColor: hover ? FNX.pine : FNX.pineInk },
-    inverse:  { background: hover ? '#fff' : FNX.cream, color: FNX.pineInk, borderColor: hover ? '#fff' : FNX.cream },
-    ghost:    { background: hover ? 'rgba(23,56,48,0.05)' : 'transparent', color: 'currentColor' },
-    accent:   { background: hover ? '#D5232F' : FNX.labRed, color: FNX.cream, borderColor: hover ? '#D5232F' : FNX.labRed },
+    inverse:  { background: hover ? FNX.white : FNX.cream, color: FNX.pineInk, borderColor: hover ? FNX.white : FNX.cream },
+    ghost:    { background: hover ? fnxRule(0.05) : 'transparent', color: 'currentColor' },
+    accent:   { background: hover ? FNX.labRedDark : FNX.labRed, color: FNX.cream, borderColor: hover ? FNX.labRedDark : FNX.labRed },
   };
   return <button type="button" className="btn" {...rest} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} onFocus={() => setHover(true)} onBlur={() => setHover(false)} style={{ ...base, ...variants[kind], ...style }}>{children}</button>;
 }
