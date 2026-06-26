@@ -102,13 +102,12 @@ const HomeMobile = () => {
 
       {/* 02 — THE COLLECTION */}
       <section style={{ background: FNX.cream, padding: '40px 24px' }}>
-        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <RuleLabel align="left" color={FNX.tan}>{t({ en:'02 — The Collection', ko:'02 — 컬렉션', ja:'02 — コレクション' })}</RuleLabel>
-          <Btn kind="ghost" size="sm" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="shop">{t({ en:'Shop All →', ko:'전체 보기 →', ja:'すべて見る →' })}</Btn>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, margin: '0 0 24px' }}>
+          <h2 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 30, lineHeight: 1.1, letterSpacing: '-0.01em' }}>
+            {t({ en:'Two prescriptions, one ritual.', ko:'두 개의 처방, 하나의 리추얼.', ja:'二つの処方、一つのリチュアル。' })}
+          </h2>
+          <Btn kind="ghost" size="sm" style={{ color: FNX.pineInk, borderColor: FNX.pineInk, flexShrink: 0 }} data-go="shop">{t({ en:'Shop All →', ko:'전체 보기 →', ja:'すべて見る →' })}</Btn>
         </div>
-        <h2 style={{ margin: '12px 0 24px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 30, lineHeight: 1.1, letterSpacing: '-0.01em' }}>
-          {t({ en:'Two prescriptions, one ritual.', ko:'두 개의 처방, 하나의 리추얼.', ja:'二つの処方、一つのリチュアル。' })}
-        </h2>
         <div style={{ display: 'grid', gap: 20 }}>
           {products.map(p => (
             <article key={p.t} style={{ background: FNX.bone, padding: 20, border: `1px solid ${fnxRule(0.12)}` }}>
@@ -134,13 +133,12 @@ const HomeMobile = () => {
 
       {/* 03 — FORMULATION */}
       <section style={{ background: FNX.cream, padding: '40px 24px', borderTop: `1px solid ${fnxRule(0.14)}` }}>
-        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <RuleLabel align="left" color={FNX.tan}>{t({ en:'03 — Formulation', ko:'03 — 포뮬레이션', ja:'03 — フォーミュレーション' })}</RuleLabel>
-          <Btn kind="ghost" size="sm" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="shop/peptosome">{t({ en:'View Full Formula →', ko:'전체 포뮬러 보기 →', ja:'フル処方を見る →' })}</Btn>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, margin: '0 0 24px' }}>
+          <h2 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 30, lineHeight: 1.1, letterSpacing: '-0.01em' }}>
+            {t({ en:'Concentration before narrative.', ko:'서사보다 농도.', ja:'物語よりも濃度。' })}
+          </h2>
+          <Btn kind="ghost" size="sm" style={{ color: FNX.pineInk, borderColor: FNX.pineInk, flexShrink: 0 }} data-go="shop/peptosome">{t({ en:'Formula →', ko:'포뮬러 →', ja:'処方 →' })}</Btn>
         </div>
-        <h2 style={{ margin: '12px 0 24px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 30, lineHeight: 1.1, letterSpacing: '-0.01em' }}>
-          {t({ en:'Concentration before narrative.', ko:'서사보다 농도.', ja:'物語よりも濃度。' })}
-        </h2>
         <div style={{ height: 320, overflow: 'hidden', position: 'relative', background: FNX.cream, border: `1px solid ${fnxRule(0.12)}` }}>
           <img src="assets/serum-grid.png" alt={t({ en:'Spicule Serum boxes grid', ko:'Spicule 세럼 박스 그리드', ja:'Spicule セラムの箱グリッド' })}
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
@@ -236,13 +234,12 @@ const HomeMobile = () => {
 
       {/* 07 — JOURNAL */}
       <section style={{ background: FNX.parchment, padding: '40px 24px' }}>
-        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-          <RuleLabel align="left" color={FNX.tan}>{t({ en:'07 — Journal', ko:'07 — 저널', ja:'07 — ジャーナル' })}</RuleLabel>
-          <Btn kind="ghost" size="sm" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="journal">{t({ en:'All Entries →', ko:'전체 보기 →', ja:'すべての記事 →' })}</Btn>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 16, margin: '0 0 24px' }}>
+          <h2 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 30, lineHeight: 1.05 }}>
+            {t({ en:'Dispatches & Quiet Notes.', ko:'기록과 조용한 노트.', ja:'ディスパッチと静かなノート。' })}
+          </h2>
+          <Btn kind="ghost" size="sm" style={{ color: FNX.pineInk, borderColor: FNX.pineInk, flexShrink: 0 }} data-go="journal">{t({ en:'All Entries →', ko:'전체 보기 →', ja:'すべての記事 →' })}</Btn>
         </div>
-        <h2 style={{ margin: '12px 0 24px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 30, lineHeight: 1.05 }}>
-          {t({ en:'Dispatches & Quiet Notes.', ko:'기록과 조용한 노트.', ja:'ディスパッチと静かなノート。' })}
-        </h2>
         {journal.map((j, i) => (
           <article key={j.img} style={{ display: 'grid', gridTemplateColumns: '90px 1fr', gap: 14, padding: '16px 0', borderTop: i === 0 ? `1px solid ${fnxRule(0.2)}` : `1px dashed ${fnxRule(0.14)}`, alignItems: 'start' }}>
             <div style={{ aspectRatio: '4/5', overflow: 'hidden', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
