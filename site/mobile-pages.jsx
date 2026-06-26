@@ -232,7 +232,7 @@ const ShopMobile = () => {
                   <h3 style={{ margin: '12px 0 6px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 18, lineHeight: 1.2 }}>{t(s.t)}</h3>
                   <div style={{ fontFamily: FNX.mono, fontSize: 10, color: FNX.sage, letterSpacing: '0.14em' }}>{(typeof s.info === 'string' ? s.info : t(s.info)).toUpperCase()}</div>
                 </div>
-                <div style={{ marginTop: 14, display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
+                <div style={{ marginTop: 14, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
                   <span style={{ fontFamily: FNX.serif, fontSize: 16, letterSpacing: '0.04em' }}>{s.price}</span>
                   <Btn kind="ghost" size="sm" data-go="shop" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }}>{t({ en:'Shop →', ko:'쇼핑하기 →', ja:'ショップ →' })}</Btn>
                 </div>

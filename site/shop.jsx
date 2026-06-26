@@ -199,7 +199,7 @@ const ShopPage = () => {
                   <h3 style={{ margin: '14px 0 6px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 20, lineHeight: 1.2 }}>{t(s.t)}</h3>
                   <div style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>{t(s.info).toUpperCase()}</div>
                 </div>
-                <div style={{ marginTop: 16, display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
+                <div style={{ marginTop: 16, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}>
                   <span style={{ fontFamily: FNX.serif, fontSize: 18, letterSpacing: '0.04em' }}>{s.price}</span>
                   <Btn kind="ghost" size="sm" data-go="shop" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }}>{t({ en:'Shop →', ko:'숍 →', ja:'ショップ →' })}</Btn>
                 </div>
