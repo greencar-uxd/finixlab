@@ -332,7 +332,7 @@ const HomeV1 = () => {
             { r: 5, t:'Honest concentration', d:'The ingredient list is generous and clear. By week six the fine lines softened. Feels like following a prescription day by day.', a:'— Park · 45 · Busan' },
           ].map((r, i) => (
             <div key={i} style={{ padding: 32, background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
-              <div style={{ color: FNX.pineInk, letterSpacing: '0.4em', fontSize: 14 }}>★★★★★</div>
+              <div role="img" aria-label="Rated 5 out of 5" style={{ color: FNX.pineInk, letterSpacing: '0.4em', fontSize: 14 }}>★★★★★</div>
               <h3 style={{ margin: '18px 0 12px', fontFamily: FNX.serif, fontSize: 22, fontWeight: 300, letterSpacing: '-0.01em' }}>{r.t}</h3>
               <p style={{ margin: 0, fontSize: 13, lineHeight: 1.85, color: FNX.pineInk }}>{r.d}</p>
               <div style={{ marginTop: 18, fontSize: 12, color: FNX.sage }}>{r.a}</div>

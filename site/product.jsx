@@ -43,7 +43,7 @@ const ProductPage = () => {
 
             {/* rating */}
             <div style={{ marginTop: 18, display: 'flex', alignItems: 'center', gap: 12, fontSize: 12 }}>
-              <span style={{ color: FNX.pineInk, letterSpacing: '0.36em' }}>★★★★★</span>
+              <span role="img" aria-label="Rated 5 out of 5" style={{ color: FNX.pineInk, letterSpacing: '0.36em' }}>★★★★★</span>
               <span style={{ color: FNX.sage }}>4.92 / 612 reviews</span>
             </div>
 
@@ -288,7 +288,7 @@ const ProductPage = () => {
           ].map((r, i) => (
             <div key={i} style={{ padding: 32, background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
               <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-                <span style={{ color: FNX.pineInk, letterSpacing: '0.4em', fontSize: 12 }}>★★★★★</span>
+                <span role="img" aria-label="Rated 5 out of 5" style={{ color: FNX.pineInk, letterSpacing: '0.4em', fontSize: 12 }}>★★★★★</span>
                 <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>VERIFIED</span>
               </div>
               <h3 style={{ margin: '14px 0 12px', fontFamily: FNX.serif, fontSize: 22, fontWeight: 300, letterSpacing: '-0.01em' }}>{r.t}</h3>

@@ -207,7 +207,7 @@ const HomeMobile = () => {
           </div>
         </div>
         <div style={{ marginTop: 18 }}>
-          <Btn kind="ghost" full size="sm" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="product">View all reviews →</Btn>
+          <Btn kind="ghost" full size="sm" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="shop/peptosome">View all reviews →</Btn>
         </div>
       </section>
 
@@ -268,7 +268,7 @@ const HomeMobile = () => {
         <div style={{ display: 'grid', gap: 12 }}>
           {reviews.map((r, i) => (
             <div key={i} style={{ padding: 20, background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
-              <div style={{ color: FNX.pineInk, letterSpacing: '0.4em', fontSize: 12 }}>★★★★★</div>
+              <div role="img" aria-label="Rated 5 out of 5" style={{ color: FNX.pineInk, letterSpacing: '0.4em', fontSize: 12 }}>★★★★★</div>
               <h3 style={{ margin: '12px 0 8px', fontFamily: FNX.serif, fontSize: 18, fontWeight: 300, letterSpacing: '-0.01em' }}>{r.t}</h3>
               <p style={{ margin: 0, fontSize: 13, lineHeight: 1.75, color: FNX.pineInk }}>{r.d}</p>
               <div style={{ marginTop: 14, fontSize: 11, color: FNX.sage }}>{r.a}</div>

@@ -132,7 +132,6 @@ const ShopPage = () => {
               <div style={{ padding: '24px 24px 28px' }}>
                 <h3 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 24, lineHeight: 1.15, letterSpacing: '-0.01em' }}>{p.t}</h3>
                 <p style={{ margin: '10px 0 0', fontSize: 13, lineHeight: 1.7, color: FNX.sage }}>{p.tagline}</p>
-                <p style={{ margin: '6px 0 0', fontSize: 12, color: FNX.pineInk, opacity: 0.6 }}>{p.ko}</p>
 
                 <div style={{ marginTop: 18, display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                   {p.tags.slice(1).map(t => (
