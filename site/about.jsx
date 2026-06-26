@@ -5,7 +5,7 @@ const AboutPage = () => {
     { n:'01', t:'Honesty in concentration', k:'Honest concentration',     d:'Active concentrations stated on the label, in the language of prescription rather than marketing.' },
     { n:'02', t:'Clinic in everyday',       k:'Clinic to everyday', d:'The essence of procedures, distilled into eight daily minutes. Measurable change instead of heavy promises.' },
     { n:'03', t:'A quiet ritual',           k:'Quiet ritual',     d:'The quietest touch. Consistency is what shapes skin in the end.' },
-    { n:'04', t:'Slow Asia',                k:'Slow Asia',     d:'From Seoul to Shanghai, Tokyo and Ho Chi Minh. The poetic restraint of Asian indie beauty placed alongside clinical honesty.' },
+    { n:'04', t:'Slow Asia',                k:'Slow Asia',     d:'From Seoul to Shanghai, Tokyo and Ho Chi Minh. The poetic restraint of Korean indie beauty placed alongside clinical honesty.' },
   ];
 
   return (

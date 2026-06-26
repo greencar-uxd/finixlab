@@ -91,10 +91,10 @@ const ShopMobile = () => {
     },
     {
       n:'N°02', t:'Spicule Wrinkle-Free Glow Serum',
-      tagline:'Radiant Renewal. VAMTOXIN™ 20,000ppm · Hydro Niamid™.',
+      tagline:'Radiant Renewal. VAMTOXIN™ 2.0% · Niacinamide.',
       price:'₩58,000', size:'20ml',
       img:'assets/serum-quartet.png', pos:'50% center',
-      tags:['Hydro Niamid™', 'Spot Care'], stock:'In stock',
+      tags:['Niacinamide', 'Spot Care'], stock:'In stock',
     },
     {
       n:'N°03', t:'Notox Cream — Coming Soon',
@@ -126,7 +126,7 @@ const ShopMobile = () => {
         <div style={{ marginTop: 18, fontFamily: FNX.serif, fontSize: 12, color: FNX.sage, letterSpacing: '0.06em', lineHeight: 1.9 }}>
           <div>{products.length} pieces · {sets.length} sets</div>
           <div>Free shipping over ₩60,000</div>
-          <div>Ships to Worldwide</div>
+          <div>Ships worldwide</div>
         </div>
       </section>
 
@@ -336,7 +336,7 @@ const ProductMobile = () => (
         <div>↳ Free shipping over ₩60,000</div>
         <div>↳ Free samples in every order</div>
         <div>↳ 30-day return on unopened</div>
-        <div>↳ Worldwide ships</div>
+        <div>↳ Ships worldwide</div>
       </div>
 
       {/* highlights */}
@@ -630,9 +630,9 @@ const ScienceMobile = () => (
       <div style={{ marginTop: 20, aspectRatio: '3/4', overflow: 'hidden', position: 'relative', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
         <img src="assets/booster-box-front.png" alt="VAMTOXIN™ Patent" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
       </div>
-      <h3 style={{ margin: '20px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 22, lineHeight: 1.2 }}>A peptide that was designed, not borrowed.</h3>
+      <h3 style={{ margin: '20px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 22, lineHeight: 1.2 }}>Exclusively licensed, precisely formulated.</h3>
       <p style={{ marginTop: 16, fontSize: 14, lineHeight: 1.9, color: FNX.pineInk }}>
-        VAMTOXIN™ is a hexapeptide designed to mimic the mechanism of Botulinum Toxin. Supadelixir holds the ingredient exclusively; Finixlab formulates it — an injection-free prescription at 2.0%.
+        VAMTOXIN™ is a hexapeptide that mimics the mechanism of Botulinum Toxin. Supadelixir holds the ingredient exclusively; Finixlab formulates it — an injection-free prescription at 2.0%.
       </p>
       <div style={{ marginTop: 24, display: 'grid', gap: 0 }}>
         {[
@@ -819,7 +819,7 @@ const AboutMobile = () => {
     { n:'01', t:'Honesty in concentration', d:'Active concentrations stated on the label, in the language of prescription rather than marketing.' },
     { n:'02', t:'Clinic in everyday',       d:'The essence of procedures, distilled into eight daily minutes. Measurable change instead of heavy promises.' },
     { n:'03', t:'A quiet ritual',           d:'The quietest touch. Consistency is what shapes skin in the end.' },
-    { n:'04', t:'Slow Asia',                d:'From Seoul to Shanghai, Tokyo and Ho Chi Minh. The poetic restraint of Asian indie beauty placed alongside clinical honesty.' },
+    { n:'04', t:'Slow Asia',                d:'From Seoul to Shanghai, Tokyo and Ho Chi Minh. The poetic restraint of Korean indie beauty placed alongside clinical honesty.' },
   ];
   return (
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300, fontSize: 14 }}>

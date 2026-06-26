@@ -28,7 +28,7 @@ const HomeV1 = () => {
               Notox · Botox in a Bottle · Vol. 01
             </RuleLabel>
             <div style={{ marginTop: 28 }}>
-              <Slogan size="lg" en={'Real Efficacy,\nQuietly Delivered.'} ko="A daily ritual, in clinic-grade concentrations." />
+              <Slogan size="lg" en={'Real Efficacy,\nQuietly Delivered.'} ko="정직한 농도, 조용한 효능." />
             </div>
             <p style={{ marginTop: 36, maxWidth: '48ch', fontSize: 15, lineHeight: 1.85, color: FNX.pineInk }}>
               VAMTOXIN™ Peptide 2.0% — clinic-grade care distilled into a daily ritual. Concentrations stated honestly, formulated with the quietest touch.
@@ -126,7 +126,7 @@ const HomeV1 = () => {
                   Spicule Wrinkle-Free Glow.
                 </h3>
                 <p style={{ marginTop: 12, fontSize: 13, lineHeight: 1.7, color: FNX.sage, margin: '12px 0 0' }}>
-                  VAMTOXIN™ 20,000ppm · Hydro Niamid™ · Hydroxycitric Acid — a single beam of clarity over fine lines.
+                  VAMTOXIN™ 2.0% · Niacinamide · Hydroxycitric Acid — a single beam of clarity over fine lines.
                 </p>
               </div>
               <div style={{ textAlign: 'right' }}>

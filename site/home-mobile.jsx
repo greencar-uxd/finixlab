@@ -22,7 +22,7 @@ const HomeMobile = () => {
     },
     {
       t:'Spicule Wrinkle-Free Glow.',
-      d:'VAMTOXIN™ 20,000ppm · Hydro Niamid™ · Hydroxycitric Acid — a single beam of clarity over fine lines.',
+      d:'VAMTOXIN™ 2.0% · Niacinamide · Hydroxycitric Acid — a single beam of clarity over fine lines.',
       price:'₩58,000', sub:'~$43 · 20ML', img:'assets/serum-shadow.png', go:'shop',
     },
   ];
@@ -55,8 +55,8 @@ const HomeMobile = () => {
         <h1 style={{ margin: '20px 0 0', fontFamily: FNX.serif, fontWeight: 200, fontSize: 44, lineHeight: 1.02, letterSpacing: '-0.02em' }}>
           Real Efficacy, Quietly Delivered.
         </h1>
-        <p style={{ margin: '12px 0 0', fontSize: 13, color: FNX.sage, letterSpacing: '0.02em' }}>
-          A daily ritual, in clinic-grade concentrations.
+        <p lang="ko" style={{ margin: '12px 0 0', fontSize: 13, color: FNX.sage, letterSpacing: '0.02em' }}>
+          정직한 농도, 조용한 효능.
         </p>
 
         <div style={{ marginTop: 28 }}>

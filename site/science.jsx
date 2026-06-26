@@ -111,10 +111,10 @@ const SciencePage = () => {
 
           <div>
             <h3 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 28, lineHeight: 1.2 }}>
-              A peptide that was<br/>designed, not borrowed.
+              Exclusively licensed,<br/>precisely formulated.
             </h3>
             <p style={{ marginTop: 18, fontSize: 15, lineHeight: 1.9, color: FNX.pineInk, maxWidth: '52ch' }}>
-              VAMTOXIN™ is a hexapeptide designed to mimic the mechanism of Botulinum Toxin. Supadelixir holds the ingredient exclusively; Finixlab formulates it — an injection-free prescription at 2.0%.
+              VAMTOXIN™ is a hexapeptide that mimics the mechanism of Botulinum Toxin. Supadelixir holds the ingredient exclusively; Finixlab formulates it — an injection-free prescription at 2.0%.
             </p>
 
             <div style={{ marginTop: 36, display: 'grid', gap: 0 }}>

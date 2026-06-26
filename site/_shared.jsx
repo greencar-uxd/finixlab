@@ -199,7 +199,7 @@ function Btn({ children, kind = 'primary', size = 'md', style = {}, full = false
 }
 
 // ============ SLOGAN / EDITORIAL ============
-function Slogan({ size = 'md', align = 'left', color = FNX.pineInk, en = 'Real Efficacy,\nQuietly Delivered.', ko = 'A daily ritual, in clinic-grade concentrations.' }) {
+function Slogan({ size = 'md', align = 'left', color = FNX.pineInk, en = 'Real Efficacy,\nQuietly Delivered.', ko = '정직한 농도, 조용한 효능.' }) {
   const sizes = {
     sm: { en: 36, ko: 16 },
     md: { en: 56, ko: 19 },
@@ -214,7 +214,7 @@ function Slogan({ size = 'md', align = 'left', color = FNX.pineInk, en = 'Real E
         fontSize: s.en, lineHeight: 1.05, letterSpacing: '-0.01em',
         whiteSpace: 'pre-line',
       }}>{en}</h1>
-      <p style={{
+      <p lang="ko" style={{
         margin: '20px 0 0', fontFamily: FNX.sans, fontWeight: 300,
         fontSize: s.ko, letterSpacing: '-0.02em', opacity: 0.7,
       }}>{ko}</p>

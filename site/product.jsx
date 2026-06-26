@@ -83,7 +83,7 @@ const ProductPage = () => {
               <div>↳ Free shipping over ₩60,000</div>
               <div>↳ Free samples in every order</div>
               <div>↳ 30-day return on unopened</div>
-              <div>↳ Worldwide ships</div>
+              <div>↳ Ships worldwide</div>
             </div>
 
             {/* highlights */}

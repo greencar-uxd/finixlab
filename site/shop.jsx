@@ -14,11 +14,11 @@ const ShopPage = () => {
     },
     {
       n:'N°02', t:'Spicule Wrinkle-Free Glow Serum',
-      tagline:'Radiant Renewal. VAMTOXIN™ 20,000ppm · Hydro Niamid™.',
+      tagline:'Radiant Renewal. VAMTOXIN™ 2.0% · Niacinamide.',
       desc:'Clarity that settles over fine lines.',
       price:'₩58,000', size:'20ml',
       img:'assets/serum-quartet.png', pos:'50% center',
-      tags:['New', 'Hydro Niamid™', 'Spot Care'],
+      tags:['New', 'Niacinamide', 'Spot Care'],
       stock:'In stock',
       cat:'Serum',
     },
@@ -81,7 +81,7 @@ const ShopPage = () => {
           <div style={{ textAlign: 'right', fontFamily: FNX.serif, fontSize: 12, color: FNX.sage, letterSpacing: '0.06em', lineHeight: 1.8 }}>
             <div>{products.length} pieces · {sets.length} sets</div>
             <div>Free shipping over ₩60,000</div>
-            <div>Ships to Worldwide</div>
+            <div>Ships worldwide</div>
           </div>
         </div>
       </section>
