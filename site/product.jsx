@@ -7,14 +7,14 @@ const ProductPage = () => {
 
       {/* HERO — gallery left, buy block right */}
       <section style={{ background: FNX.cream, padding: '56px 40px 96px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 64, alignItems: 'start' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 64, alignItems: 'start' }}>
           {/* Gallery */}
           <div>
             <div style={{ height: 720, background: FNX.bone, position: 'relative', overflow: 'hidden', border: `1px solid ${fnxRule(0.12)}` }}>
               <img src="assets/booster-hero.png" alt="Peptosome Skin Booster"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 40%' }} />
             </div>
-            <div style={{ marginTop: 16, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
+            <div className="r4" style={{ marginTop: 16, display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 12 }}>
               {[
                 { src: 'assets/peptosome-pair.jpg',       pos: '50% 30%', sel: false },
                 { src: 'assets/booster-grid.png',         pos: '50% center', sel: false },
@@ -108,7 +108,7 @@ const ProductPage = () => {
 
       {/* DESCRIPTION */}
       <Section bg={FNX.parchment} padding="100px 40px">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'start' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'start' }}>
           <h2 style={{ ...T.h2, margin: 0, color: FNX.pineInk }}>
             An all-in-one prescription, in a bottle that doesn't shout.
           </h2>
@@ -169,7 +169,7 @@ const ProductPage = () => {
           <RuleLabel align="center" color={fnxCream(0.82)}>03 — How to Use</RuleLabel>
           <h2 style={{ ...T.h2, margin: '18px 0 0', color: FNX.cream }}>One step in a four-step ritual.</h2>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
+        <div className="r4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
           {[
             { n:'01', t:'Cleanse',   k:'Cleanse',   d:'Morning and evening, a gentle cleanser.', active: false },
             { n:'02', t:'Prep',      k:'Prep',   d:'One pass of pH-balanced toner.', active: false },
@@ -190,7 +190,7 @@ const ProductPage = () => {
 
       {/* ROLLER USE — applicator demo */}
       <Section bg={FNX.parchment} padding="120px 40px">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'center' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'center' }}>
           <div>
             <RuleLabel align="left" color={FNX.tan}>04 — Roller Applicator</RuleLabel>
             <h2 style={{ ...T.h2, margin: '14px 0 0', color: FNX.pineInk }}>
@@ -306,7 +306,7 @@ const ProductPage = () => {
       <Section bg={FNX.cream} padding="100px 40px">
         <RuleLabel align="left" color={FNX.tan}>07 — Pair Well With</RuleLabel>
                 <h2 style={{ ...T.h2, margin: '14px 0 40px', color: FNX.pineInk }}>Continue the ritual.</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+        <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
           {[
             { src:'assets/serum-trio.png', t:'Spicule Wrinkle-Free Glow Serum', n:'N°02', p:'₩58,000', s:'20ml', pos: '50% center' },
             { src:'assets/peptosome-pair.jpg', t:'Peptosome — Couple Set', n:'SET', p:'₩172,800 (−10%)', s:'50ml × 2', pos: '50% 30%' },

@@ -116,7 +116,7 @@ const ShopPage = () => {
           <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>{products.length} ITEMS</span>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+        <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
           {products.map(p => (
             <div key={p.n} data-go="shop/peptosome" role="link" tabIndex={0}
               onKeyDown={(e)=>{ if(e.key==='Enter'){ location.hash = '#/shop/peptosome'; } }}
@@ -176,7 +176,7 @@ const ShopPage = () => {
           <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>{sets.length} SETS</span>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+        <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
           {sets.map(s => (
             <article key={s.n} style={{ display: 'grid', gridTemplateColumns: '180px 1fr', gap: 0, background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
               <div style={{ overflow: 'hidden', position: 'relative', background: FNX.cream }}>

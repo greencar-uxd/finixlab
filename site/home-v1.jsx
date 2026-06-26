@@ -21,7 +21,7 @@ const HomeV1 = () => {
 
       {/* HERO — slogan + duo-on-stone */}
       <section style={{ background: FNX.cream, padding: '80px 40px 120px', position: 'relative' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 1fr', gap: 64, alignItems: 'center' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1.05fr 1fr', gap: 64, alignItems: 'center' }}>
           <div>
             <RuleLabel align="left" color={FNX.sage}>
               <span style={{ display:'inline-block', width:6, height:6, borderRadius:'50%', background: FNX.labRed, marginRight: 10, verticalAlign: 'middle' }}/>
@@ -37,7 +37,7 @@ const HomeV1 = () => {
               <Btn kind="primary" size="lg" data-go="shop">Shop the Collection →</Btn>
               <Btn kind="ghost" size="lg" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="science">Read the Science</Btn>
             </div>
-            <div style={{ marginTop: 56, display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, paddingTop: 28, borderTop: `1px solid ${fnxRule(0.18)}` }}>
+            <div className="r3" style={{ marginTop: 56, display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, paddingTop: 28, borderTop: `1px solid ${fnxRule(0.18)}` }}>
               {[
                 { k:'2.0%', v:'VAMTOXIN™ Peptide' },
                 { k:'N°01', v:'Supadelixir Sole Patent' },
@@ -60,7 +60,7 @@ const HomeV1 = () => {
 
       {/* MOOD STATEMENT + decorative pair shot */}
       <Section bg={FNX.parchment} padding="120px 40px">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'center' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'center' }}>
           <ProductShot src="assets/peptosome-pair.jpg" alt="Peptosome on stone" height={540} objectPosition="50% center" bg={FNX.parchment} />
           <div>
             <RuleLabel align="left" color={FNX.sage}>The Premise</RuleLabel>
@@ -154,7 +154,7 @@ const HomeV1 = () => {
           <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }}>View Full Formula →</Btn>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'start' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'start' }}>
           {/* Big still image — serum-grid editorial pattern */}
           <div style={{ height: 580, overflow: 'hidden', position: 'relative', background: FNX.cream, border: `1px solid ${fnxRule(0.12)}` }}>
             <img src="assets/serum-grid.png" alt="Spicule Serum boxes grid"
@@ -190,7 +190,7 @@ const HomeV1 = () => {
             Four steps, eight minutes.
           </h2>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
+        <div className="r4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
           {ritual.map(r => (
             <div key={r.n} style={{ borderTop: `1px solid ${fnxCream(0.25)}`, paddingTop: 24 }}>
               <div style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.tan, letterSpacing: '0.24em' }}>{r.n}</div>
@@ -235,7 +235,7 @@ const HomeV1 = () => {
 
       {/* HASHTAG LIBRARY — brand copy culture */}
       <Section bg={FNX.olive} padding="100px 40px" style={{ color: FNX.cream }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 64, alignItems: 'center' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 64, alignItems: 'center' }}>
           <div>
             <RuleLabel align="left" color={fnxCream(0.82)}>06 — The Hashtag Library</RuleLabel>
             <h2 style={{ margin: '18px 0 0', fontFamily: FNX.serif, fontWeight: 200, fontSize: 56, lineHeight: 1.05 }}>
@@ -284,7 +284,7 @@ const HomeV1 = () => {
           </div>
           <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }}>All Entries →</Btn>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
+        <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
           {[
             {
               t:'No.012', cat:'Slow Aging',
@@ -325,7 +325,7 @@ const HomeV1 = () => {
         <h2 style={{ margin: '18px 0 64px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 48, letterSpacing: '0.02em', textAlign: 'center' }}>
           A few quiet sentences.
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
+        <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
           {[
             { r: 5, t:'Softer expression lines', d:'In the morning mirror I can feel the lines have softened. Without any heavy procedures, the daily texture has changed.', a:'— Kim · 38 · Seoul' },
             { r: 5, t:'A bottle that listens',  d:"My skin's tension has eased since I started — morning makeup sits differently. The quietest ritual, once a day.", a:'— Y.S. · 39 · Tokyo' },
@@ -343,7 +343,7 @@ const HomeV1 = () => {
 
       {/* STORE LOCATOR */}
       <Section bg={FNX.parchment} padding="100px 40px">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'center' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'center' }}>
           <div>
             <RuleLabel align="left" color={FNX.tan}>09 — Clinic Partners</RuleLabel>
             <h2 style={{ ...T.h2, margin: '18px 0 0', color: FNX.pineInk }}>

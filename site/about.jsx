@@ -14,7 +14,7 @@ const AboutPage = () => {
 
       {/* HERO */}
       <section style={{ background: FNX.cream, padding: '88px 56px 100px', position: 'relative' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: 64, alignItems: 'center' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: 64, alignItems: 'center' }}>
           <div>
             <RuleLabel align="left" color={FNX.sage}>
               <span style={{ display:'inline-block', width:6, height:6, borderRadius:'50%', background: FNX.labRed, marginRight: 10, verticalAlign: 'middle' }}/>
@@ -26,7 +26,7 @@ const AboutPage = () => {
             <p style={{ marginTop: 28, fontSize: 16, lineHeight: 1.85, color: FNX.pineInk, maxWidth: '46ch' }}>
               Finixlab is a slow-aging brand that brings together clinical peptide concentrations and the poetic restraint of Korean indie beauty. A pharmacy-clean shelf of prescriptions, with a touch as quiet as midday light.
             </p>
-            <div style={{ marginTop: 36, display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, paddingTop: 24, borderTop: `1px solid ${fnxRule(0.18)}` }}>
+            <div className="r3" style={{ marginTop: 36, display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, paddingTop: 24, borderTop: `1px solid ${fnxRule(0.18)}` }}>
               {[
                 { k:'2024', v:'Founded · Seoul' },
                 { k:'04', v:'Cities · KR/CN/JP/VN' },
@@ -48,7 +48,7 @@ const AboutPage = () => {
 
       {/* FOUNDER'S LETTER */}
       <Section bg={FNX.parchment} padding="120px 40px">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'start' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'start' }}>
           <div>
             <RuleLabel align="left" color={FNX.sage}>Founder's Letter · 01</RuleLabel>
             <h2 style={{ margin: '20px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 28, lineHeight: 1.2 }}>
@@ -127,7 +127,7 @@ const AboutPage = () => {
 
       {/* SUSTAINABILITY */}
       <Section bg={FNX.cream} padding="120px 40px">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80 }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80 }}>
           <div>
             <RuleLabel align="left" color={FNX.tan}>04 — Sustainability</RuleLabel>
             <h2 style={{ ...T.h2, margin: '14px 0 0', color: FNX.pineInk }}>
@@ -156,7 +156,7 @@ const AboutPage = () => {
         <h2 style={{ ...T.h2, margin: '14px 0 40px', color: FNX.cream }}>
           A network of slow-thinking clinics.
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 32 }}>
+        <div className="r4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 32 }}>
           {[
             { c:'Seoul · 14', n:['Cheongdam Skin Lab', 'Hannam-dong Clinic', 'Yongsan Dermal', 'Yeoksam Aesthetics', '+ 10 partners'] },
             { c:'Shanghai · 6', n:['Xintiandi Dermatology', 'Jing\'an Skin Studio', 'Pudong Aesthetics', '+ 3 partners'] },

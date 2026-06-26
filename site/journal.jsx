@@ -61,7 +61,7 @@ const JournalPage = () => {
       {/* FEATURED */}
       <Section bg={FNX.cream} padding="80px 40px">
         <RuleLabel align="left" color={FNX.tan}>Featured · This Month</RuleLabel>
-        <div style={{ marginTop: 28, display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 56, alignItems: 'center' }}>
+        <div className="rsplit" style={{ marginTop: 28, display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 56, alignItems: 'center' }}>
           <div style={{ height: 600, overflow: 'hidden', position: 'relative', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
             <img src={featured.img} alt={featured.h}
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: featured.pos }} />
@@ -95,7 +95,7 @@ const JournalPage = () => {
           <h2 style={{ ...T.h2, margin: 0, color: FNX.pineInk }}>All Dispatches.</h2>
           <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>SORT · NEWEST</span>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
+        <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
           {articles.map(a => (
             <article key={a.n} style={{ display: 'flex', flexDirection: 'column' }}>
               <div style={{ aspectRatio: '4/5', overflow: 'hidden', position: 'relative', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>

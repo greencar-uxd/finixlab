@@ -67,6 +67,21 @@
     #root > *, a, button { animation: none !important; transition: none !important; }
   }
 
+  /* Tablet responsive — desktop components render >640px (mobile swaps in at <=640).
+     Collapse rigid multi-column grids so 641-1024px (tablet) doesn't crush/overflow.
+     Inline grid styles set the desktop default; these override at tablet via !important. */
+  @media (max-width: 1024px) {
+    .rsplit { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .r4     { grid-template-columns: repeat(2, 1fr) !important; }
+  }
+  @media (max-width: 860px) {
+    .r3     { grid-template-columns: repeat(2, 1fr) !important; }
+    .r4     { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 720px) {
+    .r3     { grid-template-columns: 1fr !important; }
+  }
+
 </style>
 <script type="application/ld+json">
 {

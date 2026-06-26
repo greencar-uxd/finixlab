@@ -7,7 +7,7 @@ const SciencePage = () => {
 
       {/* HERO */}
       <section style={{ background: FNX.pineInk, color: FNX.cream, padding: '88px 56px 100px', position: 'relative' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 56, alignItems: 'end', paddingTop: 24 }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 56, alignItems: 'end', paddingTop: 24 }}>
           <div>
             <RuleLabel align="left" color={fnxCream(0.55)}>The Science</RuleLabel>
             <h1 style={{ ...T.h1, margin: '24px 0 0', color: FNX.cream }}>
@@ -55,7 +55,7 @@ const SciencePage = () => {
         <h2 style={{ ...T.h2, margin: '14px 0 40px', color: FNX.pineInk }}>
           Quiet expression, at the protein level.
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
+        <div className="r4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
           {[
             { n:'01', t:'Receptor Bind',    d:"VAMTOXIN™'s hexapeptide residues bind to SNAP-25." },
             { n:'02', t:'SNARE Inhibit',    d:'Temporarily slows SNARE complex formation.' },
@@ -101,7 +101,7 @@ const SciencePage = () => {
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'start' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'start' }}>
           <div>
             <div style={{ aspectRatio: '3/4', overflow: 'hidden', position: 'relative', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
               <img src="assets/booster-box-front.png" alt="VAMTOXIN™ Patent"
@@ -175,7 +175,7 @@ const SciencePage = () => {
       <Section bg={FNX.cream} padding="100px 40px">
         <RuleLabel align="left" color={FNX.tan}>05 — Documents</RuleLabel>
         <h2 style={{ ...T.h2, margin: '14px 0 32px', color: FNX.pineInk }}>For the curious.</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+        <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
           {[
             { t:'VAMTOXIN™ Whitepaper',          s:'PDF · 1.1 MB · 11 pages', tag:'SCIENCE' },
             { t:'Patent Story — Supadelixir',     s:'PDF · 0.8 MB · 6 pages',  tag:'INGREDIENT' },

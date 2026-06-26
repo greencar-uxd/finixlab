@@ -26,7 +26,7 @@ const CartPage = () => {
           <span style={{ ...T.eyebrow, color: FNX.sage }}>{items.length} items · {krw(sub)}</span>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 56, alignItems: 'start' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 56, alignItems: 'start' }}>
           {/* Line items */}
           <div>
             {items.map(it => (
