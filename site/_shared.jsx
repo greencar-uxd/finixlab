@@ -323,9 +323,38 @@ function VRule({ children, color = FNX.sage }) {
   );
 }
 
+// ============ TOAST ============
+// Global transient toast. Call window.fnxToast('message') from anywhere
+// (e.g. Add-to-Bag onClick). <ToastHost/> is mounted once at the app root.
+function ToastHost() {
+  const [msg, setMsg] = React.useState(null);
+  const timer = React.useRef(null);
+  React.useEffect(() => {
+    window.fnxToast = (m) => {
+      setMsg(m);
+      if (timer.current) clearTimeout(timer.current);
+      timer.current = setTimeout(() => setMsg(null), 2600);
+    };
+    return () => { if (timer.current) clearTimeout(timer.current); };
+  }, []);
+  if (!msg) return null;
+  return (
+    <div role="status" aria-live="polite" style={{
+      position: 'fixed', left: '50%', bottom: 28, transform: 'translateX(-50%)', zIndex: 200,
+      background: FNX.pineInk, color: FNX.cream, padding: '14px 22px',
+      fontFamily: FNX.serif, fontSize: 13, letterSpacing: '0.06em',
+      boxShadow: '0 6px 24px rgba(23,56,48,0.25)',
+      display: 'inline-flex', alignItems: 'center', gap: 12, maxWidth: '90vw',
+    }}>
+      <span style={{ width: 6, height: 6, borderRadius: '50%', background: FNX.labRed, flexShrink: 0 }}/>
+      {msg}
+    </div>
+  );
+}
+
 // expose globally
 Object.assign(window, {
-  FNX, T, fnxRule, ucLetters,
+  FNX, T, fnxRule, fnxCream, ucLetters,
   SiteHeader, SiteFooter, Btn, Slogan, ProductShot,
-  MonoTag, Tag, RuleLabel, Section, VRule,
+  MonoTag, Tag, RuleLabel, Section, VRule, ToastHost,
 });
