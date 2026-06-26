@@ -166,7 +166,7 @@ const ProductPage = () => {
       {/* HOW TO USE — ritual */}
       <Section bg={FNX.pineInk} padding="120px 40px" style={{ color: FNX.cream }}>
         <div style={{ textAlign: 'center', marginBottom: 56 }}>
-          <RuleLabel align="center" color="rgba(244,239,224,0.82)">03 — How to Use</RuleLabel>
+          <RuleLabel align="center" color={fnxCream(0.82)}>03 — How to Use</RuleLabel>
           <h2 style={{ ...T.h2, margin: '18px 0 0', color: FNX.cream }}>One step in a four-step ritual.</h2>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
@@ -177,12 +177,12 @@ const ProductPage = () => {
             { n:'04', t:'Seal',      k:'Seal', d:'Seal with a light cream.', active: false },
           ].map(s => (
             <div key={s.n} style={{
-              padding: '24px 20px', borderTop: `1px solid ${s.active ? FNX.labRed : 'rgba(244,239,224,0.25)'}`,
-              background: s.active ? 'rgba(244,239,224,0.06)' : 'transparent',
+              padding: '24px 20px', borderTop: `1px solid ${s.active ? FNX.labRed : fnxCream(0.25)}`,
+              background: s.active ? fnxCream(0.06) : 'transparent',
             }}>
               <h3 style={{ margin: '14px 0 4px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 26 }}>{s.t}</h3>
-              <div style={{ color: 'rgba(244,239,224,0.72)', fontSize: 12, letterSpacing: '0.04em', marginBottom: 12 }}>{s.k}</div>
-              <p style={{ fontSize: 13, lineHeight: 1.7, color: 'rgba(244,239,224,0.85)', margin: 0 }}>{s.d}</p>
+              <div style={{ color: fnxCream(0.72), fontSize: 12, letterSpacing: '0.04em', marginBottom: 12 }}>{s.k}</div>
+              <p style={{ fontSize: 13, lineHeight: 1.7, color: fnxCream(0.85), margin: 0 }}>{s.d}</p>
             </div>
           ))}
         </div>

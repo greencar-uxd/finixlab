@@ -9,11 +9,11 @@ const SciencePage = () => {
       <section style={{ background: FNX.pineInk, color: FNX.cream, padding: '88px 56px 100px', position: 'relative' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1.3fr 1fr', gap: 56, alignItems: 'end', paddingTop: 24 }}>
           <div>
-            <RuleLabel align="left" color="rgba(244,239,224,0.55)">The Science</RuleLabel>
+            <RuleLabel align="left" color={fnxCream(0.55)}>The Science</RuleLabel>
             <h1 style={{ ...T.h1, margin: '24px 0 0', color: FNX.cream }}>
               VAMTOXIN™ 2.0% — a quiet molecule.
             </h1>
-            <p style={{ marginTop: 28, fontSize: 16, lineHeight: 1.85, color: 'rgba(244,239,224,0.85)', maxWidth: '52ch' }}>
+            <p style={{ marginTop: 28, fontSize: 16, lineHeight: 1.85, color: fnxCream(0.85), maxWidth: '52ch' }}>
               A SNARE-inhibiting hexapeptide that acts on micro-contractions in expression muscles. An injection-free prescription — the exact work of a molecule that quiets the surface.
             </p>
             <div style={{ marginTop: 32, display: 'flex', gap: 16 }}>
@@ -22,10 +22,10 @@ const SciencePage = () => {
             </div>
           </div>
           {/* Big SNARE diagram */}
-          <div style={{ aspectRatio: '1/1', background: 'repeating-linear-gradient(135deg, rgba(244,239,224,0.06) 0 14px, transparent 14px 28px)', border: '1px solid rgba(244,239,224,0.18)', position: 'relative' }}>
+          <div style={{ aspectRatio: '1/1', background: `repeating-linear-gradient(135deg, ${fnxCream(0.06)} 0 14px, transparent 14px 28px)`, border: `1px solid ${fnxCream(0.18)}`, position: 'relative' }}>
             <div style={{ position: 'absolute', inset: 28, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <div style={{ fontFamily: FNX.mono, fontSize: 12, color: 'rgba(244,239,224,0.72)', letterSpacing: '0.14em' }}>FIG. 01 — VAMTOXIN™ ON SNARE</div>
+                <div style={{ fontFamily: FNX.mono, fontSize: 12, color: fnxCream(0.72), letterSpacing: '0.14em' }}>FIG. 01 — VAMTOXIN™ ON SNARE</div>
               </div>
               <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <svg viewBox="0 0 280 280" style={{ width: 380, height: 380 }}>
@@ -35,13 +35,13 @@ const SciencePage = () => {
                   <circle cx="140" cy="140" r="10"  fill={FNX.labRed} />
                   <line x1="40" y1="140" x2="240" y2="140" stroke={FNX.cream} strokeWidth="0.4" opacity="0.3" />
                   <line x1="140" y1="40" x2="140" y2="240" stroke={FNX.cream} strokeWidth="0.4" opacity="0.3" />
-                  <text x="155" y="138" fontFamily="ui-monospace" fontSize="6" fill="rgba(244,239,224,0.82)">VAMTOXIN™</text>
-                  <text x="36" y="265" fontFamily="ui-monospace" fontSize="6" fill="rgba(244,239,224,0.55)">Synaptic Membrane</text>
-                  <text x="36" y="80" fontFamily="ui-monospace" fontSize="6" fill="rgba(244,239,224,0.55)">Synaptic Vesicle</text>
-                  <text x="180" y="80" fontFamily="ui-monospace" fontSize="6" fill="rgba(244,239,224,0.55)">SNAP-25</text>
+                  <text x="155" y="138" fontFamily="ui-monospace" fontSize="6" fill={fnxCream(0.82)}>VAMTOXIN™</text>
+                  <text x="36" y="265" fontFamily="ui-monospace" fontSize="6" fill={fnxCream(0.55)}>Synaptic Membrane</text>
+                  <text x="36" y="80" fontFamily="ui-monospace" fontSize="6" fill={fnxCream(0.55)}>Synaptic Vesicle</text>
+                  <text x="180" y="80" fontFamily="ui-monospace" fontSize="6" fill={fnxCream(0.55)}>SNAP-25</text>
                 </svg>
               </div>
-              <div style={{ fontFamily: FNX.mono, fontSize: 12, color: 'rgba(244,239,224,0.72)', letterSpacing: '0.14em', textAlign: 'right' }}>
+              <div style={{ fontFamily: FNX.mono, fontSize: 12, color: fnxCream(0.72), letterSpacing: '0.14em', textAlign: 'right' }}>
                 Schematic · not to scale
               </div>
             </div>
@@ -143,11 +143,11 @@ const SciencePage = () => {
       <Section bg={FNX.olive} padding="120px 40px" style={{ color: FNX.cream }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
           <div>
-            <RuleLabel align="left" color="rgba(244,239,224,0.55)">04 — Notox Method</RuleLabel>
+            <RuleLabel align="left" color={fnxCream(0.55)}>04 — Notox Method</RuleLabel>
             <h2 style={{ ...T.h2, margin: '14px 0 0', color: FNX.cream }}>
               Notox — a verb, not a substitute.
             </h2>
-            <p style={{ marginTop: 24, fontSize: 15, lineHeight: 1.85, color: 'rgba(244,239,224,0.85)', maxWidth: '48ch' }}>
+            <p style={{ marginTop: 24, fontSize: 15, lineHeight: 1.85, color: fnxCream(0.85), maxWidth: '48ch' }}>
               We never claim to replace procedures. We simply fill the days between them with a daily prescription. Alongside clinical treatments, or as a daily slow-aging ritual — both in the same place.
             </p>
             <div style={{ marginTop: 32 }}>
@@ -161,10 +161,10 @@ const SciencePage = () => {
               { t:'Layered',    d:'High-concentration peptide layered with hydration and soothing actives.', tag:'LAYERING' },
               { t:'Quiet',      d:"Doesn't interfere with whatever comes next.", tag:'LIGHTWEIGHT' },
             ].map((c, i) => (
-              <div key={i} style={{ padding: 24, border: '1px solid rgba(244,239,224,0.2)' }}>
+              <div key={i} style={{ padding: 24, border: `1px solid ${fnxCream(0.2)}` }}>
                 <div style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.tan, letterSpacing: '0.14em' }}>{c.tag}</div>
                 <h3 style={{ margin: '14px 0 10px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 22 }}>{c.t}</h3>
-                <p style={{ margin: 0, fontSize: 12, lineHeight: 1.7, color: 'rgba(244,239,224,0.82)' }}>{c.d}</p>
+                <p style={{ margin: 0, fontSize: 12, lineHeight: 1.7, color: fnxCream(0.82) }}>{c.d}</p>
               </div>
             ))}
           </div>

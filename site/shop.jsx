@@ -207,11 +207,11 @@ const ShopPage = () => {
       <Section bg={FNX.olive} padding="80px 40px" style={{ color: FNX.cream }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
           <div>
-            <RuleLabel align="left" color="rgba(244,239,224,0.55)">03 — Before You Commit</RuleLabel>
+            <RuleLabel align="left" color={fnxCream(0.55)}>03 — Before You Commit</RuleLabel>
             <h2 style={{ ...T.h2, margin: '14px 0 0', color: FNX.cream }}>
               Try the ritual at sample size.
             </h2>
-            <p style={{ marginTop: 18, fontSize: 14, lineHeight: 1.85, color: 'rgba(244,239,224,0.85)', maxWidth: '42ch' }}>
+            <p style={{ marginTop: 18, fontSize: 14, lineHeight: 1.85, color: fnxCream(0.85), maxWidth: '42ch' }}>
               Two weeks of booster and serum at 5ml each — to see which prescription suits your skin first.
             </p>
             <div style={{ marginTop: 28, display: 'flex', gap: 14 }}>
@@ -226,9 +226,9 @@ const ShopPage = () => {
               { k:'KR ₩0', v:'Shipping included' },
               { k:'−15%', v:'Credit on next order' },
             ].map((b, i) => (
-              <div key={i} style={{ padding: 22, border: '1px solid rgba(244,239,224,0.2)' }}>
+              <div key={i} style={{ padding: 22, border: `1px solid ${fnxCream(0.2)}` }}>
                 <div style={{ fontFamily: FNX.serif, fontSize: 26, letterSpacing: '0.02em' }}>{b.k}</div>
-                <div style={{ marginTop: 8, fontSize: 12, color: 'rgba(244,239,224,0.82)', letterSpacing: '0.06em' }}>{b.v}</div>
+                <div style={{ marginTop: 8, fontSize: 12, color: fnxCream(0.82), letterSpacing: '0.06em' }}>{b.v}</div>
               </div>
             ))}
           </div>

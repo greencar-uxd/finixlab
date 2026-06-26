@@ -185,18 +185,18 @@ const HomeV1 = () => {
       {/* RITUAL — pine bg */}
       <Section bg={FNX.pineInk} padding="120px 40px" style={{ color: FNX.cream }}>
         <div style={{ textAlign: 'center', marginBottom: 64 }}>
-          <RuleLabel align="center" color="rgba(244,239,224,0.82)">04 — The Ritual</RuleLabel>
+          <RuleLabel align="center" color={fnxCream(0.82)}>04 — The Ritual</RuleLabel>
           <h2 style={{ margin: '18px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 56, letterSpacing: '0.02em', color: FNX.cream }}>
             Four steps, eight minutes.
           </h2>
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
           {ritual.map(r => (
-            <div key={r.n} style={{ borderTop: '1px solid rgba(244,239,224,0.25)', paddingTop: 24 }}>
+            <div key={r.n} style={{ borderTop: `1px solid ${fnxCream(0.25)}`, paddingTop: 24 }}>
               <div style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.tan, letterSpacing: '0.24em' }}>{r.n}</div>
               <h3 style={{ margin: '16px 0 6px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 30, letterSpacing: '0.02em' }}>{r.t}</h3>
-              <div style={{ color: 'rgba(244,239,224,0.72)', fontSize: 12, letterSpacing: '0.04em', marginBottom: 14 }}>{r.k}</div>
-              <p style={{ fontSize: 13, lineHeight: 1.7, color: 'rgba(244,239,224,0.85)', margin: 0 }}>{r.d}</p>
+              <div style={{ color: fnxCream(0.72), fontSize: 12, letterSpacing: '0.04em', marginBottom: 14 }}>{r.k}</div>
+              <p style={{ fontSize: 13, lineHeight: 1.7, color: fnxCream(0.85), margin: 0 }}>{r.d}</p>
             </div>
           ))}
         </div>
@@ -237,11 +237,11 @@ const HomeV1 = () => {
       <Section bg={FNX.olive} padding="100px 40px" style={{ color: FNX.cream }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 64, alignItems: 'center' }}>
           <div>
-            <RuleLabel align="left" color="rgba(244,239,224,0.82)">06 — The Hashtag Library</RuleLabel>
+            <RuleLabel align="left" color={fnxCream(0.82)}>06 — The Hashtag Library</RuleLabel>
             <h2 style={{ margin: '18px 0 0', fontFamily: FNX.serif, fontWeight: 200, fontSize: 56, lineHeight: 1.05 }}>
               Words we live in lower case.
             </h2>
-            <p style={{ marginTop: 22, fontSize: 14, lineHeight: 1.85, color: 'rgba(244,239,224,0.82)', maxWidth: '36ch' }}>
+            <p style={{ marginTop: 22, fontSize: 14, lineHeight: 1.85, color: fnxCream(0.82), maxWidth: '36ch' }}>
               Finixlab's copy culture — a brand vocabulary of English hashtags. A single word users use to name their ritual.
             </p>
           </div>
@@ -265,7 +265,7 @@ const HomeV1 = () => {
                 letterSpacing: '0.02em',
                 color: h.hero ? FNX.pineInk : FNX.cream,
                 background: h.hero ? FNX.cream : 'transparent',
-                border: `1px solid ${h.hero ? FNX.cream : 'rgba(244,239,224,0.4)'}`,
+                border: `1px solid ${h.hero ? FNX.cream : fnxCream(0.4)}`,
                 borderRadius: 999,
               }}>{h.t}</span>
             ))}
@@ -353,7 +353,7 @@ const HomeV1 = () => {
               Clinical partner network — Seoul · Shanghai · Tokyo · Ho Chi Minh. As a post-procedure prescription, or a daily slow-aging ritual.
             </p>
           </div>
-          <div style={{ height: 320, position: 'relative', border: '1px solid rgba(244,239,224,0.18)', overflow: 'hidden' }}>
+          <div style={{ height: 320, position: 'relative', border: `1px solid ${fnxCream(0.18)}`, overflow: 'hidden' }}>
             <img src="assets/peptosome-pair.jpg" alt="Clinic partners"
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
           </div>

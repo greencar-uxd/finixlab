@@ -152,7 +152,7 @@ const AboutPage = () => {
 
       {/* CLINIC PARTNERS */}
       <Section bg={FNX.olive} padding="120px 40px" style={{ color: FNX.cream }}>
-        <RuleLabel align="left" color="rgba(244,239,224,0.55)">05 — Clinic Partners</RuleLabel>
+        <RuleLabel align="left" color={fnxCream(0.55)}>05 — Clinic Partners</RuleLabel>
         <h2 style={{ ...T.h2, margin: '14px 0 40px', color: FNX.cream }}>
           A network of slow-thinking clinics.
         </h2>
@@ -163,9 +163,9 @@ const AboutPage = () => {
             { c:'Tokyo · 5', n:['Aoyama Clinic', 'Daikanyama Skin', 'Ginza Dermal', '+ 2 partners'] },
             { c:'HCMC · 3', n:['District 1 Skin Studio', 'Thao Dien Clinic', '+ 1 partner'] },
           ].map(city => (
-            <div key={city.c} style={{ paddingTop: 22, borderTop: '1px solid rgba(244,239,224,0.18)' }}>
+            <div key={city.c} style={{ paddingTop: 22, borderTop: `1px solid ${fnxCream(0.18)}` }}>
               <h3 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 22, letterSpacing: '0.04em' }}>{city.c}</h3>
-              <ul style={{ listStyle: 'none', margin: '18px 0 0', padding: 0, display: 'grid', gap: 8, fontSize: 12, color: 'rgba(244,239,224,0.82)' }}>
+              <ul style={{ listStyle: 'none', margin: '18px 0 0', padding: 0, display: 'grid', gap: 8, fontSize: 12, color: fnxCream(0.82) }}>
                 {city.n.map(p => <li key={p}>· {p}</li>)}
               </ul>
             </div>

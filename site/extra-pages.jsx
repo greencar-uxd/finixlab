@@ -157,9 +157,9 @@ const AccountPage = () => (
 
 const inputStyle = {
   width: '100%', padding: '14px 16px',
-  background: '#FBF8F2', border: `1px solid ${fnxRule(0.18)}`,
-  fontFamily: '"Pretendard Variable", "Pretendard", system-ui, sans-serif',
-  fontSize: 14, color: '#173830',
+  background: FNX.bone, border: `1px solid ${fnxRule(0.18)}`,
+  fontFamily: FNX.sans,
+  fontSize: 14, color: FNX.pineInk,
 };
 
 // ============ SEARCH RESULTS ============
@@ -256,7 +256,7 @@ const CartMobile = () => {
       {/* sticky checkout */}
       <div style={{
         position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 90,
-        background: 'rgba(244,239,224,0.96)', borderTop: `1px solid ${fnxRule(0.2)}`,
+        background: fnxCream(0.96), borderTop: `1px solid ${fnxRule(0.2)}`,
         padding: '12px 24px', display: 'flex', alignItems: 'center', gap: 12,
         backdropFilter: 'blur(8px)', WebkitBackdropFilter: 'blur(8px)',
       }}>
