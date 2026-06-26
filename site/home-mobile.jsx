@@ -101,7 +101,7 @@ const HomeMobile = () => {
 
       {/* 02 — THE COLLECTION */}
       <section style={{ background: FNX.cream, padding: '40px 24px' }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <RuleLabel align="left" color={FNX.tan}>02 — The Collection</RuleLabel>
           <Btn kind="ghost" size="sm" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="shop">Shop All →</Btn>
         </div>
@@ -133,7 +133,7 @@ const HomeMobile = () => {
 
       {/* 03 — FORMULATION */}
       <section style={{ background: FNX.cream, padding: '40px 24px', borderTop: `1px solid ${fnxRule(0.14)}` }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <RuleLabel align="left" color={FNX.tan}>03 — Formulation</RuleLabel>
           <Btn kind="ghost" size="sm" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="shop/peptosome">View Full Formula →</Btn>
         </div>
@@ -235,7 +235,7 @@ const HomeMobile = () => {
 
       {/* 07 — JOURNAL */}
       <section style={{ background: FNX.parchment, padding: '40px 24px' }}>
-        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
+        <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <RuleLabel align="left" color={FNX.tan}>07 — Journal</RuleLabel>
           <Btn kind="ghost" size="sm" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="journal">All Entries →</Btn>
         </div>
