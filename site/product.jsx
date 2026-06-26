@@ -108,16 +108,18 @@ const ProductPage = () => {
 
       {/* DESCRIPTION */}
       <Section bg={FNX.parchment} padding="100px 40px">
-        <div style={{ maxWidth: 820 }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'start' }}>
           <h2 style={{ ...T.h2, margin: 0, color: FNX.pineInk }}>
             An all-in-one prescription, in a bottle that doesn't shout.
           </h2>
-          <p style={{ marginTop: 24, fontSize: 15, lineHeight: 1.85, color: FNX.pineInk, maxWidth: '60ch' }}>
-            Peptosome Skin Booster is built around VAMTOXIN™ Peptide 2.0%. A SNARE-inhibiting peptide quiets micro-contractions in expression muscles, Niacinamide 4% evens tone, and the Spicule Complex carries efficacy into the dermis.
-          </p>
-          <p style={{ marginTop: 16, fontSize: 14, lineHeight: 1.85, color: FNX.sage, maxWidth: '60ch' }}>
-            Once daily, after toner. A lightweight texture that won't interfere with whatever comes next. Quietest feel, most honest concentration.
-          </p>
+          <div>
+            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.85, color: FNX.pineInk }}>
+              Peptosome Skin Booster is built around VAMTOXIN™ Peptide 2.0%. A SNARE-inhibiting peptide quiets micro-contractions in expression muscles, Niacinamide 4% evens tone, and the Spicule Complex carries efficacy into the dermis.
+            </p>
+            <p style={{ marginTop: 18, fontSize: 14, lineHeight: 1.85, color: FNX.sage }}>
+              Once daily, after toner. A lightweight texture that won't interfere with whatever comes next. Quietest feel, most honest concentration.
+            </p>
+          </div>
         </div>
       </Section>
 

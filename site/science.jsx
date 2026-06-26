@@ -72,26 +72,22 @@ const SciencePage = () => {
 
       {/* MOLECULE FACTS */}
       <Section bg={FNX.parchment} padding="100px 40px">
-        <div>
-          <table style={{ width: '100%', maxWidth: 760, borderCollapse: 'collapse', fontSize: 14 }}>
-            <tbody>
-              {[
-                ['INCI Name', 'Acetyl Hexapeptide-8 derivative'],
-                ['Class', 'SNARE-mimicking peptide'],
-                ['Molecular Weight', '888.05 Da'],
-                ['Charge at pH 5.5', 'Net +1'],
-                ['Concentration', '2.0% (20,000 ppm)'],
-                ['Permeation', 'Stratum corneum · with Spicule carrier'],
-                ['Stability', '24 months · sealed, 25°C'],
-                ['Compatibility', 'Niacinamide, HA, Centella, Vitamin B5'],
-              ].map((row, i) => (
-                <tr key={i} style={{ borderBottom: `1px dashed ${fnxRule(0.18)}` }}>
-                  <td style={{ padding: '18px 0', fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: FNX.sage, width: 240 }}>{row[0]}</td>
-                  <td style={{ padding: '18px 0', fontFamily: FNX.serif, fontSize: 17, color: FNX.pineInk, letterSpacing: '0.02em' }}>{row[1]}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', columnGap: 80 }}>
+          {[
+            ['INCI Name', 'Acetyl Hexapeptide-8 derivative'],
+            ['Class', 'SNARE-mimicking peptide'],
+            ['Molecular Weight', '888.05 Da'],
+            ['Charge at pH 5.5', 'Net +1'],
+            ['Concentration', '2.0% (20,000 ppm)'],
+            ['Permeation', 'Stratum corneum · with Spicule carrier'],
+            ['Stability', '24 months · sealed, 25°C'],
+            ['Compatibility', 'Niacinamide, HA, Centella, Vitamin B5'],
+          ].map((row, i) => (
+            <div key={i} style={{ display: 'grid', gridTemplateColumns: '180px 1fr', gap: 24, alignItems: 'baseline', padding: '18px 0', borderBottom: `1px dashed ${fnxRule(0.18)}` }}>
+              <div style={{ fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.14em', textTransform: 'uppercase', color: FNX.sage }}>{row[0]}</div>
+              <div style={{ fontFamily: FNX.serif, fontSize: 17, color: FNX.pineInk, letterSpacing: '0.02em' }}>{row[1]}</div>
+            </div>
+          ))}
         </div>
       </Section>
 
