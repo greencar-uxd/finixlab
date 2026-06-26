@@ -80,8 +80,8 @@ const HomeV1 = () => {
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 32, marginBottom: 48, paddingBottom: 22, borderBottom: `1px solid ${fnxRule(0.2)}` }}>
           <div>
             <RuleLabel align="left" color={FNX.tan}>{t({ en:'02 — The Collection', ko:'02 — 컬렉션', ja:'02 — コレクション' })}</RuleLabel>
-            <h2 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 56, letterSpacing: '-0.01em', lineHeight: 1.05, whiteSpace: 'pre-line' }}>
-              {t({ en:'Two prescriptions,\none ritual.', ko:'두 개의 처방,\n하나의 리추얼.', ja:'二つの処方、\n一つのリチュアル。' })}
+            <h2 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 56, letterSpacing: '-0.01em', lineHeight: 1.05 }}>
+              {t({ en:'Two prescriptions, one ritual.', ko:'두 개의 처방, 하나의 리추얼.', ja:'二つの処方、一つのリチュアル。' })}
             </h2>
           </div>
           <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="shop">{t({ en:'Shop All →', ko:'전체 보기 →', ja:'すべて見る →' })}</Btn>
@@ -147,8 +147,8 @@ const HomeV1 = () => {
         <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', columnGap: 32, alignItems: 'center', borderBottom: `1px solid ${fnxRule(0.2)}`, paddingBottom: 24, marginBottom: 48 }}>
           <div>
             <RuleLabel align="left" color={FNX.tan}>{t({ en:'03 — Formulation', ko:'03 — 포뮬레이션', ja:'03 — フォーミュレーション' })}</RuleLabel>
-            <h2 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 56, letterSpacing: '-0.01em', lineHeight: 1.05, whiteSpace: 'pre-line' }}>
-              {t({ en:'Concentration\nbefore narrative.', ko:'서사보다\n함량.', ja:'物語より\n配合量。' })}
+            <h2 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 56, letterSpacing: '-0.01em', lineHeight: 1.05 }}>
+              {t({ en:'Concentration before narrative.', ko:'서사보다 함량.', ja:'物語より配合量。' })}
             </h2>
           </div>
           <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }}>{t({ en:'View Full Formula →', ko:'전체 포뮬러 보기 →', ja:'全成分を見る →' })}</Btn>
@@ -278,8 +278,8 @@ const HomeV1 = () => {
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 32, marginBottom: 48 }}>
           <div>
             <RuleLabel align="left" color={FNX.tan}>{t({ en:'07 — Journal', ko:'07 — 저널', ja:'07 — ジャーナル' })}</RuleLabel>
-            <h2 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 48, letterSpacing: '0.02em', whiteSpace: 'pre-line' }}>
-              {t({ en:'Dispatches &\nQuiet Notes.', ko:'디스패치 &\n고요한 노트.', ja:'ディスパッチ &\n静かなノート。' })}
+            <h2 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 48, letterSpacing: '0.02em' }}>
+              {t({ en:'Dispatches & Quiet Notes.', ko:'디스패치 & 고요한 노트.', ja:'ディスパッチ & 静かなノート。' })}
             </h2>
           </div>
           <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }}>{t({ en:'All Entries →', ko:'전체 글 보기 →', ja:'すべての記事 →' })}</Btn>
