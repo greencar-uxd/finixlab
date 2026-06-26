@@ -35,8 +35,7 @@ const CartPage = () => {
                   <img src={it.img} alt={it.t} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div>
-                  <div style={{ ...T.eyebrow, color: FNX.tan }}>{it.n}</div>
-                  <h3 style={{ ...T.h4, margin: '10px 0 4px' }}>{it.t}</h3>
+                  <h3 style={{ ...T.h4, margin: '0 0 4px' }}>{it.t}</h3>
                   <div style={{ ...T.caption, color: FNX.sage }}>{it.s}</div>
                   <div style={{ marginTop: 18, display: 'flex', alignItems: 'center', gap: 18 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: 14, border: `1px solid ${fnxRule(0.2)}`, padding: '4px 10px' }}>
@@ -278,8 +277,7 @@ const CartMobile = () => {
               <img src={it.img} alt={it.t} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div>
-              <div style={{ ...T.eyebrow, color: FNX.tan, fontSize: 11 }}>{it.n}</div>
-              <h3 style={{ margin: '6px 0 4px', fontFamily: FNX.serif, fontSize: 16, fontWeight: 400 }}>{it.t}</h3>
+              <h3 style={{ margin: '0 0 4px', fontFamily: FNX.serif, fontSize: 16, fontWeight: 400 }}>{it.t}</h3>
               <div style={{ ...T.caption, color: FNX.sage }}>{it.s}</div>
               <div style={{ marginTop: 10, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, border: `1px solid ${fnxRule(0.2)}`, padding: '2px 8px' }}>
