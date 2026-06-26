@@ -178,11 +178,16 @@ const SearchPage = () => {
         <RuleLabel align="left" color={FNX.tan}>Search</RuleLabel>
         <div style={{ marginTop: 18, position: 'relative' }}>
           <input type="search" aria-label="Search" defaultValue="peptide" placeholder="Search for prescriptions, journal entries…" style={{
-            ...inputStyle, fontSize: 28, padding: '18px 20px 18px 56px',
+            ...inputStyle, fontSize: 28, padding: '18px 56px 18px 56px',
+            border: `1px solid ${fnxRule(0.3)}`,
             fontFamily: '"Pretendard Variable", system-ui, sans-serif', fontWeight: 300,
           }} />
-          <span style={{ position: 'absolute', left: 22, top: '50%', transform: 'translateY(-50%)', fontSize: 18, color: FNX.sage }}>⌕</span>
-          <span role="button" aria-label="Clear search" style={{ position: 'absolute', right: 22, top: '50%', transform: 'translateY(-50%)', fontSize: 18, color: FNX.sage, cursor: 'pointer' }}>✕</span>
+          <span aria-hidden="true" style={{ position: 'absolute', left: 22, top: '50%', transform: 'translateY(-50%)', color: FNX.pineInk, display: 'inline-flex' }}>
+            <svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg>
+          </span>
+          <span role="button" aria-label="Clear search" style={{ position: 'absolute', right: 22, top: '50%', transform: 'translateY(-50%)', color: FNX.pineInk, cursor: 'pointer', display: 'inline-flex' }}>
+            <svg width="22" height="22" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+          </span>
         </div>
         <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
           {['All', 'Products', 'Journal', 'Science', 'Ingredients'].map((f, i) => (
@@ -389,9 +394,14 @@ const SearchMobile = () => {
         <div style={{ marginTop: 12, position: 'relative' }}>
           <input type="search" aria-label="Search" defaultValue="peptide" placeholder="Search for prescriptions, journal entries…" style={{
             ...inputStyle, fontSize: 20, padding: '14px 44px 14px 44px', fontWeight: 300,
+            border: `1px solid ${fnxRule(0.3)}`,
           }} />
-          <span style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', color: FNX.sage }}>⌕</span>
-          <span role="button" aria-label="Clear search" style={{ position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)', color: FNX.sage, cursor: 'pointer' }}>✕</span>
+          <span aria-hidden="true" style={{ position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)', color: FNX.pineInk, display: 'inline-flex' }}>
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6"><circle cx="7" cy="7" r="5"/><path d="M11 11l3.5 3.5"/></svg>
+          </span>
+          <span role="button" aria-label="Clear search" style={{ position: 'absolute', right: 16, top: '50%', transform: 'translateY(-50%)', color: FNX.pineInk, cursor: 'pointer', display: 'inline-flex' }}>
+            <svg width="18" height="18" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+          </span>
         </div>
         <div style={{ marginTop: 12, display: 'flex', gap: 6, overflowX: 'auto' }}>
           {['All','Products','Journal','Science','Ingredients'].map((f, i) => (
