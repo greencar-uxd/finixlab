@@ -25,7 +25,7 @@ const SciencePage = () => {
           <div style={{ aspectRatio: '1/1', background: 'repeating-linear-gradient(135deg, rgba(244,239,224,0.06) 0 14px, transparent 14px 28px)', border: '1px solid rgba(244,239,224,0.18)', position: 'relative' }}>
             <div style={{ position: 'absolute', inset: 28, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <div style={{ fontFamily: FNX.mono, fontSize: 12, color: 'rgba(244,239,224,0.55)', letterSpacing: '0.14em' }}>FIG. 01 — VAMTOXIN™ ON SNARE</div>
+                <div style={{ fontFamily: FNX.mono, fontSize: 12, color: 'rgba(244,239,224,0.72)', letterSpacing: '0.14em' }}>FIG. 01 — VAMTOXIN™ ON SNARE</div>
               </div>
               <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <svg viewBox="0 0 280 280" style={{ width: 380, height: 380 }}>
@@ -41,7 +41,7 @@ const SciencePage = () => {
                   <text x="180" y="80" fontFamily="ui-monospace" fontSize="6" fill="rgba(244,239,224,0.55)">SNAP-25</text>
                 </svg>
               </div>
-              <div style={{ fontFamily: FNX.mono, fontSize: 12, color: 'rgba(244,239,224,0.55)', letterSpacing: '0.14em', textAlign: 'right' }}>
+              <div style={{ fontFamily: FNX.mono, fontSize: 12, color: 'rgba(244,239,224,0.72)', letterSpacing: '0.14em', textAlign: 'right' }}>
                 Schematic · not to scale
               </div>
             </div>

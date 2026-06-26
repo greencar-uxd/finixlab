@@ -151,7 +151,7 @@ const HomeMobile = () => {
               gap: 12, padding: '16px 0', alignItems: 'baseline',
               borderBottom: idx < ingredients.length - 1 ? `1px dashed ${fnxRule(0.15)}` : `1px solid ${fnxRule(0.25)}`,
             }}>
-              <span style={{ fontFamily: FNX.mono, fontSize: 10, color: FNX.tan, letterSpacing: '0.18em' }}>{x.i}</span>
+              <span style={{ fontFamily: FNX.mono, fontSize: 10, color: FNX.sage, letterSpacing: '0.18em' }}>{x.i}</span>
               <div>
                 <div style={{ fontFamily: FNX.serif, fontSize: 16, letterSpacing: '0.02em' }}>{x.n}</div>
                 <div style={{ marginTop: 3, fontSize: 12, color: FNX.sage, lineHeight: 1.5 }}>{x.r}</div>
@@ -178,7 +178,7 @@ const HomeMobile = () => {
                   <span style={{ fontFamily: FNX.mono, fontSize: 10, color: FNX.tan, letterSpacing: '0.18em' }}>{r.n}</span>
                   <span style={{ fontFamily: FNX.serif, fontSize: 20, letterSpacing: '0.02em' }}>{r.t}</span>
                 </div>
-                <span style={{ fontSize: 11, color: 'rgba(244,239,224,0.55)' }}>{r.k}</span>
+                <span style={{ fontSize: 11, color: 'rgba(244,239,224,0.72)' }}>{r.k}</span>
               </div>
               <p style={{ margin: '8px 0 0', fontSize: 12, lineHeight: 1.7, color: 'rgba(244,239,224,0.85)' }}>{r.d}</p>
             </div>
@@ -266,7 +266,7 @@ const HomeMobile = () => {
         <div style={{ display: 'grid', gap: 12 }}>
           {reviews.map((r, i) => (
             <div key={i} style={{ padding: 20, background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
-              <div style={{ color: FNX.labRed, letterSpacing: '0.4em', fontSize: 12 }}>★★★★★</div>
+              <div style={{ color: FNX.pineInk, letterSpacing: '0.4em', fontSize: 12 }}>★★★★★</div>
               <h3 style={{ margin: '12px 0 8px', fontFamily: FNX.serif, fontSize: 18, fontWeight: 300, letterSpacing: '-0.01em' }}>{r.t}</h3>
               <p style={{ margin: 0, fontSize: 13, lineHeight: 1.75, color: FNX.pineInk }}>{r.d}</p>
               <div style={{ marginTop: 14, fontSize: 11, color: FNX.sage }}>{r.a}</div>

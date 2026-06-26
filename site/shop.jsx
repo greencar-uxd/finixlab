@@ -183,7 +183,7 @@ const ShopPage = () => {
               <div style={{ padding: 22, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div>
                   <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-                    <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.tan, letterSpacing: '0.24em' }}>{s.n}</span>
+                    <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.24em' }}>{s.n}</span>
                     {s.save && (
                       <span style={{ fontFamily: FNX.serif, fontSize: 12, color: FNX.labRed, letterSpacing: '0.16em', textTransform: 'uppercase' }}>{s.save}</span>
                     )}

@@ -205,7 +205,7 @@ const SearchPage = () => {
                 <img src={r.img} alt={r.t} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
               <div>
-                <div style={{ ...T.eyebrow, color: FNX.tan }}>{r.cat}</div>
+                <div style={{ ...T.eyebrow, color: FNX.sage }}>{r.cat}</div>
                 <h3 style={{ ...T.h4, margin: '8px 0 0' }}>{r.t}</h3>
               </div>
               <span style={{ alignSelf: 'center', ...T.caption, color: FNX.sage }}>→</span>
@@ -415,7 +415,7 @@ const SearchMobile = () => {
               <img src={r.img} alt={r.t} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
             </div>
             <div>
-              <div style={{ fontFamily: FNX.serif, fontSize: 10, color: FNX.tan, letterSpacing: '0.14em', textTransform: 'uppercase' }}>{r.cat}</div>
+              <div style={{ fontFamily: FNX.serif, fontSize: 10, color: FNX.sage, letterSpacing: '0.14em', textTransform: 'uppercase' }}>{r.cat}</div>
               <h3 style={{ margin: '6px 0 0', fontFamily: FNX.serif, fontSize: 15, fontWeight: 400 }}>{r.t}</h3>
             </div>
             <span style={{ alignSelf: 'center', ...T.caption, color: FNX.sage }}>→</span>

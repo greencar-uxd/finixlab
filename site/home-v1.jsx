@@ -168,7 +168,7 @@ const HomeV1 = () => {
                 alignItems: 'baseline', gap: 24, padding: '24px 0',
                 borderBottom: idx < ingredients.length - 1 ? `1px dashed ${fnxRule(0.15)}` : `1px solid ${fnxRule(0.25)}`,
               }}>
-                <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.tan, letterSpacing: '0.14em' }}>{x.i}</span>
+                <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>{x.i}</span>
                 <div>
                   <div style={{ fontFamily: FNX.serif, fontSize: 22, fontWeight: 300, letterSpacing: '0.02em' }}>
                     {x.n}
@@ -195,7 +195,7 @@ const HomeV1 = () => {
             <div key={r.n} style={{ borderTop: '1px solid rgba(244,239,224,0.25)', paddingTop: 24 }}>
               <div style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.tan, letterSpacing: '0.24em' }}>{r.n}</div>
               <h3 style={{ margin: '16px 0 6px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 30, letterSpacing: '0.02em' }}>{r.t}</h3>
-              <div style={{ color: 'rgba(244,239,224,0.55)', fontSize: 12, letterSpacing: '0.04em', marginBottom: 14 }}>{r.k}</div>
+              <div style={{ color: 'rgba(244,239,224,0.72)', fontSize: 12, letterSpacing: '0.04em', marginBottom: 14 }}>{r.k}</div>
               <p style={{ fontSize: 13, lineHeight: 1.7, color: 'rgba(244,239,224,0.85)', margin: 0 }}>{r.d}</p>
             </div>
           ))}
@@ -330,7 +330,7 @@ const HomeV1 = () => {
             { r: 5, t:'Honest concentration', d:'The ingredient list is generous and clear. By week six the fine lines softened. Feels like following a prescription day by day.', a:'— Park · 45 · Busan' },
           ].map((r, i) => (
             <div key={i} style={{ padding: 32, background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
-              <div style={{ color: FNX.labRed, letterSpacing: '0.4em', fontSize: 14 }}>★★★★★</div>
+              <div style={{ color: FNX.pineInk, letterSpacing: '0.4em', fontSize: 14 }}>★★★★★</div>
               <h3 style={{ margin: '18px 0 12px', fontFamily: FNX.serif, fontSize: 22, fontWeight: 300, letterSpacing: '-0.01em' }}>{r.t}</h3>
               <p style={{ margin: 0, fontSize: 13, lineHeight: 1.85, color: FNX.pineInk }}>{r.d}</p>
               <div style={{ marginTop: 18, fontSize: 12, color: FNX.sage }}>{r.a}</div>

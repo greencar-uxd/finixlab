@@ -6,7 +6,7 @@ const FNX = {
   // colors (from concept board)
   pineInk:  '#173830',
   pine:     '#295B52',
-  sage:     '#5E6E5D',
+  sage:     '#4C5A4B',
   tan:      '#B8A580',
   cream:    '#F4EFE0',
   parchment:'#E8DFC9',
@@ -15,7 +15,7 @@ const FNX = {
   olive:    '#37533D',
   labRed:   '#EE313E',
   // type
-  serif:    '"Pretendard Variable", "Pretendard", system-ui, sans-serif',
+  serif:    '"Outfit", "Pretendard Variable", "Pretendard", system-ui, sans-serif',
   sans:     '"Pretendard", system-ui, sans-serif',
   mono:     'ui-monospace, "SF Mono", Menlo, Consolas, monospace',
 };
@@ -119,7 +119,7 @@ function SiteFooter({ variant = 'pine' }) {
   const isPine = variant === 'pine';
   const bg = isPine ? FNX.pineInk : FNX.cream;
   const fg = isPine ? FNX.cream : FNX.pineInk;
-  const subFg = isPine ? 'rgba(244,239,224,0.55)' : FNX.sage;
+  const subFg = isPine ? 'rgba(244,239,224,0.72)' : FNX.sage;
   const rule = isPine ? 'rgba(244,239,224,0.12)' : fnxRule(0.14);
 
   const cols = [

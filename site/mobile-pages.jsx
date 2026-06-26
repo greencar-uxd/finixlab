@@ -35,7 +35,7 @@ const MHeader = ({ title }) => {
         height: '100dvh', overflowY: 'auto',
       }}>
         <div style={{ display: 'grid', gridTemplateColumns: '24px 1fr 24px', alignItems: 'center', marginBottom: 'clamp(16px, 5vw, 32px)' }}>
-          <span style={{ fontFamily: FNX.mono, fontSize: 11, color: 'rgba(244,239,224,0.55)', letterSpacing: '0.18em' }}>MENU</span>
+          <span style={{ fontFamily: FNX.mono, fontSize: 11, color: 'rgba(244,239,224,0.72)', letterSpacing: '0.18em' }}>MENU</span>
           <div/>
           <button onClick={() => setOpen(false)} style={{ background: 'none', border: 'none', padding: 0, color: FNX.cream, fontSize: 24, lineHeight: 1, cursor: 'pointer' }}>×</button>
         </div>
@@ -56,7 +56,7 @@ const MHeader = ({ title }) => {
         </nav>
         <div style={{ paddingTop: 22, borderTop: '1px solid rgba(244,239,224,0.18)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.18em', color: 'rgba(244,239,224,0.82)' }}>
           <span>EN · JP ▾</span>
-          <span style={{ fontSize: 11, letterSpacing: '0.06em', color: 'rgba(244,239,224,0.6)' }}>Ships globally from Korea</span>
+          <span style={{ fontSize: 11, letterSpacing: '0.06em', color: 'rgba(244,239,224,0.72)' }}>Ships globally from Korea</span>
         </div>
       </div>
     )}
@@ -65,12 +65,12 @@ const MHeader = ({ title }) => {
 };
 
 const MFooter = () => (
-  <footer style={{ background: FNX.pineInk, color: 'rgba(244,239,224,0.55)', padding: '32px 24px', fontSize: 11, lineHeight: 1.8, fontFamily: FNX.serif, letterSpacing: '0.08em' }}>
+  <footer style={{ background: FNX.pineInk, color: 'rgba(244,239,224,0.72)', padding: '32px 24px', fontSize: 11, lineHeight: 1.8, fontFamily: FNX.serif, letterSpacing: '0.08em' }}>
     <img src="assets/fnxlab-logo.png" alt="Finixlab" style={{ height: 18, filter: 'brightness(0) invert(1)', opacity: 0.9, marginBottom: 16 }} />
     <div>Finixlab · Real Efficacy, Quietly Delivered.</div>
     <div style={{ marginTop: 16, display: 'flex', flexWrap: 'wrap', gap: '6px 14px' }}>
       {['About','Science','Shop','Journal','Care','Account'].map(l =>
-        <a key={l} href={`#/${l.toLowerCase()}`} style={{ color: 'rgba(244,239,224,0.55)', textDecoration: 'none' }}>{l}</a>
+        <a key={l} href={`#/${l.toLowerCase()}`} style={{ color: 'rgba(244,239,224,0.72)', textDecoration: 'none' }}>{l}</a>
       )}
     </div>
     <div style={{ marginTop: 18, paddingTop: 12, borderTop: '1px solid rgba(244,239,224,0.1)', fontSize: 10 }}>
@@ -206,7 +206,7 @@ const ShopMobile = () => {
               <div style={{ padding: 18, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div>
                   <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-                    <span style={{ fontFamily: FNX.mono, fontSize: 10, color: FNX.tan, letterSpacing: '0.24em' }}>{s.n}</span>
+                    <span style={{ fontFamily: FNX.mono, fontSize: 10, color: FNX.sage, letterSpacing: '0.24em' }}>{s.n}</span>
                     {s.save && <span style={{ fontFamily: FNX.serif, fontSize: 11, color: FNX.labRed, letterSpacing: '0.16em', textTransform: 'uppercase' }}>{s.save}</span>}
                   </div>
                   <h3 style={{ margin: '12px 0 6px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 18, lineHeight: 1.2 }}>{s.t}</h3>
@@ -298,7 +298,7 @@ const ProductMobile = () => (
         All-in-one skin boosting solution, revitalized by Peptosome.
       </p>
       <div style={{ marginTop: 16, display: 'flex', alignItems: 'center', gap: 12, fontSize: 12 }}>
-        <span style={{ color: FNX.labRed, letterSpacing: '0.36em' }}>★★★★★</span>
+        <span style={{ color: FNX.pineInk, letterSpacing: '0.36em' }}>★★★★★</span>
         <span style={{ color: FNX.sage }}>4.92 / 612 reviews</span>
       </div>
       <div style={{ marginTop: 22, paddingTop: 16, borderTop: `1px solid ${fnxRule(0.2)}`, display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
@@ -384,7 +384,7 @@ const ProductMobile = () => (
           { i:'06', n:'Panthenol',         r:'Pro-Vitamin B5 · barrier support', p:'2.0%' },
         ].map((x) => (
           <li key={x.n} style={{ display: 'grid', gridTemplateColumns: '24px 1fr auto', gap: 12, padding: '14px 0', borderBottom: `1px dashed ${fnxRule(0.15)}`, alignItems: 'baseline' }}>
-            <span style={{ fontFamily: FNX.mono, fontSize: 10, color: FNX.tan, letterSpacing: '0.18em' }}>{x.i}</span>
+            <span style={{ fontFamily: FNX.mono, fontSize: 10, color: FNX.sage, letterSpacing: '0.18em' }}>{x.i}</span>
             <div>
               <div style={{ fontFamily: FNX.serif, fontSize: 15 }}>{x.n}</div>
               <div style={{ marginTop: 2, fontSize: 12, color: FNX.sage }}>{x.r}</div>
@@ -411,7 +411,7 @@ const ProductMobile = () => (
               <span style={{ fontFamily: FNX.mono, fontSize: 11, color: s.active ? FNX.labRed : FNX.tan, letterSpacing: '0.18em' }}>{s.n}</span>
               <span style={{ fontFamily: FNX.serif, fontSize: 20 }}>{s.t}</span>
             </div>
-            <span style={{ fontSize: 11, color: 'rgba(244,239,224,0.55)' }}>{s.k}</span>
+            <span style={{ fontSize: 11, color: 'rgba(244,239,224,0.72)' }}>{s.k}</span>
           </div>
           <p style={{ margin: '8px 0 0', fontSize: 12, lineHeight: 1.7, color: 'rgba(244,239,224,0.85)' }}>{s.d}</p>
         </div>
@@ -494,7 +494,7 @@ const ProductMobile = () => (
         ].map((r, i) => (
           <div key={i} style={{ padding: 20, background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
             <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-              <span style={{ color: FNX.labRed, letterSpacing: '0.4em', fontSize: 11 }}>★★★★★</span>
+              <span style={{ color: FNX.pineInk, letterSpacing: '0.4em', fontSize: 11 }}>★★★★★</span>
               <span style={{ fontFamily: FNX.mono, fontSize: 10, color: FNX.sage, letterSpacing: '0.14em' }}>VERIFIED</span>
             </div>
             <h3 style={{ margin: '12px 0 8px', fontFamily: FNX.serif, fontSize: 18, fontWeight: 300, letterSpacing: '-0.01em' }}>{r.t}</h3>
@@ -562,7 +562,7 @@ const ScienceMobile = () => (
       {/* SNARE diagram */}
       <div style={{ marginTop: 28, aspectRatio: '1/1', background: 'repeating-linear-gradient(135deg, rgba(244,239,224,0.06) 0 14px, transparent 14px 28px)', border: '1px solid rgba(244,239,224,0.18)', position: 'relative' }}>
         <div style={{ position: 'absolute', inset: 20, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-          <div style={{ fontFamily: FNX.mono, fontSize: 10, color: 'rgba(244,239,224,0.55)', letterSpacing: '0.14em' }}>FIG. 01 — VAMTOXIN™ ON SNARE</div>
+          <div style={{ fontFamily: FNX.mono, fontSize: 10, color: 'rgba(244,239,224,0.72)', letterSpacing: '0.14em' }}>FIG. 01 — VAMTOXIN™ ON SNARE</div>
           <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <svg viewBox="0 0 280 280" style={{ width: '85%', height: '85%' }}>
               <circle cx="140" cy="140" r="110" fill="none" stroke={FNX.cream} strokeWidth="0.6" opacity="0.3" />
@@ -577,7 +577,7 @@ const ScienceMobile = () => (
               <text x="180" y="80" fontFamily="ui-monospace" fontSize="6" fill="rgba(244,239,224,0.55)">SNAP-25</text>
             </svg>
           </div>
-          <div style={{ fontFamily: FNX.mono, fontSize: 10, color: 'rgba(244,239,224,0.55)', letterSpacing: '0.14em', textAlign: 'right' }}>Schematic · not to scale</div>
+          <div style={{ fontFamily: FNX.mono, fontSize: 10, color: 'rgba(244,239,224,0.72)', letterSpacing: '0.14em', textAlign: 'right' }}>Schematic · not to scale</div>
         </div>
       </div>
     </section>

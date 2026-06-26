@@ -43,7 +43,7 @@ const ProductPage = () => {
 
             {/* rating */}
             <div style={{ marginTop: 18, display: 'flex', alignItems: 'center', gap: 12, fontSize: 12 }}>
-              <span style={{ color: FNX.labRed, letterSpacing: '0.36em' }}>★★★★★</span>
+              <span style={{ color: FNX.pineInk, letterSpacing: '0.36em' }}>★★★★★</span>
               <span style={{ color: FNX.sage }}>4.92 / 612 reviews</span>
             </div>
 
@@ -151,7 +151,7 @@ const ProductPage = () => {
               { i:'06', n:'Panthenol',         r:'Pro-Vitamin B5 · barrier support',                       p:'2.0%' },
             ].map((f, i) => (
               <tr key={f.n} style={{ borderBottom: `1px dashed ${fnxRule(0.12)}` }}>
-                <td style={{ padding: '20px 0', fontFamily: FNX.mono, fontSize: 12, color: FNX.tan, letterSpacing: '0.14em' }}>{f.i}</td>
+                <td style={{ padding: '20px 0', fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>{f.i}</td>
                 <td style={{ padding: '20px 0', fontFamily: FNX.serif, fontSize: 18, letterSpacing: '0.04em', color: FNX.pineInk }}>
                   {f.n}
                 </td>
@@ -181,7 +181,7 @@ const ProductPage = () => {
               background: s.active ? 'rgba(244,239,224,0.06)' : 'transparent',
             }}>
               <h3 style={{ margin: '14px 0 4px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 26 }}>{s.t}</h3>
-              <div style={{ color: 'rgba(244,239,224,0.55)', fontSize: 12, letterSpacing: '0.04em', marginBottom: 12 }}>{s.k}</div>
+              <div style={{ color: 'rgba(244,239,224,0.72)', fontSize: 12, letterSpacing: '0.04em', marginBottom: 12 }}>{s.k}</div>
               <p style={{ fontSize: 13, lineHeight: 1.7, color: 'rgba(244,239,224,0.85)', margin: 0 }}>{s.d}</p>
             </div>
           ))}
@@ -288,7 +288,7 @@ const ProductPage = () => {
           ].map((r, i) => (
             <div key={i} style={{ padding: 32, background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
               <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between' }}>
-                <span style={{ color: FNX.labRed, letterSpacing: '0.4em', fontSize: 12 }}>★★★★★</span>
+                <span style={{ color: FNX.pineInk, letterSpacing: '0.4em', fontSize: 12 }}>★★★★★</span>
                 <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>VERIFIED</span>
               </div>
               <h3 style={{ margin: '14px 0 12px', fontFamily: FNX.serif, fontSize: 22, fontWeight: 300, letterSpacing: '-0.01em' }}>{r.t}</h3>
