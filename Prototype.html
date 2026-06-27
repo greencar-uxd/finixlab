@@ -82,13 +82,11 @@
     .r3     { grid-template-columns: 1fr !important; }
   }
 
-  /* Section headers (heading + CTA): side-by-side on wide desktop; as the
-     viewport narrows, drop the CTA below the title, right-aligned. */
+  /* Section headers (heading + CTA): side-by-side on wide desktop; on narrow
+     viewports the section-level CTA is hidden (kept only on full desktop). */
   @media (max-width: 860px) {
-    .sechead { flex-direction: column !important; align-items: stretch !important; gap: 16px !important; }
-    .sechead > *:last-child { align-self: flex-end; }
-    .sechead-grid { grid-template-columns: 1fr !important; row-gap: 16px; }
-    .sechead-grid > *:last-child { justify-self: end; }
+    .sechead > *:last-child,
+    .sechead-grid > *:last-child { display: none !important; }
   }
 
 </style>

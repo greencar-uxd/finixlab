@@ -138,11 +138,11 @@ const AccountPage = () => {
           <form style={{ marginTop: 28, display: 'grid', gap: 18 }}>
             <label style={{ display: 'grid', gap: 6 }}>
               <span style={{ ...T.eyebrow, color: FNX.sage }}>{t({ en:'Email', ko:'이메일', ja:'メール' })}</span>
-              <input type="email" placeholder="your@email.com" style={inputStyle} />
+              <input type="email" translate="no" placeholder="your@email.com" style={inputStyle} />
             </label>
             <label style={{ display: 'grid', gap: 6 }}>
               <span style={{ ...T.eyebrow, color: FNX.sage }}>{t({ en:'Password', ko:'비밀번호', ja:'パスワード' })}</span>
-              <input aria-label={t({ en:'Password', ko:'비밀번호', ja:'パスワード' })} type="password" placeholder="••••••••" style={inputStyle} />
+              <input aria-label={t({ en:'Password', ko:'비밀번호', ja:'パスワード' })} type="password" translate="no" placeholder={t({ en:'Enter your password', ko:'비밀번호를 입력하세요', ja:'パスワードを入力してください' })} style={inputStyle} />
             </label>
             <Btn kind="primary" full size="lg">{t({ en:'Sign In →', ko:'로그인 →', ja:'ログイン →' })}</Btn>
             <div style={{ display: 'flex', justifyContent: 'space-between', ...T.caption, color: FNX.sage }}>
@@ -401,11 +401,11 @@ const AccountMobile = () => {
       <form style={{ marginTop: 24, display: 'grid', gap: 14 }}>
         <label style={{ display: 'grid', gap: 6 }}>
           <span style={{ ...T.eyebrow, color: FNX.sage, fontSize: 11 }}>{t({ en:'Email', ko:'이메일', ja:'メール' })}</span>
-          <input type="email" placeholder="your@email.com" style={inputStyle} />
+          <input type="email" translate="no" placeholder="your@email.com" style={inputStyle} />
         </label>
         <label style={{ display: 'grid', gap: 6 }}>
           <span style={{ ...T.eyebrow, color: FNX.sage, fontSize: 11 }}>{t({ en:'Password', ko:'비밀번호', ja:'パスワード' })}</span>
-          <input aria-label={t({ en:'Password', ko:'비밀번호', ja:'パスワード' })} type="password" placeholder="••••••••" style={inputStyle} />
+          <input aria-label={t({ en:'Password', ko:'비밀번호', ja:'パスワード' })} type="password" translate="no" placeholder={t({ en:'Enter your password', ko:'비밀번호를 입력하세요', ja:'パスワードを入力してください' })} style={inputStyle} />
         </label>
         <Btn kind="primary" full size="lg">{t({ en:'Sign In →', ko:'로그인 →', ja:'ログイン →' })}</Btn>
         <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, color: FNX.sage }}>
