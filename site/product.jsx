@@ -268,7 +268,7 @@ const ProductPage = () => {
 
       {/* REVIEWS */}
       <Section bg={FNX.parchment} padding="120px 40px">
-        <div className="sechead" style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 20, marginBottom: 40, borderBottom: `1px solid ${fnxRule(0.2)}`, paddingBottom: 22 }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 40, borderBottom: `1px solid ${fnxRule(0.2)}`, paddingBottom: 22 }}>
           <div>
             <RuleLabel align="left" color={FNX.tan}>{t({ en:'06 — Reviews', ko:'06 — 리뷰', ja:'06 — レビュー' })}</RuleLabel>
             <h2 style={{ ...T.h2, margin: '14px 0 0', color: FNX.pineInk }}>{t({ en:'4.92 ★ / 612 reviews', ko:'4.92 ★ / 리뷰 612개', ja:'4.92 ★ / レビュー612件' })}</h2>
