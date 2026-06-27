@@ -34,7 +34,7 @@ const JournalPage = () => {
 
       {/* MASTHEAD */}
       <section style={{ background: FNX.cream, padding: '64px 40px 32px', borderBottom: `1px solid ${fnxRule(0.18)}` }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'end' }}>
+        <div className="sechead-grid" style={{ display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'end', rowGap: 16 }}>
           <h1 style={{ ...T.hero, margin: 0, color: FNX.pineInk }}>
             {t({ en:'The Journal.', ko:'저널.', ja:'ジャーナル。' })}
           </h1>
