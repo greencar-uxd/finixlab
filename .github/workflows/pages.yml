@@ -33,10 +33,19 @@ jobs:
         with:
           enablement: true
 
+      # uploads/ 는 어떤 페이지에서도 참조되지 않는 원본 소스 사진(≈230MB)이라
+      # 배포에서 제외합니다. 아티팩트가 커지면 Pages 동기화(syncing_files)가
+      # "Deployment failed, try again later"로 실패하는 빈도가 높아집니다.
+      - name: Stage site (exclude raw uploads)
+        run: |
+          mkdir -p "$RUNNER_TEMP/site"
+          rsync -a --exclude='.git' --exclude='.github' --exclude='uploads' ./ "$RUNNER_TEMP/site/"
+          du -sh "$RUNNER_TEMP/site"
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: ${{ runner.temp }}/site
 
       - name: Deploy to GitHub Pages
         id: deployment
