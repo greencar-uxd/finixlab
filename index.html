@@ -149,14 +149,13 @@
     border-bottom:1px solid rgba(23,56,48,0.08);
     position:relative;
   }
-  /* document-style thumb — contained with a cream inner frame so content
-     doesn't butt against the card outline */
+  /* document-style thumb — the export PNG fills the box edge-to-edge.
+     No inner frame: a CSS-cream border around the image reads as a white
+     band when the PNG's color profile shifts its cream slightly. */
   .card-thumb--doc{
     background-color:var(--cream);
-    background-size:contain;
-    background-position:center;
-    background-origin:content-box;
-    padding:18px;
+    background-size:cover;
+    background-position:top center;
   }
   .card-thumb .badge{
     position:absolute; top:12px; left:12px;
