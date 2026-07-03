@@ -20,49 +20,49 @@ const HomeV1 = () => {
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300 }}>
       <SiteHeader variant="cream" />
 
-      {/* HERO — full-bleed visual · mood v2 (light + large imagery) */}
-      <section style={{ position: 'relative', minHeight: '86vh', overflow: 'hidden', background: FNX.cream }}>
-        <img
-          src="assets/duo-on-stone.jpg"
-          alt={t({ en: 'Peptosome duo on stone', ko: '스톤 위의 Peptosome 듀오', ja: '石の上の Peptosome デュオ' })}
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 64%' }}
-        />
-        <div aria-hidden="true" style={{ position: 'absolute', inset: 0,
-          background: 'linear-gradient(to right, rgba(251,250,247,0.90) 0%, rgba(251,250,247,0.44) 44%, rgba(251,250,247,0) 68%)' }} />
-        <div style={{ position: 'relative', zIndex: 1, minHeight: '86vh', display: 'flex', alignItems: 'center', padding: '96px 40px' }}>
-          <div style={{ maxWidth: 640 }}>
-            <Slogan size="lg" />
-            <p style={{ marginTop: 32, maxWidth: '44ch', fontSize: 15, lineHeight: 1.85, color: FNX.pineInk }}>
-              {t({ en: 'VAMTOXIN™ Peptide 2.0% — clinic-grade care distilled into a daily ritual. Concentrations stated honestly, formulated with the quietest touch.', ko: 'VAMTOXIN™ 펩타이드 2.0% — 클리닉 수준의 케어를 매일의 리추얼로 담았습니다. 함량은 정직하게, 손길은 가장 고요하게.', ja: 'VAMTOXIN™ ペプチド 2.0% — クリニック品質のケアを毎日のリチュアルへ。配合量は正直に、タッチは最も静かに。' })}
+      {/* HERO — slogan + duo-on-stone */}
+      <section style={{ background: FNX.cream, padding: '80px 40px 120px', position: 'relative' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1.05fr 1fr', gap: 64, alignItems: 'center' }}>
+          <div>
+            <RuleLabel align="left" color={FNX.sage}>
+              <span style={{ display:'inline-block', width:6, height:6, borderRadius:'50%', background: FNX.labRed, marginRight: 10, verticalAlign: 'middle' }}/>
+              {t({ en:'Notox · Botox in a Bottle · Vol. 01', ko:'Notox · 보틀 속 보톡스 · Vol. 01', ja:'Notox · ボトルの中のボトックス · Vol. 01' })}
+            </RuleLabel>
+            <div style={{ marginTop: 28 }}>
+              <Slogan size="lg" />
+            </div>
+            <p style={{ marginTop: 36, maxWidth: '48ch', fontSize: 15, lineHeight: 1.85, color: FNX.pineInk }}>
+              {t({ en:'VAMTOXIN™ Peptide 2.0% — clinic-grade care distilled into a daily ritual. Concentrations stated honestly, formulated with the quietest touch.', ko:'VAMTOXIN™ 펩타이드 2.0% — 클리닉 수준의 케어를 매일의 리추얼로 담았습니다. 함량은 정직하게, 손길은 가장 고요하게.', ja:'VAMTOXIN™ ペプチド 2.0% — クリニック品質のケアを毎日のリチュアルへ。配合量は正直に、タッチは最も静かに。' })}
             </p>
-            <div style={{ marginTop: 38, display: 'flex', alignItems: 'center', gap: 18, flexWrap: 'wrap' }}>
-              <Btn kind="primary" size="lg" data-go="shop">{t({ en: 'Shop the Collection →', ko: '컬렉션 보기 →', ja: 'コレクションを見る →' })}</Btn>
-              <Btn kind="ghost" size="lg" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="science">{t({ en: 'Read the Science', ko: '사이언스 보기', ja: 'サイエンスを読む' })}</Btn>
+            <div style={{ marginTop: 40, display: 'flex', alignItems: 'center', gap: 18 }}>
+              <Btn kind="primary" size="lg" data-go="shop">{t({ en:'Shop the Collection →', ko:'컬렉션 보기 →', ja:'コレクションを見る →' })}</Btn>
+              <Btn kind="ghost" size="lg" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="science">{t({ en:'Read the Science', ko:'사이언스 보기', ja:'サイエンスを読む' })}</Btn>
+            </div>
+            <div className="r3" style={{ marginTop: 56, display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, paddingTop: 28, borderTop: `1px solid ${fnxRule(0.18)}` }}>
+              {[
+                { k:'2.0%', v:{ en:'VAMTOXIN™ Peptide', ko:'VAMTOXIN™ 펩타이드', ja:'VAMTOXIN™ ペプチド' } },
+                { k:'N°01', v:{ en:'Supadelixir Sole Patent', ko:'Supadelixir 단독 특허', ja:'Supadelixir 単独特許' } },
+                { k:'8 min',v:{ en:'Daily Slow Ritual', ko:'매일의 슬로우 리추얼', ja:'毎日のスロー リチュアル' } },
+              ].map(s => (
+                <div key={s.k}>
+                  <div style={{ fontFamily: FNX.serif, fontSize: 32, fontWeight: 300, letterSpacing: '0.02em', lineHeight: 1 }}>{s.k}</div>
+                  <div style={{ marginTop: 6, fontSize: 12, color: FNX.sage, letterSpacing: '0.06em' }}>{t(s.v)}</div>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* HERO STATS — white band */}
-      <section style={{ background: FNX.white, borderBottom: `1px solid ${fnxRule(0.10)}`, padding: '34px 40px' }}>
-        <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
-          {[
-            { k: '2.0%', v: { en: 'VAMTOXIN™ Peptide', ko: 'VAMTOXIN™ 펩타이드', ja: 'VAMTOXIN™ ペプチド' } },
-            { k: 'N°01', v: { en: 'Supadelixir Sole Patent', ko: 'Supadelixir 단독 특허', ja: 'Supadelixir 単独特許' } },
-            { k: '8 min', v: { en: 'Daily Slow Ritual', ko: '매일의 슬로우 리추얼', ja: '毎日のスロー リチュアル' } },
-          ].map(s => (
-            <div key={s.k}>
-              <div style={{ fontFamily: FNX.serif, fontSize: 32, fontWeight: 300, letterSpacing: '0.02em', lineHeight: 1 }}>{s.k}</div>
-              <div style={{ marginTop: 6, fontSize: 12, color: FNX.sage, letterSpacing: '0.06em' }}>{t(s.v)}</div>
-            </div>
-          ))}
+          {/* Hero image — duo on stone */}
+          <div style={{ position: 'relative' }}>
+            <ProductShot src="../assets/booster-hero.png" alt={t({ en:'Peptosome Skin Booster collection', ko:'Peptosome Skin Booster 컬렉션', ja:'Peptosome Skin Booster コレクション' })} height={720} objectPosition="50% 40%" bg={FNX.bone} />
+          </div>
         </div>
       </section>
 
       {/* MOOD STATEMENT + decorative pair shot */}
       <Section bg={FNX.parchment} padding="120px 40px">
         <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'center' }}>
-          <ProductShot src="assets/peptosome-pair.jpg" alt={t({ en:'Peptosome on stone', ko:'돌 위의 Peptosome', ja:'石の上の Peptosome' })} height={540} objectPosition="50% center" bg={FNX.parchment} />
+          <ProductShot src="../assets/peptosome-pair.jpg" alt={t({ en:'Peptosome on stone', ko:'돌 위의 Peptosome', ja:'石の上の Peptosome' })} height={540} objectPosition="50% center" bg={FNX.parchment} />
           <div>
             <RuleLabel align="left" color={FNX.sage}>{t({ en:'The Premise', ko:'프레미스', ja:'前提' })}</RuleLabel>
             <p style={{ marginTop: 22, fontFamily: FNX.serif, fontWeight: 300, fontSize: 32, lineHeight: 1.35, letterSpacing: '-0.01em', color: FNX.pineInk }}>
@@ -91,7 +91,7 @@ const HomeV1 = () => {
           {/* Card 1 — Peptosome */}
           <article style={{ background: FNX.bone, padding: 36, border: `1px solid ${fnxRule(0.12)}` }}>
             <div style={{ marginTop: 24, height: 480, overflow: 'hidden', position: 'relative', background: FNX.cream }}>
-              <img src="assets/booster-bottle-front.png" alt={t({ en:'Peptosome Skin Booster', ko:'Peptosome Skin Booster', ja:'Peptosome Skin Booster' })}
+              <img src="../assets/booster-bottle-front.png" alt={t({ en:'Peptosome Skin Booster', ko:'Peptosome Skin Booster', ja:'Peptosome Skin Booster' })}
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
             </div>
             <div style={{ marginTop: 28, display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'end', gap: 24 }}>
@@ -117,7 +117,7 @@ const HomeV1 = () => {
           {/* Card 2 — Spicule serum */}
           <article style={{ background: FNX.bone, padding: 36, border: `1px solid ${fnxRule(0.12)}` }}>
             <div style={{ marginTop: 24, height: 480, overflow: 'hidden', position: 'relative', background: FNX.cream }}>
-              <img src="assets/serum-shadow.png" alt={t({ en:'Spicule Wrinkle-Free Glow Serum', ko:'Spicule Wrinkle-Free Glow Serum', ja:'Spicule Wrinkle-Free Glow Serum' })}
+              <img src="../assets/serum-shadow.png" alt={t({ en:'Spicule Wrinkle-Free Glow Serum', ko:'Spicule Wrinkle-Free Glow Serum', ja:'Spicule Wrinkle-Free Glow Serum' })}
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
             </div>
             <div style={{ marginTop: 28, display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'end', gap: 24 }}>
@@ -157,7 +157,7 @@ const HomeV1 = () => {
         <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'start' }}>
           {/* Big still image — serum-grid editorial pattern */}
           <div style={{ height: 580, overflow: 'hidden', position: 'relative', background: FNX.cream, border: `1px solid ${fnxRule(0.12)}` }}>
-            <img src="assets/serum-grid.png" alt={t({ en:'Spicule Serum boxes grid', ko:'Spicule Serum 박스 그리드', ja:'Spicule Serum ボックス グリッド' })}
+            <img src="../assets/serum-grid.png" alt={t({ en:'Spicule Serum boxes grid', ko:'Spicule Serum 박스 그리드', ja:'Spicule Serum ボックス グリッド' })}
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
           </div>
 
@@ -220,12 +220,12 @@ const HomeV1 = () => {
           <div style={{ position: 'relative', height: 520, background: FNX.bone, border: `1px solid ${fnxRule(0.18)}` }}>
             <div style={{ position: 'absolute', inset: 0, display: 'grid', gridTemplateColumns: '1fr 1px 1fr' }}>
               <div style={{ position: 'relative', overflow: 'hidden' }}>
-                <img src="assets/model-a-before.png" alt={t({ en:'Model A — before', ko:'모델 A — 비포', ja:'モデル A — ビフォー' })}
+                <img src="../assets/model-a-before.png" alt={t({ en:'Model A — before', ko:'모델 A — 비포', ja:'モデル A — ビフォー' })}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
               </div>
               <div style={{ background: fnxRule(0.25) }}/>
               <div style={{ position: 'relative', overflow: 'hidden' }}>
-                <img src="assets/model-a-after.png" alt={t({ en:'Model A — after', ko:'모델 A — 애프터', ja:'モデル A — アフター' })}
+                <img src="../assets/model-a-after.png" alt={t({ en:'Model A — after', ko:'모델 A — 애프터', ja:'モデル A — アフター' })}
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
               </div>
             </div>
@@ -290,19 +290,19 @@ const HomeV1 = () => {
               t:'No.012', cat:{ en:'Slow Aging', ko:'슬로우 에이징', ja:'スロー エイジング' },
               h:{ en:'On The Quiet Discipline of Peptides', ko:'펩타이드의 고요한 절제에 관하여', ja:'ペプチドの静かな規律について' },
               d:{ en:'How a single peptide molecule softens the texture of expression.', ko:'하나의 펩타이드 분자가 표정의 결을 부드럽게 하는 방식.', ja:'一つのペプチド分子が表情のキメをやわらげる仕組み。' },
-              imgKind: 'still', imgSrc: 'assets/serum-pump.png', pos: '50% center',
+              imgKind: 'still', imgSrc: '../assets/serum-pump.png', pos: '50% center',
             },
             {
               t:'No.011', cat:{ en:'Interview', ko:'인터뷰', ja:'インタビュー' },
               h:{ en:'In The Cabinet of A Seoul Dermatologist', ko:'서울 피부과 의사의 캐비닛에서', ja:'ソウルの皮膚科医のキャビネットで' },
               d:{ en:'A prescription on the clinic shelf, and a cup of tea.', ko:'클리닉 선반 위의 처방, 그리고 한 잔의 차.', ja:'クリニックの棚にある処方と、一杯のお茶。' },
-              imgKind: 'still', imgSrc: 'assets/booster-grid.png', pos: '50% center',
+              imgKind: 'still', imgSrc: '../assets/booster-grid.png', pos: '50% center',
             },
             {
               t:'No.010', cat:{ en:'Method', ko:'메소드', ja:'メソッド' },
               h:{ en:'Notox · A Verb, Not a Substitute', ko:'Notox · 대체가 아닌, 하나의 동사', ja:'Notox · 代替ではなく、一つの動詞' },
               d:{ en:'Not an alternative to procedures, but a daily prescription that brings them home.', ko:'시술의 대안이 아니라, 그것을 일상으로 가져오는 매일의 처방.', ja:'施術の代わりではなく、それを日常に持ち帰る毎日の処方。' },
-              imgKind: 'still', imgSrc: 'assets/serum-roller-green.png', pos: '50% center',
+              imgKind: 'still', imgSrc: '../assets/serum-roller-green.png', pos: '50% center',
             },
           ].map((j) => (
             <article key={j.t} style={{ display: 'flex', flexDirection: 'column' }}>
@@ -354,7 +354,7 @@ const HomeV1 = () => {
             </p>
           </div>
           <div style={{ height: 320, position: 'relative', border: `1px solid ${fnxCream(0.18)}`, overflow: 'hidden' }}>
-            <img src="assets/peptosome-pair.jpg" alt={t({ en:'Clinic partners', ko:'클리닉 파트너', ja:'クリニックパートナー' })}
+            <img src="../assets/peptosome-pair.jpg" alt={t({ en:'Clinic partners', ko:'클리닉 파트너', ja:'クリニックパートナー' })}
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
           </div>
         </div>

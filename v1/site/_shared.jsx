@@ -8,10 +8,10 @@ const FNX = {
   pine:     '#295B52',
   sage:     '#4C5A4B',
   tan:      '#B8A580',
-  cream:    '#FBFAF7',
-  parchment:'#F1EFE9',
+  cream:    '#F4EFE0',
+  parchment:'#E8DFC9',
   white:    '#FFFFFF',
-  bone:     '#FFFFFF',
+  bone:     '#FBF8F2',
   olive:    '#37533D',
   labRed:   '#EE313E',
   // type
@@ -179,7 +179,7 @@ function SiteHeader({ variant = 'cream', sticky = false }) {
     }}>
       {/* Logo */}
       <a href="#/home" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none' }}>
-        <img src="assets/fnxlab-logo.png" alt="Finixlab"
+        <img src="../assets/fnxlab-logo.png" alt="Finixlab"
           style={{ height: 22, filter: isPine ? 'brightness(0) invert(1) sepia(0.05)' : 'none', opacity: isPine ? 0.95 : 1 }} />
       </a>
 
@@ -263,7 +263,7 @@ function SiteFooter({ variant = 'pine' }) {
         paddingBottom: 36, borderBottom: `1px solid ${rule}`,
       }}>
         <div>
-          <img src="assets/fnxlab-logo.png" alt="Finixlab" style={{ height: 24, filter: isPine ? 'brightness(0) invert(1)' : 'none', opacity: 0.92, marginBottom: 18 }} />
+          <img src="../assets/fnxlab-logo.png" alt="Finixlab" style={{ height: 24, filter: isPine ? 'brightness(0) invert(1)' : 'none', opacity: 0.92, marginBottom: 18 }} />
           <p style={{ fontSize: 12, lineHeight: 1.7, color: subFg, maxWidth: '32ch' }}>
             {t(tagline)}
           </p>
@@ -351,7 +351,7 @@ function Slogan({ size = 'md', align = 'left', color = FNX.pineInk,
 }
 
 // ============ PRODUCT SHOT (uses real photo) ============
-function ProductShot({ src = 'assets/fnxlab-product.jpg', alt = 'Peptosome Skin Booster', bg = FNX.bone, height = 520, objectPosition = '58% center', children, frame = false, contain = false }) {
+function ProductShot({ src = '../assets/fnxlab-product.jpg', alt = 'Peptosome Skin Booster', bg = FNX.bone, height = 520, objectPosition = '58% center', children, frame = false, contain = false }) {
   return (
     <div style={{
       width: '100%', height,

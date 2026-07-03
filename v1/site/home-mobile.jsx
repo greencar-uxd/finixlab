@@ -19,12 +19,12 @@ const HomeMobile = () => {
     {
       t:'Peptosome Skin Booster',
       d:{ en:'All-in-one skin boosting solution, revitalized by Peptosome — VAMTOXIN™ 2.0% — softens expression lines without injection.', ko:'Peptosome로 활력을 더한 올인원 스킨 부스팅 솔루션 — VAMTOXIN™ 2.0% — 시술 없이 표정 주름을 부드럽게.', ja:'Peptosomeが活力を与えるオールインワン スキンブースティング ソリューション — VAMTOXIN™ 2.0% — 注射なしで表情ジワをやわらげる。' },
-      price:'₩96,000', sub:'~$72 · 50ML', img:'assets/booster-bottle-front.png', go:'shop/peptosome',
+      price:'₩96,000', sub:'~$72 · 50ML', img:'../assets/booster-bottle-front.png', go:'shop/peptosome',
     },
     {
       t:'Spicule Wrinkle-Free Glow.',
       d:{ en:'VAMTOXIN™ 2.0% · Niacinamide · Hydroxycitric Acid — a single beam of clarity over fine lines.', ko:'VAMTOXIN™ 2.0% · 나이아신아마이드 · 하이드록시시트릭애씨드 — 잔주름 위로 비치는 한 줄기 맑은 빛.', ja:'VAMTOXIN™ 2.0% · ナイアシンアミド · ヒドロキシクエン酸 — 小ジワに射す一筋の透明感。' },
-      price:'₩58,000', sub:'~$43 · 20ML', img:'assets/serum-shadow.png', go:'shop',
+      price:'₩58,000', sub:'~$43 · 20ML', img:'../assets/serum-shadow.png', go:'shop',
     },
   ];
   const hashtags = [
@@ -33,9 +33,9 @@ const HomeMobile = () => {
     { t:'#QuietRitual' }, { t:'#PeptideDiscipline' }, { t:'#RealEfficacy', hero:true }, { t:'#SkinStillness' },
   ];
   const journal = [
-    { h:{ en:'On The Quiet Discipline of Peptides', ko:'펩타이드의 조용한 절제에 대하여', ja:'ペプチドの静かな規律について' }, d:{ en:'How a single peptide molecule softens the texture of expression.', ko:'하나의 펩타이드 분자가 표정의 결을 어떻게 부드럽게 하는가.', ja:'一つのペプチド分子が表情の質感をいかにやわらげるか。' }, img:'assets/serum-pump.png', pos:'50% center' },
-    { h:{ en:'In The Cabinet of A Seoul Dermatologist', ko:'서울 피부과 의사의 진열장에서', ja:'ソウルの皮膚科医のキャビネットにて' }, d:{ en:'A prescription on the clinic shelf, and a cup of tea.', ko:'클리닉 선반 위의 처방전, 그리고 한 잔의 차.', ja:'クリニックの棚にある処方箋と、一杯のお茶。' }, img:'assets/booster-grid.png', pos:'50% center' },
-    { h:{ en:'Notox · A Verb, Not a Substitute', ko:'Notox · 대체가 아닌, 하나의 동사', ja:'Notox · 代替ではなく、一つの動詞' }, d:{ en:'Not an alternative to procedures, but a daily prescription that brings them home.', ko:'시술의 대체가 아닌, 그 효과를 일상으로 가져오는 매일의 처방.', ja:'施術の代わりではなく、その効果を日常に持ち帰る毎日の処方。' }, img:'assets/serum-roller-green.png', pos:'50% center' },
+    { h:{ en:'On The Quiet Discipline of Peptides', ko:'펩타이드의 조용한 절제에 대하여', ja:'ペプチドの静かな規律について' }, d:{ en:'How a single peptide molecule softens the texture of expression.', ko:'하나의 펩타이드 분자가 표정의 결을 어떻게 부드럽게 하는가.', ja:'一つのペプチド分子が表情の質感をいかにやわらげるか。' }, img:'../assets/serum-pump.png', pos:'50% center' },
+    { h:{ en:'In The Cabinet of A Seoul Dermatologist', ko:'서울 피부과 의사의 진열장에서', ja:'ソウルの皮膚科医のキャビネットにて' }, d:{ en:'A prescription on the clinic shelf, and a cup of tea.', ko:'클리닉 선반 위의 처방전, 그리고 한 잔의 차.', ja:'クリニックの棚にある処方箋と、一杯のお茶。' }, img:'../assets/booster-grid.png', pos:'50% center' },
+    { h:{ en:'Notox · A Verb, Not a Substitute', ko:'Notox · 대체가 아닌, 하나의 동사', ja:'Notox · 代替ではなく、一つの動詞' }, d:{ en:'Not an alternative to procedures, but a daily prescription that brings them home.', ko:'시술의 대체가 아닌, 그 효과를 일상으로 가져오는 매일의 처방.', ja:'施術の代わりではなく、その効果を日常に持ち帰る毎日の処方。' }, img:'../assets/serum-roller-green.png', pos:'50% center' },
   ];
   const reviews = [
     { t:{ en:'Softer expression lines', ko:'한결 부드러워진 표정 주름', ja:'やわらいだ表情ジワ' }, d:{ en:'In the morning mirror I can feel the lines have softened. Without any heavy procedures, the daily texture has changed.', ko:'아침 거울 속에서 주름이 부드러워진 게 느껴져요. 부담스러운 시술 없이도 매일의 피부 결이 달라졌습니다.', ja:'朝の鏡で、シワがやわらいだのを感じます。負担の大きい施術なしで、毎日の肌の質感が変わりました。' }, a:'— Kim · 38 · Seoul' },
@@ -60,8 +60,8 @@ const HomeMobile = () => {
           {t({ en:'Honest concentration, quiet efficacy.', ko:'정직한 농도, 조용한 효능.', ja:'正直な濃度、静かな効能。' })}
         </p>
 
-        <div style={{ margin: '28px -24px 0' }}>
-          <ProductShot src="assets/duo-on-stone.jpg" alt={t({ en:'Peptosome duo on stone', ko:'스톤 위의 Peptosome 듀오', ja:'石の上の Peptosome デュオ' })} height={520} bg={FNX.cream} objectPosition="50% 62%" />
+        <div style={{ marginTop: 28 }}>
+          <ProductShot src="../assets/booster-hero.png" alt={t({ en:'Peptosome Skin Booster', ko:'Peptosome Skin Booster', ja:'Peptosome Skin Booster' })} height={460} bg={FNX.bone} objectPosition="50% 40%" />
         </div>
 
         <p style={{ marginTop: 22, fontSize: 14, lineHeight: 1.8, color: FNX.pineInk }}>
@@ -90,7 +90,7 @@ const HomeMobile = () => {
 
       {/* THE PREMISE — pair shot + statement */}
       <section style={{ background: FNX.parchment, padding: '40px 24px' }}>
-        <ProductShot src="assets/peptosome-pair.jpg" alt={t({ en:'Peptosome on stone', ko:'돌 위의 Peptosome', ja:'石の上のPeptosome' })} height={300} bg={FNX.parchment} objectPosition="50% center" />
+        <ProductShot src="../assets/peptosome-pair.jpg" alt={t({ en:'Peptosome on stone', ko:'돌 위의 Peptosome', ja:'石の上のPeptosome' })} height={300} bg={FNX.parchment} objectPosition="50% center" />
         <RuleLabel align="left" color={FNX.sage} style={{ marginTop: 24 }}>{t({ en:'The Premise', ko:'전제', ja:'前提' })}</RuleLabel>
         <p style={{ marginTop: 16, fontFamily: FNX.serif, fontSize: 23, lineHeight: 1.4, letterSpacing: '-0.01em', color: FNX.pineInk }}>
           {t({ en:'A quiet ritual that settles into skin. Honest in concentration, quietest in touch — a prescription for the time it takes skin to find its own light.', ko:'피부에 가만히 스며드는 조용한 리추얼. 농도는 정직하게, 손길은 가장 조용하게 — 피부가 스스로의 빛을 찾는 시간을 위한 처방.', ja:'肌に静かに溶け込むリチュアル。濃度は正直に、手つきは最も静かに — 肌が自らの輝きを取り戻すための処方。' })}
@@ -138,7 +138,7 @@ const HomeMobile = () => {
           </h2>
         </div>
         <div style={{ height: 320, overflow: 'hidden', position: 'relative', background: FNX.cream, border: `1px solid ${fnxRule(0.12)}` }}>
-          <img src="assets/serum-grid.png" alt={t({ en:'Spicule Serum boxes grid', ko:'Spicule 세럼 박스 그리드', ja:'Spicule セラムの箱グリッド' })}
+          <img src="../assets/serum-grid.png" alt={t({ en:'Spicule Serum boxes grid', ko:'Spicule 세럼 박스 그리드', ja:'Spicule セラムの箱グリッド' })}
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
         </div>
         <ul style={{ listStyle: 'none', margin: '24px 0 0', padding: 0 }}>
@@ -194,12 +194,12 @@ const HomeMobile = () => {
         </p>
         <div style={{ marginTop: 18, display: 'grid', gridTemplateColumns: '1fr 1px 1fr', background: FNX.bone, border: `1px solid ${fnxRule(0.18)}`, height: 260 }}>
           <div style={{ position: 'relative', overflow: 'hidden' }}>
-            <img src="assets/model-a-before.png" alt={t({ en:'Model A — before', ko:'모델 A — 사용 전', ja:'モデルA — 使用前' })}
+            <img src="../assets/model-a-before.png" alt={t({ en:'Model A — before', ko:'모델 A — 사용 전', ja:'モデルA — 使用前' })}
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
           </div>
           <div style={{ background: fnxRule(0.25) }}/>
           <div style={{ position: 'relative', overflow: 'hidden' }}>
-            <img src="assets/model-a-after.png" alt={t({ en:'Model A — after', ko:'모델 A — 사용 후', ja:'モデルA — 使用後' })}
+            <img src="../assets/model-a-after.png" alt={t({ en:'Model A — after', ko:'모델 A — 사용 후', ja:'モデルA — 使用後' })}
               style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
           </div>
         </div>
@@ -282,7 +282,7 @@ const HomeMobile = () => {
           {t({ en:'Clinical partner network — Seoul · Shanghai · Tokyo · Ho Chi Minh. As a post-procedure prescription, or a daily slow-aging ritual.', ko:'클리닉 파트너 네트워크 — 서울 · 상하이 · 도쿄 · 호치민. 시술 후 처방으로, 또는 매일의 슬로우 에이징 리추얼로.', ja:'クリニカルパートナーネットワーク — ソウル · 上海 · 東京 · ホーチミン。施術後の処方として、あるいは毎日のスローエイジング リチュアルとして。' })}
         </p>
         <div style={{ marginTop: 20, height: 220, position: 'relative', border: `1px solid ${fnxRule(0.18)}`, overflow: 'hidden' }}>
-          <img src="assets/peptosome-pair.jpg" alt={t({ en:'Clinic partners', ko:'클리닉 파트너', ja:'クリニックパートナー' })}
+          <img src="../assets/peptosome-pair.jpg" alt={t({ en:'Clinic partners', ko:'클리닉 파트너', ja:'クリニックパートナー' })}
             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
         </div>
       </section>
