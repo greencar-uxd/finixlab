@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Finixlab · 제형이 아닌, real 효능을 처방하다</title>
+<meta name="description" content="Finixlab · 피닉스랩 — 임상 펩타이드(VAMTOXIN™) 2.0% 기반 슬로우 에이징. Real Efficacy, Quietly Delivered." />
+<meta name="keywords" content="피닉스랩, Finixlab, FNXLAB, VAMTOXIN, Peptosome, 슬로우 에이징, peptide, notox, 펩타이드, 클리닉 케어" />
+<meta name="author" content="주식회사 피닉스랩 / Finixlab Co., Ltd." />
+<meta name="theme-color" content="#173830" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Finixlab" />
+<meta property="og:title" content="Finixlab · Real Efficacy, Quietly Delivered." />
+<meta property="og:description" content="시술의 본질을 매일의 루틴으로. VAMTOXIN™ Peptide 2.0%." />
+<meta property="og:image" content="../assets/duo-on-stone.jpg" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="ja_JP" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Finixlab · Real Efficacy, Quietly Delivered." />
+<meta name="twitter:description" content="임상 펩타이드 2.0% 처방 · 피닉스랩" />
+<meta name="twitter:image" content="../assets/duo-on-stone.jpg" />
+<link rel="canonical" href="https://finixlab.com/" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:ital,wght@0,200;0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet" />
+<style>
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; background:#F4EFE0; }
+  body{ font-family: "Pretendard", system-ui, sans-serif; }
+  em, i{ font-style: normal; }
+
+  /* Focus ring for keyboard accessibility */
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 2px solid #EE313E; outline-offset: 3px;
+  }
+
+  /* Hide native search clear/decoration buttons (we render a custom ✕) */
+  input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+  input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+  /* Stronger field affordance on focus (mouse + keyboard) */
+  input[type="search"]:focus { border-color: #173830; }
+
+  /* Link hover for nav-like links */
+  a { transition: opacity .2s, color .2s; }
+  a:hover { opacity: 0.7; }
+  a.btn:hover { opacity: 1; }
+
+  /* Page fade-in */
+  #root > * { animation: fadeIn .35s ease both; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+  /* Skip link — keyboard a11y */
+  .skip-link{
+    position: absolute; top: -100px; left: 0; z-index: 9999;
+    background: #173830; color: #F4EFE0;
+    padding: 12px 18px; text-decoration: none;
+    font-family: "Pretendard Variable", system-ui, sans-serif;
+    font-size: 13px; letter-spacing: 0.12em;
+    transition: top .2s;
+  }
+  .skip-link:focus{ top: 0; }
+
+  /* Reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    #root > *, a, button { animation: none !important; transition: none !important; }
+  }
+
+  /* Tablet responsive — desktop components render >640px (mobile swaps in at <=640).
+     Collapse rigid multi-column grids so 641-1024px (tablet) doesn't crush/overflow.
+     Inline grid styles set the desktop default; these override at tablet via !important. */
+  @media (max-width: 1024px) {
+    .rsplit { grid-template-columns: 1fr !important; gap: 40px !important; }
+    .r4     { grid-template-columns: repeat(2, 1fr) !important; }
+  }
+  @media (max-width: 860px) {
+    .r3     { grid-template-columns: repeat(2, 1fr) !important; }
+    .r4     { grid-template-columns: 1fr !important; }
+  }
+  @media (max-width: 720px) {
+    .r3     { grid-template-columns: 1fr !important; }
+  }
+
+  /* Section headers (heading + CTA): side-by-side on wide desktop; on narrow
+     viewports the section-level CTA is hidden (kept only on full desktop). */
+  @media (max-width: 860px) {
+    .sechead > *:last-child,
+    .sechead-grid > *:last-child { display: none !important; }
+  }
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Peptosome Skin Booster",
+  "image": ["../assets/booster-bottle-front.png"],
+  "description": "All-in-one skin boosting solution with VAMTOXIN™ Peptide 2.0%",
+  "brand": { "@type": "Brand", "name": "Finixlab" },
+  "sku": "FNX-N01-50ML",
+  "offers": {
+    "@type": "Offer",
+    "priceCurrency": "KRW",
+    "price": "96000",
+    "availability": "https://schema.org/InStock"
+  },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.92", "reviewCount": "612" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Organization",
+  "name": "Finixlab",
+  "alternateName": "피닉스랩",
+  "url": "https://finixlab.com/",
+  "logo": "../assets/fnxlab-logo.png",
+  "address": { "@type": "PostalAddress", "addressLocality": "서울", "addressCountry": "KR" }
+}
+</script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="site/_shared.jsx"></script>
+  <script type="text/babel" src="site/home-v1.jsx"></script>
+  <script type="text/babel" src="site/home-mobile.jsx"></script>
+  <script type="text/babel" src="site/mobile-pages.jsx"></script>
+  <script type="text/babel" src="site/shop.jsx"></script>
+  <script type="text/babel" src="site/product.jsx"></script>
+  <script type="text/babel" src="site/about.jsx"></script>
+  <script type="text/babel" src="site/science.jsx"></script>
+  <script type="text/babel" src="site/journal.jsx"></script>
+  <script type="text/babel" src="site/extra-pages.jsx"></script>
+
+  <script type="text/babel">
+    // ---- Tiny hash-based router ----
+    function useMobile() {
+      const [m, setM] = React.useState(() => window.innerWidth <= 640);
+      React.useEffect(() => {
+        const on = () => setM(window.innerWidth <= 640);
+        window.addEventListener('resize', on);
+        return () => window.removeEventListener('resize', on);
+      }, []);
+      return m;
+    }
+    const desktopRoutes = {
+      ''                 : () => <HomeV1 />,
+      'home'             : () => <HomeV1 />,
+      'shop'             : () => <ShopPage />,
+      'shop/peptosome'   : () => <ProductPage />,
+      'science'          : () => <SciencePage />,
+      'journal'          : () => <JournalPage />,
+      'about'            : () => <AboutPage />,
+      'cart'             : () => <CartPage />,
+      'cart/empty'       : () => <EmptyCartPage />,
+      'account'          : () => <AccountPage />,
+      'search'           : () => <SearchPage />,
+      '404'              : () => <NotFoundPage />,
+    };
+    const mobileRoutes = {
+      ''                 : () => <HomeMobile />,
+      'home'             : () => <HomeMobile />,
+      'shop'             : () => <ShopMobile />,
+      'shop/peptosome'   : () => <ProductMobile />,
+      'science'          : () => <ScienceMobile />,
+      'journal'          : () => <JournalMobile />,
+      'about'            : () => <AboutMobile />,
+      'cart'             : () => <CartMobile />,
+      'account'          : () => <AccountMobile />,
+      'search'           : () => <SearchMobile />,
+      '404'              : () => <NotFoundMobile />,
+    };
+
+    function useHashRoute(){
+      const [hash, setHash] = React.useState(() => location.hash.replace(/^#\/?/, ''));
+      React.useEffect(() => {
+        const on = () => {
+          setHash(location.hash.replace(/^#\/?/, ''));
+          window.scrollTo(0, 0);
+        };
+        window.addEventListener('hashchange', on);
+        return () => window.removeEventListener('hashchange', on);
+      }, []);
+      return hash;
+    }
+
+    // Intercept clicks on links so the prototype navigates with hash routes
+    // even though the existing pages use href="#" everywhere.
+    function useNavInterception(){
+      React.useEffect(() => {
+        const onClick = (e) => {
+          let el = e.target;
+          while (el && el !== document.body) {
+            if (el.dataset && el.dataset.go) {
+              e.preventDefault();
+              location.hash = '#/' + el.dataset.go;
+              return;
+            }
+            if (el.tagName === 'A' || el.tagName === 'BUTTON') {
+              const href = el.getAttribute('href') || '';
+              if (href.startsWith('#/')) return;   // already valid hash route
+              const txt = (el.textContent || '').trim().toLowerCase();
+              const map = {
+                'shop': 'shop',
+                'science': 'science',
+                'journal': 'journal',
+                'about': 'about',
+                'home': 'home',
+                'search': 'search',
+                'account': 'account',
+                'bag': 'cart',
+                'cart': 'cart',
+                'bag · 2': 'cart',
+              };
+              for (const k of Object.keys(map)) {
+                if (txt === k || txt.startsWith(k + ' ') || txt.includes('peptosome')) {
+                  e.preventDefault();
+                  if (txt.includes('peptosome')) location.hash = '#/shop/peptosome';
+                  else location.hash = '#/' + map[k];
+                  return;
+                }
+              }
+              if (href === '#') e.preventDefault();
+              return;
+            }
+            el = el.parentElement;
+          }
+        };
+        document.addEventListener('click', onClick);
+        return () => document.removeEventListener('click', onClick);
+      }, []);
+    }
+
+    const App = () => {
+      const hash = useHashRoute();
+      useNavInterception();
+      const isMobile = useMobile();
+      const routes = isMobile ? mobileRoutes : desktopRoutes;
+      const Page = routes[hash] || (isMobile ? mobileRoutes['404'] : desktopRoutes['404']);
+      return <><main id="main"><Page /></main><ToastHost /></>;
+    };
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
