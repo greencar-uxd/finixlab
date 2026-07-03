@@ -8,10 +8,10 @@ const FNX = {
   pine:     '#295B52',
   sage:     '#4C5A4B',
   tan:      '#B8A580',
-  cream:    '#F4EFE0',
-  parchment:'#E8DFC9',
+  cream:    '#FBFAF7',
+  parchment:'#F1EFE9',
   white:    '#FFFFFF',
-  bone:     '#FBF8F2',
+  bone:     '#FFFFFF',
   olive:    '#37533D',
   labRed:   '#EE313E',
   // type

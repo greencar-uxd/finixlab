@@ -20,42 +20,42 @@ const HomeV1 = () => {
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300 }}>
       <SiteHeader variant="cream" />
 
-      {/* HERO — slogan + duo-on-stone */}
-      <section style={{ background: FNX.cream, padding: '80px 40px 120px', position: 'relative' }}>
-        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1.05fr 1fr', gap: 64, alignItems: 'center' }}>
-          <div>
-            <RuleLabel align="left" color={FNX.sage}>
-              <span style={{ display:'inline-block', width:6, height:6, borderRadius:'50%', background: FNX.labRed, marginRight: 10, verticalAlign: 'middle' }}/>
-              {t({ en:'Notox · Botox in a Bottle · Vol. 01', ko:'Notox · 보틀 속 보톡스 · Vol. 01', ja:'Notox · ボトルの中のボトックス · Vol. 01' })}
-            </RuleLabel>
-            <div style={{ marginTop: 28 }}>
-              <Slogan size="lg" />
-            </div>
-            <p style={{ marginTop: 36, maxWidth: '48ch', fontSize: 15, lineHeight: 1.85, color: FNX.pineInk }}>
-              {t({ en:'VAMTOXIN™ Peptide 2.0% — clinic-grade care distilled into a daily ritual. Concentrations stated honestly, formulated with the quietest touch.', ko:'VAMTOXIN™ 펩타이드 2.0% — 클리닉 수준의 케어를 매일의 리추얼로 담았습니다. 함량은 정직하게, 손길은 가장 고요하게.', ja:'VAMTOXIN™ ペプチド 2.0% — クリニック品質のケアを毎日のリチュアルへ。配合量は正直に、タッチは最も静かに。' })}
+      {/* HERO — full-bleed visual · mood v2 (light + large imagery) */}
+      <section style={{ position: 'relative', minHeight: '86vh', overflow: 'hidden', background: FNX.cream }}>
+        <img
+          src="assets/duo-on-stone.jpg"
+          alt={t({ en: 'Peptosome duo on stone', ko: '스톤 위의 Peptosome 듀오', ja: '石の上の Peptosome デュオ' })}
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 64%' }}
+        />
+        <div aria-hidden="true" style={{ position: 'absolute', inset: 0,
+          background: 'linear-gradient(to right, rgba(251,250,247,0.90) 0%, rgba(251,250,247,0.44) 44%, rgba(251,250,247,0) 68%)' }} />
+        <div style={{ position: 'relative', zIndex: 1, minHeight: '86vh', display: 'flex', alignItems: 'center', padding: '96px 40px' }}>
+          <div style={{ maxWidth: 640 }}>
+            <Slogan size="lg" />
+            <p style={{ marginTop: 32, maxWidth: '44ch', fontSize: 15, lineHeight: 1.85, color: FNX.pineInk }}>
+              {t({ en: 'VAMTOXIN™ Peptide 2.0% — clinic-grade care distilled into a daily ritual. Concentrations stated honestly, formulated with the quietest touch.', ko: 'VAMTOXIN™ 펩타이드 2.0% — 클리닉 수준의 케어를 매일의 리추얼로 담았습니다. 함량은 정직하게, 손길은 가장 고요하게.', ja: 'VAMTOXIN™ ペプチド 2.0% — クリニック品質のケアを毎日のリチュアルへ。配合量は正直に、タッチは最も静かに。' })}
             </p>
-            <div style={{ marginTop: 40, display: 'flex', alignItems: 'center', gap: 18 }}>
-              <Btn kind="primary" size="lg" data-go="shop">{t({ en:'Shop the Collection →', ko:'컬렉션 보기 →', ja:'コレクションを見る →' })}</Btn>
-              <Btn kind="ghost" size="lg" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="science">{t({ en:'Read the Science', ko:'사이언스 보기', ja:'サイエンスを読む' })}</Btn>
-            </div>
-            <div className="r3" style={{ marginTop: 56, display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, paddingTop: 28, borderTop: `1px solid ${fnxRule(0.18)}` }}>
-              {[
-                { k:'2.0%', v:{ en:'VAMTOXIN™ Peptide', ko:'VAMTOXIN™ 펩타이드', ja:'VAMTOXIN™ ペプチド' } },
-                { k:'N°01', v:{ en:'Supadelixir Sole Patent', ko:'Supadelixir 단독 특허', ja:'Supadelixir 単独特許' } },
-                { k:'8 min',v:{ en:'Daily Slow Ritual', ko:'매일의 슬로우 리추얼', ja:'毎日のスロー リチュアル' } },
-              ].map(s => (
-                <div key={s.k}>
-                  <div style={{ fontFamily: FNX.serif, fontSize: 32, fontWeight: 300, letterSpacing: '0.02em', lineHeight: 1 }}>{s.k}</div>
-                  <div style={{ marginTop: 6, fontSize: 12, color: FNX.sage, letterSpacing: '0.06em' }}>{t(s.v)}</div>
-                </div>
-              ))}
+            <div style={{ marginTop: 38, display: 'flex', alignItems: 'center', gap: 18, flexWrap: 'wrap' }}>
+              <Btn kind="primary" size="lg" data-go="shop">{t({ en: 'Shop the Collection →', ko: '컬렉션 보기 →', ja: 'コレクションを見る →' })}</Btn>
+              <Btn kind="ghost" size="lg" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="science">{t({ en: 'Read the Science', ko: '사이언스 보기', ja: 'サイエンスを読む' })}</Btn>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Hero image — duo on stone */}
-          <div style={{ position: 'relative' }}>
-            <ProductShot src="assets/booster-hero.png" alt={t({ en:'Peptosome Skin Booster collection', ko:'Peptosome Skin Booster 컬렉션', ja:'Peptosome Skin Booster コレクション' })} height={720} objectPosition="50% 40%" bg={FNX.bone} />
-          </div>
+      {/* HERO STATS — white band */}
+      <section style={{ background: FNX.white, borderBottom: `1px solid ${fnxRule(0.10)}`, padding: '34px 40px' }}>
+        <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+          {[
+            { k: '2.0%', v: { en: 'VAMTOXIN™ Peptide', ko: 'VAMTOXIN™ 펩타이드', ja: 'VAMTOXIN™ ペプチド' } },
+            { k: 'N°01', v: { en: 'Supadelixir Sole Patent', ko: 'Supadelixir 단독 특허', ja: 'Supadelixir 単独特許' } },
+            { k: '8 min', v: { en: 'Daily Slow Ritual', ko: '매일의 슬로우 리추얼', ja: '毎日のスロー リチュアル' } },
+          ].map(s => (
+            <div key={s.k}>
+              <div style={{ fontFamily: FNX.serif, fontSize: 32, fontWeight: 300, letterSpacing: '0.02em', lineHeight: 1 }}>{s.k}</div>
+              <div style={{ marginTop: 6, fontSize: 12, color: FNX.sage, letterSpacing: '0.06em' }}>{t(s.v)}</div>
+            </div>
+          ))}
         </div>
       </section>
 

@@ -60,8 +60,8 @@ const HomeMobile = () => {
           {t({ en:'Honest concentration, quiet efficacy.', ko:'정직한 농도, 조용한 효능.', ja:'正直な濃度、静かな効能。' })}
         </p>
 
-        <div style={{ marginTop: 28 }}>
-          <ProductShot src="assets/booster-hero.png" alt={t({ en:'Peptosome Skin Booster', ko:'Peptosome Skin Booster', ja:'Peptosome Skin Booster' })} height={460} bg={FNX.bone} objectPosition="50% 40%" />
+        <div style={{ margin: '28px -24px 0' }}>
+          <ProductShot src="assets/duo-on-stone.jpg" alt={t({ en:'Peptosome duo on stone', ko:'스톤 위의 Peptosome 듀오', ja:'石の上の Peptosome デュオ' })} height={520} bg={FNX.cream} objectPosition="50% 62%" />
         </div>
 
         <p style={{ marginTop: 22, fontSize: 14, lineHeight: 1.8, color: FNX.pineInk }}>
