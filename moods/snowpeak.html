@@ -8,19 +8,24 @@
 <meta name="theme-color" content="#FFFFFF"/>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Outfit:ital,wght@0,200;0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:ital,wght@0,200;0,300;0,400;0,500;1,300&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet" />
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" rel="stylesheet" />
 <style>
-*{box-sizing:border-box}html,body{margin:0;padding:0}
+*{box-sizing:border-box}html,body{margin:0;padding:0}html{scroll-behavior:smooth}
 body{font-family:"Pretendard Variable","Pretendard",system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
-a{text-decoration:none;color:inherit;transition:opacity .2s}a:hover{opacity:.65}
-img{display:block}
+a{text-decoration:none;color:inherit;transition:opacity .2s}a:hover{opacity:.65}img{display:block}
 .topbar{position:fixed;top:0;left:0;right:0;z-index:99;display:flex;justify-content:space-between;align-items:center;padding:10px 18px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-family:"Outfit",sans-serif}
+.topbar .mid{display:flex;gap:18px}
 .badge{border:1px solid currentColor;padding:3px 10px;border-radius:99px;font-size:10px}
-footer{padding:48px 24px 64px;text-align:center;font-size:11px;letter-spacing:.12em;line-height:2;opacity:.65;font-family:"Outfit","Pretendard Variable",sans-serif}
+footer{padding:56px 24px 30px;font-family:"Outfit","Pretendard Variable",sans-serif}
+.fgrid{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:28px;font-size:12px;letter-spacing:.06em;line-height:2.1;padding-bottom:34px}
+.fgrid .fb{font-size:15px;letter-spacing:.22em;margin-bottom:8px}
+.fnote{max-width:1120px;margin:0 auto;padding-top:20px;font-size:10px;letter-spacing:.12em;opacity:.55;text-align:center;line-height:1.9}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr 1fr}}
 body{background:#FFFFFF;color:#1F2A24}
-.topbar{position:static;color:#1F2A24;border-bottom:1px solid rgba(31,42,36,.12);padding:16px 28px;font-size:11px}
-.nav{display:flex;gap:26px}
+.topbar{position:static;color:#1F2A24;border-bottom:1px solid rgba(31,42,36,.12)}
+.cnav{display:flex;justify-content:space-between;align-items:center;padding:18px 28px;border-bottom:1px solid rgba(31,42,36,.12);font-family:"Outfit",sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase;position:sticky;top:0;background:#fff;z-index:50}
+.cnav nav{display:flex;gap:26px}
 .hero{position:relative;height:78vh;overflow:hidden}
 .hero img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
 .hero .ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,26,22,.42),transparent 55%)}
@@ -28,51 +33,81 @@ body{background:#FFFFFF;color:#1F2A24}
 .hero h1{font-family:"Outfit",sans-serif;font-weight:200;font-size:clamp(34px,4.8vw,62px);line-height:1.14;margin:0;letter-spacing:.01em}
 .hero p{margin:14px 0 0;font-size:14px;line-height:1.8;opacity:.92}
 .btn{display:inline-block;margin-top:24px;background:#fff;color:#1F2A24;padding:14px 34px;font-family:"Outfit",sans-serif;font-size:12px;letter-spacing:.24em;text-transform:uppercase}
-.grid{max-width:1180px;margin:70px auto 0;padding:0 28px}
-.grid h2{font-family:"Outfit",sans-serif;font-weight:300;font-size:24px;letter-spacing:.04em;margin:0 0 26px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.sh{display:flex;justify-content:space-between;align-items:baseline;margin:84px 0 26px}
+.sh h2{font-family:"Outfit",sans-serif;font-weight:300;font-size:24px;letter-spacing:.04em;margin:0}
+.sh a{font-family:"Outfit",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid #1F2A24;padding-bottom:2px}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{border:1px solid rgba(31,42,36,.1)}
+.card{border:1px solid rgba(31,42,36,.1);transition:box-shadow .2s}
+.card:hover{box-shadow:0 14px 34px rgba(31,42,36,.12)}
 .card img{width:100%;height:240px;object-fit:cover}
 .card .in{padding:14px 14px 18px}
 .card .nm{font-size:13px;font-weight:400}
 .card .pr{margin-top:6px;font-family:"Outfit",sans-serif;font-size:12px;opacity:.65;letter-spacing:.06em}
-.strip{margin:80px 0 20px;background:#F4F6F2;padding:44px 28px;display:flex;justify-content:center;gap:min(9vw,120px);text-align:center}
+.bene{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.bene .b{border-top:2px solid #1F2A24;padding:18px 4px 0}
+.bene .k{font-family:"Outfit",sans-serif;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.bene p{margin:8px 0 0;font-size:12.5px;line-height:1.8;color:#5A6A5A}
+.strip{margin:90px 0 0;background:#F4F6F2;padding:44px 28px;display:flex;justify-content:center;gap:min(9vw,120px);text-align:center}
 .strip .k{font-family:"Outfit",sans-serif;font-weight:300;font-size:30px}
 .strip .v{margin-top:6px;font-size:11px;letter-spacing:.1em;opacity:.6}
-@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.strip{flex-wrap:wrap;gap:28px}}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ba figure{margin:0}
+.ba img{width:100%;height:400px;object-fit:cover}
+.ba figcaption{padding:12px 2px;font-family:"Outfit",sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#5A6A5A}
+.jr{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.jr a{display:block;border:1px solid rgba(31,42,36,.1)}
+.jr img{width:100%;height:200px;object-fit:cover}
+.jr .in{padding:16px}
+.jr h3{font-family:"Outfit",sans-serif;font-weight:400;font-size:15px;margin:0;line-height:1.5}
+.jr .k{margin-top:6px;font-size:12px;color:#5A6A5A}
+.news{margin:90px 0 0;border-top:1px solid rgba(31,42,36,.12);border-bottom:1px solid rgba(31,42,36,.12);padding:44px 28px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.news h3{font-family:"Outfit",sans-serif;font-weight:300;font-size:22px;margin:0}
+.news form{display:flex;gap:0;flex:1;max-width:480px;min-width:260px}
+.news input{flex:1;border:1px solid rgba(31,42,36,.3);border-right:none;padding:13px 16px;font-family:inherit;font-size:13px;outline:none;background:#fff}
+.news button{background:#1F2A24;color:#fff;border:none;padding:13px 26px;font-family:"Outfit",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+footer{border-top:1px solid rgba(31,42,36,.12);color:#1F2A24}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.bene{grid-template-columns:1fr 1fr}.strip{flex-wrap:wrap;gap:28px}.ba,.jr{grid-template-columns:1fr}}
 
 </style>
 </head>
 <body>
-<div class="topbar"><a href="index.html">← Mood Study</a><span class="badge">Ref 03 · Snow Peak</span></div>
-<div style="display:flex;justify-content:space-between;align-items:center;padding:18px 28px;border-bottom:1px solid rgba(31,42,36,.12);font-family:'Outfit',sans-serif;font-size:12px;letter-spacing:.18em;text-transform:uppercase">
-  <strong style="font-weight:500">Finixlab</strong>
-  <nav class="nav"><a href="#">New</a><a href="#">Shop</a><a href="#">Science</a><a href="#">Journal</a></nav>
-  <span>Cart (0)</span>
-</div>
+<div class="topbar"><a href="index.html">← Mood Study</a><div class="mid"><a href="snowpeak.html">Home</a><a href="snowpeak-science.html">Science</a><a href="snowpeak-about.html">About</a><a href="snowpeak-journal.html">Journal</a><a href="snowpeak-product.html">Shop</a></div><span class="badge">Ref 03 · Snow Peak</span></div>
+<div class="cnav"><strong style="font-weight:500">Finixlab</strong>
+  <nav><a href="#">New</a><a href="snowpeak-product.html">Shop</a><a href="#">Science</a><a href="#">Journal</a></nav><span>Cart (0)</span></div>
 <section class="hero">
-  <img src="img/hero-duo.jpg" alt="Peptosome duo"/>
-  <div class="ov"></div>
-  <div class="tx">
-    <h1>Build Your<br/>Slow-Aging Ritual</h1>
+  <img src="img/hero-duo.jpg" alt="Peptosome duo"/><div class="ov"></div>
+  <div class="tx"><h1>Build Your<br/>Slow-Aging Ritual</h1>
     <p>클리닉 수준의 펩타이드 케어를, 매일의 리추얼로.<br/>VAMTOXIN™ 2.0% 부스터에서 시작하세요.</p>
-    <a class="btn" href="#">Shop</a>
-  </div>
+    <a class="btn" href="snowpeak-product.html">Shop</a></div>
 </section>
-<section class="grid">
-  <h2>The Collection</h2>
+<div class="wrap">
+  <div class="sh"><h2>The Collection</h2><a href="snowpeak-product.html">View All →</a></div>
   <div class="cards">
-    <div class="card"><img src="img/bottle-front.jpg" alt=""/><div class="in"><div class="nm">Peptosome Skin Booster</div><div class="pr">₩96,000</div></div></div>
-    <div class="card"><img src="img/serum-roller.jpg" alt=""/><div class="in"><div class="nm">Spicule Glow Serum</div><div class="pr">₩58,000</div></div></div>
-    <div class="card"><img src="img/serum-trio.jpg" alt=""/><div class="in"><div class="nm">Ritual Set (Booster + Serum)</div><div class="pr">Coming Soon</div></div></div>
-    <div class="card"><img src="img/box.jpg" alt=""/><div class="in"><div class="nm">Refill &amp; Packaging</div><div class="pr">—</div></div></div>
+    <a class="card" href="snowpeak-product.html"><img src="img/bottle-front.jpg" alt=""/><div class="in"><div class="nm">Peptosome Skin Booster</div><div class="pr">₩96,000</div></div></a>
+    <a class="card" href="#"><img src="img/serum-roller.jpg" alt=""/><div class="in"><div class="nm">Spicule Glow Serum</div><div class="pr">₩58,000</div></div></a>
+    <a class="card" href="#"><img src="img/serum-trio.jpg" alt=""/><div class="in"><div class="nm">Ritual Set (Booster + Serum)</div><div class="pr">Coming Soon</div></div></a>
+    <a class="card" href="#"><img src="img/box.jpg" alt=""/><div class="in"><div class="nm">Refill &amp; Packaging</div><div class="pr">—</div></div></a>
   </div>
-</section>
-<section class="strip">
-  <div><div class="k">2.0%</div><div class="v">VAMTOXIN™ PEPTIDE</div></div>
-  <div><div class="k">N°01</div><div class="v">SUPADELIXIR 단독 특허</div></div>
-  <div><div class="k">8 min</div><div class="v">DAILY SLOW RITUAL</div></div>
-</section>
-<footer>FINIXLAB · REAL EFFICACY, QUIETLY DELIVERED.<br/>MOOD STUDY · 사진은 임시 컷 (촬영본 교체 예정) · PROTOTYPE © 2026</footer>
+  <div class="sh"><h2>Why Finixlab</h2></div>
+  <div class="bene">
+    <div class="b"><div class="k">Honest %</div><p>핵심 성분 함량을 숫자 그대로 표기 — 2.0%는 2.0%.</p></div>
+    <div class="b"><div class="k">Clinic-Born</div><p>피부과·에스테틱 현장에서 출발한 처방 설계.</p></div>
+    <div class="b"><div class="k">Slow-Aging</div><p>자극적인 약속 대신, 매일 8분의 조용한 리추얼.</p></div>
+    <div class="b"><div class="k">Global Ready</div><p>서울 · 상하이 · 도쿄 · 호치민 — 국문·영문·일문 지원.</p></div>
+  </div>
+</div>
+<div class="strip"><div><div class="k">2.0%</div><div class="v">VAMTOXIN™ Peptide</div></div><div><div class="k">N°01</div><div class="v">Supadelixir 단독 특허</div></div><div><div class="k">8 min</div><div class="v">매일의 슬로우 리추얼</div></div></div>
+<div class="wrap">
+  <div class="sh"><h2>Texture &amp; Glow — 21일의 기록</h2></div>
+  <div class="ba">
+    <figure><img src="img/model-b-before.jpg" alt="Day 0"/><figcaption>Day 0</figcaption></figure>
+    <figure><img src="img/model-b-after.jpg" alt="Day 21"/><figcaption>Day 21 · 피부 결·윤기</figcaption></figure>
+  </div>
+  <div class="sh"><h2>Journal</h2><a href="#">All Entries →</a></div>
+  <div class="jr"><a href="#"><img src="img/serum-shadow.jpg" alt=""/><div class="in"><h3>On The Quiet Discipline of Peptides</h3><div class="k">펩타이드 함량 표기의 원칙에 대하여</div></div></a><a href="#"><img src="img/booster-hero.jpg" alt=""/><div class="in"><h3>In The Cabinet of A Seoul Dermatologist</h3><div class="k">서울의 한 피부과 캐비닛에서</div></div></a><a href="#"><img src="img/serum-quartet.jpg" alt=""/><div class="in"><h3>Notox — A Verb, Not a Substitute</h3><div class="k">노톡스, 대체가 아닌 동사</div></div></a></div>
+</div>
+<div class="news"><h3>리추얼 레터 — 한 달에 한 번, 조용히.</h3><form onsubmit="return false"><input type="email" placeholder="이메일 주소"/><button>Subscribe</button></form></div>
+<footer class=""><div class="fgrid"><div><div class="fb">FINIXLAB</div>Real Efficacy, Quietly Delivered.<br/>제형이 아닌, real 효능을 처방하다.</div><div><div class="fb" style="font-size:11px">SHOP</div>Peptosome Skin Booster<br/>Spicule Glow Serum<br/>Ritual Set</div><div><div class="fb" style="font-size:11px">BRAND</div>About · Science<br/>Journal · Reviews<br/>Clinic Network</div><div><div class="fb" style="font-size:11px">CARE</div>Contact · Shipping<br/>Returns · FAQ<br/>B2B Inquiry</div></div><div class="fnote">CLINIC PARTNER NETWORK — 서울 · 상하이 · 도쿄 · 호치민<br/>MOOD STUDY · 사진은 임시 컷(촬영본 교체 예정) · 사업자 정보·이용약관 자리 · PROTOTYPE © 2026</div></footer>
 </body>
 </html>
