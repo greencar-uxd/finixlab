@@ -18,6 +18,7 @@ const AboutPage = () => {
   return (
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300 }}>
       <SiteHeader variant="cream" />
+      <AboutTabs active="about" />
 
       {/* HERO */}
       <section style={{ background: FNX.cream, padding: '88px 40px 100px', position: 'relative' }}>
