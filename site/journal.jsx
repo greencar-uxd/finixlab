@@ -13,7 +13,7 @@ const JournalPage = () => {
 
   const articles = [
     { n:'N°011', cat:{ en:'Interview', ko:'인터뷰', ja:'インタビュー' },  date:'Apr 2026', h:{ en:'In the Cabinet of a Seoul Dermatologist', ko:'서울 피부과 의사의 캐비닛 속에서', ja:'ソウルの皮膚科医のキャビネットの中で' },  img:'assets/booster-grid.png', pos:'50% center' },
-    { n:'N°010', cat:{ en:'Method', ko:'메소드', ja:'メソッド' },     date:'Mar 2026', h:{ en:'Notox — A Verb, Not a Substitute', ko:'Notox — 대체가 아니라, 하나의 동사', ja:'Notox — 代わりではなく、ひとつの動詞' },           img:'assets/serum-roller-green.png', pos:'50% center' },
+    { n:'N°010', cat:{ en:'Method', ko:'메소드', ja:'メソッド' },     date:'Mar 2026', h:{ en:'Recovery, Not Reversal', ko:'되돌림이 아니라, 회복입니다', ja:'巻き戻しではなく、回復です' },           img:'assets/serum-roller-green.png', pos:'50% center' },
     { n:'N°009', cat:{ en:'Ingredient', ko:'성분', ja:'成分' }, date:'Mar 2026', h:{ en:'Niacinamide at 4%: Where the Glow Begins', ko:'Niacinamide 4%: 광채가 시작되는 곳', ja:'Niacinamide 4%：輝きが始まるところ' },  img:'assets/booster-bottle-front.png', pos:'50% center' },
     { n:'N°008', cat:{ en:'Clinic', ko:'클리닉', ja:'クリニック' },     date:'Feb 2026', h:{ en:'Three Weeks After a Procedure: The Quiet In-Between', ko:'시술 3주 후: 조용한 사이의 시간', ja:'施術から三週間後：静かな、あいだの時間' }, img:'assets/serum-shadow.png', pos:'50% center' },
     { n:'N°007', cat:{ en:'Ritual', ko:'리추얼', ja:'リチュアル' },     date:'Feb 2026', h:{ en:'Eight Minutes, in a Slow Bathroom', ko:'느린 욕실에서의, 8분', ja:'ゆっくりとした浴室での、8分' },          img:'assets/peptosome-pair.jpg', pos:'50% center' },
