@@ -107,11 +107,11 @@ const ShopMobile = () => {
       tags:['Niacinamide', { en:'Spot Care', ko:'스팟 케어', ja:'スポットケア' }], stock:{ en:'In stock', ko:'재고 있음', ja:'在庫あり' },
     },
     {
-      n:'N°03', t:{ en:'Notox Cream — Coming Soon', ko:'노톡스 크림 — 출시 예정', ja:'ノトックス クリーム — 近日発売' },
-      tagline:{ en:'The final seal. VAMTOXIN™ 1.5% in a velvet cream.', ko:'마지막 봉인. 벨벳 크림에 담긴 VAMTOXIN™ 1.5%.', ja:'最後の封印。ベルベットクリームに込めたVAMTOXIN™ 1.5%。' },
-      price:'TBA', size:'50ml',
-      img:'assets/duo-on-stone.jpg', pos:'50% 70%',
-      tags:[{ en:'Cream', ko:'크림', ja:'クリーム' }], stock:{ en:'Notify me', ko:'알림 신청', ja:'通知を受け取る' }, muted:true,
+      n:'RX·01', t:{ en:'PDRN RX Ampoule — Coming Soon', ko:'PDRN RX 앰플 — 출시 예정', ja:'PDRN RX アンプル — 近日発売' },
+      tagline:{ en:'PureRX — professional recovery care for sensitized, depleted skin.', ko:'PureRX — 민감하고 컨디션이 저하된 피부를 위한 전문가용 회복 케어.', ja:'PureRX — 敏感でコンディションが低下した肌のためのプロ仕様リカバリーケア。' },
+      price:'TBA', size:'—',
+      img:'assets/serum-box-single.png', pos:'50% center',
+      tags:[{ en:'PureRX', ko:'PureRX', ja:'PureRX' }, { en:'PDRN', ko:'PDRN', ja:'PDRN' }], stock:{ en:'Notify me', ko:'알림 신청', ja:'通知を受け取る' }, muted:true,
     },
   ];
   const sets = [
@@ -121,17 +121,17 @@ const ShopMobile = () => {
   ];
   return (
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300, fontSize: 14 }}>
-      <MHeader title={{ en:'Home / Shop', ko:'홈 / 제품', ja:'ホーム / ショップ' }} />
+      <MHeader title={{ en:'Home / Products', ko:'홈 / 제품', ja:'ホーム / 製品' }} />
 
       {/* MASTHEAD */}
       <section style={{ padding: '32px 24px 24px', borderBottom: `1px solid ${fnxRule(0.18)}` }}>
         <RuleLabel align="left" color={FNX.sage}>
           <span style={{ display:'inline-block', width:6, height:6, borderRadius:'50%', background: FNX.labRed, marginRight: 10, verticalAlign: 'middle' }}/>
-          {t({ en:'The Collection · Vol. 01 / 2026', ko:'더 컬렉션 · Vol. 01 / 2026', ja:'ザ・コレクション · Vol. 01 / 2026' })}
+          {t({ en:'One Philosophy. Two Brands.', ko:'하나의 철학, 두 개의 브랜드', ja:'一つの哲学、二つのブランド' })}
         </RuleLabel>
-        <h1 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontWeight: 200, fontSize: 56, lineHeight: 0.95, letterSpacing: '-0.02em' }}>{t({ en:'Shop.', ko:'제품.', ja:'ショップ.' })}</h1>
+        <h1 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontWeight: 200, fontSize: 56, lineHeight: 0.95, letterSpacing: '-0.02em' }}>{t({ en:'Products.', ko:'제품.', ja:'製品。' })}</h1>
         <p style={{ marginTop: 16, fontSize: 14, color: FNX.pineInk, opacity: 0.78, lineHeight: 1.7 }}>
-          {t({ en:'Three prescriptions — a booster, a serum, and a closing cream. Every concentration on the label.', ko:'세 가지 처방 — 부스터, 세럼, 그리고 마무리 크림. 모든 농도를 라벨에 그대로.', ja:'三つの処方 — ブースター、セラム、そして仕上げのクリーム。すべての濃度をラベルに。' })}
+          {t({ en:'Two collections from one philosophy of recovery — FINIXLAB for daily slow-aging, PureRX for professional recovery care.', ko:'하나의 회복 철학에서 시작된 두 개의 컬렉션 — 매일의 슬로우 에이징은 FINIXLAB, 전문가용 회복 케어는 PureRX.', ja:'一つの回復哲学から生まれた二つのコレクション — 毎日のスローエイジングはFINIXLAB、プロ仕様のリカバリーケアはPureRX。' })}
         </p>
         <div style={{ marginTop: 18, fontFamily: FNX.serif, fontSize: 12, color: FNX.sage, letterSpacing: '0.06em', lineHeight: 1.9 }}>
           <div>{products.length} {t({ en:'pieces', ko:'제품', ja:'アイテム' })} · {sets.length} {t({ en:'sets', ko:'세트', ja:'セット' })}</div>
@@ -674,12 +674,12 @@ const ScienceMobile = () => {
       </p>
     </section>
 
-    {/* NOTOX METHOD — 04 */}
+    {/* RECOVERY METHOD — 04 */}
     <section style={{ background: FNX.olive, color: FNX.cream, padding: '40px 24px' }}>
-      <RuleLabel align="left" color={fnxCream(0.55)}>{t({ en:'04 — Notox Method', ko:'04 — 노톡스 메서드', ja:'04 — ノトックス メソッド' })}</RuleLabel>
-      <h2 style={{ margin: '12px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 28, lineHeight: 1.1 }}>{t({ en:'Notox — a verb, not a substitute.', ko:'노톡스 — 대체가 아니라, 동사.', ja:'ノトックス — 代替ではなく、動詞。' })}</h2>
+      <RuleLabel align="left" color={fnxCream(0.55)}>{t({ en:'04 — Recovery Method', ko:'04 — 회복 메소드', ja:'04 — リカバリー メソッド' })}</RuleLabel>
+      <h2 style={{ margin: '12px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 28, lineHeight: 1.1 }}>{t({ en:'Recovery, not reversal.', ko:'되돌림이 아니라, 회복입니다.', ja:'巻き戻しではなく、回復です。' })}</h2>
       <p style={{ marginTop: 18, fontSize: 14, lineHeight: 1.85, color: fnxCream(0.85) }}>
-        {t({ en:'We never claim to replace procedures. We simply fill the days between them with a daily prescription. Alongside clinical treatments, or as a daily slow-aging ritual — both in the same place.', ko:'시술을 대체한다고 말하지 않습니다. 그저 그 사이의 날들을 매일의 처방으로 채울 뿐입니다. 임상 시술과 함께, 혹은 매일의 슬로우 에이징 리추얼로 — 같은 자리에서.', ja:'施術を置き換えるとは言いません。ただ、その間の日々を毎日の処方で満たすだけ。臨床施術とともに、あるいは毎日のスローエイジング・リチュアルとして — 同じ場所で。' })}
+        {t({ en:'We don’t try to turn back time or replace procedures. We help skin recover its own balance, day by day — after clinical treatments, or as a daily slow-aging ritual.', ko:'시간을 되돌리거나 시술을 대신하려 하지 않습니다. 다만 피부가 스스로의 균형을 되찾도록 하루하루 곁에서 돕습니다 — 시술 후에, 혹은 매일의 슬로우 에이징 리추얼로.', ja:'時間を巻き戻したり、施術の代わりになろうとはしません。肌が自らのバランスを取り戻せるよう、日々そばで支えます — 施術後に、あるいは毎日のスローエイジング リチュアルとして。' })}
       </p>
       <div style={{ marginTop: 24 }}>
         <Btn kind="inverse" full>{t({ en:'Read the Method →', ko:'메서드 읽기 →', ja:'メソッドを読む →' })}</Btn>
@@ -739,7 +739,7 @@ const JournalMobile = () => {
   };
   const articles = [
     { n:'N°011', h:{ en:'In the Cabinet of a Seoul Dermatologist', ko:'서울 피부과 의사의 캐비닛 속에서', ja:'ソウルの皮膚科医のキャビネットの中で' },  img:'assets/booster-grid.png', pos:'50% center' },
-    { n:'N°010', h:{ en:'Notox — A Verb, Not a Substitute', ko:'노톡스 — 대체가 아니라, 동사', ja:'ノトックス — 代替ではなく、動詞' },           img:'assets/serum-roller-green.png', pos:'50% center' },
+    { n:'N°010', h:{ en:'Recovery, Not Reversal', ko:'되돌림이 아니라, 회복입니다', ja:'巻き戻しではなく、回復です' },           img:'assets/serum-roller-green.png', pos:'50% center' },
     { n:'N°009', h:{ en:'Niacinamide at 4%: Where the Glow Begins', ko:'나이아신아마이드 4%: 광채가 시작되는 곳', ja:'ナイアシンアミド4%：輝きが始まる場所' },  img:'assets/booster-bottle-front.png', pos:'50% center' },
     { n:'N°008', h:{ en:'Three Weeks After a Procedure: The Quiet In-Between', ko:'시술 3주 후: 조용한 사이의 시간', ja:'施術から3週間後：静かな間（あわい）' }, img:'assets/serum-shadow.png', pos:'50% center' },
     { n:'N°007', h:{ en:'Eight Minutes, in a Slow Bathroom', ko:'느린 욕실에서의 8분', ja:'ゆっくりとした浴室での8分' },          img:'assets/peptosome-pair.jpg', pos:'50% center' },

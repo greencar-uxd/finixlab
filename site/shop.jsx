@@ -2,9 +2,14 @@
 
 const ShopPage = () => {
   const { t } = useLocale();
+  // Two collections, one philosophy — per client IA (2026.07): FINIXLAB + PureRX
+  const collections = [
+    { key:'FINIXLAB', name:'FINIXLAB', role:{ en:'Daily Slow Aging Care', ko:'데일리 슬로우 에이징 케어', ja:'デイリー スローエイジングケア' } },
+    { key:'PureRX',   name:'PureRX',   role:{ en:'Professional Recovery Care', ko:'전문가용 회복 케어', ja:'プロフェッショナル リカバリーケア' } },
+  ];
   const products = [
     {
-      n:'N°01', t:{ en:'Peptosome Skin Booster', ko:'펩토좀 스킨 부스터', ja:'ペプトソーム スキンブースター' },
+      n:'N°01', brand:'FINIXLAB', t:{ en:'Peptosome Skin Booster', ko:'펩토좀 스킨 부스터', ja:'ペプトソーム スキンブースター' },
       tagline:{ en:'All-in-one skin boosting solution, revitalized by Peptosome.', ko:'펩토좀으로 되살아나는 올인원 스킨 부스팅 솔루션.', ja:'ペプトソームで生まれ変わる、オールインワンの肌ブースティングソリューション。' },
       desc:{ en:'A booster that keeps expressions soft.', ko:'표정을 부드럽게 지켜주는 부스터.', ja:'表情をやわらかく保つブースター。' },
       price:'₩96,000', size:'50ml',
@@ -14,7 +19,7 @@ const ShopPage = () => {
       cat:'Booster',
     },
     {
-      n:'N°02', t:{ en:'Spicule Wrinkle-Free Glow Serum', ko:'스피큘 링클프리 글로우 세럼', ja:'スピキュール リンクルフリー グロウ セラム' },
+      n:'N°02', brand:'FINIXLAB', t:{ en:'Spicule Wrinkle-Free Glow Serum', ko:'스피큘 링클프리 글로우 세럼', ja:'スピキュール リンクルフリー グロウ セラム' },
       tagline:{ en:'Radiant Renewal. VAMTOXIN™ 2.0% · Niacinamide.', ko:'빛나는 리뉴얼. VAMTOXIN™ 2.0% · 나이아신아마이드.', ja:'輝くリニューアル。VAMTOXIN™ 2.0% · ナイアシンアミド。' },
       desc:{ en:'Clarity that settles over fine lines.', ko:'잔주름 위에 내려앉는 맑음.', ja:'小じわの上に行き渡る透明感。' },
       price:'₩58,000', size:'20ml',
@@ -24,14 +29,14 @@ const ShopPage = () => {
       cat:'Serum',
     },
     {
-      n:'N°03', t:{ en:'Notox Cream — Coming Soon', ko:'노톡스 크림 — 출시 예정', ja:'ノトックス クリーム — 近日発売' },
-      tagline:{ en:'The final seal. VAMTOXIN™ 1.5% in a velvet cream.', ko:'마지막 봉인. 벨벳 크림에 담은 VAMTOXIN™ 1.5%.', ja:'最後の封印。ベルベットクリームに込めたVAMTOXIN™ 1.5%。' },
-      desc:{ en:'A final seal, the lightest cream.', ko:'마지막을 봉인하는 가장 가벼운 크림.', ja:'仕上げを封じる、最も軽やかなクリーム。' },
-      price:'TBA', size:'50ml',
-      img:'assets/duo-on-stone.jpg', pos:'50% 70%',
-      tags:[{ en:'Coming · FW 26', ko:'출시 예정 · FW 26', ja:'近日発売 · FW 26' }, { en:'Cream', ko:'크림', ja:'クリーム' }],
+      n:'RX·01', brand:'PureRX', t:{ en:'PDRN RX Ampoule — Coming Soon', ko:'PDRN RX 앰플 — 출시 예정', ja:'PDRN RX アンプル — 近日発売' },
+      tagline:{ en:'Professional recovery care for sensitized, depleted skin.', ko:'민감하고 컨디션이 저하된 피부를 위한 전문가용 회복 케어.', ja:'敏感でコンディションが低下した肌のためのプロ仕様リカバリーケア。' },
+      desc:{ en:'Barrier-respecting recovery, as expert-level home care.', ko:'피부 장벽을 존중하는 회복, 전문가용 홈케어로.', ja:'肌バリアを尊重する回復を、プロ仕様のホームケアで。' },
+      price:'TBA', size:'—',
+      img:'assets/serum-box-single.png', pos:'50% center',
+      tags:[{ en:'PureRX', ko:'PureRX', ja:'PureRX' }, { en:'PDRN', ko:'PDRN', ja:'PDRN' }, { en:'Recovery', ko:'회복 케어', ja:'リカバリー' }],
       stock:{ en:'Notify me', ko:'알림 신청', ja:'通知を受け取る' },
-      cat:'Cream',
+      cat:'Ampoule',
       muted:true,
     },
   ];
@@ -75,13 +80,13 @@ const ShopPage = () => {
           <div>
             <RuleLabel align="left" color={FNX.sage}>
               <span style={{ display:'inline-block', width:6, height:6, borderRadius:'50%', background: FNX.labRed, marginRight: 10, verticalAlign: 'middle' }}/>
-              {t({ en:'The Collection · Vol. 01 / 2026', ko:'더 컬렉션 · Vol. 01 / 2026', ja:'ザ・コレクション · Vol. 01 / 2026' })}
+              {t({ en:'One Philosophy. Two Brands.', ko:'하나의 철학, 두 개의 브랜드', ja:'一つの哲学、二つのブランド' })}
             </RuleLabel>
             <h1 style={{ ...T.hero, margin: '24px 0 0', color: FNX.pineInk }}>
-              {t({ en:'Shop.', ko:'숍.', ja:'ショップ。' })}
+              {t({ en:'Products.', ko:'제품.', ja:'製品。' })}
             </h1>
-            <p style={{ marginTop: 20, fontSize: 16, color: FNX.pineInk, opacity: 0.78, maxWidth: '44ch', letterSpacing: '-0.01em' }}>
-              {t({ en:'Three prescriptions — a booster, a serum, and a closing cream. Every concentration on the label.', ko:'세 가지 처방 — 부스터, 세럼, 그리고 마무리 크림. 모든 농도를 라벨에 그대로.', ja:'三つの処方 — ブースター、セラム、そして仕上げのクリーム。すべての濃度をラベルに明記。' })}
+            <p style={{ marginTop: 20, fontSize: 16, color: FNX.pineInk, opacity: 0.78, maxWidth: '46ch', letterSpacing: '-0.01em' }}>
+              {t({ en:'Two collections from one philosophy of recovery — FINIXLAB for daily slow-aging care, PureRX for professional recovery care.', ko:'하나의 회복 철학에서 시작된 두 개의 컬렉션 — 매일의 슬로우 에이징은 FINIXLAB, 전문가용 회복 케어는 PureRX.', ja:'一つの回復哲学から生まれた二つのコレクション — 毎日のスローエイジングはFINIXLAB、プロ仕様のリカバリーケアはPureRX。' })}
             </p>
           </div>
           <div style={{ textAlign: 'right', fontFamily: FNX.serif, fontSize: 12, color: FNX.sage, letterSpacing: '0.06em', lineHeight: 1.8 }}>
@@ -117,13 +122,20 @@ const ShopPage = () => {
 
       {/* PRODUCT GRID */}
       <Section bg={FNX.cream} padding="80px 40px">
-        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 32, paddingBottom: 18, borderBottom: `1px solid ${fnxRule(0.2)}` }}>
-          <h2 style={{ ...T.h2, margin: 0, color: FNX.pineInk }}>{t({ en:'Single Pieces.', ko:'단품.', ja:'単品。' })}</h2>
-          <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>{products.length} {t({ en:'ITEMS', ko:'개', ja:'点' })}</span>
-        </div>
+        {collections.map((col, ci) => {
+          const items = products.filter(p => p.brand === col.key);
+          return (
+          <div key={col.key} style={{ marginBottom: ci < collections.length - 1 ? 72 : 0 }}>
+            <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: 32, paddingBottom: 18, borderBottom: `1px solid ${fnxRule(0.2)}` }}>
+              <div>
+                <RuleLabel align="left" color={FNX.tan}>{'0' + (ci + 1) + ' — '}{t(col.role)}</RuleLabel>
+                <h2 style={{ ...T.h2, margin: '8px 0 0', color: FNX.pineInk }}>{col.name} <span style={{ fontSize: '0.5em', color: FNX.sage, letterSpacing: '0.04em' }}>Collection</span></h2>
+              </div>
+              <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>{items.length} {t({ en:'ITEMS', ko:'개', ja:'点' })}</span>
+            </div>
 
-        <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
-          {products.map(p => (
+            <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
+          {items.map(p => (
             <div key={p.n} data-go="shop/peptosome" role="link" tabIndex={0}
               onKeyDown={(e)=>{ if(e.key==='Enter'){ location.hash = '#/shop/peptosome'; } }}
               style={{
@@ -169,7 +181,10 @@ const ShopPage = () => {
               </div>
             </div>
           ))}
-        </div>
+            </div>
+          </div>
+          );
+        })}
       </Section>
 
       {/* SETS */}
