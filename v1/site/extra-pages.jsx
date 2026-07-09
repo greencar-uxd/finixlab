@@ -527,7 +527,40 @@ const NotFoundMobile = () => {
   );
 };
 
+// ============ CONTACT (desktop) ============
+const ContactPage = () => {
+  const { t } = useLocale();
+  return (
+    <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300 }}>
+      <SiteHeader variant="cream" />
+      <section style={{ background: FNX.cream, padding: '80px 40px 0', maxWidth: 1320, margin: '0 auto' }}>
+        <p style={{ margin: 0, fontFamily: FNX.serif, fontSize: 15, lineHeight: 1.85, color: FNX.sage, maxWidth: '60ch' }}>
+          {t({
+            en: 'FINIXLAB studies the skin’s power to recover, across two brands — FINIXLAB and PureRX. For brand, wholesale, clinic-partnership or media conversations, reach us below.',
+            ko: 'FINIXLAB은 FINIXLAB과 PureRX, 두 개의 브랜드를 통해 피부의 회복력을 연구합니다. 브랜드·유통·클리닉 파트너십·미디어 관련 문의는 아래로 연락 주세요.',
+            ja: 'FINIXLABは、FINIXLABとPureRXという二つのブランドを通じて肌の回復力を研究しています。ブランド・卸・クリニックパートナーシップ・メディアに関するお問い合わせは以下へ。',
+          })}
+        </p>
+      </section>
+      <ContactBlock />
+      <SiteFooter variant="pine" />
+    </div>
+  );
+};
+
+// ============ CONTACT (mobile) ============
+const ContactMobile = () => {
+  return (
+    <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300, fontSize: 14 }}>
+      <MHeader title={{ en:'Contact', ko:'문의', ja:'お問い合わせ' }} />
+      <ContactBlock mobile />
+      <MFooter />
+    </div>
+  );
+};
+
 Object.assign(window, {
   CartPage, EmptyCartPage, AccountPage, SearchPage, NotFoundPage,
   CartMobile, AccountMobile, SearchMobile, NotFoundMobile,
+  ContactPage, ContactMobile,
 });

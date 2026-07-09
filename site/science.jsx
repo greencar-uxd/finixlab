@@ -1,4 +1,4 @@
-// Science — VAMTOXIN™ deep dive + Notox method
+// Science — VAMTOXIN™ deep dive + Recovery Method
 
 const SciencePage = () => {
   const { t } = useLocale();
@@ -140,7 +140,7 @@ const SciencePage = () => {
         </div>
       </Section>
 
-      {/* NOTOX METHOD */}
+      {/* RECOVERY METHOD */}
       <Section bg={FNX.olive} padding="120px 40px" style={{ color: FNX.cream }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
           <div>

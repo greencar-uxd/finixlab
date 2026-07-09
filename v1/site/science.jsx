@@ -1,4 +1,4 @@
-// Science — VAMTOXIN™ deep dive + Notox method
+// Science — VAMTOXIN™ deep dive + Recovery Method
 
 const SciencePage = () => {
   const { t } = useLocale();
@@ -140,16 +140,16 @@ const SciencePage = () => {
         </div>
       </Section>
 
-      {/* NOTOX METHOD */}
+      {/* RECOVERY METHOD */}
       <Section bg={FNX.olive} padding="120px 40px" style={{ color: FNX.cream }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
           <div>
-            <RuleLabel align="left" color={fnxCream(0.55)}>{t({ en:'04 — Notox Method', ko:'04 — Notox 메소드', ja:'04 — Notox メソッド' })}</RuleLabel>
+            <RuleLabel align="left" color={fnxCream(0.55)}>{t({ en:'04 — Recovery Method', ko:'04 — 회복 메소드', ja:'04 — リカバリー メソッド' })}</RuleLabel>
             <h2 style={{ ...T.h2, margin: '14px 0 0', color: FNX.cream }}>
-              {t({ en:'Notox — a verb, not a substitute.', ko:'Notox — 대체가 아니라, 하나의 동사.', ja:'Notox — 代わりではなく、ひとつの動詞。' })}
+              {t({ en:'Recovery, not reversal.', ko:'되돌림이 아니라, 회복입니다.', ja:'巻き戻しではなく、回復です。' })}
             </h2>
             <p style={{ marginTop: 24, fontSize: 15, lineHeight: 1.85, color: fnxCream(0.85), maxWidth: '48ch' }}>
-              {t({ en:'We never claim to replace procedures. We simply fill the days between them with a daily prescription. Alongside clinical treatments, or as a daily slow-aging ritual — both in the same place.', ko:'우리는 시술을 대신한다고 말하지 않습니다. 다만 그 사이의 날들을 매일의 처방으로 채울 뿐입니다. 임상 시술과 함께, 혹은 매일의 슬로우 에이징 의식으로 — 둘 다 같은 자리에서.', ja:'私たちは施術の代わりだとは言いません。ただ、そのあいだの日々を、毎日の処方で満たすだけです。臨床的な施術とともに、あるいは毎日のスローエイジングの儀式として — どちらも同じ場所で。' })}
+              {t({ en:'We don’t try to turn back time or replace procedures. We help skin recover its own balance, day by day — after clinical treatments, or as a daily slow-aging ritual.', ko:'우리는 시간을 되돌리거나 시술을 대신하려 하지 않습니다. 다만 피부가 스스로의 균형을 되찾도록 하루하루 곁에서 돕습니다 — 시술 후에, 혹은 매일의 슬로우 에이징 리추얼로.', ja:'私たちは時間を巻き戻したり、施術の代わりになろうとはしません。肌が自らのバランスを取り戻せるよう、日々そばで支えます — 施術後に、あるいは毎日のスローエイジング リチュアルとして。' })}
             </p>
             <div style={{ marginTop: 32 }}>
               <Btn kind="inverse">{t({ en:'Read the Method →', ko:'메소드 보기 →', ja:'メソッドを読む →' })}</Btn>
