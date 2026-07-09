@@ -2,23 +2,31 @@
 // Reflects client menu doc: ABOUT = Brand Story · Recovery Skin Science · FINIXLAB · PureRX.
 
 // ── ABOUT sub-nav (tabs). active: 'about' | 'science' | 'finixlab' | 'purerx' ──
-function AboutTabs({ active }) {
+const ABOUT_TABS = [
+  { key: 'about',    go: 'about',          label: { en: 'Brand Story', ko: '브랜드 스토리', ja: 'ブランドストーリー' } },
+  { key: 'science',  go: 'science',        label: { en: 'Recovery Skin Science', ko: 'Recovery Skin Science', ja: 'Recovery Skin Science' } },
+  { key: 'finixlab', go: 'about/finixlab', label: { en: 'FINIXLAB', ko: 'FINIXLAB', ja: 'FINIXLAB' } },
+  { key: 'purerx',   go: 'about/purerx',   label: { en: 'PureRX', ko: 'PureRX', ja: 'PureRX' } },
+];
+function AboutTabs({ active, mobile = false }) {
   const { t } = useLocale();
-  const tabs = [
-    { key: 'about',    go: 'about',          label: { en: 'Brand Story', ko: '브랜드 스토리', ja: 'ブランドストーリー' } },
-    { key: 'science',  go: 'science',        label: { en: 'Recovery Skin Science', ko: 'Recovery Skin Science', ja: 'Recovery Skin Science' } },
-    { key: 'finixlab', go: 'about/finixlab', label: { en: 'FINIXLAB', ko: 'FINIXLAB', ja: 'FINIXLAB' } },
-    { key: 'purerx',   go: 'about/purerx',   label: { en: 'PureRX', ko: 'PureRX', ja: 'PureRX' } },
-  ];
   return (
-    <div style={{ background: FNX.cream, borderBottom: `1px solid ${fnxRule(0.14)}`, position: 'sticky', top: 0, zIndex: 20 }}>
-      <div style={{ maxWidth: 1320, margin: '0 auto', padding: '0 40px', display: 'flex', gap: 4, overflowX: 'auto' }}>
-        {tabs.map(tb => {
+    <div style={{
+      background: FNX.cream, borderBottom: `1px solid ${fnxRule(0.14)}`,
+      position: mobile ? 'relative' : 'sticky', top: 0, zIndex: mobile ? 'auto' : 20,
+    }}>
+      <div style={{
+        maxWidth: mobile ? 'none' : 1320, margin: '0 auto',
+        padding: mobile ? '0 16px' : '0 40px',
+        display: 'flex', gap: mobile ? 2 : 4, overflowX: 'auto',
+        WebkitOverflowScrolling: 'touch',
+      }}>
+        {ABOUT_TABS.map(tb => {
           const on = tb.key === active;
           return (
             <a key={tb.key} href={`#/${tb.go}`} data-go={tb.go} style={{
-              padding: '16px 18px', whiteSpace: 'nowrap', textDecoration: 'none',
-              fontFamily: FNX.serif, fontSize: 13, letterSpacing: '0.1em', textTransform: 'uppercase',
+              padding: mobile ? '13px 12px' : '16px 18px', whiteSpace: 'nowrap', textDecoration: 'none',
+              fontFamily: FNX.serif, fontSize: mobile ? 11 : 13, letterSpacing: '0.08em', textTransform: 'uppercase',
               color: on ? FNX.pineInk : FNX.sage,
               borderBottom: `2px solid ${on ? FNX.labRed : 'transparent'}`,
             }}>{t(tb.label)}</a>
@@ -172,6 +180,7 @@ function BrandPageMobile({ brand }) {
   return (
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300, fontSize: 14 }}>
       <MHeader title={{ en: 'About / ' + b.name, ko: '브랜드 / ' + b.name, ja: 'ブランド / ' + b.name }} />
+      <AboutTabs active={brand === 'FINIXLAB' ? 'finixlab' : 'purerx'} mobile />
 
       <section style={{ padding: '28px 24px 8px' }}>
         <div style={{ fontFamily: FNX.serif, fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: FNX.tan }}>{b.no} · {t(b.role)}</div>
