@@ -42,10 +42,9 @@ const MHeader = ({ title }) => {
         </div>
         <nav style={{ display: 'flex', flexDirection: 'column', flex: 1, marginTop: 'clamp(8px, 3vw, 24px)' }}>
           {[
-            { l:{ en:'About',   ko:'브랜드',     ja:'ブランド' },   h:'#/about' },
-            { l:{ en:'Science', ko:'사이언스',   ja:'サイエンス' }, h:'#/science' },
-            { l:{ en:'Shop',    ko:'제품',       ja:'ショップ' },   h:'#/shop' },
-            { l:{ en:'Journal', ko:'저널',       ja:'ジャーナル' }, h:'#/journal' },
+            { l:{ en:'About',    ko:'브랜드',   ja:'ブランド' },       h:'#/about' },
+            { l:{ en:'Products', ko:'제품',     ja:'製品' },           h:'#/shop' },
+            { l:{ en:'Contact',  ko:'문의',     ja:'お問い合わせ' },   h:'#/contact' },
           ].map((it, i, arr) => (
             <a key={it.h} href={it.h} onClick={() => setOpen(false)} style={{
               fontFamily: FNX.serif, fontWeight: 200, fontSize: 'clamp(28px, 8vw, 40px)', letterSpacing: '0.02em',
@@ -68,17 +67,15 @@ const MHeader = ({ title }) => {
 const MFooter = () => {
   const { t } = useLocale();
   const footLinks = [
-    { key:'about',   label:{ en:'About',   ko:'브랜드',     ja:'ブランド' } },
-    { key:'science', label:{ en:'Science', ko:'사이언스',   ja:'サイエンス' } },
-    { key:'shop',    label:{ en:'Shop',    ko:'제품',       ja:'ショップ' } },
-    { key:'journal', label:{ en:'Journal', ko:'저널',       ja:'ジャーナル' } },
-    { key:'care',    label:{ en:'Care',    ko:'고객지원',   ja:'サポート' } },
-    { key:'account', label:{ en:'Account', ko:'계정',       ja:'アカウント' } },
+    { key:'about',   label:{ en:'About',    ko:'브랜드',   ja:'ブランド' } },
+    { key:'shop',    label:{ en:'Products', ko:'제품',     ja:'製品' } },
+    { key:'contact', label:{ en:'Contact',  ko:'문의',     ja:'お問い合わせ' } },
+    { key:'account', label:{ en:'Account',  ko:'계정',     ja:'アカウント' } },
   ];
   return (
   <footer style={{ background: FNX.pineInk, color: fnxCream(0.72), padding: '32px 24px', fontSize: 11, lineHeight: 1.8, fontFamily: FNX.serif, letterSpacing: '0.08em' }}>
     <img src="assets/fnxlab-logo.png" alt="Finixlab" style={{ height: 18, filter: 'brightness(0) invert(1)', opacity: 0.9, marginBottom: 16 }} />
-    <div>Finixlab · {t({ en:'Real Efficacy, Quietly Delivered.', ko:'정직한 효능을, 조용히 전합니다.', ja:'確かな効果を、静かに届ける。' })}</div>
+    <div>Finixlab · {t({ en:'So your skin can rise again.', ko:'당신의 피부가 다시 비상할 수 있도록', ja:'あなたの肌が、再び羽ばたけるように。' })}</div>
     <div style={{ marginTop: 16, display: 'flex', flexWrap: 'wrap', gap: '6px 14px' }}>
       {footLinks.map(l =>
         <a key={l.key} href={`#/${l.key}`} style={{ color: fnxCream(0.72), textDecoration: 'none' }}>{t(l.label)}</a>
@@ -848,11 +845,15 @@ const JournalMobile = () => {
 // ============ MOBILE ABOUT ============
 const AboutMobile = () => {
   const { t } = useLocale();
-  const pillars = [
-    { n:'01', t:{ en:'Honesty in concentration', ko:'농도의 정직함', ja:'濃度の正直さ' }, d:{ en:'Active concentrations stated on the label, in the language of prescription rather than marketing.', ko:'유효 성분 농도를 라벨에 명시합니다. 마케팅이 아니라 처방의 언어로.', ja:'有効成分の濃度をラベルに記載。マーケティングではなく、処方の言葉で。' } },
-    { n:'02', t:{ en:'Clinic in everyday', ko:'일상 속의 클리닉', ja:'日常の中のクリニック' },       d:{ en:'The essence of procedures, distilled into eight daily minutes. Measurable change instead of heavy promises.', ko:'시술의 본질을 하루 8분으로 응축합니다. 거창한 약속이 아니라 측정 가능한 변화로.', ja:'施術の本質を1日8分に凝縮。大げさな約束ではなく、測定できる変化を。' } },
-    { n:'03', t:{ en:'A quiet ritual', ko:'조용한 리추얼', ja:'静かなリチュアル' },           d:{ en:'The quietest touch. Consistency is what shapes skin in the end.', ko:'가장 조용한 손길. 결국 피부를 만드는 것은 꾸준함입니다.', ja:'最も静かな手触り。結局、肌をつくるのは続けること。' } },
-    { n:'04', t:{ en:'Slow Asia', ko:'슬로우 아시아', ja:'スロー・アジア' },                d:{ en:'From Seoul to Shanghai, Tokyo and Ho Chi Minh. The poetic restraint of Korean indie beauty placed alongside clinical honesty.', ko:'서울에서 상하이, 도쿄, 호치민까지. 한국 인디 뷰티의 시적 절제를 임상적 정직함과 나란히.', ja:'ソウルから上海、東京、ホーチミンまで。韓国インディビューティーの詩的な抑制を、臨床的な正直さとともに。' } },
+  const promiseDont = [
+    { en: 'We don’t sell exaggerated anti-aging', ko: '과장된 안티에이징을 말하지 않습니다', ja: '誇張したアンチエイジングを語りません' },
+    { en: 'We don’t promise fast results', ko: '빠른 효과를 약속하지 않습니다', ja: '速い効果を約束しません' },
+    { en: 'We don’t rely on harsh ingredients', ko: '자극적인 성분에 기대지 않습니다', ja: '刺激的な成分に頼りません' },
+  ];
+  const promiseDo = [
+    { en: 'Recovery-centered formulation', ko: '회복력 중심의 처방', ja: '回復力を軸にした処方' },
+    { en: 'Designs that respect the skin barrier', ko: '피부 장벽을 존중하는 설계', ja: '肌バリアを尊重する設計' },
+    { en: 'Research into long-term skin health', ko: '장기적인 피부 건강 연구', ja: '長期的な肌の健康の研究' },
   ];
   return (
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300, fontSize: 14 }}>
@@ -860,129 +861,92 @@ const AboutMobile = () => {
 
       {/* HERO */}
       <section style={{ padding: '32px 24px' }}>
-        <RuleLabel align="left" color={FNX.sage}>
-          <span style={{ display:'inline-block', width:6, height:6, borderRadius:'50%', background: FNX.labRed, marginRight: 10, verticalAlign: 'middle' }}/>
-          {t({ en:'About Finixlab', ko:'Finixlab 소개', ja:'Finixlabについて' })}
-        </RuleLabel>
-        <h1 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontWeight: 200, fontSize: 44, lineHeight: 0.98 }}>{t({ en:'A quiet pharmacy of light.', ko:'빛의 조용한 약국.', ja:'光の、静かな薬局。' })}</h1>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontFamily: FNX.serif, fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: FNX.sage }}>
+          <span style={{ width: 6, height: 6, borderRadius: '50%', background: FNX.labRed }}/>
+          {t({ en:'Brand Story · Recovery Skin Science', ko:'브랜드 스토리 · Recovery Skin Science', ja:'ブランドストーリー · Recovery Skin Science' })}
+        </div>
+        <h1 style={{ margin: '16px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 30, lineHeight: 1.18, letterSpacing: '-0.01em', whiteSpace: 'pre-line' }}>
+          {t({ en:'Skin doesn’t age.\nIt loses its power\nto recover.', ko:'피부는 나이를 먹는 것이\n아니라, 회복력을\n잃어갑니다.', ja:'肌は年を取るのではなく、\n時間の中で回復力を\n失っていく。' })}
+        </h1>
         <p style={{ marginTop: 18, fontSize: 14, lineHeight: 1.85, color: FNX.pineInk }}>
-          {t({ en:'Finixlab is a slow-aging brand that brings together clinical peptide concentrations and the poetic restraint of Korean indie beauty. A pharmacy-clean shelf of prescriptions, with a touch as quiet as midday light.', ko:'Finixlab은 임상 수준의 펩타이드 농도와 한국 인디 뷰티의 시적 절제를 함께 담은 슬로우 에이징 브랜드입니다. 약국처럼 정갈한 처방의 선반, 한낮의 빛처럼 조용한 손길로.', ja:'Finixlabは、臨床レベルのペプチド濃度と韓国インディビューティーの詩的な抑制をひとつにしたスローエイジングブランド。薬局のように清潔な処方の棚を、真昼の光のように静かな手触りで。' })}
+          {t({ en:'FINIXLAB is a slow-aging derma brand that studies the skin’s own power to recover — so your skin can rise again.', ko:'FINIXLAB은 피부 스스로의 회복력을 연구하는 슬로우에이징 더마 브랜드입니다. 당신의 피부가 다시 비상할 수 있도록.', ja:'FINIXLABは、肌自身の回復力を研究するスローエイジング ダーマブランドです。あなたの肌が、再び羽ばたけるように。' })}
         </p>
-        <div style={{ marginTop: 24, display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, paddingTop: 20, borderTop: `1px solid ${fnxRule(0.18)}` }}>
-          {[
-            { k:'2024', v:{ en:'Founded · Seoul', ko:'설립 · 서울', ja:'設立 · ソウル' } },
-            { k:'04', v:{ en:'Cities · KR/CN/JP/VN', ko:'도시 · 한/중/일/베', ja:'都市 · 韓/中/日/越' } },
-            { k:'31', v:{ en:'Clinic Partners', ko:'클리닉 파트너', ja:'クリニックパートナー' } },
-          ].map(s => (
-            <div key={s.k}>
-              <div style={{ fontFamily: FNX.serif, fontSize: 24, lineHeight: 1 }}>{s.k}</div>
-              <div style={{ marginTop: 6, fontSize: 10, color: FNX.sage, letterSpacing: '0.06em' }}>{t(s.v)}</div>
-            </div>
-          ))}
-        </div>
         <div style={{ marginTop: 24, aspectRatio: '4/5', overflow: 'hidden', position: 'relative', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
-          <img src="assets/peptosome-pair.jpg" alt={t({ en:'Peptosome pair', ko:'펩토좀 페어', ja:'ペプトソーム ペア' })} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
+          <img src="assets/duo-on-stone.jpg" alt="FINIXLAB" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 62%' }} />
         </div>
       </section>
 
-      {/* FOUNDER'S LETTER — 01 */}
-      <section style={{ background: FNX.parchment, padding: '40px 24px' }}>
-        <RuleLabel align="left" color={FNX.sage}>{t({ en:"Founder's Letter · 01", ko:'창립자의 편지 · 01', ja:'創業者の手紙 · 01' })}</RuleLabel>
-        <h2 style={{ margin: '12px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 26, lineHeight: 1.2 }}>{t({ en:'The bottle, in lower case.', ko:'소문자로 쓴 병.', ja:'小文字で書いたボトル。' })}</h2>
-        <div style={{ marginTop: 20, fontSize: 15, lineHeight: 1.95, color: FNX.pineInk }}>
-          <p style={{ margin: 0 }}>
-            <span style={{ float:'left', fontFamily: FNX.serif, fontSize: 64, lineHeight: 0.85, marginRight: 12, marginTop: 6, fontWeight: 300 }}>{t({ en:'O', ko:'시', ja:'施' })}</span>{t({ en:'nce I started watching patients sit in front of the mirror for days after a procedure, I knew. The brief stillness of softened expressions, slowly returning to everyday lines — and I wondered, what if we could prescribe something for those days.', ko:'술 후 며칠 동안 거울 앞에 앉아 있는 환자들을 지켜보기 시작하면서, 알게 되었습니다. 부드러워진 표정의 짧은 고요가 다시 일상의 주름으로 천천히 돌아가는 모습 — 그 날들을 위한 무언가를 처방할 수 있다면 어떨까, 하고 생각했습니다.', ja:'術後の数日間、鏡の前に座る患者を見つめるようになって、わかりました。やわらいだ表情の束の間の静けさが、ゆっくりと日常のシワへ戻っていく — その日々に何かを処方できたら、と思ったのです。' })}
-          </p>
-          <p style={{ margin: '16px 0 0' }}>
-            {t({ en:'Finixlab is for those in-between days. Not an alternative to procedures, but a way to carry their essence into daily skin. While a single prescription stays with you each day, we prescribe the quietest possible ritual.', ko:'Finixlab은 그 사이의 날들을 위한 것입니다. 시술의 대안이 아니라, 그 본질을 매일의 피부로 옮기는 방법. 하나의 처방이 매일 곁에 머무는 동안, 우리는 가능한 한 가장 조용한 리추얼을 처방합니다.', ja:'Finixlabは、その合間の日々のためのもの。施術の代替ではなく、その本質を毎日の肌へ運ぶ方法です。一つの処方が日々そばにある間、私たちは可能なかぎり静かなリチュアルを処方します。' })}
-          </p>
-          <p style={{ margin: '16px 0 0' }}>
-            {t({ en:'Concentrations are stated on the label. VAMTOXIN™ 2%, Niacinamide 4%, Spicule 0.5% — concentration before narrative. The nine-week study is the measure of that honesty, arranged like a single prescription.', ko:'농도는 라벨에 명시되어 있습니다. VAMTOXIN™ 2%, 나이아신아마이드 4%, 스피큘 0.5% — 서사보다 먼저 농도. 9주 연구는 그 정직함의 척도이며, 하나의 처방처럼 정돈되어 있습니다.', ja:'濃度はラベルに記載しています。VAMTOXIN™ 2%、ナイアシンアミド4%、スピキュール0.5% — 物語より先に濃度を。9週間の研究は、その正直さの尺度であり、一つの処方のように整えられています。' })}
-          </p>
-          <p style={{ margin: '16px 0 0', color: FNX.sage, fontSize: 14 }}>
-            {t({ en:'What we prescribe is consistency, not efficacy. Eight minutes a day that keep the surface from dulling — that single thing, as quietly as possible.', ko:'우리가 처방하는 것은 효능이 아니라 꾸준함입니다. 표면을 흐려지지 않게 하는 하루 8분 — 그 한 가지를, 가능한 한 조용하게.', ja:'私たちが処方するのは効能ではなく、続けること。表面をくすませない1日8分 — その一つを、できるだけ静かに。' })}
-          </p>
-        </div>
-        <div style={{ marginTop: 24, paddingTop: 16, borderTop: `1px solid ${fnxRule(0.18)}` }}>
-          <div style={{ fontFamily: FNX.serif, fontSize: 16 }}>{t({ en:'Hyungju Park', ko:'박형주', ja:'パク・ヒョンジュ' })}</div>
-          <div style={{ marginTop: 4, fontSize: 12, color: FNX.sage, letterSpacing: '0.06em' }}>{t({ en:'Founder', ko:'창립자', ja:'創業者' })}</div>
-          <div style={{ marginTop: 12, fontFamily: FNX.mono, fontSize: 11, color: FNX.sage, letterSpacing: '0.14em' }}>{t({ en:'Seoul · April 2024', ko:'서울 · 2024년 4월', ja:'ソウル · 2024年4月' })}</div>
-        </div>
+      {/* 01 — PERSPECTIVE */}
+      <section style={{ background: FNX.parchment, padding: '44px 24px' }}>
+        <RuleLabel align="left" color={FNX.tan}>{t({ en:'01 — Our Perspective', ko:'01 — 관점', ja:'01 — 視点' })}</RuleLabel>
+        <h2 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 26, lineHeight: 1.28, letterSpacing: '-0.01em' }}>
+          {t({ en:'Real change begins with the skin’s own power to recover.', ko:'진짜 변화는 피부가 스스로 회복하는 힘에서 시작됩니다.', ja:'本当の変化は、肌が自ら回復する力から始まります。' })}
+        </h2>
+        <p style={{ margin: '18px 0 0', fontSize: 14, lineHeight: 1.9, color: FNX.sage }}>
+          {t({ en:'FINIXLAB does not try to force time backward. Instead, we help skin age slowly and in good health — not chasing what has passed, but caring for the power to recover that remains.', ko:'FINIXLAB은 시간을 억지로 되돌리려 하지 않습니다. 대신 피부가 천천히, 그리고 건강하게 나이 들어갈 수 있도록 돕습니다. 지나간 것을 좇기보다, 남아 있는 회복의 힘을 돌봅니다.', ja:'FINIXLABは時間を無理に巻き戻そうとはしません。代わりに、肌がゆっくりと、健やかに年を重ねられるよう寄り添います。過ぎたものを追うのではなく、残された回復の力をいたわります。' })}
+        </p>
       </section>
 
-      {/* PRINCIPLES — 02 */}
-      <section style={{ background: FNX.cream, padding: '40px 24px' }}>
-        <RuleLabel align="left" color={FNX.tan}>{t({ en:'02 — Principles', ko:'02 — 원칙', ja:'02 — 原則' })}</RuleLabel>
-        <h2 style={{ margin: '12px 0 24px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 28, lineHeight: 1.1 }}>{t({ en:'Four quiet principles.', ko:'네 가지 조용한 원칙.', ja:'四つの静かな原則。' })}</h2>
-        {pillars.map(p => (
-          <div key={p.n} style={{ padding: '20px 0', borderTop: `1px solid ${fnxRule(0.18)}` }}>
-            <h3 style={{ margin: '0 0 10px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 24, lineHeight: 1.15 }}>{t(p.t)}</h3>
-            <p style={{ margin: 0, fontSize: 14, lineHeight: 1.85, color: FNX.pineInk }}>{t(p.d)}</p>
-          </div>
-        ))}
-      </section>
-
-      {/* THE LAB — 03 */}
-      <section style={{ background: FNX.parchment, padding: 0 }}>
+      {/* 02 — MISSION */}
+      <section style={{ background: FNX.cream, padding: 0 }}>
         <div style={{ aspectRatio: '4/5', overflow: 'hidden', position: 'relative' }}>
-          <img src="assets/serum-trio.png" alt={t({ en:'Lab collection', ko:'랩 컬렉션', ja:'ラボコレクション' })} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
+          <img src="assets/peptosome-pair.jpg" alt={t({ en:'FINIXLAB lab', ko:'FINIXLAB 랩', ja:'FINIXLAB ラボ' })} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
         </div>
         <div style={{ padding: '40px 24px' }}>
-          <RuleLabel align="left" color={FNX.tan}>{t({ en:'03 — The Lab', ko:'03 — 더 랩', ja:'03 — ザ・ラボ' })}</RuleLabel>
-          <h2 style={{ margin: '12px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 28, lineHeight: 1.1 }}>{t({ en:'Made in Seoul, by hand and instrument.', ko:'서울에서, 손과 기기로 만듭니다.', ja:'ソウルで、手と機器によって。' })}</h2>
-          <p style={{ marginTop: 18, fontSize: 14, lineHeight: 1.85, color: FNX.pineInk }}>
-            {t({ en:'All products are produced in small batches at our Seoul lab and GMP-certified partner facilities. A new batch every eight weeks, with batch numbers printed on every label.', ko:'모든 제품은 서울 랩과 GMP 인증 파트너 시설에서 소량 배치로 생산됩니다. 8주마다 새로운 배치, 모든 라벨에 배치 번호를 인쇄합니다.', ja:'すべての製品は、ソウルのラボとGMP認証パートナー施設で少量バッチ生産されます。8週間ごとに新しいバッチ、すべてのラベルにバッチ番号を印字。' })}
+          <RuleLabel align="left" color={FNX.tan}>{t({ en:'02 — Mission', ko:'02 — 미션', ja:'02 — ミッション' })}</RuleLabel>
+          <h2 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 26, lineHeight: 1.2 }}>{t({ en:'A regenerative derma brand studying baseline recovery.', ko:'근본 컨디션의 회복을 연구하는 재생 더마 브랜드.', ja:'根本コンディションの回復を研究する再生ダーマブランド。' })}</h2>
+          <p style={{ marginTop: 16, fontSize: 14, lineHeight: 1.9, color: FNX.pineInk }}>
+            {t({ en:'FINIXLAB researches how skin recovers its baseline condition. Before the immediate results on the surface, we look first at the conditions that let skin recover on its own.', ko:'FINIXLAB은 피부의 근본 컨디션 회복을 연구하는 재생(再生) 더마 브랜드입니다. 겉으로 드러나는 즉각적인 결과보다, 피부가 스스로 회복하는 힘의 조건을 먼저 살핍니다.', ja:'FINIXLABは、肌の根本コンディションの回復を研究する再生ダーマブランドです。表面に現れる即時の結果よりも、肌が自ら回復するための条件をまず見つめます。' })}
           </p>
-          <div style={{ marginTop: 24, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
-            {[
-              { k:'GMP', v:'CGMP · ISO 22716' },
-              { k:'IRB', v:{ en:'Clinical · Seoul', ko:'임상 · 서울', ja:'臨床 · ソウル' } },
-              { k:'PETA',v:{ en:'Cruelty-free · Vegan', ko:'동물실험 없음 · 비건', ja:'動物実験なし · ヴィーガン' } },
-              { k:'EWG', v:{ en:'Green · skin-safe', ko:'그린 · 피부 안전', ja:'グリーン · 肌にやさしい' } },
-            ].map((c, i) => (
-              <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 10, padding: '12px 0', borderBottom: `1px solid ${fnxRule(0.18)}` }}>
-                <span style={{ fontFamily: FNX.serif, fontSize: 16, letterSpacing: '0.04em' }}>{c.k}</span>
-                <span style={{ fontSize: 11, color: FNX.sage }}>{typeof c.v === 'string' ? c.v : t(c.v)}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* SUSTAINABILITY — 04 */}
-      <section style={{ background: FNX.cream, padding: '40px 24px' }}>
-        <RuleLabel align="left" color={FNX.tan}>{t({ en:'04 — Sustainability', ko:'04 — 지속가능성', ja:'04 — サステナビリティ' })}</RuleLabel>
-        <h2 style={{ margin: '12px 0 24px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 28, lineHeight: 1.1 }}>{t({ en:'Quietly considered for the earth.', ko:'지구를 위한 조용한 고민.', ja:'地球のための、静かな配慮。' })}</h2>
-        {[
-          { t:{ en:'PCR Glass', ko:'PCR 글라스', ja:'PCRガラス' }, d:{ en:'Glass bottles use 60% recycled glass. Labels printed on FSC-certified paper.', ko:'유리병은 재활용 유리 60%를 사용합니다. 라벨은 FSC 인증 종이에 인쇄합니다.', ja:'ガラスボトルは再生ガラスを60%使用。ラベルはFSC認証紙に印刷。' } },
-          { t:{ en:'Refill-Ready', ko:'리필 가능', ja:'リフィル対応' }, d:{ en:'From spring 2026, 50ml bottles run on a refill system. Bring back the bottle for −15% off.', ko:'2026년 봄부터 50ml 병은 리필 시스템으로 운영됩니다. 병을 가져오면 15% 할인.', ja:'2026年春から、50mlボトルはリフィルシステムに。ボトルを持ち込むと15%オフ。' } },
-          { t:{ en:'Local Batch', ko:'로컬 배치', ja:'ローカルバッチ' }, d:{ en:'Small-batch production at GMP partner facilities to minimize shipping distance.', ko:'배송 거리를 최소화하기 위해 GMP 파트너 시설에서 소량 배치로 생산합니다.', ja:'輸送距離を最小化するため、GMPパートナー施設で少量バッチ生産。' } },
-          { t:{ en:'1% for Skin', ko:'1% 포 스킨', ja:'1% フォー スキン' }, d:{ en:'1% of revenue is donated to a Korean dermatology research fellowship.', ko:'매출의 1%를 한국 피부과학 연구 펠로십에 기부합니다.', ja:'売上の1%を韓国の皮膚科学研究フェローシップに寄付します。' } },
-        ].map(c => (
-          <div key={c.t.en} style={{ padding: '18px 0', borderTop: `1px solid ${fnxRule(0.18)}` }}>
-            <h3 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 20 }}>{t(c.t)}</h3>
-            <p style={{ margin: '10px 0 0', fontSize: 13, lineHeight: 1.7, color: FNX.pineInk }}>{t(c.d)}</p>
-          </div>
-        ))}
+      {/* 03 — IDENTITY */}
+      <section style={{ background: FNX.pineInk, color: FNX.cream, padding: '48px 24px' }}>
+        <RuleLabel align="left" color={fnxCream(0.82)}>{t({ en:'03 — Identity', ko:'03 — 아이덴티티', ja:'03 — アイデンティティ' })}</RuleLabel>
+        <h2 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontWeight: 200, fontSize: 32, lineHeight: 1.12 }}>{t({ en:'FINIXLAB — skin that rises again.', ko:'FINIXLAB — 다시 비상하는 피부.', ja:'FINIXLAB — 再び羽ばたく肌。' })}</h2>
+        <p style={{ margin: '18px 0 0', fontSize: 14, lineHeight: 1.9, color: fnxCream(0.85) }}>
+          {t({ en:'The name comes from the phoenix — the bird that raises itself again. Tired, depleted skin regaining its power to recover and rising once more: that moment of recovery is the story FINIXLAB tells.', ko:'브랜드 이름은 스스로를 다시 일으키는 불사조(Phoenix)에서 비롯되었습니다. 지치고 무너진 피부가 회복력을 되찾아 다시 비상하는 순간 — FINIXLAB이 이야기하는 것은 바로 그 회복의 서사입니다.', ja:'ブランド名は、自らを再び起こす不死鳥（フェニックス）に由来します。疲れ、崩れた肌が回復力を取り戻し、再び羽ばたく瞬間 — FINIXLABが語るのは、その回復の物語です。' })}
+        </p>
       </section>
 
-      {/* CLINIC PARTNERS — 05 */}
-      <section style={{ background: FNX.olive, color: FNX.cream, padding: '40px 24px' }}>
-        <RuleLabel align="left" color={fnxCream(0.55)}>{t({ en:'05 — Clinic Partners', ko:'05 — 클리닉 파트너', ja:'05 — クリニックパートナー' })}</RuleLabel>
-        <h2 style={{ margin: '12px 0 24px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 28, lineHeight: 1.1 }}>{t({ en:'A network of slow-thinking clinics.', ko:'느리게 생각하는 클리닉들의 네트워크.', ja:'ゆっくり考えるクリニックのネットワーク。' })}</h2>
-        {[
-          { c:{ en:'Seoul · 14', ko:'서울 · 14', ja:'ソウル · 14' }, n:['Cheongdam Skin Lab', 'Hannam-dong Clinic', 'Yongsan Dermal', 'Yeoksam Aesthetics', { en:'+ 10 partners', ko:'+ 10개 파트너', ja:'+ 10パートナー' }] },
-          { c:{ en:'Shanghai · 6', ko:'상하이 · 6', ja:'上海 · 6' }, n:['Xintiandi Dermatology', 'Jing\'an Skin Studio', 'Pudong Aesthetics', { en:'+ 3 partners', ko:'+ 3개 파트너', ja:'+ 3パートナー' }] },
-          { c:{ en:'Tokyo · 5', ko:'도쿄 · 5', ja:'東京 · 5' }, n:['Aoyama Clinic', 'Daikanyama Skin', 'Ginza Dermal', { en:'+ 2 partners', ko:'+ 2개 파트너', ja:'+ 2パートナー' }] },
-          { c:{ en:'HCMC · 3', ko:'호치민 · 3', ja:'ホーチミン · 3' }, n:['District 1 Skin Studio', 'Thao Dien Clinic', { en:'+ 1 partner', ko:'+ 1개 파트너', ja:'+ 1パートナー' }] },
-        ].map(city => (
-          <div key={city.c.en} style={{ padding: '20px 0', borderTop: `1px solid ${fnxCream(0.18)}` }}>
-            <h3 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 20, letterSpacing: '0.04em' }}>{t(city.c)}</h3>
-            <ul style={{ listStyle: 'none', margin: '14px 0 0', padding: 0, display: 'grid', gap: 8, fontSize: 12, color: fnxCream(0.82) }}>
-              {city.n.map((p, pi) => <li key={pi}>· {typeof p === 'string' ? p : t(p)}</li>)}
-            </ul>
-          </div>
-        ))}
+      {/* 04 — PROMISE */}
+      <section style={{ background: FNX.cream, padding: '44px 24px' }}>
+        <RuleLabel align="left" color={FNX.tan}>{t({ en:'04 — Our Promise', ko:'04 — 약속', ja:'04 — 約束' })}</RuleLabel>
+        <h2 style={{ margin: '14px 0 24px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 26, lineHeight: 1.15 }}>{t({ en:'What we don’t promise, and what we do.', ko:'약속하지 않는 것, 그리고 약속하는 것.', ja:'約束しないこと、そして約束すること。' })}</h2>
+        <div style={{ background: FNX.bone, border: `1px solid ${fnxRule(0.14)}`, padding: '24px 20px' }}>
+          <div style={{ fontFamily: FNX.serif, fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: FNX.sage }}>{t({ en:'We don’t', ko:'하지 않는 것', ja:'しないこと' })}</div>
+          <ul style={{ listStyle: 'none', margin: '12px 0 0', padding: 0 }}>
+            {promiseDont.map((p, i) => (
+              <li key={i} style={{ display: 'flex', gap: 12, alignItems: 'baseline', padding: '12px 0', borderTop: i > 0 ? `1px solid ${fnxRule(0.14)}` : 'none', fontSize: 14, lineHeight: 1.5, color: FNX.sage }}>
+                <span style={{ color: FNX.tan }}>✕</span>{t(p)}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div style={{ marginTop: 14, background: FNX.pineInk, color: FNX.cream, padding: '24px 20px' }}>
+          <div style={{ fontFamily: FNX.serif, fontSize: 11, letterSpacing: '0.16em', textTransform: 'uppercase', color: fnxCream(0.72) }}>{t({ en:'Instead, we do', ko:'대신 하는 것', ja:'代わりにすること' })}</div>
+          <ul style={{ listStyle: 'none', margin: '12px 0 0', padding: 0 }}>
+            {promiseDo.map((p, i) => (
+              <li key={i} style={{ display: 'flex', gap: 12, alignItems: 'baseline', padding: '12px 0', borderTop: i > 0 ? `1px solid ${fnxCream(0.16)}` : 'none', fontSize: 14, lineHeight: 1.5, color: FNX.cream }}>
+                <span style={{ color: FNX.labRed }}>✓</span>{t(p)}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* 05 — FOR YOU */}
+      <section style={{ background: FNX.parchment, padding: '44px 24px' }}>
+        <RuleLabel align="left" color={FNX.tan}>{t({ en:'05 — For You', ko:'05 — 소비자에게', ja:'05 — あなたへ' })}</RuleLabel>
+        <h2 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 26, lineHeight: 1.22 }}>{t({ en:'Skin is not a competition — it’s something you care for.', ko:'피부는 경쟁이 아니라, 관리의 대상입니다.', ja:'肌は競争ではなく、ケアの対象です。' })}</h2>
+        <p style={{ margin: '18px 0 0', fontSize: 14, lineHeight: 1.9, color: FNX.sage }}>
+          {t({ en:'Not faster, not stronger — but looking at your own skin over time and caring for it. FINIXLAB does not try to beat your skin; it stays beside you, aging together.', ko:'더 빠르게, 더 강하게가 아니라 — 나의 피부를 오래 들여다보고 돌보는 일. FINIXLAB은 피부를 이기려 하지 않고, 함께 나이 들어가는 방식으로 당신의 곁에 머뭅니다.', ja:'より速く、より強くではなく — 自分の肌を長く見つめ、いたわること。FINIXLABは肌に勝とうとはせず、ともに歳を重ねる形であなたのそばに寄り添います。' })}
+        </p>
+        <div style={{ marginTop: 26, display: 'grid', gap: 10 }}>
+          <Btn kind="primary" full data-go="shop">{t({ en:'See the Product Line →', ko:'제품 라인업 보기 →', ja:'製品ラインナップを見る →' })}</Btn>
+          <Btn kind="ghost" full style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="contact">{t({ en:'Contact Us', ko:'문의하기', ja:'お問い合わせ' })}</Btn>
+        </div>
       </section>
 
       <MFooter />

@@ -158,6 +158,7 @@
       'science'          : () => <SciencePage />,
       'journal'          : () => <JournalPage />,
       'about'            : () => <AboutPage />,
+      'contact'          : () => <ContactPage />,
       'cart'             : () => <CartPage />,
       'cart/empty'       : () => <EmptyCartPage />,
       'account'          : () => <AccountPage />,
@@ -172,6 +173,7 @@
       'science'          : () => <ScienceMobile />,
       'journal'          : () => <JournalMobile />,
       'about'            : () => <AboutMobile />,
+      'contact'          : () => <ContactMobile />,
       'cart'             : () => <CartMobile />,
       'account'          : () => <AccountMobile />,
       'search'           : () => <SearchMobile />,
@@ -209,6 +211,8 @@
               const txt = (el.textContent || '').trim().toLowerCase();
               const map = {
                 'shop': 'shop',
+                'products': 'shop',
+                'contact': 'contact',
                 'science': 'science',
                 'journal': 'journal',
                 'about': 'about',
