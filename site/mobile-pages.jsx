@@ -858,6 +858,7 @@ const AboutMobile = () => {
   return (
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300, fontSize: 14 }}>
       <MHeader title={{ en:'About', ko:'브랜드', ja:'ブランド' }} />
+      <AboutTabs active="about" mobile />
 
       {/* HERO */}
       <section style={{ padding: '32px 24px' }}>
