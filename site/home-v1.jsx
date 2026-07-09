@@ -1,364 +1,165 @@
-// Home V1 — Editorial Hero (Cream-heavy, Aesop-influenced)
-// Now actively uses product imagery throughout
+// Home V1 — Recovery Skin Science (desktop)
+// Structure per client IA (2026.07 brand update): HERO · OUR BRANDS · CONTACT
 
 const HomeV1 = () => {
   const { t } = useLocale();
-  const ingredients = [
-    { i:'01', n:'VAMTOXIN™ Peptide', r:{ en:'SNARE-inhibiting peptide · softens expression lines', ko:'SNARE 억제 펩타이드 · 표정 주름을 부드럽게', ja:'SNARE阻害ペプチド · 表情ジワをやわらげる' }, p:'2.0%' },
-    { i:'02', n:'Spicule Complex',   r:{ en:'Marine micro-needle · active delivery', ko:'해양 마이크로 니들 · 유효성분 전달', ja:'マリン マイクロニードル · 有効成分デリバリー' },    p:'0.5%' },
-    { i:'03', n:'Centella Asiatica', r:{ en:'Centella · soothing · barrier support', ko:'센텔라 · 진정 · 장벽 케어', ja:'ツボクサ · 鎮静 · バリアケア' },     p:'0.5%' },
-    { i:'04', n:'Niacinamide',       r:{ en:'Niacinamide · tone clarity', ko:'나이아신아마이드 · 맑은 톤', ja:'ナイアシンアミド · 澄んだトーン' },   p:'4.0%' },
-  ];
-  const ritual = [
-    { n:'01', t:{ en:'Cleanse', ko:'클렌즈', ja:'クレンズ' },   k:{ en:'Cleanse', ko:'클렌즈', ja:'クレンズ' },   d:{ en:'Morning and evening, a gentle cleanser.', ko:'아침과 저녁, 부드러운 클렌저로.', ja:'朝と夜、やさしいクレンザーで。' } },
-    { n:'02', t:{ en:'Prep', ko:'프렙', ja:'プレップ' },      k:{ en:'Prep', ko:'프렙', ja:'プレップ' },   d:{ en:'A pH-balanced toner to settle the surface.', ko:'pH 밸런스 토너로 피부 결을 정돈.', ja:'pHバランストナーで肌のキメを整える。' } },
-    { n:'03', t:{ en:'Prescribe', ko:'프리스크라이브', ja:'プリスクライブ' }, k:{ en:'Prescribe', ko:'프리스크라이브', ja:'プリスクライブ' },   d:{ en:'VAMTOXIN™ 2% booster, once.', ko:'VAMTOXIN™ 2% 부스터, 한 번.', ja:'VAMTOXIN™ 2% ブースター、一度。' } },
-    { n:'04', t:{ en:'Seal', ko:'씰', ja:'シール' },      k:{ en:'Seal', ko:'씰', ja:'シール' }, d:{ en:'Seal with a light cream.', ko:'가벼운 크림으로 마무리.', ja:'軽やかなクリームで仕上げる。' } },
+
+  const brands = [
+    {
+      no: 'Brand 01',
+      name: 'FINIXLAB',
+      role: { en: 'Daily Slow Aging Care', ko: '데일리 슬로우 에이징 케어', ja: 'デイリー スローエイジングケア' },
+      desc: {
+        en: 'Slow-aging care that protects the skin’s power to recover within a daily routine — easing inner dryness and rough texture, keeping radiance and lines healthy over time.',
+        ko: '매일의 루틴에서 피부 회복력을 지키는 슬로우 에이징 케어. 속건조와 거칠어진 피부결을 다독이고, 윤기와 주름결을 오래도록 건강하게 가꿉니다.',
+        ja: '毎日のルーティンで肌の回復力を守るスローエイジングケア。インナードライやごわつくキメを整え、ツヤとハリを長く健やかに保ちます。',
+      },
+      concerns: [
+        { en: 'Inner Dryness', ko: '속건조', ja: 'インナードライ' },
+        { en: 'Texture', ko: '피부결', ja: 'キメ' },
+        { en: 'Radiance', ko: '윤기', ja: 'ツヤ' },
+        { en: 'Fine Lines', ko: '주름', ja: 'シワ' },
+      ],
+      products: [
+        { n: 'Peptosome Skin Booster' },
+        { n: 'Spicule Wrinkle-Free Glow Serum' },
+      ],
+      img: 'assets/peptosome-pair.jpg', pos: '50% center', go: 'shop',
+    },
+    {
+      no: 'Brand 02',
+      name: 'PureRX',
+      role: { en: 'Professional Recovery Care', ko: '프로페셔널 리커버리 케어', ja: 'プロフェッショナル リカバリーケア' },
+      desc: {
+        en: 'Professional recovery care for sensitized, depleted skin. Respecting the barrier after procedures and through fragile periods, it restores baseline condition as expert-level home care.',
+        ko: '민감해지고 컨디션이 저하된 피부를 위한 전문가용 회복 케어. 시술 후와 예민한 시기의 피부 장벽을 존중하며, 전문적인 홈케어로 근본 컨디션을 회복합니다.',
+        ja: '敏感になりコンディションが低下した肌のための専門的なリカバリーケア。施術後やゆらぎやすい時期の肌バリアを尊重し、プロ仕様のホームケアで根本コンディションを整えます。',
+      },
+      concerns: [
+        { en: 'Sensitive Skin', ko: '민감 피부', ja: '敏感肌' },
+        { en: 'Depleted Condition', ko: '컨디션 저하', ja: 'コンディション低下' },
+        { en: 'Pro Home-Care', ko: '전문 홈케어', ja: 'プロ仕様ホームケア' },
+      ],
+      products: [
+        { n: 'PDRN RX Ampoule', soon: true },
+      ],
+      img: 'assets/serum-box-single.png', pos: '50% center', go: 'shop',
+    },
   ];
 
   return (
     <div style={{ width: '100%', background: FNX.cream, color: FNX.pineInk, fontFamily: FNX.sans, fontWeight: 300 }}>
       <SiteHeader variant="cream" />
 
-      {/* HERO — full-bleed visual · mood v2 (light + large imagery) */}
-      <section style={{ position: 'relative', minHeight: '86vh', overflow: 'hidden', background: FNX.cream }}>
+      {/* ===================== HERO ===================== */}
+      <section style={{ position: 'relative', minHeight: '92vh', overflow: 'hidden', background: FNX.cream }}>
         <img
           src="assets/duo-on-stone.jpg"
-          alt={t({ en: 'Peptosome duo on stone', ko: '스톤 위의 Peptosome 듀오', ja: '石の上の Peptosome デュオ' })}
+          alt={t({ en: 'FINIXLAB on stone', ko: '스톤 위의 FINIXLAB', ja: '石の上の FINIXLAB' })}
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 64%' }}
         />
         <div aria-hidden="true" style={{ position: 'absolute', inset: 0,
-          background: 'linear-gradient(to right, rgba(251,250,247,0.90) 0%, rgba(251,250,247,0.44) 44%, rgba(251,250,247,0) 68%)' }} />
-        <div style={{ position: 'relative', zIndex: 1, minHeight: '86vh', display: 'flex', alignItems: 'center', padding: '96px 40px' }}>
-          <div style={{ maxWidth: 640 }}>
-            <Slogan size="lg" />
-            <p style={{ marginTop: 32, maxWidth: '44ch', fontSize: 15, lineHeight: 1.85, color: FNX.pineInk }}>
-              {t({ en: 'VAMTOXIN™ Peptide 2.0% — clinic-grade care distilled into a daily ritual. Concentrations stated honestly, formulated with the quietest touch.', ko: 'VAMTOXIN™ 펩타이드 2.0% — 클리닉 수준의 케어를 매일의 리추얼로 담았습니다. 함량은 정직하게, 손길은 가장 고요하게.', ja: 'VAMTOXIN™ ペプチド 2.0% — クリニック品質のケアを毎日のリチュアルへ。配合量は正直に、タッチは最も静かに。' })}
+          background: 'linear-gradient(to right, rgba(251,250,247,0.94) 0%, rgba(251,250,247,0.60) 46%, rgba(251,250,247,0.08) 74%)' }} />
+        <div style={{ position: 'relative', zIndex: 1, minHeight: '92vh', display: 'flex', alignItems: 'center', padding: '96px 40px' }}>
+          <div style={{ maxWidth: 720 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', color: FNX.sage }}>
+              <span style={{ width: 6, height: 6, borderRadius: '50%', background: FNX.labRed }}/>
+              Recovery Skin Science
+            </div>
+            <h1 style={{ margin: '26px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 54, lineHeight: 1.12, letterSpacing: '-0.02em', color: FNX.pineInk, whiteSpace: 'pre-line' }}>
+              {t({
+                en: 'Skin doesn’t age.\nIt loses its power to recover.',
+                ko: '피부는 나이를 먹는 것이 아니라,\n회복력을 잃어갑니다.',
+                ja: '肌は年を取るのではなく、\n回復力を失っていく。',
+              })}
+            </h1>
+            <p style={{ marginTop: 28, maxWidth: '52ch', fontSize: 16, lineHeight: 1.9, color: FNX.pineInk }}>
+              {t({
+                en: 'FINIXLAB is a slow-aging derma brand that studies the skin’s power to recover. Rather than promising fast change, we research how skin regains its own healthy balance and stays beautiful for the long term.',
+                ko: 'FINIXLAB은 피부 회복력을 연구하는 슬로우에이징 더마 브랜드입니다. 빠른 변화를 약속하기보다, 피부가 스스로 건강한 균형을 되찾고 오래도록 아름다운 피부를 유지할 수 있도록 연구합니다.',
+                ja: 'FINIXLABは、肌の回復力を研究するスローエイジング ダーマブランドです。速い変化を約束するのではなく、肌が自ら健康なバランスを取り戻し、長く美しい肌を保てるよう研究します。',
+              })}
             </p>
-            <div style={{ marginTop: 38, display: 'flex', alignItems: 'center', gap: 18, flexWrap: 'wrap' }}>
-              <Btn kind="primary" size="lg" data-go="shop">{t({ en: 'Shop the Collection →', ko: '컬렉션 보기 →', ja: 'コレクションを見る →' })}</Btn>
-              <Btn kind="ghost" size="lg" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="science">{t({ en: 'Read the Science', ko: '사이언스 보기', ja: 'サイエンスを読む' })}</Btn>
+            <p style={{ marginTop: 24, fontFamily: FNX.serif, fontWeight: 300, fontStyle: 'italic', fontSize: 22, letterSpacing: '-0.01em', color: FNX.pine }}>
+              {t({ en: 'So your skin can rise again.', ko: '당신의 피부가 다시 비상할 수 있도록.', ja: 'あなたの肌が、再び羽ばたけるように。' })}
+            </p>
+            <div style={{ marginTop: 38, display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+              <Btn kind="primary" size="lg" data-go="about">{t({ en: 'Read the Brand Story →', ko: '브랜드 스토리 보기 →', ja: 'ブランドストーリーを見る →' })}</Btn>
+              <Btn kind="ghost" size="lg" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="shop">{t({ en: 'See the Product Line', ko: '제품 라인업 보기', ja: '製品ラインナップを見る' })}</Btn>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* HERO STATS — white band */}
-      <section style={{ background: FNX.white, borderBottom: `1px solid ${fnxRule(0.10)}`, padding: '34px 40px' }}>
-        <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24 }}>
-          {[
-            { k: '2.0%', v: { en: 'VAMTOXIN™ Peptide', ko: 'VAMTOXIN™ 펩타이드', ja: 'VAMTOXIN™ ペプチド' } },
-            { k: 'N°01', v: { en: 'Supadelixir Sole Patent', ko: 'Supadelixir 단독 특허', ja: 'Supadelixir 単独特許' } },
-            { k: '8 min', v: { en: 'Daily Slow Ritual', ko: '매일의 슬로우 리추얼', ja: '毎日のスロー リチュアル' } },
-          ].map(s => (
-            <div key={s.k}>
-              <div style={{ fontFamily: FNX.serif, fontSize: 32, fontWeight: 300, letterSpacing: '0.02em', lineHeight: 1 }}>{s.k}</div>
-              <div style={{ marginTop: 6, fontSize: 12, color: FNX.sage, letterSpacing: '0.06em' }}>{t(s.v)}</div>
-            </div>
-          ))}
+        <div aria-hidden="true" style={{ position: 'absolute', left: 40, bottom: 28, zIndex: 1, display: 'flex', alignItems: 'center', gap: 10, fontFamily: FNX.mono, fontSize: 11, letterSpacing: '0.2em', color: FNX.sage }}>
+          <span>SCROLL</span><span style={{ fontSize: 14 }}>↓</span>
         </div>
       </section>
 
-      {/* MOOD STATEMENT + decorative pair shot */}
-      <Section bg={FNX.parchment} padding="120px 40px">
-        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'center' }}>
-          <ProductShot src="assets/peptosome-pair.jpg" alt={t({ en:'Peptosome on stone', ko:'돌 위의 Peptosome', ja:'石の上の Peptosome' })} height={540} objectPosition="50% center" bg={FNX.parchment} />
-          <div>
-            <RuleLabel align="left" color={FNX.sage}>{t({ en:'The Premise', ko:'프레미스', ja:'前提' })}</RuleLabel>
-            <p style={{ marginTop: 22, fontFamily: FNX.serif, fontWeight: 300, fontSize: 32, lineHeight: 1.35, letterSpacing: '-0.01em', color: FNX.pineInk }}>
-              {t({ en:'A quiet ritual that settles into skin. Honest in concentration, quietest in touch — a prescription for the time it takes skin to find its own light.', ko:'피부에 고요히 스며드는 리추얼. 함량은 정직하게, 손길은 가장 고요하게 — 피부가 스스로의 빛을 찾는 시간을 위한 처방.', ja:'肌に静かに溶け込むリチュアル。配合量は正直に、タッチは最も静かに — 肌が自らの輝きを取り戻す時間のための処方。' })}
-            </p>
-            <p style={{ marginTop: 28, maxWidth: '52ch', fontSize: 14, lineHeight: 1.85, color: FNX.sage }}>
-              {t({ en:'Finixlab brings together clinical peptide concentrations and the poetic restraint of Korean indie beauty. Ingredients arranged like a clean shelf, finish quiet as midday light.', ko:'Finixlab는 클리닉 수준의 펩타이드 함량과 한국 인디 뷰티의 시적인 절제를 함께 담습니다. 깔끔한 선반처럼 정돈된 성분, 한낮의 빛처럼 고요한 마무리.', ja:'Finixlab はクリニカルなペプチド配合と韓国インディービューティーの詩的な抑制を併せ持ちます。整然とした棚のように並ぶ成分、真昼の光のように静かな仕上がり。' })}
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      {/* THE COLLECTION — two products side by side */}
+      {/* ===================== OUR BRANDS ===================== */}
       <Section bg={FNX.cream} padding="120px 40px">
-        <div className="sechead" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 32, marginBottom: 48, paddingBottom: 22, borderBottom: `1px solid ${fnxRule(0.2)}` }}>
-          <div>
-            <RuleLabel align="left" color={FNX.tan}>{t({ en:'02 — The Collection', ko:'02 — 컬렉션', ja:'02 — コレクション' })}</RuleLabel>
-            <h2 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 56, letterSpacing: '-0.01em', lineHeight: 1.05 }}>
-              {t({ en:'Two prescriptions, one ritual.', ko:'두 개의 처방, 하나의 리추얼.', ja:'二つの処方、一つのリチュアル。' })}
-            </h2>
-          </div>
-          <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="shop">{t({ en:'Shop All →', ko:'전체 보기 →', ja:'すべて見る →' })}</Btn>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
-          {/* Card 1 — Peptosome */}
-          <article style={{ background: FNX.bone, padding: 36, border: `1px solid ${fnxRule(0.12)}` }}>
-            <div style={{ marginTop: 24, height: 480, overflow: 'hidden', position: 'relative', background: FNX.cream }}>
-              <img src="assets/booster-bottle-front.png" alt={t({ en:'Peptosome Skin Booster', ko:'Peptosome Skin Booster', ja:'Peptosome Skin Booster' })}
-                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
-            </div>
-            <div style={{ marginTop: 28, display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'end', gap: 24 }}>
-              <div>
-                <h3 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 32, letterSpacing: '-0.01em', lineHeight: 1.1 }}>
-                  Peptosome Skin Booster
-                </h3>
-                <p style={{ marginTop: 12, fontSize: 13, lineHeight: 1.7, color: FNX.sage, margin: '12px 0 0' }}>
-                  {t({ en:'All-in-one skin boosting solution, revitalized by Peptosome — VAMTOXIN™ 2.0% — softens expression lines without injection.', ko:'Peptosome로 되살아난 올인원 스킨 부스팅 솔루션 — VAMTOXIN™ 2.0% — 시술 없이 표정 주름을 부드럽게.', ja:'Peptosome で生まれ変わるオールインワン スキンブースティング ソリューション — VAMTOXIN™ 2.0% — 注射なしで表情ジワをやわらげる。' })}
-                </p>
-              </div>
-              <div style={{ textAlign: 'right' }}>
-                <div style={{ fontFamily: FNX.serif, fontSize: 22, letterSpacing: '0.04em' }}>₩96,000</div>
-                <div style={{ marginTop: 4, fontFamily: FNX.mono, fontSize: 11, color: FNX.sage, letterSpacing: '0.14em' }}>~$72 · 50ML</div>
-              </div>
-            </div>
-            <div style={{ marginTop: 24, display: 'flex', gap: 10 }}>
-              <Btn kind="primary" full style={{}} onClick={() => window.fnxToast && window.fnxToast('Added to bag')}>{t({ en:'Add to Bag', ko:'장바구니 담기', ja:'バッグに追加' })}</Btn>
-              <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} size="md" data-go="shop/peptosome">{t({ en:'Detail →', ko:'자세히 →', ja:'詳細 →' })}</Btn>
-            </div>
-          </article>
-
-          {/* Card 2 — Spicule serum */}
-          <article style={{ background: FNX.bone, padding: 36, border: `1px solid ${fnxRule(0.12)}` }}>
-            <div style={{ marginTop: 24, height: 480, overflow: 'hidden', position: 'relative', background: FNX.cream }}>
-              <img src="assets/serum-shadow.png" alt={t({ en:'Spicule Wrinkle-Free Glow Serum', ko:'Spicule Wrinkle-Free Glow Serum', ja:'Spicule Wrinkle-Free Glow Serum' })}
-                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
-            </div>
-            <div style={{ marginTop: 28, display: 'grid', gridTemplateColumns: '1fr auto', alignItems: 'end', gap: 24 }}>
-              <div>
-                <h3 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 32, letterSpacing: '-0.01em', lineHeight: 1.1 }}>
-                  Spicule Wrinkle-Free Glow.
-                </h3>
-                <p style={{ marginTop: 12, fontSize: 13, lineHeight: 1.7, color: FNX.sage, margin: '12px 0 0' }}>
-                  {t({ en:'VAMTOXIN™ 2.0% · Niacinamide · Hydroxycitric Acid — a single beam of clarity over fine lines.', ko:'VAMTOXIN™ 2.0% · 나이아신아마이드 · 하이드록시시트릭 애시드 — 잔주름 위로 번지는 한 줄기 맑은 빛.', ja:'VAMTOXIN™ 2.0% · ナイアシンアミド · ヒドロキシクエン酸 — 小ジワに差す一筋の澄んだ輝き。' })}
-                </p>
-              </div>
-              <div style={{ textAlign: 'right' }}>
-                <div style={{ fontFamily: FNX.serif, fontSize: 22, letterSpacing: '0.04em' }}>₩58,000</div>
-                <div style={{ marginTop: 4, fontFamily: FNX.mono, fontSize: 11, color: FNX.sage, letterSpacing: '0.14em' }}>~$43 · 20ML</div>
-              </div>
-            </div>
-            <div style={{ marginTop: 24, display: 'flex', gap: 10 }}>
-              <Btn kind="primary" full style={{}} onClick={() => window.fnxToast && window.fnxToast('Added to bag')}>{t({ en:'Add to Bag', ko:'장바구니 담기', ja:'バッグに追加' })}</Btn>
-              <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} size="md" data-go="shop/peptosome">{t({ en:'Detail →', ko:'자세히 →', ja:'詳細 →' })}</Btn>
-            </div>
-          </article>
-        </div>
-      </Section>
-
-      {/* INGREDIENT SPOTLIGHT */}
-      <Section bg={FNX.cream} padding="120px 40px" style={{ borderTop: `1px solid ${fnxRule(0.14)}` }}>
-        <div className="sechead-grid" style={{ display: 'grid', gridTemplateColumns: '1fr auto', columnGap: 32, alignItems: 'center', borderBottom: `1px solid ${fnxRule(0.2)}`, paddingBottom: 24, marginBottom: 48 }}>
-          <div>
-            <RuleLabel align="left" color={FNX.tan}>{t({ en:'03 — Formulation', ko:'03 — 포뮬레이션', ja:'03 — フォーミュレーション' })}</RuleLabel>
-            <h2 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 56, letterSpacing: '-0.01em', lineHeight: 1.05 }}>
-              {t({ en:'Concentration before narrative.', ko:'서사보다 함량.', ja:'物語より配合量。' })}
-            </h2>
-          </div>
-          <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }}>{t({ en:'View Full Formula →', ko:'전체 포뮬러 보기 →', ja:'全成分を見る →' })}</Btn>
-        </div>
-
-        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'start' }}>
-          {/* Big still image — serum-grid editorial pattern */}
-          <div style={{ height: 580, overflow: 'hidden', position: 'relative', background: FNX.cream, border: `1px solid ${fnxRule(0.12)}` }}>
-            <img src="assets/serum-grid.png" alt={t({ en:'Spicule Serum boxes grid', ko:'Spicule Serum 박스 그리드', ja:'Spicule Serum ボックス グリッド' })}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% center' }} />
-          </div>
-
-          <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-            {ingredients.map((x, idx) => (
-              <li key={x.n} style={{
-                display: 'grid', gridTemplateColumns: '40px 1fr auto',
-                alignItems: 'baseline', gap: 24, padding: '24px 0',
-                borderBottom: idx < ingredients.length - 1 ? `1px dashed ${fnxRule(0.15)}` : `1px solid ${fnxRule(0.25)}`,
-              }}>
-                <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage, letterSpacing: '0.14em' }}>{x.i}</span>
-                <div>
-                  <div style={{ fontFamily: FNX.serif, fontSize: 22, fontWeight: 300, letterSpacing: '0.02em' }}>
-                    {x.n}
-                  </div>
-                  <div style={{ marginTop: 6, fontSize: 13, color: FNX.sage, lineHeight: 1.55 }}>{t(x.r)}</div>
-                </div>
-                <div style={{ fontFamily: FNX.serif, fontSize: 22, fontWeight: 300, letterSpacing: '0.06em' }}>{x.p}</div>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Section>
-
-      {/* RITUAL — pine bg */}
-      <Section bg={FNX.pineInk} padding="120px 40px" style={{ color: FNX.cream }}>
-        <div style={{ textAlign: 'center', marginBottom: 64 }}>
-          <RuleLabel align="center" color={fnxCream(0.82)}>{t({ en:'04 — The Ritual', ko:'04 — 리추얼', ja:'04 — リチュアル' })}</RuleLabel>
-          <h2 style={{ margin: '18px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 56, letterSpacing: '0.02em', color: FNX.cream }}>
-            {t({ en:'Four steps, eight minutes.', ko:'네 단계, 8분.', ja:'四つのステップ、八分。' })}
+        <div style={{ textAlign: 'center', maxWidth: 720, margin: '0 auto 80px' }}>
+          <RuleLabel align="center" color={FNX.tan}>{t({ en: 'Our Brands', ko: '아워 브랜드', ja: 'アワーブランド' })}</RuleLabel>
+          <h2 style={{ margin: '18px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 52, letterSpacing: '-0.01em', lineHeight: 1.08 }}>
+            One Philosophy. Two Brands.
           </h2>
+          <p style={{ margin: '22px 0 0', fontSize: 15, lineHeight: 1.85, color: FNX.sage }}>
+            {t({
+              en: 'Two brands grown from one philosophy of skin. From a single root — recovery — they branch into daily slow-aging care and professional recovery care.',
+              ko: '하나의 피부 철학에서 시작된 두 개의 브랜드. ‘회복력’이라는 같은 뿌리에서, 매일의 슬로우 에이징 케어와 전문가용 회복 케어로 나뉩니다.',
+              ja: '一つの肌哲学から生まれた二つのブランド。「回復力」という同じ根から、毎日のスローエイジングケアと、専門家向けのリカバリーケアへと枝分かれします。',
+            })}
+          </p>
         </div>
-        <div className="r4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
-          {ritual.map(r => (
-            <div key={r.n} style={{ borderTop: `1px solid ${fnxCream(0.25)}`, paddingTop: 24 }}>
-              <div style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.tan, letterSpacing: '0.24em' }}>{r.n}</div>
-              <h3 style={{ margin: '16px 0 6px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 30, letterSpacing: '0.02em' }}>{t(r.t)}</h3>
-              <div style={{ color: fnxCream(0.72), fontSize: 12, letterSpacing: '0.04em', marginBottom: 14 }}>{t(r.k)}</div>
-              <p style={{ fontSize: 13, lineHeight: 1.7, color: fnxCream(0.85), margin: 0 }}>{t(r.d)}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
 
-      {/* BEFORE / AFTER — visual only, no metrics */}
-      <Section bg={FNX.cream} padding="120px 40px">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 64, alignItems: 'center' }}>
-          <div>
-            <RuleLabel align="left" color={FNX.tan}>{t({ en:'05 — Real Users · Testers', ko:'05 — 실사용자 · 테스터', ja:'05 — 実ユーザー · テスター' })}</RuleLabel>
-            <h2 style={{ margin: '18px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 52, lineHeight: 1.1, letterSpacing: '-0.01em' }}>
-              {t({ en:'Before & After.', ko:'비포 & 애프터.', ja:'ビフォー & アフター。' })}
-            </h2>
-            <p style={{ marginTop: 22, color: FNX.pineInk, fontSize: 15, lineHeight: 1.85, maxWidth: '46ch' }}>
-              {t({ en:'A record from real users in their thirties and beyond. Instead of promising numbers, we present what time has left behind, in their own words.', ko:'30대 이상의 실사용자들이 남긴 기록. 숫자를 약속하는 대신, 시간이 남긴 변화를 그들의 언어로 전합니다.', ja:'30代以上の実ユーザーが残した記録。数字を約束する代わりに、時間が残したものを彼女たち自身の言葉で。' })}
-            </p>
-            <div style={{ marginTop: 32 }}>
-              <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }}>{t({ en:'View all reviews →', ko:'리뷰 전체 보기 →', ja:'すべてのレビューを見る →' })}</Btn>
+        {brands.map((b, i) => {
+          const imgFirst = i % 2 === 0;
+          const imgCol = (
+            <div style={{ height: 620, overflow: 'hidden', position: 'relative', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
+              <img src={b.img} alt={b.name} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: b.pos }} />
             </div>
-          </div>
-          <div style={{ position: 'relative', height: 520, background: FNX.bone, border: `1px solid ${fnxRule(0.18)}` }}>
-            <div style={{ position: 'absolute', inset: 0, display: 'grid', gridTemplateColumns: '1fr 1px 1fr' }}>
-              <div style={{ position: 'relative', overflow: 'hidden' }}>
-                <img src="assets/model-a-before.png" alt={t({ en:'Model A — before', ko:'모델 A — 비포', ja:'モデル A — ビフォー' })}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
+          );
+          const txtCol = (
+            <div>
+              <div style={{ fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.16em', textTransform: 'uppercase', color: FNX.tan }}>
+                {b.no} · {t(b.role)}
               </div>
-              <div style={{ background: fnxRule(0.25) }}/>
-              <div style={{ position: 'relative', overflow: 'hidden' }}>
-                <img src="assets/model-a-after.png" alt={t({ en:'Model A — after', ko:'모델 A — 애프터', ja:'モデル A — アフター' })}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
+              <h3 style={{ margin: '14px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 46, letterSpacing: '0.01em', lineHeight: 1.02 }}>{b.name}</h3>
+              <p style={{ margin: '20px 0 0', fontSize: 15, lineHeight: 1.9, color: FNX.pineInk, maxWidth: '48ch' }}>{t(b.desc)}</p>
+
+              <div style={{ marginTop: 24, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                {b.concerns.map((c, ci) => (
+                  <span key={ci} style={{ padding: '7px 14px', borderRadius: 999, border: `1px solid ${fnxRule(0.22)}`, fontSize: 12, letterSpacing: '0.04em', color: FNX.sage }}>{t(c)}</span>
+                ))}
+              </div>
+
+              <ul style={{ listStyle: 'none', margin: '28px 0 0', padding: 0 }}>
+                {b.products.map((p, pi) => (
+                  <li key={pi} style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', gap: 16, padding: '16px 0', borderTop: `1px solid ${fnxRule(0.18)}` }}>
+                    <span style={{ fontFamily: FNX.serif, fontSize: 19, fontWeight: 300, letterSpacing: '0.01em' }}>{p.n}</span>
+                    {p.soon
+                      ? <span style={{ fontFamily: FNX.mono, fontSize: 10, letterSpacing: '0.16em', color: FNX.labRed, whiteSpace: 'nowrap' }}>{t({ en: 'COMING SOON', ko: '출시 예정', ja: '近日発売' })}</span>
+                      : <span style={{ fontFamily: FNX.mono, fontSize: 12, color: FNX.sage }}>→</span>}
+                  </li>
+                ))}
+              </ul>
+
+              <div style={{ marginTop: 32 }}>
+                <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go={b.go}>{t({ en: 'View', ko: '보기', ja: '見る' })} {b.name} →</Btn>
               </div>
             </div>
-          </div>
-        </div>
-      </Section>
-
-      {/* HASHTAG LIBRARY — brand copy culture */}
-      <Section bg={FNX.olive} padding="100px 40px" style={{ color: FNX.cream }}>
-        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: 64, alignItems: 'center' }}>
-          <div>
-            <RuleLabel align="left" color={fnxCream(0.82)}>{t({ en:'06 — The Hashtag Library', ko:'06 — 해시태그 라이브러리', ja:'06 — ハッシュタグ ライブラリー' })}</RuleLabel>
-            <h2 style={{ margin: '18px 0 0', fontFamily: FNX.serif, fontWeight: 200, fontSize: 56, lineHeight: 1.05 }}>
-              {t({ en:'Words we live in lower case.', ko:'소문자로 살아가는 단어들.', ja:'小文字で生きる言葉たち。' })}
-            </h2>
-            <p style={{ marginTop: 22, fontSize: 14, lineHeight: 1.85, color: fnxCream(0.82), maxWidth: '36ch' }}>
-              {t({ en:"Finixlab's copy culture — a brand vocabulary of English hashtags. A single word users use to name their ritual.", ko:'Finixlab의 카피 문화 — 영어 해시태그로 이루어진 브랜드 보캐뷸러리. 사용자가 자신의 리추얼을 부르는 한 단어.', ja:'Finixlab のコピー文化 — 英語ハッシュタグによるブランドボキャブラリー。ユーザーが自らのリチュアルを名づける一つの言葉。' })}
-            </p>
-          </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-            {[
-              { t:'#FineLineFighter', hero:true },
-              { t:'#SculptedBeauty' },
-              { t:'#ClinicalGlow' },
-              { t:'#Notox',           hero:true },
-              { t:'#BotoxInABottle' },
-              { t:'#SlowAging' },
-              { t:'#QuietRitual' },
-              { t:'#PeptideDiscipline' },
-              { t:'#RealEfficacy',    hero:true },
-              { t:'#SkinStillness' },
-            ].map((h, i) => (
-              <span key={i} style={{
-                padding: '11px 18px',
-                fontFamily: FNX.serif, fontWeight: 300,
-                fontSize: 14,
-                letterSpacing: '0.02em',
-                color: h.hero ? FNX.pineInk : FNX.cream,
-                background: h.hero ? FNX.cream : 'transparent',
-                border: `1px solid ${h.hero ? FNX.cream : fnxCream(0.4)}`,
-                borderRadius: 999,
-              }}>{h.t}</span>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* JOURNAL */}
-      <Section bg={FNX.parchment} padding="120px 40px">
-        <div className="sechead" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 32, marginBottom: 48 }}>
-          <div>
-            <RuleLabel align="left" color={FNX.tan}>{t({ en:'07 — Journal', ko:'07 — 저널', ja:'07 — ジャーナル' })}</RuleLabel>
-            <h2 style={{ margin: 0, fontFamily: FNX.serif, fontWeight: 300, fontSize: 48, letterSpacing: '0.02em' }}>
-              {t({ en:'Dispatches & Quiet Notes.', ko:'디스패치 & 고요한 노트.', ja:'ディスパッチ & 静かなノート。' })}
-            </h2>
-          </div>
-          <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }}>{t({ en:'All Entries →', ko:'전체 글 보기 →', ja:'すべての記事 →' })}</Btn>
-        </div>
-        <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
-          {[
-            {
-              t:'No.012', cat:{ en:'Slow Aging', ko:'슬로우 에이징', ja:'スロー エイジング' },
-              h:{ en:'On The Quiet Discipline of Peptides', ko:'펩타이드의 고요한 절제에 관하여', ja:'ペプチドの静かな規律について' },
-              d:{ en:'How a single peptide molecule softens the texture of expression.', ko:'하나의 펩타이드 분자가 표정의 결을 부드럽게 하는 방식.', ja:'一つのペプチド分子が表情のキメをやわらげる仕組み。' },
-              imgKind: 'still', imgSrc: 'assets/serum-pump.png', pos: '50% center',
-            },
-            {
-              t:'No.011', cat:{ en:'Interview', ko:'인터뷰', ja:'インタビュー' },
-              h:{ en:'In The Cabinet of A Seoul Dermatologist', ko:'서울 피부과 의사의 캐비닛에서', ja:'ソウルの皮膚科医のキャビネットで' },
-              d:{ en:'A prescription on the clinic shelf, and a cup of tea.', ko:'클리닉 선반 위의 처방, 그리고 한 잔의 차.', ja:'クリニックの棚にある処方と、一杯のお茶。' },
-              imgKind: 'still', imgSrc: 'assets/booster-grid.png', pos: '50% center',
-            },
-            {
-              t:'No.010', cat:{ en:'Method', ko:'메소드', ja:'メソッド' },
-              h:{ en:'Notox · A Verb, Not a Substitute', ko:'Notox · 대체가 아닌, 하나의 동사', ja:'Notox · 代替ではなく、一つの動詞' },
-              d:{ en:'Not an alternative to procedures, but a daily prescription that brings them home.', ko:'시술의 대안이 아니라, 그것을 일상으로 가져오는 매일의 처방.', ja:'施術の代わりではなく、それを日常に持ち帰る毎日の処方。' },
-              imgKind: 'still', imgSrc: 'assets/serum-roller-green.png', pos: '50% center',
-            },
-          ].map((j) => (
-            <article key={j.t} style={{ display: 'flex', flexDirection: 'column' }}>
-              <div style={{ aspectRatio: '4/5', overflow: 'hidden', position: 'relative', background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
-                <img src={j.imgSrc} alt={t(j.h)}
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: j.pos, display: 'block' }} />
-              </div>
-              <h3 style={{ margin: '10px 0 8px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 24, letterSpacing: '-0.01em', lineHeight: 1.2 }}>
-                <a href="#/journal" data-go="journal" style={{ color: 'inherit', textDecoration: 'none' }}>{t(j.h)}</a>
-              </h3>
-              <p style={{ margin: 0, fontSize: 13, color: FNX.sage, lineHeight: 1.7 }}>{t(j.d)}</p>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      {/* REVIEWS */}
-      <Section bg={FNX.cream} padding="120px 40px">
-        <RuleLabel align="center" color={FNX.tan}>{t({ en:'08 — Customer Voice', ko:'08 — 고객의 목소리', ja:'08 — お客様の声' })}</RuleLabel>
-        <h2 style={{ margin: '18px 0 64px', fontFamily: FNX.serif, fontWeight: 300, fontSize: 48, letterSpacing: '0.02em', textAlign: 'center' }}>
-          {t({ en:'A few quiet sentences.', ko:'몇 개의 고요한 문장.', ja:'いくつかの静かな文章。' })}
-        </h2>
-        <div className="r3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 32 }}>
-          {[
-            { r: 5, t:{ en:'Softer expression lines', ko:'부드러워진 표정 주름', ja:'やわらいだ表情ジワ' }, d:{ en:'In the morning mirror I can feel the lines have softened. Without any heavy procedures, the daily texture has changed.', ko:'아침 거울 앞에서 주름이 부드러워진 게 느껴져요. 부담스러운 시술 없이도 매일의 결이 달라졌습니다.', ja:'朝の鏡でシワがやわらいだのを感じます。負担の大きい施術なしで、毎日のキメが変わりました。' }, a:'— Kim · 38 · Seoul' },
-            { r: 5, t:{ en:'A bottle that listens', ko:'귀 기울여 주는 한 병', ja:'寄り添ってくれる一本' },  d:{ en:"My skin's tension has eased since I started — morning makeup sits differently. The quietest ritual, once a day.", ko:'사용한 뒤로 피부의 긴장이 풀렸어요 — 아침 화장이 다르게 얹힙니다. 하루 한 번, 가장 고요한 리추얼.', ja:'使い始めてから肌のこわばりがほぐれました — 朝のメイクのりが違います。一日一度、最も静かなリチュアル。' }, a:'— Y.S. · 39 · Tokyo' },
-            { r: 5, t:{ en:'Honest concentration', ko:'정직한 함량', ja:'正直な配合量' }, d:{ en:'The ingredient list is generous and clear. By week six the fine lines softened. Feels like following a prescription day by day.', ko:'성분 리스트가 넉넉하고 투명해요. 6주 차에 잔주름이 부드러워졌습니다. 하루하루 처방을 따르는 기분이에요.', ja:'成分リストが充実していて明快です。6週目で小ジワがやわらぎました。日々処方に従っているような感覚です。' }, a:'— Park · 45 · Busan' },
-          ].map((r, i) => (
-            <div key={i} style={{ padding: 32, background: FNX.bone, border: `1px solid ${fnxRule(0.12)}` }}>
-              <div role="img" aria-label={t({ en:'Rated 5 out of 5', ko:'5점 만점에 5점', ja:'5点満点中5点' })} style={{ color: FNX.pineInk, letterSpacing: '0.4em', fontSize: 14 }}>★★★★★</div>
-              <h3 style={{ margin: '18px 0 12px', fontFamily: FNX.serif, fontSize: 22, fontWeight: 300, letterSpacing: '-0.01em' }}>{t(r.t)}</h3>
-              <p style={{ margin: 0, fontSize: 13, lineHeight: 1.85, color: FNX.pineInk }}>{t(r.d)}</p>
-              <div style={{ marginTop: 18, fontSize: 12, color: FNX.sage }}>{r.a}</div>
+          );
+          return (
+            <div key={b.name} className="rsplit" style={{
+              display: 'grid', gridTemplateColumns: imgFirst ? '1.05fr 1fr' : '1fr 1.05fr', gap: 72, alignItems: 'center',
+              marginBottom: i < brands.length - 1 ? 96 : 0,
+            }}>
+              {imgFirst ? <>{imgCol}{txtCol}</> : <>{txtCol}{imgCol}</>}
             </div>
-          ))}
-        </div>
+          );
+        })}
       </Section>
 
-      {/* STORE LOCATOR */}
-      <Section bg={FNX.parchment} padding="100px 40px">
-        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: 64, alignItems: 'center' }}>
-          <div>
-            <RuleLabel align="left" color={FNX.tan}>{t({ en:'09 — Clinic Partners', ko:'09 — 클리닉 파트너', ja:'09 — クリニックパートナー' })}</RuleLabel>
-            <h2 style={{ ...T.h2, margin: '18px 0 0', color: FNX.pineInk }}>
-              {t({ en:'In selected clinics, across four cities.', ko:'네 도시, 엄선된 클리닉에서.', ja:'四つの都市、選ばれたクリニックで。' })}
-            </h2>
-            <p style={{ marginTop: 22, ...T.body, color: FNX.pineInk, maxWidth: '40ch' }}>
-              {t({ en:'Clinical partner network — Seoul · Shanghai · Tokyo · Ho Chi Minh. As a post-procedure prescription, or a daily slow-aging ritual.', ko:'클리닉 파트너 네트워크 — 서울 · 상하이 · 도쿄 · 호치민. 시술 후 처방으로, 또는 매일의 슬로우 에이징 리추얼로.', ja:'クリニカル パートナー ネットワーク — ソウル · 上海 · 東京 · ホーチミン。施術後の処方として、あるいは毎日のスローエイジング リチュアルとして。' })}
-            </p>
-          </div>
-          <div style={{ height: 320, position: 'relative', border: `1px solid ${fnxCream(0.18)}`, overflow: 'hidden' }}>
-            <img src="assets/peptosome-pair.jpg" alt={t({ en:'Clinic partners', ko:'클리닉 파트너', ja:'クリニックパートナー' })}
-              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 35%' }} />
-          </div>
-        </div>
-      </Section>
+      {/* ===================== CONTACT ===================== */}
+      <ContactBlock />
 
       <SiteFooter variant="pine" />
     </div>

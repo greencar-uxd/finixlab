@@ -152,10 +152,9 @@ function LangSwitcher({ sub = FNX.sage, up = false, align = 'right' }) {
 function SiteHeader({ variant = 'cream', sticky = false }) {
   const { t } = useLocale();
   const nav = [
-    { key: 'about',   label: { en: 'About',   ko: '브랜드',     ja: 'ブランド' } },
-    { key: 'science', label: { en: 'Science', ko: '사이언스',   ja: 'サイエンス' } },
-    { key: 'shop',    label: { en: 'Shop',    ko: '제품',       ja: 'ショップ' } },
-    { key: 'journal', label: { en: 'Journal', ko: '저널',       ja: 'ジャーナル' } },
+    { key: 'about',   label: { en: 'About',    ko: '브랜드',   ja: 'ブランド' } },
+    { key: 'shop',    label: { en: 'Products', ko: '제품',     ja: '製品' } },
+    { key: 'contact', label: { en: 'Contact',  ko: '문의',     ja: 'お問い合わせ' } },
   ];
   const isPine = variant === 'pine';
   const fg = isPine ? FNX.cream : FNX.pineInk;
@@ -223,28 +222,25 @@ function SiteFooter({ variant = 'pine' }) {
   const rule = isPine ? fnxCream(0.12) : fnxRule(0.14);
 
   const cols = [
-    { t: { en: 'Shop', ko: '제품', ja: 'ショップ' }, items: [
-      { en: 'Peptosome Skin Booster', ko: '펩토좀 스킨 부스터',  ja: 'ペプトソーム スキンブースター' },
-      { en: 'Notox Cream · FW 26',    ko: 'Notox 크림 · FW 26',  ja: 'Notox クリーム · FW 26' },
-      { en: 'Sets & Rituals',         ko: '세트 & 리추얼',        ja: 'セット & リチュアル' },
-      { en: 'Sample Trials',          ko: '샘플 체험',            ja: 'サンプル トライアル' },
+    { t: { en: 'FINIXLAB', ko: 'FINIXLAB', ja: 'FINIXLAB' }, items: [
+      { en: 'Peptosome Skin Booster', ko: 'Peptosome Skin Booster', ja: 'Peptosome Skin Booster' },
+      { en: 'Spicule Glow Serum',     ko: 'Spicule Glow Serum',     ja: 'Spicule Glow Serum' },
+      { en: 'Daily Slow Aging Care',  ko: '데일리 슬로우 에이징 케어', ja: 'デイリー スローエイジングケア' },
     ] },
-    { t: { en: 'Care', ko: '고객 지원', ja: 'サポート' }, items: [
-      { en: 'Customer Care',    ko: '고객 센터',    ja: 'カスタマーケア' },
-      { en: 'Order & Shipping', ko: '주문 & 배송',  ja: '注文 & 配送' },
-      { en: 'Returns',          ko: '반품 & 교환',  ja: '返品' },
-      { en: 'Product FAQ',      ko: '제품 FAQ',     ja: '製品 FAQ' },
+    { t: { en: 'PureRX', ko: 'PureRX', ja: 'PureRX' }, items: [
+      { en: 'PDRN RX Ampoule',            ko: 'PDRN RX Ampoule',        ja: 'PDRN RX Ampoule' },
+      { en: 'Professional Recovery Care', ko: '전문가용 회복 케어',      ja: 'プロ仕様リカバリーケア' },
     ] },
     { t: { en: 'Brand', ko: '브랜드', ja: 'ブランド' }, items: [
-      { en: 'Our Science',        ko: '사이언스',        ja: 'サイエンス' },
-      { en: 'Sustainability',     ko: '지속가능성',      ja: 'サステナビリティ' },
-      { en: 'Press',              ko: '프레스',          ja: 'プレス' },
-      { en: 'Partners & Clinics', ko: '파트너 & 클리닉', ja: 'パートナー & クリニック' },
+      { en: 'Brand Story',           ko: '브랜드 스토리',      ja: 'ブランドストーリー' },
+      { en: 'Recovery Skin Science', ko: 'Recovery Skin Science', ja: 'Recovery Skin Science' },
+      { en: 'Sustainability',        ko: '지속가능성',         ja: 'サステナビリティ' },
     ] },
-    { t: { en: 'Connect', ko: '채널', ja: 'チャンネル' }, items: [
-      { en: 'Instagram',     ko: '인스타그램', ja: 'Instagram' },
-      { en: 'YouTube',       ko: '유튜브',     ja: 'YouTube' },
-      { en: 'Store Locator', ko: '매장 찾기',  ja: '店舗検索' },
+    { t: { en: 'Contact', ko: '문의', ja: 'お問い合わせ' }, items: [
+      { en: 'General · hello@finixlab.com', ko: '일반 · hello@finixlab.com', ja: '一般 · hello@finixlab.com' },
+      { en: 'Partnership · Clinic',         ko: '파트너십 · 클리닉',         ja: 'パートナーシップ · クリニック' },
+      { en: 'Press',                        ko: '프레스',                    ja: 'プレス' },
+      { en: 'Instagram',                    ko: '인스타그램',                ja: 'Instagram' },
     ] },
   ];
   const bottomLinks = [
@@ -252,7 +248,7 @@ function SiteFooter({ variant = 'pine' }) {
     { key: 'terms',   label: { en: 'Terms',   ko: '이용약관', ja: '利用規約' } },
     { key: 'cookies', label: { en: 'Cookies', ko: '쿠키',     ja: 'クッキー' } },
   ];
-  const tagline = { en: 'Real Efficacy, Quietly Delivered.', ko: '정직한 효능을, 조용히 전합니다.', ja: '確かな効果を、静かに届ける。' };
+  const tagline = { en: 'So your skin can rise again.', ko: '당신의 피부가 다시 비상할 수 있도록', ja: 'あなたの肌が、再び羽ばたけるように。' };
 
   return (
     <footer style={{ background: bg, color: fg, padding: '40px 40px 32px', fontFamily: FNX.sans, fontWeight: 300 }}>
@@ -325,8 +321,8 @@ function Btn({ children, kind = 'primary', size = 'md', style = {}, full = false
 
 // ============ SLOGAN / EDITORIAL ============
 function Slogan({ size = 'md', align = 'left', color = FNX.pineInk,
-  head = { en: 'Real Efficacy,\nQuietly Delivered.', ko: '정직한 농도,\n조용한 효능.', ja: '確かな効果を、\n静かに。' },
-  sub  = { en: 'Clinic-grade peptide care, as a daily ritual.', ko: '시술의 본질을 매일의 루틴으로.', ja: '施術の本質を、毎日のルーティンへ。' } }) {
+  head = { en: 'So your skin\ncan rise again.', ko: '당신의 피부가\n다시 비상할 수 있도록', ja: 'あなたの肌が、\n再び羽ばたけるように。' },
+  sub  = { en: 'Recovery Skin Science', ko: 'Recovery Skin Science', ja: 'Recovery Skin Science' } }) {
   const { t, lang } = useLocale();
   const sizes = {
     sm: { en: 36, ko: 16 },
@@ -468,10 +464,72 @@ function ToastHost() {
   );
 }
 
+// ============ CONTACT BLOCK ============
+// Shared brand-contact panel — used both as the home page's closing section
+// and inside the dedicated Contact route (desktop + mobile via `mobile` prop).
+function ContactBlock({ mobile = false }) {
+  const { t } = useLocale();
+  const rows = [
+    { k: { en: 'General',              ko: '일반 문의',            ja: '一般' },                        v: 'hello@finixlab.com' },
+    { k: { en: 'Partnership · Clinic', ko: '파트너십 · 클리닉',    ja: 'パートナーシップ · クリニック' }, v: 'partners@finixlab.com' },
+    { k: { en: 'Press',                ko: '미디어 · 프레스',      ja: 'プレス' },                      v: 'press@finixlab.com' },
+    { k: { en: 'Instagram',            ko: '인스타그램',           ja: 'Instagram' },                   v: '@finixlab.official' },
+  ];
+  const eyebrow = { en: 'Contact', ko: '문의하기', ja: 'お問い合わせ' };
+  const head = { en: 'Let’s talk about skin\nthat recovers.', ko: '회복하는 피부에 대해\n이야기 나눠요.', ja: '回復する肌について、\n話しましょう。' };
+  const lead = {
+    en: 'We welcome brand, distribution, clinic-partnership and media inquiries about FINIXLAB and PureRX.',
+    ko: 'FINIXLAB과 PureRX에 대한 브랜드·유통·클리닉 파트너십, 미디어 문의를 환영합니다.',
+    ja: 'FINIXLABおよびPureRXに関するブランド・流通・クリニックパートナーシップ、メディアのお問い合わせを歓迎します。',
+  };
+  const rowsEl = (
+    <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: mobile ? 0 : 2 }}>
+      {rows.map((r, i) => (
+        <li key={i} style={{
+          display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 16,
+          padding: mobile ? '16px 0' : '18px 0',
+          borderTop: `1px solid ${fnxCream(0.16)}`,
+          ...(i === rows.length - 1 ? { borderBottom: `1px solid ${fnxCream(0.16)}` } : {}),
+        }}>
+          <span style={{ fontFamily: FNX.serif, fontSize: mobile ? 12 : 13, letterSpacing: '0.14em', textTransform: 'uppercase', color: fnxCream(0.72) }}>{t(r.k)}</span>
+          <span style={{ fontFamily: FNX.sans, fontSize: mobile ? 13 : 15, color: FNX.cream, letterSpacing: '0.01em' }}>{r.v}</span>
+        </li>
+      ))}
+    </ul>
+  );
+  return (
+    <section style={{ background: FNX.pineInk, color: FNX.cream, padding: mobile ? '48px 24px' : '120px 40px', fontFamily: FNX.sans, fontWeight: 300 }}>
+      <div style={mobile ? {} : { maxWidth: 1320, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 80, alignItems: 'center' }}>
+        <div>
+          <RuleLabel align="left" color={fnxCream(0.82)}>
+            <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', background: FNX.labRed, marginRight: 10, verticalAlign: 'middle' }}/>
+            {t(eyebrow)}
+          </RuleLabel>
+          <h2 style={{ margin: '18px 0 0', fontFamily: FNX.serif, fontWeight: 200, fontSize: mobile ? 34 : 56, lineHeight: 1.05, letterSpacing: '-0.01em', whiteSpace: 'pre-line' }}>
+            {t(head)}
+          </h2>
+          <p style={{ margin: mobile ? '18px 0 0' : '24px 0 0', fontSize: mobile ? 14 : 15, lineHeight: 1.85, color: fnxCream(0.82), maxWidth: '44ch' }}>
+            {t(lead)}
+          </p>
+          <div style={{ marginTop: mobile ? 24 : 34 }}>
+            <Btn kind="inverse" size={mobile ? 'md' : 'lg'} full={mobile}>{t({ en: 'Send an Inquiry', ko: '문의 보내기', ja: 'お問い合わせを送る' })}</Btn>
+          </div>
+        </div>
+        <div style={mobile ? { marginTop: 32 } : {}}>
+          {rowsEl}
+          <p style={{ margin: mobile ? '20px 0 0' : '24px 0 0', fontFamily: FNX.mono, fontSize: 11, letterSpacing: '0.14em', color: fnxCream(0.6) }}>
+            {t({ en: 'FINIXLAB Co., Ltd. · Seoul, Korea', ko: '주식회사 피닉스랩 · 서울, 대한민국', ja: 'FINIXLAB Co., Ltd. · ソウル, 韓国' })}
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // expose globally
 Object.assign(window, {
   FNX, T, fnxRule, fnxCream, ucLetters,
   I18N, tr, useLocale, LangSwitcher,
   SiteHeader, SiteFooter, Btn, Slogan, ProductShot,
-  MonoTag, Tag, RuleLabel, Section, VRule, ToastHost,
+  MonoTag, Tag, RuleLabel, Section, VRule, ToastHost, ContactBlock,
 });
