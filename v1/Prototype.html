@@ -3,21 +3,22 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Finixlab · 제형이 아닌, real 효능을 처방하다</title>
-<meta name="description" content="Finixlab · 피닉스랩 — 임상 펩타이드(VAMTOXIN™) 2.0% 기반 슬로우 에이징. Real Efficacy, Quietly Delivered." />
-<meta name="keywords" content="피닉스랩, Finixlab, FNXLAB, VAMTOXIN, Peptosome, 슬로우 에이징, peptide, notox, 펩타이드, 클리닉 케어" />
+<title>FINIXLAB · Recovery Skin Science (v1 Archive)</title>
+<meta name="robots" content="noindex" />
+<meta name="description" content="FINIXLAB · 피닉스랩 — 피부 회복력을 연구하는 슬로우에이징 더마 브랜드. So your skin can rise again. (v1 archive)" />
+<meta name="keywords" content="피닉스랩, FINIXLAB, PureRX, Recovery Skin Science, Peptosome, PDRN, 슬로우 에이징, 회복력, 펩타이드, 클리닉 케어" />
 <meta name="author" content="주식회사 피닉스랩 / Finixlab Co., Ltd." />
 <meta name="theme-color" content="#173830" />
 <meta property="og:type" content="website" />
-<meta property="og:site_name" content="Finixlab" />
-<meta property="og:title" content="Finixlab · Real Efficacy, Quietly Delivered." />
-<meta property="og:description" content="시술의 본질을 매일의 루틴으로. VAMTOXIN™ Peptide 2.0%." />
+<meta property="og:site_name" content="FINIXLAB" />
+<meta property="og:title" content="FINIXLAB · So your skin can rise again." />
+<meta property="og:description" content="피부는 나이를 먹는 것이 아니라, 회복력을 잃어갑니다. Recovery Skin Science." />
 <meta property="og:image" content="../assets/duo-on-stone.jpg" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:locale:alternate" content="ja_JP" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Finixlab · Real Efficacy, Quietly Delivered." />
-<meta name="twitter:description" content="임상 펩타이드 2.0% 처방 · 피닉스랩" />
+<meta name="twitter:title" content="FINIXLAB · So your skin can rise again." />
+<meta name="twitter:description" content="피부 회복력을 연구하는 슬로우에이징 더마 · 피닉스랩" />
 <meta name="twitter:image" content="../assets/duo-on-stone.jpg" />
 <link rel="canonical" href="https://finixlab.com/" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +28,7 @@
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" rel="stylesheet" />
 <style>
   *{ box-sizing: border-box; }
-  html,body{ margin:0; padding:0; background:#F4EFE0; }
+  html,body{ margin:0; padding:0; background:#FBFAF7; }
   body{ font-family: "Pretendard", system-ui, sans-serif; }
   em, i{ font-style: normal; }
 
@@ -97,7 +98,7 @@
   "name": "Peptosome Skin Booster",
   "image": ["../assets/booster-bottle-front.png"],
   "description": "All-in-one skin boosting solution with VAMTOXIN™ Peptide 2.0%",
-  "brand": { "@type": "Brand", "name": "Finixlab" },
+  "brand": { "@type": "Brand", "name": "FINIXLAB" },
   "sku": "FNX-N01-50ML",
   "offers": {
     "@type": "Offer",
@@ -112,7 +113,7 @@
 {
   "@context": "https://schema.org/",
   "@type": "Organization",
-  "name": "Finixlab",
+  "name": "FINIXLAB",
   "alternateName": "피닉스랩",
   "url": "https://finixlab.com/",
   "logo": "../assets/fnxlab-logo.png",
@@ -135,6 +136,7 @@
   <script type="text/babel" src="site/shop.jsx"></script>
   <script type="text/babel" src="site/product.jsx"></script>
   <script type="text/babel" src="site/about.jsx"></script>
+  <script type="text/babel" src="site/brand-pages.jsx"></script>
   <script type="text/babel" src="site/science.jsx"></script>
   <script type="text/babel" src="site/journal.jsx"></script>
   <script type="text/babel" src="site/extra-pages.jsx"></script>
@@ -158,6 +160,9 @@
       'science'          : () => <SciencePage />,
       'journal'          : () => <JournalPage />,
       'about'            : () => <AboutPage />,
+      'about/finixlab'   : () => <FinixlabPage />,
+      'about/purerx'     : () => <PureRXPage />,
+      'contact'          : () => <ContactPage />,
       'cart'             : () => <CartPage />,
       'cart/empty'       : () => <EmptyCartPage />,
       'account'          : () => <AccountPage />,
@@ -172,6 +177,9 @@
       'science'          : () => <ScienceMobile />,
       'journal'          : () => <JournalMobile />,
       'about'            : () => <AboutMobile />,
+      'about/finixlab'   : () => <FinixlabMobile />,
+      'about/purerx'     : () => <PureRXMobile />,
+      'contact'          : () => <ContactMobile />,
       'cart'             : () => <CartMobile />,
       'account'          : () => <AccountMobile />,
       'search'           : () => <SearchMobile />,
@@ -209,6 +217,8 @@
               const txt = (el.textContent || '').trim().toLowerCase();
               const map = {
                 'shop': 'shop',
+                'products': 'shop',
+                'contact': 'contact',
                 'science': 'science',
                 'journal': 'journal',
                 'about': 'about',
