@@ -10,10 +10,11 @@ const HomeV1 = () => {
       name: 'FINIXLAB',
       role: { en: 'Daily Slow Aging Care', ko: '데일리 슬로우 에이징 케어', ja: 'デイリー スローエイジングケア' },
       desc: {
-        en: 'Slow-aging care that protects the skin’s power to recover within a daily routine — easing inner dryness and rough texture, keeping radiance and lines healthy over time.',
-        ko: '매일의 루틴에서 피부 회복력을 지키는 슬로우 에이징 케어. 속건조와 거칠어진 피부결을 다독이고, 윤기와 주름결을 오래도록 건강하게 가꿉니다.',
-        ja: '毎日のルーティンで肌の回復力を守るスローエイジングケア。インナードライやごわつくキメを整え、ツヤとハリを長く健やかに保ちます。',
+        en: 'Built on the skin’s power to recover, FINIXLAB is a slow-aging derma brand that keeps daily skin condition healthy — from inner dryness, texture and radiance to fine lines, daily conditioning care that helps skin age well.',
+        ko: 'FINIXLAB은 피부 회복력을 바탕으로, 매일의 피부 컨디션을 건강하게 가꾸는 슬로우에이징 더마 브랜드입니다. 속건조, 피부결, 윤기, 주름 고민까지 — 피부가 건강하게 나이 들어갈 수 있도록 일상 속 데일리 컨디셔닝 케어를 제안합니다.',
+        ja: '肌の回復力を土台に、毎日の肌コンディションを健やかに育てるスローエイジング ダーマブランド。インナードライ・キメ・ツヤ・シワの悩みまで、日常のデイリーコンディショニングケアを提案します。',
       },
+      cta: { en: 'View FINIXLAB Products →', ko: 'FINIXLAB 제품 보기 →', ja: 'FINIXLAB 製品を見る →' },
       concerns: [
         { en: 'Inner Dryness', ko: '속건조', ja: 'インナードライ' },
         { en: 'Texture', ko: '피부결', ja: 'キメ' },
@@ -31,10 +32,11 @@ const HomeV1 = () => {
       name: 'PureRX',
       role: { en: 'Professional Recovery Care', ko: '프로페셔널 리커버리 케어', ja: 'プロフェッショナル リカバリーケア' },
       desc: {
-        en: 'Professional recovery care for sensitized, depleted skin. Respecting the barrier after procedures and through fragile periods, it restores baseline condition as expert-level home care.',
-        ko: '민감해지고 컨디션이 저하된 피부를 위한 전문가용 회복 케어. 시술 후와 예민한 시기의 피부 장벽을 존중하며, 전문적인 홈케어로 근본 컨디션을 회복합니다.',
-        ja: '敏感になりコンディションが低下した肌のための専門的なリカバリーケア。施術後やゆらぎやすい時期の肌バリアを尊重し、プロ仕様のホームケアで根本コンディションを整えます。',
+        en: 'PureRX is a professional recovery derma brand for sensitized skin — a calm, stable recovery solution for sensitive skin, depleted condition, and skin that needs expert-level home care.',
+        ko: 'PureRX는 민감해진 피부 컨디션을 위한 전문 리커버리 더마 브랜드입니다. 민감 피부, 피부 컨디션 저하, 전문적인 홈케어가 필요한 피부를 위해 편안하고 안정적인 리커버리 솔루션을 제안합니다.',
+        ja: 'PureRXは、敏感になった肌コンディションのための専門リカバリー ダーマブランド。敏感肌、コンディション低下、専門的なホームケアが必要な肌へ、穏やかで安定したリカバリーソリューションを提案します。',
       },
+      cta: { en: 'View PureRX Products →', ko: 'PureRX 제품 보기 →', ja: 'PureRX 製品を見る →' },
       concerns: [
         { en: 'Sensitive Skin', ko: '민감 피부', ja: '敏感肌' },
         { en: 'Depleted Condition', ko: '컨디션 저하', ja: 'コンディション低下' },
@@ -52,44 +54,43 @@ const HomeV1 = () => {
       <SiteHeader variant="cream" />
 
       {/* ===================== HERO ===================== */}
-      <section style={{ position: 'relative', minHeight: '92vh', overflow: 'hidden', background: FNX.cream }}>
-        <img
-          src="../assets/duo-on-stone.jpg"
-          alt={t({ en: 'FINIXLAB on stone', ko: '스톤 위의 FINIXLAB', ja: '石の上の FINIXLAB' })}
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 64%' }}
-        />
-        <div aria-hidden="true" style={{ position: 'absolute', inset: 0,
-          background: 'linear-gradient(to right, rgba(251,250,247,0.94) 0%, rgba(251,250,247,0.60) 46%, rgba(251,250,247,0.08) 74%)' }} />
-        <div style={{ position: 'relative', zIndex: 1, minHeight: '92vh', display: 'flex', alignItems: 'center', padding: '96px 40px' }}>
-          <div style={{ maxWidth: 720 }}>
+      {/* HERO — v1 archive keeps the original cream-heavy editorial split */}
+      <section style={{ background: FNX.cream, padding: '80px 40px 100px', position: 'relative' }}>
+        <div className="rsplit" style={{ display: 'grid', gridTemplateColumns: '1.05fr 1fr', gap: 64, alignItems: 'center', maxWidth: 1320, margin: '0 auto' }}>
+          <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, fontFamily: FNX.serif, fontSize: 12, letterSpacing: '0.18em', textTransform: 'uppercase', color: FNX.sage }}>
               <span style={{ width: 6, height: 6, borderRadius: '50%', background: FNX.labRed }}/>
               Recovery Skin Science
             </div>
-            <h1 style={{ margin: '26px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 54, lineHeight: 1.12, letterSpacing: '-0.02em', color: FNX.pineInk, whiteSpace: 'pre-line' }}>
+            <h1 style={{ margin: '28px 0 0', fontFamily: FNX.serif, fontWeight: 300, fontSize: 56, lineHeight: 1.1, letterSpacing: '-0.02em', color: FNX.pineInk, whiteSpace: 'pre-line' }}>
               {t({
-                en: 'Skin doesn’t age.\nIt loses its power to recover.',
-                ko: '피부는 나이를 먹는 것이 아니라,\n회복력을 잃어갑니다.',
-                ja: '肌は年を取るのではなく、\n回復力を失っていく。',
+                en: 'Skin doesn’t age.\nIt loses its power\nto recover.',
+                ko: '피부는 나이를\n먹는 것이 아니라,\n회복력을 잃어갑니다.',
+                ja: '肌は年を取るの\nではなく、回復力を\n失っていく。',
               })}
             </h1>
-            <p style={{ marginTop: 28, maxWidth: '52ch', fontSize: 16, lineHeight: 1.9, color: FNX.pineInk }}>
+            <p style={{ marginTop: 32, maxWidth: '48ch', fontSize: 15, lineHeight: 1.9, color: FNX.pineInk }}>
               {t({
                 en: 'FINIXLAB is a slow-aging derma brand that studies the skin’s power to recover. Rather than promising fast change, we research how skin regains its own healthy balance and stays beautiful for the long term.',
                 ko: 'FINIXLAB은 피부 회복력을 연구하는 슬로우에이징 더마 브랜드입니다. 빠른 변화를 약속하기보다, 피부가 스스로 건강한 균형을 되찾고 오래도록 아름다운 피부를 유지할 수 있도록 연구합니다.',
                 ja: 'FINIXLABは、肌の回復力を研究するスローエイジング ダーマブランドです。速い変化を約束するのではなく、肌が自ら健康なバランスを取り戻し、長く美しい肌を保てるよう研究します。',
               })}
             </p>
-            <p style={{ marginTop: 24, fontFamily: FNX.serif, fontWeight: 300, fontStyle: 'italic', fontSize: 22, letterSpacing: '-0.01em', color: FNX.pine }}>
+            <p style={{ marginTop: 22, fontFamily: FNX.serif, fontWeight: 300, fontStyle: 'italic', fontSize: 21, letterSpacing: '-0.01em', color: FNX.pine }}>
               {t({ en: 'So your skin can rise again.', ko: '당신의 피부가 다시 비상할 수 있도록.', ja: 'あなたの肌が、再び羽ばたけるように。' })}
             </p>
-            <div style={{ marginTop: 38, display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
+            <div style={{ marginTop: 36, display: 'flex', alignItems: 'center', gap: 16, flexWrap: 'wrap' }}>
               <Btn kind="primary" size="lg" data-go="about">{t({ en: 'Read the Brand Story →', ko: '브랜드 스토리 보기 →', ja: 'ブランドストーリーを見る →' })}</Btn>
               <Btn kind="ghost" size="lg" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go="shop">{t({ en: 'See the Product Line', ko: '제품 라인업 보기', ja: '製品ラインナップを見る' })}</Btn>
             </div>
           </div>
+
+          {/* Framed hero still — original v1 treatment */}
+          <div style={{ position: 'relative' }}>
+            <ProductShot src="../assets/booster-hero.png" alt={t({ en: 'FINIXLAB Peptosome Skin Booster', ko: 'FINIXLAB 펩토좀 스킨 부스터', ja: 'FINIXLAB ペプトソーム スキンブースター' })} height={680} objectPosition="50% 40%" bg={FNX.bone} frame />
+          </div>
         </div>
-        <div aria-hidden="true" style={{ position: 'absolute', left: 40, bottom: 28, zIndex: 1, display: 'flex', alignItems: 'center', gap: 10, fontFamily: FNX.mono, fontSize: 11, letterSpacing: '0.2em', color: FNX.sage }}>
+        <div aria-hidden="true" style={{ position: 'absolute', left: 40, bottom: 28, display: 'flex', alignItems: 'center', gap: 10, fontFamily: FNX.mono, fontSize: 11, letterSpacing: '0.2em', color: FNX.sage }}>
           <span>SCROLL</span><span style={{ fontSize: 14 }}>↓</span>
         </div>
       </section>
@@ -103,9 +104,9 @@ const HomeV1 = () => {
           </h2>
           <p style={{ margin: '22px 0 0', fontSize: 15, lineHeight: 1.85, color: FNX.sage }}>
             {t({
-              en: 'Two brands grown from one philosophy of skin. From a single root — recovery — they branch into daily slow-aging care and professional recovery care.',
-              ko: '하나의 피부 철학에서 시작된 두 개의 브랜드. ‘회복력’이라는 같은 뿌리에서, 매일의 슬로우 에이징 케어와 전문가용 회복 케어로 나뉩니다.',
-              ja: '一つの肌哲学から生まれた二つのブランド。「回復力」という同じ根から、毎日のスローエイジングケアと、専門家向けのリカバリーケアへと枝分かれします。',
+              en: 'Two brands born from one philosophy of skin. They meet your skin at different moments, but the direction we pursue is the same.',
+              ko: '하나의 피부 철학에서 시작된 두 개의 브랜드. 피부를 만나는 순간은 다르지만, 우리가 추구하는 방향은 같습니다.',
+              ja: '一つの肌哲学から生まれた二つのブランド。肌と出会う瞬間は違っても、目指す方向は同じです。',
             })}
           </p>
         </div>
@@ -143,7 +144,7 @@ const HomeV1 = () => {
               </ul>
 
               <div style={{ marginTop: 32 }}>
-                <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go={b.go}>{t({ en: 'View', ko: '보기', ja: '見る' })} {b.name} →</Btn>
+                <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go={b.go}>{t(b.cta)}</Btn>
               </div>
             </div>
           );
@@ -156,6 +157,15 @@ const HomeV1 = () => {
             </div>
           );
         })}
+
+        {/* SECTION 마무리 — per client doc */}
+        <p style={{ margin: '88px auto 0', textAlign: 'center', fontFamily: FNX.serif, fontWeight: 300, fontSize: 22, lineHeight: 1.6, letterSpacing: '-0.01em', color: FNX.pine, maxWidth: '40ch' }}>
+          {t({
+            en: 'Starting from one philosophy, we propose solutions for each skin’s own condition.',
+            ko: '하나의 철학으로 시작해, 서로 다른 피부 컨디션에 맞는 솔루션을 제안합니다.',
+            ja: '一つの哲学から始まり、異なる肌コンディションに合うソリューションを提案します。',
+          })}
+        </p>
       </Section>
 
       {/* ===================== CONTACT ===================== */}

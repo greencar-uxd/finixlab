@@ -10,10 +10,11 @@ const HomeV1 = () => {
       name: 'FINIXLAB',
       role: { en: 'Daily Slow Aging Care', ko: '데일리 슬로우 에이징 케어', ja: 'デイリー スローエイジングケア' },
       desc: {
-        en: 'Slow-aging care that protects the skin’s power to recover within a daily routine — easing inner dryness and rough texture, keeping radiance and lines healthy over time.',
-        ko: '매일의 루틴에서 피부 회복력을 지키는 슬로우 에이징 케어. 속건조와 거칠어진 피부결을 다독이고, 윤기와 주름결을 오래도록 건강하게 가꿉니다.',
-        ja: '毎日のルーティンで肌の回復力を守るスローエイジングケア。インナードライやごわつくキメを整え、ツヤとハリを長く健やかに保ちます。',
+        en: 'Built on the skin’s power to recover, FINIXLAB is a slow-aging derma brand that keeps daily skin condition healthy — from inner dryness, texture and radiance to fine lines, daily conditioning care that helps skin age well.',
+        ko: 'FINIXLAB은 피부 회복력을 바탕으로, 매일의 피부 컨디션을 건강하게 가꾸는 슬로우에이징 더마 브랜드입니다. 속건조, 피부결, 윤기, 주름 고민까지 — 피부가 건강하게 나이 들어갈 수 있도록 일상 속 데일리 컨디셔닝 케어를 제안합니다.',
+        ja: '肌の回復力を土台に、毎日の肌コンディションを健やかに育てるスローエイジング ダーマブランド。インナードライ・キメ・ツヤ・シワの悩みまで、日常のデイリーコンディショニングケアを提案します。',
       },
+      cta: { en: 'View FINIXLAB Products →', ko: 'FINIXLAB 제품 보기 →', ja: 'FINIXLAB 製品を見る →' },
       concerns: [
         { en: 'Inner Dryness', ko: '속건조', ja: 'インナードライ' },
         { en: 'Texture', ko: '피부결', ja: 'キメ' },
@@ -31,10 +32,11 @@ const HomeV1 = () => {
       name: 'PureRX',
       role: { en: 'Professional Recovery Care', ko: '프로페셔널 리커버리 케어', ja: 'プロフェッショナル リカバリーケア' },
       desc: {
-        en: 'Professional recovery care for sensitized, depleted skin. Respecting the barrier after procedures and through fragile periods, it restores baseline condition as expert-level home care.',
-        ko: '민감해지고 컨디션이 저하된 피부를 위한 전문가용 회복 케어. 시술 후와 예민한 시기의 피부 장벽을 존중하며, 전문적인 홈케어로 근본 컨디션을 회복합니다.',
-        ja: '敏感になりコンディションが低下した肌のための専門的なリカバリーケア。施術後やゆらぎやすい時期の肌バリアを尊重し、プロ仕様のホームケアで根本コンディションを整えます。',
+        en: 'PureRX is a professional recovery derma brand for sensitized skin — a calm, stable recovery solution for sensitive skin, depleted condition, and skin that needs expert-level home care.',
+        ko: 'PureRX는 민감해진 피부 컨디션을 위한 전문 리커버리 더마 브랜드입니다. 민감 피부, 피부 컨디션 저하, 전문적인 홈케어가 필요한 피부를 위해 편안하고 안정적인 리커버리 솔루션을 제안합니다.',
+        ja: 'PureRXは、敏感になった肌コンディションのための専門リカバリー ダーマブランド。敏感肌、コンディション低下、専門的なホームケアが必要な肌へ、穏やかで安定したリカバリーソリューションを提案します。',
       },
+      cta: { en: 'View PureRX Products →', ko: 'PureRX 제품 보기 →', ja: 'PureRX 製品を見る →' },
       concerns: [
         { en: 'Sensitive Skin', ko: '민감 피부', ja: '敏感肌' },
         { en: 'Depleted Condition', ko: '컨디션 저하', ja: 'コンディション低下' },
@@ -103,9 +105,9 @@ const HomeV1 = () => {
           </h2>
           <p style={{ margin: '22px 0 0', fontSize: 15, lineHeight: 1.85, color: FNX.sage }}>
             {t({
-              en: 'Two brands grown from one philosophy of skin. From a single root — recovery — they branch into daily slow-aging care and professional recovery care.',
-              ko: '하나의 피부 철학에서 시작된 두 개의 브랜드. ‘회복력’이라는 같은 뿌리에서, 매일의 슬로우 에이징 케어와 전문가용 회복 케어로 나뉩니다.',
-              ja: '一つの肌哲学から生まれた二つのブランド。「回復力」という同じ根から、毎日のスローエイジングケアと、専門家向けのリカバリーケアへと枝分かれします。',
+              en: 'Two brands born from one philosophy of skin. They meet your skin at different moments, but the direction we pursue is the same.',
+              ko: '하나의 피부 철학에서 시작된 두 개의 브랜드. 피부를 만나는 순간은 다르지만, 우리가 추구하는 방향은 같습니다.',
+              ja: '一つの肌哲学から生まれた二つのブランド。肌と出会う瞬間は違っても、目指す方向は同じです。',
             })}
           </p>
         </div>
@@ -143,7 +145,7 @@ const HomeV1 = () => {
               </ul>
 
               <div style={{ marginTop: 32 }}>
-                <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go={b.go}>{t({ en: 'View', ko: '보기', ja: '見る' })} {b.name} →</Btn>
+                <Btn kind="ghost" style={{ color: FNX.pineInk, borderColor: FNX.pineInk }} data-go={b.go}>{t(b.cta)}</Btn>
               </div>
             </div>
           );
@@ -156,6 +158,15 @@ const HomeV1 = () => {
             </div>
           );
         })}
+
+        {/* SECTION 마무리 — per client doc */}
+        <p style={{ margin: '88px auto 0', textAlign: 'center', fontFamily: FNX.serif, fontWeight: 300, fontSize: 22, lineHeight: 1.6, letterSpacing: '-0.01em', color: FNX.pine, maxWidth: '40ch' }}>
+          {t({
+            en: 'Starting from one philosophy, we propose solutions for each skin’s own condition.',
+            ko: '하나의 철학으로 시작해, 서로 다른 피부 컨디션에 맞는 솔루션을 제안합니다.',
+            ja: '一つの哲学から始まり、異なる肌コンディションに合うソリューションを提案します。',
+          })}
+        </p>
       </Section>
 
       {/* ===================== CONTACT ===================== */}

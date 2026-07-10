@@ -65,19 +65,19 @@ const BRANDS = {
         d: { en: 'Metal-roller glow serum · VAMTOXIN™ 2.0% · Niacinamide', ko: '메탈 롤러 글로우 세럼 · VAMTOXIN™ 2.0% · 나이아신아마이드', ja: 'メタルローラー グロウセラム · VAMTOXIN™ 2.0% · ナイアシンアミド' } },
     ],
     img: '../assets/peptosome-pair.jpg', pos: '50% center', accent: FNX.pine,
-    cta: { label: { en: 'Shop FINIXLAB →', ko: 'FINIXLAB 제품 보기 →', ja: 'FINIXLAB 製品を見る →' }, go: 'shop' },
+    cta: { label: { en: 'View FINIXLAB Products →', ko: 'FINIXLAB 제품 보기 →', ja: 'FINIXLAB 製品を見る →' }, go: 'shop' },
   },
   PureRX: {
     no: 'Brand 02', name: 'PureRX',
     role: { en: 'Professional Recovery Care', ko: '전문가용 회복 케어', ja: 'プロフェッショナル リカバリーケア' },
     lead: {
-      en: 'PureRX is the professional arm of recovery skin science — expert-level home care for sensitized, depleted skin.',
-      ko: 'PureRX는 회복 스킨 사이언스의 전문가용 라인입니다 — 민감해지고 컨디션이 저하된 피부를 위한 전문 홈케어.',
-      ja: 'PureRXは、リカバリー スキンサイエンスの専門ライン — 敏感でコンディションが低下した肌のためのプロ仕様ホームケアです。',
+      en: 'PureRX is a professional recovery derma brand for sensitized skin — the professional arm of recovery skin science.',
+      ko: 'PureRX는 민감해진 피부 컨디션을 위한 전문 리커버리 더마 브랜드입니다 — 회복 스킨 사이언스의 전문가용 라인.',
+      ja: 'PureRXは、敏感になった肌コンディションのための専門リカバリー ダーマブランド — リカバリー スキンサイエンスの専門ラインです。',
     },
     body: [
       { h: { en: 'Respect the barrier', ko: '장벽을 존중하다', ja: 'バリアを尊重する' },
-        d: { en: 'For skin after procedures and through fragile periods, PureRX respects the barrier and restores baseline condition — recovery care, not a quick fix.', ko: '시술 후와 예민한 시기의 피부를 위해, PureRX는 피부 장벽을 존중하며 근본 컨디션을 회복합니다 — 빠른 처방이 아니라 회복 케어.', ja: '施術後やゆらぎやすい時期の肌のために、PureRXは肌バリアを尊重し、根本コンディションを整えます — 速い処方ではなく、リカバリーケア。' } },
+        d: { en: 'For sensitive skin, depleted condition, and skin that needs expert-level home care, PureRX respects the barrier and proposes a calm, stable recovery solution — recovery care, not a quick fix.', ko: '민감 피부, 피부 컨디션 저하, 전문적인 홈케어가 필요한 피부를 위해 — 피부 장벽을 존중하며 편안하고 안정적인 리커버리 솔루션을 제안합니다. 빠른 처방이 아니라, 회복 케어.', ja: '敏感肌、コンディション低下、専門的なホームケアが必要な肌のために — 肌バリアを尊重し、穏やかで安定したリカバリーソリューションを提案します。速い処方ではなく、リカバリーケア。' } },
       { h: { en: 'PDRN, at the core', ko: 'PDRN을 중심으로', ja: 'PDRNを中心に' },
         d: { en: 'Built around PDRN for professional-grade recovery. The full lineup and formulation detail follow once the client’s materials arrive.', ko: 'PDRN을 중심으로 한 전문가용 회복 처방. 전체 라인업과 성분 상세는 자료 수신 후 반영됩니다.', ja: 'PDRNを軸にしたプロ仕様のリカバリー処方。ラインナップと処方の詳細は、資料の受領後に反映します。' } },
     ],
@@ -91,7 +91,7 @@ const BRANDS = {
         d: { en: 'Professional recovery ampoule · PDRN', ko: '전문가용 회복 앰플 · PDRN', ja: 'プロ仕様リカバリー アンプル · PDRN' } },
     ],
     img: '../assets/serum-box-single.png', pos: '50% center', accent: FNX.olive,
-    cta: { label: { en: 'Contact PureRX →', ko: 'PureRX 문의 →', ja: 'PureRX お問い合わせ →' }, go: 'contact' },
+    cta: { label: { en: 'View PureRX Products →', ko: 'PureRX 제품 보기 →', ja: 'PureRX 製品を見る →' }, go: 'shop' },
   },
 };
 
