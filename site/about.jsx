@@ -7,7 +7,7 @@ const AboutPage = () => {
   const promiseDont = [
     { en: 'We don’t sell exaggerated anti-aging', ko: '과장된 안티에이징을 말하지 않습니다', ja: '誇張したアンチエイジングを語りません' },
     { en: 'We don’t promise fast results', ko: '빠른 효과를 약속하지 않습니다', ja: '速い効果を約束しません' },
-    { en: 'We don’t rely on harsh ingredients', ko: '자극적인 성분에 기대지 않습니다', ja: '刺激的な成分に頼りません' },
+    { en: 'We don’t rely on harsh ingredients', ko: '자극적인 성분에 의존하지 않습니다', ja: '刺激的な成分に依存しません' },
   ];
   const promiseDo = [
     { en: 'Recovery-centered formulation', ko: '회복력 중심의 처방', ja: '回復力を軸にした処方' },
@@ -63,9 +63,9 @@ const AboutPage = () => {
           </h2>
           <p style={{ margin: '28px auto 0', fontSize: 16, lineHeight: 1.95, color: FNX.sage, maxWidth: '58ch' }}>
             {t({
-              en: 'FINIXLAB does not try to force time backward. Instead, we help skin age slowly and in good health — not chasing what has passed, but caring for the power to recover that remains.',
-              ko: 'FINIXLAB은 시간을 억지로 되돌리려 하지 않습니다. 대신 피부가 천천히, 그리고 건강하게 나이 들어갈 수 있도록 돕습니다. 지나간 것을 좇기보다, 남아 있는 회복의 힘을 돌봅니다.',
-              ja: 'FINIXLABは時間を無理に巻き戻そうとはしません。代わりに、肌がゆっくりと、健やかに年を重ねられるよう寄り添います。過ぎたものを追うのではなく、残された回復の力をいたわります。',
+              en: 'Fast change and harsh solutions only leave skin more exhausted. FINIXLAB doesn’t try to turn skin back — instead, we help it age slowly and in good health.',
+              ko: '빠른 변화와 자극적인 솔루션은 피부를 더 지치게 할 뿐입니다. FINIXLAB은 피부를 되돌리려 하지 않습니다 — 대신 피부가 천천히, 건강하게 나이 들도록 돕습니다.',
+              ja: '速い変化や刺激的なソリューションは、肌をさらに疲れさせるだけ。FINIXLABは肌を巻き戻そうとはせず — 代わりに、肌がゆっくりと健やかに歳を重ねられるよう支えます。',
             })}
           </p>
         </div>
@@ -89,9 +89,9 @@ const AboutPage = () => {
             </h2>
             <p style={{ marginTop: 26, fontSize: 16, lineHeight: 1.9, color: FNX.pineInk, maxWidth: '48ch' }}>
               {t({
-                en: 'FINIXLAB researches how skin recovers its baseline condition. Before the immediate results on the surface, we look first at the conditions that let skin recover on its own.',
-                ko: 'FINIXLAB은 피부의 근본 컨디션 회복을 연구하는 재생(再生) 더마 브랜드입니다. 겉으로 드러나는 즉각적인 결과보다, 피부가 스스로 회복하는 힘의 조건을 먼저 살핍니다.',
-                ja: 'FINIXLABは、肌の根本コンディションの回復を研究する再生ダーマブランドです。表面に現れる即時の結果よりも、肌が自ら回復するための条件をまず見つめます。',
+                en: 'FINIXLAB is a regenerative derma brand that studies skin recovery and slow aging. We focus on research that restores the skin’s baseline condition, not temporary improvement — so skin finds its own balance and holds steady against time.',
+                ko: 'FINIXLAB은 피부 회복력과 슬로우에이징을 연구하는 재생(再生) 더마 브랜드입니다. 일시적인 개선이 아니라 피부의 근본 컨디션을 회복시키는 연구에 집중합니다 — 피부가 스스로 균형을 찾고, 시간에 흔들리지 않는 상태를 유지하도록.',
+                ja: 'FINIXLABは、肌の回復力とスローエイジングを研究する再生ダーマブランドです。一時的な改善ではなく、肌の根本コンディションを回復させる研究に集中します — 肌が自らバランスを取り戻し、時間に揺らがない状態を保てるように。',
               })}
             </p>
           </div>
@@ -107,9 +107,9 @@ const AboutPage = () => {
           </h2>
           <p style={{ margin: '28px auto 0', fontSize: 16, lineHeight: 1.95, color: fnxCream(0.85), maxWidth: '56ch' }}>
             {t({
-              en: 'The name comes from the phoenix — the bird that raises itself again. Tired, depleted skin regaining its power to recover and rising once more: that moment of recovery is the story FINIXLAB tells.',
-              ko: '브랜드 이름은 스스로를 다시 일으키는 불사조(Phoenix)에서 비롯되었습니다. 지치고 무너진 피부가 회복력을 되찾아 다시 비상하는 순간 — FINIXLAB이 이야기하는 것은 바로 그 회복의 서사입니다.',
-              ja: 'ブランド名は、自らを再び起こす不死鳥（フェニックス）に由来します。疲れ、崩れた肌が回復力を取り戻し、再び羽ばたく瞬間 — FINIXLABが語るのは、その回復の物語です。',
+              en: 'The name FINIXLAB means “skin that rises again.” As the phoenix is reborn from its ashes, skin too can regain its power to recover. Our role is not to change skin — it is to help skin rise again on its own.',
+              ko: 'FINIXLAB이라는 이름은 ‘다시 비상하는 피부’를 의미합니다. 불사조가 재에서 다시 태어나듯, 피부도 회복력을 되찾을 수 있습니다. 우리의 역할은 피부를 바꾸는 것이 아니라, 피부가 스스로 다시 일어날 수 있도록 돕는 것입니다.',
+              ja: 'FINIXLABという名は「再び羽ばたく肌」を意味します。不死鳥が灰から蘇るように、肌も回復力を取り戻せます。私たちの役割は肌を変えることではなく、肌が自ら立ち上がれるよう支えることです。',
             })}
           </p>
         </div>
@@ -156,9 +156,9 @@ const AboutPage = () => {
           </h2>
           <p style={{ margin: '28px auto 0', fontSize: 16, lineHeight: 1.95, color: FNX.sage, maxWidth: '56ch' }}>
             {t({
-              en: 'Not faster, not stronger — but looking at your own skin over time and caring for it. FINIXLAB does not try to beat your skin; it stays beside you, aging together.',
-              ko: '더 빠르게, 더 강하게가 아니라 — 나의 피부를 오래 들여다보고 돌보는 일. FINIXLAB은 피부를 이기려 하지 않고, 함께 나이 들어가는 방식으로 당신의 곁에 머뭅니다.',
-              ja: 'より速く、より強くではなく — 自分の肌を長く見つめ、いたわること。FINIXLABは肌に勝とうとはせず、ともに歳を重ねる形であなたのそばに寄り添います。',
+              en: 'Not faster, not stronger — FINIXLAB walks with your skin, so it can recover at its own pace and age naturally.',
+              ko: '더 빠르게, 더 강하게가 아니라 — FINIXLAB은 당신의 피부가 자신의 속도로 회복하고, 자연스럽게 나이 들 수 있도록 함께합니다.',
+              ja: 'より速く、より強くではなく — FINIXLABは、あなたの肌が自分の速度で回復し、自然に歳を重ねられるよう寄り添います。',
             })}
           </p>
           <div style={{ marginTop: 40, display: 'flex', justifyContent: 'center', gap: 16, flexWrap: 'wrap' }}>

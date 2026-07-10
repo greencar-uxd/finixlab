@@ -3,15 +3,15 @@
 // ProductShot, EditorialBlock, RuleLabel, MonoTag, Tag
 
 const FNX = {
-  // colors (from concept board)
+  // colors — v1 archive keeps the original warm cream-editorial palette
   pineInk:  '#173830',
   pine:     '#295B52',
   sage:     '#4C5A4B',
   tan:      '#B8A580',
-  cream:    '#FBFAF7',
-  parchment:'#F1EFE9',
+  cream:    '#F4EFE0',
+  parchment:'#E8DFC9',
   white:    '#FFFFFF',
-  bone:     '#FFFFFF',
+  bone:     '#FBF8F2',
   olive:    '#37533D',
   labRed:   '#EE313E',
   // type

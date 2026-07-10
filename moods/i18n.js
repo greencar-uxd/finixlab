@@ -120,7 +120,7 @@
     { ko: '과장된 안티에이징이 아니라, 피부 스스로의 회복력을 우선합니다.',
       en: 'Not exaggerated anti-aging — the skin’s own power to recover comes first.',
       ja: '誇張したアンチエイジングではなく、肌自身の回復力を優先します。' },
-    { ko: '빠른 효과를 약속하지 않고, 자극적인 성분에 기대지 않습니다.',
+    { ko: '빠른 효과를 약속하지 않고, 자극적인 성분에 의존하지 않습니다.',
       en: 'We don’t promise fast results, and we don’t rely on harsh ingredients.',
       ja: '速い効果を約束せず、刺激的な成分に頼りません。' },
     { ko: '피부 장벽을 존중하는 설계와 회복력 중심의 처방.',
