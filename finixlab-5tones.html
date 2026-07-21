@@ -12,7 +12,7 @@
 <style>
   :root{
     --brand-red:#DB4A38;
-    --serif:'Cormorant Garamond','Nanum Myeongjo',serif;
+    --serif:'Outfit','Pretendard','Apple SD Gothic Neo',system-ui,sans-serif;
     --sans:'Outfit','Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;
   }
   /* ===== ⑤ 칩×다크 (기본) ===== */
@@ -272,6 +272,8 @@
   .dcta button:hover{opacity:.82}
   .dcta .sec{background:none;color:var(--head)}
   @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+  /* 상품 상세는 카드 밖에 노출하지 않음 — 성분 리스트·성분 태그는 '상품 상세 보기' 클릭 시 풀스크린 detail 안에서만 보인다. 카드는 제품컷+이름+한 줄 카피만. */
+  .story .chap-copy .ingr, .story .chap-copy .pill{ display:none; }
 </style>
 </head>
 <body class="ko">
@@ -460,15 +462,20 @@
 <script>
 (function(){
   var nav=document.getElementById('nav'),heroInner=document.getElementById('heroInner');
-  window.addEventListener('scroll',function(){nav.classList.toggle('solid',window.scrollY>40);parallax();},{passive:true});
+  var lastY=0,scrollV=0;
+  window.addEventListener('scroll',function(){var y=window.scrollY;scrollV+=(y-lastY);lastY=y;nav.classList.toggle('solid',y>40);parallax();},{passive:true});
   document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){
     var l=b.getAttribute('data-lang');document.documentElement.classList.remove('ko','en');document.documentElement.classList.add(l);
     document.body.className=l;document.querySelectorAll('.lang button').forEach(function(x){x.classList.toggle('on',x===b);});});});
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  var orbs=document.querySelectorAll('.orb');
   function parallax(){var y=window.scrollY;document.querySelectorAll('[data-parallax]').forEach(function(el){
-    el.style.transform='translate(-50%,-50%) translateY('+(y*parseFloat(el.getAttribute('data-parallax')))+'px)';});
-    if(heroInner&&y<900){heroInner.style.transform='translateY('+(y*0.05)+'px)';heroInner.style.opacity=String(Math.max(0,1-y/760));}}
+    var f=parseFloat(el.getAttribute('data-parallax'));
+    el.style.transform='translate(-50%,-50%) translateY('+(y*f)+'px) scale('+(1+y/2600)+')';el.style.opacity=String(Math.max(0,1-y/900));});
+    if(heroInner&&y<900){heroInner.style.transform='translateY('+(y*0.05)+'px)';heroInner.style.opacity=String(Math.max(0,1-y/760));}
+    for(var oi=0;oi<orbs.length;oi++){var rc=orbs[oi].getBoundingClientRect().top,pr=(window.innerHeight-rc)/(window.innerHeight+220);
+      orbs[oi].style.transform='translateY('+((pr-0.5)*-56)+'px) rotate('+(y*0.05*(oi%2?-1:1))+'deg)';}}
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   var cv=document.getElementById('spark'),ctx=cv.getContext('2d'),parts=[],raf;
   var THEMES={
@@ -483,9 +490,9 @@
   function seed(){parts=[];var i;
     for(i=0;i<cur.n;i++){parts.push({orb:false,x:Math.random()*cv.width,y:Math.random()*cv.height,r:Math.random()*1.5+.4,v:Math.random()*.28+.06,o:Math.random()*cur.oMax+cur.oMax*.25,d:Math.random()*.4-.2});}
     for(i=0;i<cur.orbN;i++){parts.push({orb:true,x:Math.random()*cv.width,y:Math.random()*cv.height,r:Math.random()*11+5,v:Math.random()*.12+.03,o:Math.random()*cur.orbO+cur.orbO*.4,d:Math.random()*.3-.15});}}
-  function draw(){ctx.clearRect(0,0,cv.width,cv.height);var o=cur.orb;
-    for(var i=0;i<parts.length;i++){var p=parts[i];p.y-=p.v;p.x+=p.d*.3;
-      if(p.y<-20){p.y=cv.height+20;p.x=Math.random()*cv.width;}
+  function draw(){ctx.clearRect(0,0,cv.width,cv.height);var o=cur.orb;scrollV*=0.88;
+    for(var i=0;i<parts.length;i++){var p=parts[i];p.y-=(p.v+scrollV*(p.orb?0.4:1.1));p.x+=p.d*.3;
+      if(p.y<-20){p.y=cv.height+20;p.x=Math.random()*cv.width;}else if(p.y>cv.height+20){p.y=-20;p.x=Math.random()*cv.width;}
       if(p.orb){var g=ctx.createRadialGradient(p.x-p.r*.35,p.y-p.r*.35,p.r*.08,p.x,p.y,p.r);
         g.addColorStop(0,'rgba('+o.hi+','+Math.min(p.o*1.6,.6)+')');g.addColorStop(.45,'rgba('+o.body+','+p.o+')');g.addColorStop(1,'rgba('+o.rim+','+p.o*.55+')');ctx.fillStyle=g;}
       else{ctx.fillStyle='rgba('+cur.pal[i%3]+','+p.o+')';}
