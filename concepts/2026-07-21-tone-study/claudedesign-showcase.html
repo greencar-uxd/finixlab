@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" rel="stylesheet" />
+<style>
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html,body{ margin:0; padding:0; background:#0F1512; }
+  body{ -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  a{ color:var(--accent); text-decoration:none; transition:opacity .25s; }
+  a:hover{ opacity:.62; }
+  ::selection{ background:var(--red); color:#fff; }
+  @keyframes fnxFloat{ 0%,100%{ transform:translate(0,0) } 50%{ transform:translate(8px,-18px) } }
+  @keyframes fnxFloat2{ 0%,100%{ transform:translate(0,0) } 50%{ transform:translate(-10px,16px) } }
+  @keyframes fnxRing{ 0%,100%{ transform:translate(-50%,-50%) scale(1); opacity:.55 } 50%{ transform:translate(-50%,-50%) scale(1.025); opacity:.9 } }
+  @keyframes fnxCue{ 0%,100%{ transform:translateY(0); opacity:.45 } 50%{ transform:translateY(7px); opacity:1 } }
+  @media (prefers-reduced-motion: reduce){ *{ animation:none !important } }
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="--accent:#B8A580;--red:#DB4A38;--hero-bg:#F4EFE0;--hero-fg:#1F2A24;--dec-bg:#1F2A24;--dec-fg:#F4EFE0;--val-bg:#6E7D6C;--val-fg:#F7F4EC;--line-bg:#E8DFC9;--line-fg:#1F2A24;--p1-bg:#F4EFE0;--p1-fg:#1F2A24;--p2-bg:#14201A;--p2-fg:#F4EFE0;--rev-bg:#E8DFC9;--rev-fg:#1F2A24;--rx-bg:#1F2A24;--rx-fg:#F4EFE0;--con-bg:#14201A;--con-fg:#F4EFE0;--foot-bg:#0F1512;--foot-fg:#B7C0B2;--ring:color-mix(in oklab,#1F2A24 14%,transparent);--orb1:#B8A580;--orb2:#DB4A38;--logo-filter:none;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Pretendard Variable','Pretendard',system-ui,sans-serif;font-family:var(--sans);font-weight:300;line-height:1.75;color:var(--hero-fg);position:relative">
+
+  <!-- ============ HERO ============ -->
+  <section data-screen-label="01 Hero" style="position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--hero-bg);color:var(--hero-fg);padding:72px 0 84px">
+    <canvas data-hero-canvas style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none"></canvas>
+    <div data-hero-graphic style="position:absolute;inset:0;pointer-events:none;overflow:hidden">
+      <div style="position:absolute;top:50%;left:50%;width:min(94vmin,940px);aspect-ratio:1;transform:translate(-50%,-50%);border:1px solid var(--ring);border-radius:50%;animation:fnxRing 14s ease-in-out infinite"></div>
+      <div style="position:absolute;top:50%;left:50%;width:min(60vmin,600px);aspect-ratio:1;transform:translate(-50%,-50%);border:1px solid var(--ring);border-radius:50%;animation:fnxRing 18s ease-in-out infinite"></div>
+      <div style="position:absolute;top:20%;left:15%;width:clamp(140px,22vw,260px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 34% 30%,color-mix(in oklab,#fff 72%,var(--orb1)) 0%,var(--orb1) 44%,transparent 70%);opacity:.5;filter:blur(2px);animation:fnxFloat 17s ease-in-out infinite"></div>
+      <div style="position:absolute;bottom:18%;right:13%;width:clamp(90px,14vw,166px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 36% 32%,color-mix(in oklab,#fff 62%,var(--orb1)) 0%,var(--orb1) 48%,transparent 72%);opacity:.42;filter:blur(1px);animation:fnxFloat2 21s ease-in-out infinite"></div>
+      <div style="position:absolute;top:32%;right:26%;width:9px;height:9px;border-radius:50%;background:var(--orb2);opacity:.5;filter:blur(.3px);animation:fnxFloat 12s ease-in-out infinite"></div>
+    </div>
+
+    <div style="position:absolute;top:0;left:0;right:0;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px clamp(20px,5vw,64px)">
+      <img src="assets/fnxlab-logo.png" alt="FINIXLAB" style="height:22px;width:auto;filter:var(--logo-filter);opacity:.94" />
+      <span style="font-family:var(--serif);font-weight:400;font-size:11px;letter-spacing:0.26em;text-transform:uppercase;opacity:.6">Recovery Skin Science · SS 26</span>
+    </div>
+
+    <div data-hero-content style="position:relative;z-index:2;text-align:center;max-width:940px;padding:0 clamp(20px,5vw,64px)">
+      <div style="font-family:var(--serif);font-weight:400;font-size:12px;letter-spacing:0.36em;text-transform:uppercase;display:inline-flex;align-items:center;gap:12px;opacity:.72">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--red);display:inline-block"></span>Recovery Skin Science<span style="width:6px;height:6px;border-radius:50%;background:var(--red);display:inline-block"></span>
+      </div>
+      <img src="assets/fnxlab-logo.png" alt="FINIXLAB" style="display:block;margin:26px auto 0;height:clamp(34px,5vw,84px);width:auto;filter:var(--logo-filter)" />
+      <div style="margin-top:16px;font-size:12px;letter-spacing:0.52em;text-transform:uppercase;opacity:.6">피 닉 스 랩</div>
+      <h1 style="margin-top:28px;font-family:var(--sans);font-weight:200;font-size:clamp(27px,3.9vw,52px);line-height:1.16;letter-spacing:-0.02em">당신의 피부가<br/>다시 비상할 수 있도록.</h1>
+      <p style="margin-top:16px;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(16px,1.9vw,26px);letter-spacing:0.01em;opacity:.82">So your skin can rise again.</p>
+      <p style="margin:20px auto 0;max-width:38ch;font-size:14px;line-height:1.85;opacity:.68">피부는 나이를 먹는 것이 아니라, 회복력을 잃어갑니다.<br/>천천히, 건강하게 — 매일의 회복을 연구합니다.</p>
+    </div>
+
+    <div style="position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:9px;font-family:var(--serif);font-size:10px;letter-spacing:0.3em;text-transform:uppercase;opacity:.6;animation:fnxCue 2.4s ease-in-out infinite">Scroll<span style="font-size:13px">↓</span></div>
+  </section>
+
+  <!-- ============ 02 · BRAND DECLARATION ============ -->
+  <section data-screen-label="02 Declaration" style="background:var(--dec-bg);color:var(--dec-fg);padding:clamp(90px,15vh,180px) 0">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:clamp(30px,5vw,80px);align-items:start">
+      <div data-reveal>
+        <div style="font-family:var(--serif);font-weight:400;font-size:12px;letter-spacing:0.24em;text-transform:uppercase;line-height:2.1;color:var(--accent)">Persistence<br/>Journey<br/>New Day</div>
+        <div style="margin-top:26px;width:44px;height:1px;background:var(--red)"></div>
+      </div>
+      <div>
+        <h2 data-reveal style="font-family:var(--sans);font-weight:300;font-size:clamp(28px,4vw,50px);line-height:1.26;letter-spacing:-0.02em">되돌림이 아니라,<br/><em style="font-style:normal;color:var(--accent)">회복</em>입니다.</h2>
+        <p data-reveal style="margin-top:30px;max-width:52ch;font-size:16px;line-height:2;opacity:.82">우리는, 변화가 특별한 순간이 아니라 매일의 작은 실천에서 시작된다고 믿습니다. 시간을 되돌리려 하지 않고, 피부가 스스로의 회복력을 되찾도록 곁에서 돕습니다.</p>
+        <p data-reveal style="margin-top:20px;max-width:52ch;font-size:16px;line-height:2;opacity:.82">지치고 무너진 피부가 다시 균형을 찾는 순간 — 그 조용한 회복의 과정을 연구합니다.</p>
+        <p data-reveal style="margin-top:28px;font-family:var(--serif);font-style:italic;font-size:clamp(17px,2vw,24px);opacity:.68">So your skin can rise again.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 · VALUE STRIP ============ -->
+  <section data-screen-label="03 Values" style="background:var(--val-bg);color:var(--val-fg);padding:clamp(34px,6vh,60px) 0">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(16px,3vw,44px)">
+      <div style="text-align:center"><div style="font-family:var(--serif);font-weight:400;font-size:clamp(15px,1.8vw,20px);letter-spacing:0.2em;text-transform:uppercase">Integrity</div><div style="margin-top:5px;font-size:11px;letter-spacing:0.1em;opacity:.62">정직</div></div>
+      <span style="width:5px;height:5px;border-radius:50%;background:var(--red);display:inline-block"></span>
+      <div style="text-align:center"><div style="font-family:var(--serif);font-weight:400;font-size:clamp(15px,1.8vw,20px);letter-spacing:0.2em;text-transform:uppercase">Persistence</div><div style="margin-top:5px;font-size:11px;letter-spacing:0.1em;opacity:.62">지속</div></div>
+      <span style="width:5px;height:5px;border-radius:50%;background:var(--red);display:inline-block"></span>
+      <div style="text-align:center"><div style="font-family:var(--serif);font-weight:400;font-size:clamp(15px,1.8vw,20px);letter-spacing:0.2em;text-transform:uppercase">Expertise</div><div style="margin-top:5px;font-size:11px;letter-spacing:0.1em;opacity:.62">전문성</div></div>
+      <span style="width:5px;height:5px;border-radius:50%;background:var(--red);display:inline-block"></span>
+      <div style="text-align:center"><div style="font-family:var(--serif);font-weight:400;font-size:clamp(15px,1.8vw,20px);letter-spacing:0.2em;text-transform:uppercase">Relevance</div><div style="margin-top:5px;font-size:11px;letter-spacing:0.1em;opacity:.62">연결</div></div>
+    </div>
+  </section>
+
+  <!-- ============ 04 · OUR LINE ============ -->
+  <section data-screen-label="04 Our Line" style="background:var(--line-bg);color:var(--line-fg);padding:clamp(90px,15vh,180px) 0;text-align:center">
+    <div style="max-width:900px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+      <div data-reveal style="font-family:var(--serif);font-weight:400;font-size:12px;letter-spacing:0.34em;text-transform:uppercase;color:var(--accent)">Our Line</div>
+      <h2 data-reveal style="margin-top:22px;font-family:var(--sans);font-weight:300;font-size:clamp(24px,3.4vw,42px);line-height:1.4;letter-spacing:-0.015em"><span style="font-family:var(--serif);font-weight:500;letter-spacing:0.02em">FINIXLAB</span> — 매일의 루틴 안에서<br/>피부 컨디션을 끌어올리는 홈케어 라인</h2>
+      <div data-reveal style="margin:44px auto 0;max-width:520px">
+        <svg viewBox="0 0 480 130" style="width:100%;height:auto;overflow:visible;color:var(--line-fg)">
+          <path d="M0,104 C120,104 130,44 240,44 S360,-4 480,-4" fill="none" stroke="var(--accent)" stroke-width="1"/>
+          <path d="M0,118 C120,118 130,62 240,62 S360,16 480,16" fill="none" stroke="color-mix(in oklab,currentColor 32%,transparent)" stroke-width="1"/>
+          <path d="M0,90 C120,90 130,28 240,28 S360,-22 480,-22" fill="none" stroke="var(--red)" stroke-width="1" opacity=".55"/>
+        </svg>
+      </div>
+      <p data-reveal style="margin-top:40px;font-size:15px;line-height:1.95;opacity:.72">하나의 철학, 두 개의 챕터.<br/>보습에서 표정 케어까지 — 매일의 회복 루틴.</p>
+    </div>
+  </section>
+
+  <!-- ============ 05 · PRODUCT 01 · PEPTOSOME ============ -->
+  <section data-screen-label="05 Peptosome" style="background:var(--p1-bg);color:var(--p1-fg);padding:clamp(90px,15vh,180px) 0">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(34px,6vw,90px);align-items:center">
+      <div data-reveal style="position:relative;aspect-ratio:4/5;background:color-mix(in oklab,currentColor 4%,transparent);background-image:repeating-linear-gradient(45deg,color-mix(in oklab,currentColor 7%,transparent) 0 1px,transparent 1px 13px);border:1px solid color-mix(in oklab,currentColor 16%,transparent);display:flex;align-items:center;justify-content:center">
+        <span style="position:absolute;top:12px;left:12px;width:14px;height:14px;border-left:1px solid color-mix(in oklab,currentColor 40%,transparent);border-top:1px solid color-mix(in oklab,currentColor 40%,transparent)"></span>
+        <span style="position:absolute;bottom:12px;right:12px;width:14px;height:14px;border-right:1px solid color-mix(in oklab,currentColor 40%,transparent);border-bottom:1px solid color-mix(in oklab,currentColor 40%,transparent)"></span>
+        <div style="text-align:center;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:0.14em;opacity:.5;line-height:1.9">PRODUCT SHOT<br/>제품컷 자리 · 4:5</div>
+      </div>
+      <div>
+        <div data-reveal style="font-family:var(--serif);font-weight:400;font-size:12px;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent)">Chapter 01</div>
+        <h2 data-reveal style="margin-top:16px;font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,52px);line-height:1.08;letter-spacing:0.005em">Peptosome<br/>Skin Booster</h2>
+        <div data-reveal style="margin-top:12px;font-size:14px;letter-spacing:0.04em;opacity:.66">펩토좀 스킨부스터 · 보습</div>
+        <div data-reveal style="margin-top:22px;display:inline-flex;align-items:center;gap:9px;padding:8px 15px;border:1px solid color-mix(in oklab,currentColor 22%,transparent);border-radius:999px;font-size:12px;letter-spacing:0.04em"><span style="width:5px;height:5px;border-radius:50%;background:var(--red);display:inline-block"></span>VAMTOXIN™ Peptide 2.0%</div>
+        <p data-reveal style="margin-top:24px;max-width:44ch;font-size:15.5px;line-height:2;opacity:.82">주름과 결을 동시에, 부드럽게. 흡수 이후에도 오래 머무는 촉촉함으로 피부의 하루를 정돈합니다. 매일의 루틴 안에서, 피부 컨디션을 조용히 끌어올립니다.</p>
+        <ul data-reveal style="margin-top:30px;list-style:none;border-top:1px solid color-mix(in oklab,currentColor 16%,transparent)">
+          <sc-for list="{{ ingredients }}" as="ing" hint-placeholder-count="4">
+            <li style="display:grid;grid-template-columns:30px 1fr auto;align-items:baseline;gap:14px;padding:13px 0;border-bottom:1px solid color-mix(in oklab,currentColor 12%,transparent)">
+              <span style="font-family:var(--serif);font-size:11px;letter-spacing:0.16em;color:var(--accent)">{{ ing.idx }}</span>
+              <span style="font-size:14px"><span style="font-family:var(--serif);font-weight:500;font-size:15px;letter-spacing:0.02em">{{ ing.name }}</span><sc-if value="{{ ing.hero }}" hint-placeholder-val="{{ true }}"><span style="margin-left:8px;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);vertical-align:2px">hero</span></sc-if><span style="display:block;margin-top:3px;font-size:12px;opacity:.6">{{ ing.role }}</span></span>
+              <span style="font-family:var(--serif);font-size:15px;letter-spacing:0.06em;white-space:nowrap">{{ ing.pct }}<span style="font-size:9px;opacity:.5;margin-left:2px">%</span></span>
+            </li>
+          </sc-for>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 · PRODUCT 02 · SPICULE ============ -->
+  <section data-screen-label="06 Spicule" style="position:relative;background:var(--p2-bg);color:var(--p2-fg);padding:clamp(90px,15vh,180px) 0;overflow:hidden">
+    <div style="position:absolute;inset:0;pointer-events:none;opacity:.9">
+      <div style="position:absolute;top:14%;left:8%;width:clamp(160px,26vw,320px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 36% 30%,color-mix(in oklab,#fff 62%,var(--accent)) 0%,var(--accent) 40%,transparent 68%);opacity:.34;filter:blur(3px)"></div>
+      <div style="position:absolute;bottom:12%;right:14%;width:clamp(110px,18vw,220px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 38% 32%,color-mix(in oklab,#fff 55%,var(--accent)) 0%,var(--accent) 44%,transparent 70%);opacity:.28;filter:blur(3px)"></div>
+      <div style="position:absolute;top:52%;left:40%;width:70px;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 36% 32%,color-mix(in oklab,#fff 60%,var(--accent)),transparent 66%);opacity:.24;filter:blur(2px)"></div>
+    </div>
+    <div style="position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:clamp(34px,6vw,90px);align-items:center">
+      <div>
+        <div data-reveal style="font-family:var(--serif);font-weight:400;font-size:12px;letter-spacing:0.3em;text-transform:uppercase;color:var(--accent)">Chapter 02</div>
+        <h2 data-reveal style="margin-top:16px;font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,52px);line-height:1.08;letter-spacing:0.005em">Spicule<br/>Glow Serum</h2>
+        <div data-reveal style="margin-top:12px;font-size:14px;letter-spacing:0.04em;opacity:.66">스피큘 글로우 세럼 · 표정주름</div>
+        <div data-reveal style="margin-top:22px;display:inline-flex;align-items:center;gap:9px;padding:8px 15px;border:1px solid color-mix(in oklab,currentColor 22%,transparent);border-radius:999px;font-size:12px;letter-spacing:0.04em"><span style="width:5px;height:5px;border-radius:50%;background:var(--red);display:inline-block"></span>Spicule Complex 0.5%</div>
+        <p data-reveal style="margin-top:24px;max-width:44ch;font-size:15.5px;line-height:2;opacity:.82">눈가·미간이 신경 쓰일 때 — 홈케어의 리듬으로 매일 돌보는 표정 케어. 미세한 결까지 매끄럽게, 은은하게 빛을 머금은 피부로 하루를 정돈합니다.</p>
+        <p data-reveal style="margin-top:26px;font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.8vw,22px);opacity:.66">A daily rhythm, quietly kept.</p>
+      </div>
+      <div data-reveal style="position:relative;aspect-ratio:4/5;background:color-mix(in oklab,currentColor 5%,transparent);background-image:repeating-linear-gradient(45deg,color-mix(in oklab,currentColor 8%,transparent) 0 1px,transparent 1px 13px);border:1px solid color-mix(in oklab,currentColor 18%,transparent);display:flex;align-items:center;justify-content:center">
+        <span style="position:absolute;top:12px;left:12px;width:14px;height:14px;border-left:1px solid color-mix(in oklab,currentColor 42%,transparent);border-top:1px solid color-mix(in oklab,currentColor 42%,transparent)"></span>
+        <span style="position:absolute;bottom:12px;right:12px;width:14px;height:14px;border-right:1px solid color-mix(in oklab,currentColor 42%,transparent);border-bottom:1px solid color-mix(in oklab,currentColor 42%,transparent)"></span>
+        <div style="text-align:center;font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:11px;letter-spacing:0.14em;opacity:.5;line-height:1.9">PRODUCT SHOT<br/>제품컷 자리 · 4:5</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 07 · STORIES ============ -->
+  <section data-screen-label="07 Stories" style="background:var(--rev-bg);color:var(--rev-fg);padding:clamp(90px,15vh,180px) 0">
+    <div style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
+      <div data-reveal style="text-align:center">
+        <div style="font-family:var(--serif);font-weight:400;font-size:12px;letter-spacing:0.34em;text-transform:uppercase;color:var(--accent)">Stories · 고객의 이야기</div>
+        <h2 style="margin-top:18px;font-family:var(--sans);font-weight:300;font-size:clamp(24px,3.2vw,38px);line-height:1.35;letter-spacing:-0.01em">매일의 루틴이 쌓인 시간.</h2>
+      </div>
+      <div style="margin-top:clamp(40px,6vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:clamp(18px,2.5vw,28px)">
+        <sc-for list="{{ reviews }}" as="rv" hint-placeholder-count="3">
+          <div data-reveal style="background:color-mix(in oklab,currentColor 3.5%,transparent);border:1px solid color-mix(in oklab,currentColor 13%,transparent);padding:clamp(24px,3vw,34px);display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
+              <span style="color:var(--red);letter-spacing:0.12em;font-size:13px">★★★★★</span>
+              <span style="font-family:ui-monospace,'SF Mono',Menlo,monospace;font-size:9px;letter-spacing:0.1em;opacity:.5">PLACEHOLDER</span>
+            </div>
+            <p style="font-size:14.5px;line-height:1.9;opacity:.85">{{ rv.text }}</p>
+            <div style="margin-top:auto;padding-top:14px;border-top:1px solid color-mix(in oklab,currentColor 12%,transparent);display:flex;align-items:center;justify-content:space-between;gap:10px">
+              <span style="font-size:12px;letter-spacing:0.02em;opacity:.62">{{ rv.meta }}</span>
+              <span style="font-size:10px;letter-spacing:0.05em;opacity:.45">실제 후기로 교체 예정</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 08 · PureRX BAND ============ -->
+  <section data-screen-label="08 PureRX" style="background:var(--rx-bg);color:var(--rx-fg);padding:clamp(40px,7vh,70px) 0">
+    <div data-reveal style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px">
+      <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
+        <span style="font-family:var(--serif);font-weight:500;font-size:15px;letter-spacing:0.14em;text-transform:uppercase;opacity:.9">PureRX</span>
+        <span style="font-size:12.5px;line-height:1.8;opacity:.62;max-width:56ch">전문가·파트너 채널을 위한 회복 집중 라인. PDRN RX 앰플 준비 중.</span>
+      </div>
+      <span style="display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid color-mix(in oklab,currentColor 26%,transparent);border-radius:999px;font-family:var(--serif);font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;opacity:.8"><span style="width:5px;height:5px;border-radius:50%;background:var(--red);display:inline-block"></span>B2B · Coming Soon</span>
+    </div>
+  </section>
+
+  <!-- ============ 09 · CONTACT + FOOTER ============ -->
+  <section data-screen-label="09 Contact" style="background:var(--con-bg);color:var(--con-fg);padding:clamp(90px,16vh,190px) 0 0">
+    <div data-reveal style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,64px);text-align:center">
+      <div style="font-family:var(--serif);font-weight:400;font-size:12px;letter-spacing:0.34em;text-transform:uppercase;color:var(--accent)">Contact</div>
+      <h2 style="margin-top:22px;font-family:var(--sans);font-weight:200;font-size:clamp(28px,4.4vw,54px);line-height:1.24;letter-spacing:-0.02em">함께 만들어갈<br/>이야기를 기다립니다.</h2>
+      <div style="margin-top:34px;display:inline-flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 28px;font-size:13px;letter-spacing:0.04em;opacity:.8">
+        <a href="mailto:hello@finixlab.kr" style="font-family:var(--serif);font-size:clamp(16px,2vw,22px);letter-spacing:0.04em;color:var(--accent)">hello@finixlab.kr</a>
+        <span style="opacity:.4">·</span>
+        <span>파트너십 · 미디어 문의</span>
+      </div>
+    </div>
+    <footer style="margin-top:clamp(70px,11vh,130px);background:var(--foot-bg);color:var(--foot-fg)">
+      <div style="max-width:1180px;margin:0 auto;padding:clamp(40px,6vh,64px) clamp(20px,5vw,64px)">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px">
+          <img src="assets/fnxlab-logo.png" alt="FINIXLAB" style="height:24px;width:auto;filter:var(--logo-filter);opacity:.9" />
+          <span style="font-family:var(--serif);font-style:italic;font-size:15px;opacity:.7">So your skin can rise again.</span>
+        </div>
+        <div style="margin-top:28px;padding-top:22px;border-top:1px solid color-mix(in oklab,currentColor 16%,transparent);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;font-family:var(--serif);font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;opacity:.66">
+          <span>FINIXLAB · Recovery Skin Science · Your Daily Routine</span>
+          <span>© 2026 FINIXLAB — Prototype</span>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ============ TONE SWITCHER ============ -->
+  <div style="position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:8px;padding:8px 10px 8px 16px;max-width:94vw;background:rgba(16,20,17,0.74);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(244,239,224,0.16);border-radius:999px;box-shadow:0 14px 44px rgba(0,0,0,0.34)">
+    <div style="display:flex;flex-direction:column;line-height:1.15;margin-right:2px">
+      <span style="font-family:'Cormorant Garamond',serif;font-size:9px;letter-spacing:0.28em;text-transform:uppercase;color:rgba(244,239,224,0.5)">Tone</span>
+      <span data-tone-name style="font-size:11px;letter-spacing:0.02em;color:#F4EFE0;white-space:nowrap;font-family:'Pretendard Variable',sans-serif">멀티톤 색블록</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:5px">
+      <sc-for list="{{ tones }}" as="t" hint-placeholder-count="5">
+        <button data-tone-btn data-tone="{{ t.id }}" onClick="{{ setTone }}" title="{{ t.name }}" style="width:34px;height:34px;border-radius:999px;border:1px solid rgba(244,239,224,0.2);background:transparent;color:rgba(244,239,224,0.72);font-family:'Cormorant Garamond',serif;font-size:13px;letter-spacing:0.02em;cursor:pointer;transition:background .2s,color .2s,border-color .2s;display:flex;align-items:center;justify-content:center">{{ t.num }}</button>
+      </sc-for>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:900},&quot;tone&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;1&quot;,&quot;options&quot;:[&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;,&quot;5&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;테마&quot;,&quot;unit&quot;:&quot;&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;테마&quot;}}">
+class Component extends DCLogic {
+  rootRef = React.createRef();
+
+  TONES = [
+    { id: '1', num: '01', name: '멀티톤 색블록' },
+    { id: '2', num: '02', name: '다크 미니멀 · 뉴트럴' },
+    { id: '3', num: '03', name: '라이트 미니멀 · 뉴트럴' },
+    { id: '4', num: '04', name: '컬러칩 × 라이트' },
+    { id: '5', num: '05', name: '컬러칩 × 다크' },
+  ];
+
+  THEMES = {
+    '1': { heroBg:'#F4EFE0',heroFg:'#1F2A24', decBg:'#1F2A24',decFg:'#F4EFE0', valBg:'#6E7D6C',valFg:'#F7F4EC', lineBg:'#E8DFC9',lineFg:'#1F2A24', p1Bg:'#F4EFE0',p1Fg:'#1F2A24', p2Bg:'#14201A',p2Fg:'#F4EFE0', revBg:'#E8DFC9',revFg:'#1F2A24', rxBg:'#1F2A24',rxFg:'#F4EFE0', conBg:'#14201A',conFg:'#F4EFE0', footBg:'#0F1512',footFg:'#B7C0B2', accent:'#B8A580',red:'#DB4A38', ring:'color-mix(in oklab,#1F2A24 14%,transparent)', orb1:'#B8A580',orb2:'#DB4A38', particle:'#1F2A24', logoFilter:'none' },
+    '2': { heroBg:'#0E0E0E',heroFg:'#EDEAE3', decBg:'#121212',decFg:'#EDEAE3', valBg:'#090909',valFg:'#EDEAE3', lineBg:'#121212',lineFg:'#EDEAE3', p1Bg:'#151412',p1Fg:'#EDEAE3', p2Bg:'#0C0C0C',p2Fg:'#EDEAE3', revBg:'#121212',revFg:'#EDEAE3', rxBg:'#090909',rxFg:'#EDEAE3', conBg:'#1A1815',conFg:'#EDEAE3', footBg:'#090909',footFg:'#9A948A', accent:'#B8A580',red:'#DB4A38', ring:'color-mix(in oklab,#EDEAE3 10%,transparent)', orb1:'#B8A580',orb2:'#DB4A38', particle:'#EDEAE3', logoFilter:'brightness(0) invert(1)' },
+    '3': { heroBg:'#FFFFFF',heroFg:'#1C1C1A', decBg:'#FAF9F6',decFg:'#1C1C1A', valBg:'#161616',valFg:'#FAF9F6', lineBg:'#FFFFFF',lineFg:'#1C1C1A', p1Bg:'#FAF9F6',p1Fg:'#1C1C1A', p2Bg:'#EFEDE7',p2Fg:'#1C1C1A', revBg:'#FFFFFF',revFg:'#1C1C1A', rxBg:'#161616',rxFg:'#FAF9F6', conBg:'#FAF9F6',conFg:'#1C1C1A', footBg:'#161616',footFg:'#B7B4AC', accent:'#A08C6A',red:'#DB4A38', ring:'color-mix(in oklab,#1C1C1A 10%,transparent)', orb1:'#A08C6A',orb2:'#DB4A38', particle:'#1C1C1A', logoFilter:'none' },
+    '4': { heroBg:'#F4EFE0',heroFg:'#1F2A24', decBg:'#E8DFC9',decFg:'#1F2A24', valBg:'#1F2A24',valFg:'#F4EFE0', lineBg:'#F4EFE0',lineFg:'#1F2A24', p1Bg:'#F4EFE0',p1Fg:'#1F2A24', p2Bg:'#E8DFC9',p2Fg:'#1F2A24', revBg:'#F4EFE0',revFg:'#1F2A24', rxBg:'#1F2A24',rxFg:'#F4EFE0', conBg:'#E8DFC9',conFg:'#1F2A24', footBg:'#1F2A24',footFg:'#B7C0B2', accent:'#B8A580',red:'#DB4A38', ring:'color-mix(in oklab,#1F2A24 12%,transparent)', orb1:'#B8A580',orb2:'#DB4A38', particle:'#1F2A24', logoFilter:'none' },
+    '5': { heroBg:'#1F2A24',heroFg:'#F4EFE0', decBg:'#161E1A',decFg:'#F4EFE0', valBg:'#0F1512',valFg:'#F4EFE0', lineBg:'#1F2A24',lineFg:'#F4EFE0', p1Bg:'#22302A',p1Fg:'#F4EFE0', p2Bg:'#161E1A',p2Fg:'#F4EFE0', revBg:'#1F2A24',revFg:'#F4EFE0', rxBg:'#0F1512',rxFg:'#F4EFE0', conBg:'#161E1A',conFg:'#F4EFE0', footBg:'#0F1512',footFg:'#9FA99A', accent:'#B8A580',red:'#DB4A38', ring:'color-mix(in oklab,#F4EFE0 12%,transparent)', orb1:'#B8A580',orb2:'#DB4A38', particle:'#F4EFE0', logoFilter:'brightness(0) invert(1)' },
+  };
+
+  VARMAP = { '--hero-bg':'heroBg','--hero-fg':'heroFg','--dec-bg':'decBg','--dec-fg':'decFg','--val-bg':'valBg','--val-fg':'valFg','--line-bg':'lineBg','--line-fg':'lineFg','--p1-bg':'p1Bg','--p1-fg':'p1Fg','--p2-bg':'p2Bg','--p2-fg':'p2Fg','--rev-bg':'revBg','--rev-fg':'revFg','--rx-bg':'rxBg','--rx-fg':'rxFg','--con-bg':'conBg','--con-fg':'conFg','--foot-bg':'footBg','--foot-fg':'footFg','--accent':'accent','--red':'red','--ring':'ring','--orb1':'orb1','--orb2':'orb2','--logo-filter':'logoFilter' };
+
+  current = ['1','2','3','4','5'].includes(String(this.props.tone)) ? String(this.props.tone) : '1';
+
+  get theme() { return this.THEMES[this.current] || this.THEMES['1']; }
+  get motionOn() { return this.props.motion !== false && !window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
+
+  applyTheme() {
+    const root = this.rootRef.current; if (!root) return;
+    const t = this.theme;
+    for (const [v, k] of Object.entries(this.VARMAP)) root.style.setProperty(v, t[k]);
+    const nameEl = root.querySelector('[data-tone-name]');
+    if (nameEl) nameEl.textContent = (this.TONES.find(x => x.id === this.current) || {}).name || '';
+    root.querySelectorAll('[data-tone-btn]').forEach(b => {
+      const on = b.getAttribute('data-tone') === this.current;
+      b.style.background = on ? t.red : 'transparent';
+      b.style.color = on ? '#fff' : 'rgba(244,239,224,0.72)';
+      b.style.borderColor = on ? t.red : 'rgba(244,239,224,0.2)';
+    });
+  }
+
+  setTone = (e) => {
+    const id = e.currentTarget.getAttribute('data-tone');
+    if (id && id !== this.current) { this.current = id; this.applyTheme(); if (this.canvas) this.fitCanvas && this.fitCanvas(); }
+  };
+
+  initHero() {
+    const root = this.rootRef.current; if (!root) return;
+    const c = root.querySelector('[data-hero-canvas]'); if (!c) return;
+    this.canvas = c; const ctx = c.getContext('2d');
+    const fit = () => {
+      const r = c.getBoundingClientRect();
+      this.dpr = Math.min(window.devicePixelRatio || 1, 2);
+      c.width = Math.max(1, r.width * this.dpr); c.height = Math.max(1, r.height * this.dpr);
+      this.W = r.width; this.H = r.height;
+    };
+    fit();
+    const N = window.innerWidth < 640 ? 34 : 62;
+    this.parts = Array.from({ length: N }, () => ({
+      x: Math.random(), y: Math.random(), r: Math.random() * 1.7 + 0.4,
+      s: Math.random() * 0.00016 + 0.00005, a: Math.random() * 0.5 + 0.18,
+      drift: (Math.random() - 0.5) * 0.00016,
+    }));
+    const draw = () => {
+      const { W, H } = this; ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+      const col = this.theme.particle;
+      for (const p of this.parts) {
+        if (this.motionOn) { p.y -= p.s; p.x += p.drift; if (p.y < -0.05) { p.y = 1.05; p.x = Math.random(); } }
+        ctx.beginPath(); ctx.globalAlpha = p.a; ctx.fillStyle = col;
+        ctx.arc(p.x * W, p.y * H, p.r, 0, 6.2832); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+      this.raf = requestAnimationFrame(draw);
+    };
+    draw();
+    this._onResize = () => fit(); window.addEventListener('resize', this._onResize);
+  }
+
+  initReveal() {
+    const root = this.rootRef.current; if (!root) return;
+    const els = Array.from(root.querySelectorAll('[data-reveal]'));
+    if (!this.motionOn) return;
+    els.forEach(el => {
+      el.style.transition = 'opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1)';
+      el.style.willChange = 'opacity, transform';
+      el.style.opacity = '0'; el.style.transform = 'translateY(26px)';
+    });
+    this.io = new IntersectionObserver((ents) => {
+      ents.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; this.io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -7% 0px' });
+    els.forEach(el => this.io.observe(el));
+  }
+
+  initParallax() {
+    const root = this.rootRef.current; if (!root) return;
+    const g = root.querySelector('[data-hero-graphic]');
+    const content = root.querySelector('[data-hero-content]');
+    if (!this.motionOn) return;
+    let ticking = false;
+    this._onScroll = () => {
+      if (ticking) return; ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY || window.pageYOffset || 0;
+        if (g) g.style.transform = 'translateY(' + (y * 0.16) + 'px)';
+        if (content) { content.style.transform = 'translateY(' + (y * 0.05) + 'px)'; content.style.opacity = String(Math.max(0, 1 - y / 720)); }
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+  }
+
+  componentDidMount() {
+    this.applyTheme();
+    requestAnimationFrame(() => { this.initHero(); this.initReveal(); this.initParallax(); });
+  }
+
+  componentDidUpdate() {
+    const pt = String(this.props.tone);
+    if (['1','2','3','4','5'].includes(pt) && pt !== this.current) { this.current = pt; this.applyTheme(); }
+  }
+
+  componentWillUnmount() {
+    if (this.raf) cancelAnimationFrame(this.raf);
+    if (this.io) this.io.disconnect();
+    if (this._onResize) window.removeEventListener('resize', this._onResize);
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+  }
+
+  renderVals() {
+    return {
+      rootRef: this.rootRef,
+      tones: this.TONES,
+      setTone: this.setTone,
+      ingredients: [
+        { idx: '01', name: 'VAMTOXIN™ Peptide', role: 'SNARE 억제 펩타이드 · 표정 결 정돈', pct: '2.0', hero: true },
+        { idx: '02', name: 'Spicule Complex', role: '미세 스피큘 · 유효성분 전달 보조', pct: '0.5', hero: false },
+        { idx: '03', name: 'Centella Asiatica', role: '병풀 추출물 · 진정 · 장벽 보조', pct: '0.5', hero: false },
+        { idx: '04', name: 'Niacinamide', role: '나이아신아마이드 · 톤 정돈 · 광채', pct: '4.0', hero: false },
+      ],
+      reviews: [
+        { text: '결이 정돈되는 느낌이 좋았어요. 아침 루틴이 한결 편해졌습니다.', meta: '정상 · 4주 사용' },
+        { text: '무겁지 않게 스며들어서 매일 쓰기 좋아요. 자극 없이 순한 편이에요.', meta: '복합성 · 6주 사용' },
+        { text: '눈가가 촉촉하게 정돈되는 느낌. 은은한 마무리가 마음에 듭니다.', meta: '건성 · 8주 사용' },
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>

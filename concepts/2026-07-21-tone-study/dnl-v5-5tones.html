@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark" class="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>FINIXLAB — 시안 5종 비교 (v5)</title>
+<!-- v5 · 5톤 스터디: ①컨셉보드(cb) ②다크 미니멀(dn) ③라이트 미니멀(ln) ④칩×라이트(light) ⑤칩×다크(dark, 기본) · 구조/카피 = 7/15 확정 방향 + 6/23·7/8 클라 원문 -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Outfit:wght@200;300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<style>
+  :root{
+    --brand-red:#DB4A38;
+    --serif:'Cormorant Garamond','Nanum Myeongjo',serif;
+    --sans:'Outfit','Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo',sans-serif;
+  }
+  /* ===== ⑤ 칩×다크 (기본) ===== */
+  :root, html[data-theme="dark"]{
+    --bg:#1F2A24;--fg:#E7E3D8;--head:#F4EFE0;--muted:#95A196;--accent:#B8A580;--accent2:#7B8B7A;--line:rgba(184,165,128,.22);
+    --navbg:rgba(15,21,18,.82);
+    --hero:radial-gradient(120% 90% at 50% 8%, #24322B 0%, #1F2A24 42%, #0F1512 100%);
+    --auraO:1;--ring:rgba(184,165,128,.28);--ring2:rgba(231,227,216,.08);--grain:.05;
+    --bg-manifesto:#1F2A24;--bg-keys:#161E1A;--bg-brands:#161E1A;--bg-story1:#1F2A24;--bg-story2:#161E1A;--bg-reviews:#0F1512;--bg-purerx:#0F1512;--bg-footer:#0F1512;
+    --card:linear-gradient(180deg,#161E1A,#1F2A24);
+    --contactBg:#F4EFE0;--contactFg:#1F2A24;--contactHead:#1F2A24;--contactMuted:#8a7b52;--contactLine:rgba(31,42,36,.14);
+    --badgeBg:#7B8B7A;--badgeFg:#12160f;
+  }
+  /* ===== ④ 칩×라이트 ===== */
+  html[data-theme="light"]{
+    --bg:#F4EFE0;--fg:#3b423a;--head:#232b26;--muted:#8a9188;--accent:#9c8a5e;--accent2:#7B8B7A;--line:rgba(31,42,36,.14);
+    --navbg:rgba(251,250,247,.86);
+    --hero:radial-gradient(120% 90% at 50% 6%, #FBFAF7 0%, #F4EFE0 48%, #E8DFC9 100%);
+    --auraO:.55;--ring:rgba(31,42,36,.10);--ring2:rgba(31,42,36,.05);--grain:.03;
+    --bg-manifesto:#F4EFE0;--bg-keys:#1F2A24;--bg-brands:#FBFAF7;--bg-story1:#F4EFE0;--bg-story2:#EDE6D2;--bg-reviews:#EFE7D3;--bg-purerx:#1F2A24;--bg-footer:#1F2A24;
+    --card:linear-gradient(180deg,#FDFCFA,#F1ECDD);
+    --contactBg:#1F2A24;--contactFg:#E7E3D8;--contactHead:#F4EFE0;--contactMuted:#B8A580;--contactLine:rgba(184,165,128,.2);
+    --badgeBg:#7B8B7A;--badgeFg:#12160f;
+  }
+  html[data-theme="light"] .keys{--head:#F4EFE0;--muted:#7B8B7A}
+  html[data-theme="light"] .purerx{--head:#E8DFC9;--muted:#95A196;--accent2:#7B8B7A}
+  html[data-theme="light"] footer{--head:#F4EFE0;--muted:#95A196}
+  /* ===== ① 컨셉보드 (멀티톤 색블록) ===== */
+  html[data-theme="cb"]{
+    --bg:#1F2A24;--fg:#E7E3D8;--head:#F4EFE0;--muted:#9aa79a;--accent:#C6B27F;--accent2:#8A9A86;--line:rgba(198,178,127,.24);
+    --navbg:rgba(20,26,22,.82);
+    --hero:radial-gradient(120% 95% at 50% 10%, #2C3A31 0%, #223029 40%, #14201A 100%);
+    --auraO:1;--ring:rgba(198,178,127,.30);--ring2:rgba(231,227,216,.10);--grain:.055;
+    --bg-manifesto:#F4EFE0;--bg-keys:#1F2A24;--bg-brands:#6E7D6C;--bg-story1:#E8DFC9;--bg-story2:#14201A;--bg-reviews:#F4EFE0;--bg-purerx:#14201A;--bg-footer:#14201A;
+    --card:linear-gradient(180deg,#FDFCFA,#EFE7D5);
+    --contactBg:#EDE3CC;--contactFg:#2a3228;--contactHead:#1F2A24;--contactMuted:#8a7b52;--contactLine:rgba(31,42,36,.16);
+    --badgeBg:#1F2A24;--badgeFg:#F4EFE0;
+  }
+  html[data-theme="cb"] .manifesto,
+  html[data-theme="cb"] .story.s1,
+  html[data-theme="cb"] .reviews{--head:#1F2A24;--fg:#3a4238;--muted:#6b7268;--accent:#9c7f43;--accent2:#6E7D6C;--line:rgba(31,42,36,.14)}
+  /* ===== ② 다크 미니멀 (뉴트럴) ===== */
+  html[data-theme="dn"]{
+    --bg:#141414;--fg:#D9D6CE;--head:#EDEAE3;--muted:#8F8D86;--accent:#B8A580;--accent2:#8A8A82;--line:rgba(184,165,128,.20);
+    --navbg:rgba(10,10,10,.84);
+    --hero:radial-gradient(120% 90% at 50% 8%, #1E1E1D 0%, #141414 45%, #090909 100%);
+    --auraO:.8;--ring:rgba(184,165,128,.24);--ring2:rgba(237,234,227,.07);--grain:.06;
+    --bg-manifesto:#141414;--bg-keys:#0E0E0E;--bg-brands:#0E0E0E;--bg-story1:#141414;--bg-story2:#0E0E0E;--bg-reviews:#090909;--bg-purerx:#090909;--bg-footer:#090909;
+    --card:linear-gradient(180deg,#0E0E0E,#161616);
+    --contactBg:#EDEAE3;--contactFg:#1C1C1A;--contactHead:#1C1C1A;--contactMuted:#857A60;--contactLine:rgba(28,28,26,.14);
+    --badgeBg:#8A8A82;--badgeFg:#111110;
+  }
+  /* ===== ③ 라이트 미니멀 (뉴트럴) ===== */
+  html[data-theme="ln"]{
+    --bg:#FAF9F6;--fg:#3A3935;--head:#1C1C1A;--muted:#8B8A83;--accent:#A08C6A;--accent2:#8A8A82;--line:rgba(28,28,26,.12);
+    --navbg:rgba(255,255,255,.86);
+    --hero:radial-gradient(120% 90% at 50% 6%, #FFFFFF 0%, #FAF9F6 48%, #EFEDE7 100%);
+    --auraO:.4;--ring:rgba(28,28,26,.09);--ring2:rgba(28,28,26,.05);--grain:.028;
+    --bg-manifesto:#FAF9F6;--bg-keys:#161616;--bg-brands:#FFFFFF;--bg-story1:#FAF9F6;--bg-story2:#F1EFE9;--bg-reviews:#EBE8E0;--bg-purerx:#161616;--bg-footer:#161616;
+    --card:linear-gradient(180deg,#FFFFFF,#F3F1EA);
+    --contactBg:#161616;--contactFg:#D9D6CE;--contactHead:#EDEAE3;--contactMuted:#B8A580;--contactLine:rgba(184,165,128,.2);
+    --badgeBg:#8A8A82;--badgeFg:#111110;
+  }
+  html[data-theme="ln"] .keys{--head:#EDEAE3;--muted:#8F8D86}
+  html[data-theme="ln"] .purerx{--head:#E5E2DA;--muted:#8F8D86;--accent2:#8A8A82}
+  html[data-theme="ln"] footer{--head:#EDEAE3;--muted:#8F8D86}
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-weight:300;line-height:1.75;letter-spacing:.01em;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .6s,color .6s}
+  .en .ko{display:none}
+  .ko .en{display:none}
+  .rd{color:var(--brand-red)}
+  .grain{position:fixed;inset:0;z-index:9;pointer-events:none;opacity:var(--grain);mix-blend-mode:overlay}
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:22px clamp(20px,5vw,64px);transition:background .5s,padding .5s,border-color .5s;border-bottom:1px solid transparent}
+  header.nav.solid{background:var(--navbg);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding-top:15px;padding-bottom:15px}
+  .brand{font-weight:400;letter-spacing:.42em;font-size:15px;color:var(--head);padding-left:.42em}
+  .brand .rd{margin-left:1px;font-weight:500}
+  nav.links{display:flex;gap:clamp(18px,3vw,40px);align-items:center}
+  nav.links a{color:var(--fg);text-decoration:none;font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;opacity:.85;transition:opacity .3s,color .3s}
+  nav.links a:hover{opacity:1;color:var(--accent)}
+  .lang{display:flex;gap:8px;align-items:center;font-size:11px;letter-spacing:.14em;color:var(--muted)}
+  .lang button{background:none;border:none;color:var(--muted);cursor:pointer;font-family:var(--sans);font-size:11px;letter-spacing:.14em;padding:2px 3px;transition:color .3s}
+  .lang button.on{color:var(--head)}
+  .lang span{opacity:.4}
+  @media(max-width:760px){nav.links a{display:none}}
+  .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:var(--hero);transition:background .6s}
+  #spark{position:absolute;inset:0;z-index:1}
+  .aura{position:absolute;z-index:0;top:44%;left:50%;width:min(78vw,720px);height:min(78vw,720px);transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle, rgba(184,165,128,.16) 0%, rgba(123,139,122,.08) 38%, transparent 66%);filter:blur(6px);opacity:var(--auraO)}
+  .ring{position:absolute;z-index:1;top:44%;left:50%;width:min(64vw,540px);height:min(64vw,540px);transform:translate(-50%,-50%);border:1px solid var(--ring);border-radius:50%}
+  .ring.two{width:min(40vw,320px);height:min(40vw,320px);border-color:var(--ring2)}
+  .hero-inner{position:relative;z-index:3;padding:0 24px;max-width:940px}
+  .eyebrow{font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--accent);margin-bottom:30px}
+  .hero h1{font-family:var(--serif);font-weight:300;font-size:clamp(34px,6.4vw,74px);line-height:1.16;color:var(--head)}
+  .hero h1 .en{font-style:italic;opacity:.72}
+  .hero .sub{margin-top:26px;font-size:clamp(13px,1.5vw,15.5px);color:var(--muted);letter-spacing:.05em}
+  .hero .ydr{margin-top:20px;font-size:10.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--muted);opacity:.75}
+  .scrollcue{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:3;font-size:10.5px;letter-spacing:.3em;color:var(--muted);text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:10px}
+  .scrollcue i{display:block;width:1px;height:46px;background:linear-gradient(var(--accent),transparent);animation:cue 2.4s ease-in-out infinite}
+  @keyframes cue{0%,100%{opacity:.2;transform:scaleY(.6)}50%{opacity:1;transform:scaleY(1)}}
+  section{position:relative;z-index:2}
+  .wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:clamp(90px,13vw,180px) clamp(22px,6vw,64px)}
+  .label{font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--accent);margin-bottom:28px}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity 1s cubic-bezier(.2,.7,.2,1),transform 1s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .manifesto{background:var(--bg-manifesto);transition:background .6s}
+  .manifesto h2{font-family:var(--serif);font-weight:300;font-size:clamp(26px,4.4vw,50px);line-height:1.32;color:var(--head);max-width:16ch}
+  .manifesto p{margin-top:30px;max-width:60ch;color:var(--fg);opacity:.9;font-size:clamp(14.5px,1.6vw,17px)}
+  .manifesto .promise{margin-top:40px;font-family:var(--serif);font-style:italic;font-size:clamp(19px,2.4vw,26px);color:var(--accent)}
+  .keys{background:var(--bg-keys);border-top:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .6s}
+  .keys .row{max-width:1120px;margin:0 auto;padding:34px clamp(22px,6vw,64px);display:flex;flex-wrap:wrap;gap:14px 36px;justify-content:center;align-items:center}
+  .keys span{font-family:var(--serif);font-size:clamp(15px,2vw,22px);color:var(--head);letter-spacing:.04em;opacity:.92}
+  .keys em{color:var(--brand-red);font-style:normal;opacity:.85;padding:0 4px}
+  .brands{background:var(--bg-brands);transition:background .6s}
+  .brandcard{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,6vw,80px);align-items:center}
+  @media(max-width:820px){.brandcard{grid-template-columns:1fr}}
+  .brandcard .k{font-size:12px;letter-spacing:.3em;color:var(--accent);text-transform:uppercase}
+  .brandcard h3{font-family:var(--serif);font-weight:300;font-size:clamp(30px,5vw,58px);color:var(--head);margin:16px 0 20px}
+  .brandcard p{color:var(--fg);opacity:.86;max-width:46ch}
+  .glyphwrap{aspect-ratio:1/1;border:1px solid var(--line);border-radius:2px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 42%, rgba(184,165,128,.10), transparent 62%);color:var(--accent)}
+  .glyphwrap svg{width:56%;height:56%}
+  .story{background:var(--bg-story1);position:relative;overflow:hidden;transition:background .6s}
+  .story.s2{background:var(--bg-story2)}
+  .chap{display:grid;grid-template-columns:0.92fr 1.08fr;gap:clamp(30px,6vw,84px);align-items:center}
+  .story.rev .chap-media{order:2}
+  .story.rev .chap-copy{order:1}
+  @media(max-width:820px){.chap{grid-template-columns:1fr;gap:34px}.story.rev .chap-media,.story.rev .chap-copy{order:0}}
+  .chap-media{position:relative}
+  .imgph{position:relative;aspect-ratio:4/5;border:1px solid var(--line);border-radius:3px;overflow:hidden;display:flex;align-items:center;justify-content:center;color:var(--accent);cursor:pointer;background:radial-gradient(circle at 50% 38%, rgba(184,165,128,.09), transparent 66%);transition:border-color .5s}
+  .imgph:hover{border-color:var(--accent)}
+  .imgph svg{width:40%;opacity:.82}
+  .imgph .tag{position:absolute;top:14px;left:14px;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:4px 9px;border-radius:2px}
+  .imgph .cap{position:absolute;bottom:15px;left:0;right:0;text-align:center;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+  .chap-copy .k{font-size:11.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)}
+  .chap-copy h3{font-family:var(--serif);font-weight:300;font-size:clamp(30px,5vw,56px);color:var(--head);margin:14px 0 6px}
+  .chap-copy .kr{font-size:14.5px;color:var(--muted);margin-bottom:22px}
+  .chap-copy .lead{font-size:clamp(15px,1.7vw,18px);color:var(--fg);opacity:.9;max-width:40ch;line-height:1.7}
+  .chap-copy .more{margin-top:30px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:inline-flex;gap:9px;align-items:center;cursor:pointer}
+  .chap-copy .more b{font-weight:400;transition:transform .4s}
+  .chap-copy .more:hover b{transform:translateX(6px)}
+  .orb{position:absolute;border-radius:50%;background:radial-gradient(circle at 34% 30%, rgba(248,246,238,.6), rgba(184,165,128,.5) 42%, rgba(70,62,44,.55) 100%);filter:blur(.4px);opacity:.16;pointer-events:none;z-index:0}
+  .story.s2 .orb{opacity:.22}
+  html[data-theme="ln"] .orb, html[data-theme="light"] .orb{opacity:.12}
+  @keyframes fa{0%,100%{transform:translateY(0) translateX(0)}50%{transform:translateY(-30px) translateX(10px)}}
+  @keyframes fb{0%,100%{transform:translateY(0) translateX(0)}50%{transform:translateY(24px) translateX(-14px)}}
+  .o1{width:120px;height:120px;top:12%;right:6%;animation:fa 13s ease-in-out infinite}
+  .o2{width:64px;height:64px;bottom:16%;right:22%;animation:fb 16s ease-in-out infinite}
+  .o3{width:38px;height:38px;top:30%;right:40%;animation:fa 19s ease-in-out infinite}
+  .o4{width:150px;height:150px;bottom:8%;left:4%;animation:fb 18s ease-in-out infinite}
+  .o5{width:52px;height:52px;top:20%;left:24%;animation:fa 15s ease-in-out infinite}
+  .reviews{background:var(--bg-reviews);transition:background .6s}
+  .rhead{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px}
+  .rhead h2{font-family:var(--serif);font-weight:300;font-size:clamp(26px,4.2vw,46px);color:var(--head)}
+  .rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,26px);margin-top:46px}
+  @media(max-width:820px){.rgrid{grid-template-columns:1fr}}
+  .rcard{border:1px solid var(--line);border-radius:3px;padding:clamp(24px,3vw,36px);background:var(--card)}
+  .rcard .stars{color:var(--brand-red);letter-spacing:4px;font-size:13px}
+  .rcard p{margin:18px 0 20px;font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.66;color:var(--fg);opacity:.9}
+  .rcard .who{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .reviews .note{margin-top:30px;font-size:11.5px;color:var(--muted);opacity:.85}
+  .purerx{background:var(--bg-purerx);border-top:1px solid var(--line);transition:background .6s}
+  .purerx .inner{max-width:1120px;margin:0 auto;padding:clamp(52px,7vw,88px) clamp(22px,6vw,64px);display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+  .purerx .k{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent2);opacity:.75}
+  .purerx h3{font-family:var(--serif);font-weight:300;font-size:clamp(22px,3.2vw,34px);color:var(--head);margin:10px 0 8px}
+  .purerx p{font-size:13px;color:var(--muted);max-width:46ch}
+  .purerx .badge{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--badgeFg);background:var(--badgeBg);padding:8px 16px;border-radius:2px;white-space:nowrap;opacity:.9}
+  .contact{background:var(--contactBg);color:var(--contactFg);--head:var(--contactHead);--fg:var(--contactFg);--muted:var(--contactMuted);--accent:var(--contactMuted);--line:var(--contactLine);transition:background .6s}
+  .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px)}
+  @media(max-width:720px){.contact .wrap{grid-template-columns:1fr}}
+  .contact h2{font-family:var(--serif);font-weight:300;font-size:clamp(28px,4.6vw,52px);line-height:1.24;color:var(--head)}
+  .contact .chan{display:flex;flex-direction:column;gap:22px;margin-top:6px}
+  .contact .chan div{border-bottom:1px solid var(--line);padding-bottom:16px}
+  .contact .chan .t{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+  .contact .chan .v{font-size:15.5px;color:var(--head);margin-top:5px}
+  .contact .ph{font-size:11px;opacity:.5}
+  footer{background:var(--bg-footer);border-top:1px solid var(--line);text-align:center;padding:56px 22px 110px;transition:background .6s}
+  footer .fb{letter-spacing:.42em;font-size:14px;color:var(--head);padding-left:.42em}
+  footer .fs{margin-top:14px;font-size:11px;letter-spacing:.16em;color:var(--muted);text-transform:uppercase}
+  footer .ydr{margin-top:8px;font-size:10px;letter-spacing:.4em;color:var(--muted);opacity:.7;text-transform:uppercase}
+  footer .cc{margin-top:24px;font-size:10.5px;color:var(--muted);opacity:.6}
+  .tone{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:40;display:flex;align-items:center;gap:3px;background:rgba(20,26,22,.78);backdrop-filter:blur(12px);border:1px solid rgba(184,165,128,.3);border-radius:100px;padding:6px 8px;max-width:calc(100vw - 24px);overflow-x:auto}
+  .tone .tl{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#B8A580;padding:0 6px}
+  .tone button{background:none;border:none;color:#cfd4cb;font-family:var(--sans);font-size:11.5px;letter-spacing:.03em;padding:7px 12px;border-radius:100px;cursor:pointer;white-space:nowrap;transition:background .3s,color .3s}
+  .tone button.on{background:#B8A580;color:#12160f}
+  .modal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;padding:24px;background:rgba(10,15,12,.72);backdrop-filter:blur(8px)}
+  .modal.open{display:flex}
+  .sheet{background:#161E1A;border:1px solid rgba(184,165,128,.24);border-radius:4px;max-width:580px;width:100%;padding:clamp(30px,5vw,52px);position:relative;color:#E7E3D8;animation:rise .5s cubic-bezier(.2,.7,.2,1)}
+  @keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+  .sheet .x{position:absolute;top:18px;right:20px;background:none;border:none;color:#95A196;font-size:22px;cursor:pointer;line-height:1}
+  .sheet .pk{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#7B8B7A}
+  .sheet h4{font-family:var(--serif);font-weight:400;font-size:clamp(22px,4vw,32px);color:#F4EFE0;margin:10px 0 6px}
+  .sheet .kr{color:#E8DFC9;opacity:.82;margin-bottom:22px;font-size:13.5px}
+  .sheet ul{list-style:none;display:flex;flex-direction:column;gap:12px;margin:20px 0}
+  .sheet li{font-size:13.5px;opacity:.86;padding-left:18px;position:relative;line-height:1.6}
+  .sheet li:before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border:1px solid #B8A580;border-radius:50%}
+  .sheet .stub{margin-top:24px;font-size:11.5px;color:#95A196;border-top:1px solid rgba(184,165,128,.24);padding-top:18px}
+  @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body class="ko">
+<svg class="grain" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+<header class="nav" id="nav">
+  <div class="brand">FINIXLAB<span class="rd">.</span></div>
+  <nav class="links">
+    <a href="#about"><span class="ko">브랜드</span><span class="en">About</span></a>
+    <a href="#products"><span class="ko">제품</span><span class="en">Products</span></a>
+    <a href="#contact"><span class="ko">문의</span><span class="en">Contact</span></a>
+    <span class="lang"><button data-lang="ko" class="on">KO</button><span>·</span><button data-lang="en">EN</button></span>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="aura" data-parallax="0.18"></div>
+  <div class="ring" data-parallax="0.06"></div>
+  <div class="ring two" data-parallax="0.12"></div>
+  <canvas id="spark"></canvas>
+  <div class="hero-inner">
+    <div class="eyebrow"><span class="rd">·</span> Recovery Skin Science</div>
+    <h1><span class="ko">당신의 피부가<br/>다시 비상할 수 있도록.</span><span class="en">So your skin<br/>can rise again.</span></h1>
+    <p class="sub"><span class="ko">회복의 과학으로, 조용하게. — FINIXLAB</span><span class="en">The science of recovery, quietly delivered. — FINIXLAB</span></p>
+    <div class="ydr">Your Daily Routine</div>
+  </div>
+  <div class="scrollcue"><span class="ko">스크롤</span><span class="en">Scroll</span><i></i></div>
+</section>
+
+<section id="about" class="manifesto">
+  <div class="wrap reveal">
+    <div class="label">Persistence <span class="rd">·</span> Journey <span class="rd">·</span> New Day</div>
+    <h2><span class="ko">되돌림이 아니라, 회복입니다.</span><span class="en">Not a reversal. A recovery.</span></h2>
+    <p><span class="ko">우리는, 변화가 특별한 순간이 아니라 매일의 작은 실천에서 시작된다고 믿습니다. 꾸준히 이어진 실천은 스스로를 새롭게 일으키고, 또 다른 내일의 나를 만들어 갑니다.</span><span class="en">We believe change begins not in a single special moment, but in small daily practice. Persistence, sustained, raises you anew — and shapes the you of another tomorrow.</span></p>
+    <p class="promise"><span class="ko">매일의 작은 실천이, 새로운 나를 일으킵니다.</span><span class="en">Small daily care, raising a new you.</span></p>
+  </div>
+</section>
+
+<div class="keys reveal"><div class="row">
+  <span>Integrity</span><em>·</em><span>Persistence</span><em>·</em><span>Expertise</span><em>·</em><span>Relevance</span>
+</div></div>
+
+<section class="brands">
+  <div class="wrap brandcard reveal">
+    <div>
+      <div class="k">Our Home-Care Line</div>
+      <h3>FINIXLAB</h3>
+      <p><span class="ko">전문가에게 인정받아 국내외 에스테틱샵에서 판매되는 홈케어 라인. 매일의 루틴 안에서, 브랜드의 이야기를 따라 제품을 하나씩 만나보세요.</span><span class="en">A home-care line, expert-trusted and stocked in aesthetic shops at home and abroad. Meet each product as the brand's story unfolds.</span></p>
+    </div>
+    <div class="glyphwrap">
+      <svg viewBox="0 0 200 200" fill="none">
+        <circle cx="100" cy="108" r="70" stroke="currentColor" stroke-width="1" opacity=".45"/>
+        <path d="M40 130 Q100 40 160 130" stroke="currentColor" stroke-width="1.2" opacity=".85"/>
+        <path d="M56 138 Q100 70 144 138" stroke="currentColor" stroke-width="1" opacity=".6"/>
+        <path d="M72 146 Q100 100 128 146" stroke="currentColor" stroke-width="1" opacity=".45"/>
+        <circle cx="100" cy="108" r="3" fill="#DB4A38"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="story s1" data-product="peptosome">
+  <span class="orb o1"></span><span class="orb o3"></span>
+  <div class="wrap chap reveal">
+    <div class="chap-media">
+      <div class="imgph">
+        <span class="tag"><span class="ko">제품컷 자리</span><span class="en">Product shot</span></span>
+        <svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="34" stroke="currentColor" stroke-width="1" opacity=".55"/><circle cx="50" cy="50" r="20" stroke="currentColor" stroke-width="1" opacity=".7"/><circle cx="50" cy="50" r="7" fill="currentColor" opacity=".45"/></svg>
+        <span class="cap">SMDS 제품컷 · placeholder</span>
+      </div>
+    </div>
+    <div class="chap-copy">
+      <div class="k">FINIXLAB Collection <span class="rd">·</span> 01</div>
+      <h3>Peptosome</h3>
+      <div class="kr"><span class="ko">펩토좀 스킨부스터 · Peptosome Skin Booster · 50ml</span><span class="en">Peptosome Skin Booster · 50ml</span></div>
+      <p class="lead"><span class="ko">주름과 결을 동시에, 부드럽게. 흡수는 빠르게 — 매일의 루틴을 위한 부스터 세럼.</span><span class="en">Wrinkle and texture, cared for together. Fast to absorb — a booster serum for your daily routine.</span></p>
+      <div class="more"><span class="ko">자세히 보기</span><span class="en">View detail</span><b>→</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="story s2 rev" data-product="spicule">
+  <span class="orb o4"></span><span class="orb o2"></span><span class="orb o5"></span>
+  <div class="wrap chap reveal">
+    <div class="chap-media">
+      <div class="imgph">
+        <span class="tag"><span class="ko">제품컷 자리</span><span class="en">Product shot</span></span>
+        <svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="40" r="16" stroke="currentColor" stroke-width="1" opacity=".7"/><circle cx="50" cy="40" r="16" fill="currentColor" opacity=".12"/><line x1="50" y1="56" x2="50" y2="82" stroke="currentColor" stroke-width="1" opacity=".7"/><circle cx="50" cy="40" r="4" fill="#DB4A38" opacity=".9"/></svg>
+        <span class="cap">SMDS 제품컷 · placeholder</span>
+      </div>
+    </div>
+    <div class="chap-copy">
+      <div class="k">FINIXLAB Collection <span class="rd">·</span> 02</div>
+      <h3>Spicule</h3>
+      <div class="kr"><span class="ko">스피큘 링클 글로우 세럼 · Spicule Wrinkle-Free Glow Serum</span><span class="en">Spicule Wrinkle-Free Glow Serum · Radiant Renewal</span></div>
+      <p class="lead"><span class="ko">초저분자 펩타이드와 코어 스피큘로, 표정주름·광채·피부결을 섬세하게 케어하는 글로우 세럼.</span><span class="en">Ultra-low-molecular peptides and a core spicule — delicate care for fine lines, glow, and texture.</span></p>
+      <div class="more"><span class="ko">자세히 보기</span><span class="en">View detail</span><b>→</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="rhead reveal">
+      <h2><span class="ko">고객의 이야기</span><span class="en">Voices</span></h2>
+      <div class="label" style="margin:0"><span class="ko">후기 · 체험단</span><span class="en">Reviews</span></div>
+    </div>
+    <div class="rgrid reveal">
+      <div class="rcard"><div class="stars">★★★★★</div><p><span class="ko">“ 실제 고객 후기가 들어갈 자리입니다. 체험단·구매평에서 선별해 교체합니다. ”</span><span class="en">“ A real customer review will go here. ”</span></p><div class="who">구매 고객 · placeholder</div></div>
+      <div class="rcard"><div class="stars">★★★★★</div><p><span class="ko">“ 후기 문구 placeholder — 실제 사용 후기로 교체 예정입니다. ”</span><span class="en">“ Placeholder — to be replaced with a real testimonial. ”</span></p><div class="who">체험단 · placeholder</div></div>
+      <div class="rcard"><div class="stars">★★★★★</div><p><span class="ko">“ 레이아웃 확인용 임시 후기입니다. 별점·문구·작성자 모두 실제 데이터로 대체됩니다. ”</span><span class="en">“ Temporary review for layout only. ”</span></p><div class="who">구매 고객 · placeholder</div></div>
+    </div>
+    <p class="note reveal"><span class="ko">※ 위 후기는 실제 후기가 아니라 레이아웃 확인용 placeholder입니다.</span><span class="en">※ Placeholder reviews for layout only.</span></p>
+  </div>
+</section>
+
+<section class="purerx">
+  <div class="inner reveal">
+    <div>
+      <div class="k">Another line, further down the road</div>
+      <h3>PureRX</h3>
+      <p><span class="ko">전문가·파트너 채널을 위한 회복 집중 라인. PDRN RX 앰플을 준비 중입니다.</span><span class="en">A recovery-focused line for professional & partner channels.</span></p>
+    </div>
+    <div class="badge">B2B · Coming Soon</div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="label">Contact</div>
+      <h2><span class="ko">함께 만들어갈<br/>이야기를 기다립니다.</span><span class="en">We welcome the<br/>stories we'll build together.</span></h2>
+    </div>
+    <div class="chan reveal">
+      <div><div class="t">General</div><div class="v">hello@finixlab.com <span class="ph">(placeholder)</span></div></div>
+      <div><div class="t">Partnership · B2B</div><div class="v">partners@finixlab.com <span class="ph">(placeholder)</span></div></div>
+      <div><div class="t">Global · Stockist</div><div class="v">Korea · US · Japan · China · Vietnam</div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fb">FINIXLAB<span class="rd">.</span></div>
+  <div class="fs">Recovery Skin Science</div>
+  <div class="ydr">Your Daily Routine</div>
+  <div class="cc">© 2026 FINIXLAB · v5 Tone Study ×5 — DNL STUDIO. 제품컷·후기·연락처는 placeholder.</div>
+</footer>
+
+<div class="tone" id="tone">
+  <span class="tl">Tone</span>
+  <button data-t="cb">① 컨셉보드</button>
+  <button data-t="dn">② 다크</button>
+  <button data-t="ln">③ 라이트</button>
+  <button data-t="light">④ 칩·라이트</button>
+  <button data-t="dark" class="on">⑤ 칩·다크</button>
+</div>
+
+<div class="modal" id="modal"><div class="sheet">
+  <button class="x" aria-label="close">×</button>
+  <div class="pk" id="m-pk"></div><h4 id="m-name"></h4><div class="kr" id="m-kr"></div>
+  <ul id="m-list"></ul>
+  <div class="stub"><span class="ko">전성분·효능 표기는 브랜드 소개자료(6/23) 기준. 최종 표현은 심의 검토 후 확정.</span><span class="en">Per the brand deck (Jun 23); final wording after compliance review.</span></div>
+</div></div>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('solid',window.scrollY>40);parallax();},{passive:true});
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){
+    var l=b.getAttribute('data-lang');document.documentElement.classList.remove('ko','en');document.documentElement.classList.add(l);
+    document.body.className=l;document.querySelectorAll('.lang button').forEach(function(x){x.classList.toggle('on',x===b);});});});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  function parallax(){var y=window.scrollY;document.querySelectorAll('[data-parallax]').forEach(function(el){
+    el.style.transform='translate(-50%,-50%) translateY('+(y*parseFloat(el.getAttribute('data-parallax')))+'px)';});}
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var cv=document.getElementById('spark'),ctx=cv.getContext('2d'),parts=[],raf;
+  var THEMES={
+    dark:{pal:['184,165,128','232,223,201','123,139,122'],oMax:.5,n:26,orbN:8,orbO:.2,orb:{hi:'240,238,230',body:'184,165,128',rim:'55,50,36'}},
+    light:{pal:['123,139,122','156,138,94','120,110,80'],oMax:.14,n:18,orbN:7,orbO:.12,orb:{hi:'255,255,255',body:'150,140,108',rim:'90,84,60'}},
+    cb:{pal:['198,178,127','232,223,201','138,154,134'],oMax:.5,n:24,orbN:8,orbO:.2,orb:{hi:'240,238,230',body:'198,178,127',rim:'55,55,42'}},
+    dn:{pal:['184,165,128','237,234,227','138,138,133'],oMax:.42,n:24,orbN:8,orbO:.18,orb:{hi:'245,243,238',body:'170,158,132',rim:'40,38,34'}},
+    ln:{pal:['160,140,106','120,120,115','90,90,85'],oMax:.12,n:16,orbN:6,orbO:.1,orb:{hi:'255,255,255',body:'176,164,140',rim:'110,104,92'}}
+  };
+  var cur=THEMES.dark;
+  function size(){var h=cv.parentElement;cv.width=h.clientWidth;cv.height=h.clientHeight;}
+  function seed(){parts=[];var i;
+    for(i=0;i<cur.n;i++){parts.push({orb:false,x:Math.random()*cv.width,y:Math.random()*cv.height,r:Math.random()*1.5+.4,v:Math.random()*.28+.06,o:Math.random()*cur.oMax+cur.oMax*.25,d:Math.random()*.4-.2});}
+    for(i=0;i<cur.orbN;i++){parts.push({orb:true,x:Math.random()*cv.width,y:Math.random()*cv.height,r:Math.random()*11+5,v:Math.random()*.12+.03,o:Math.random()*cur.orbO+cur.orbO*.4,d:Math.random()*.3-.15});}}
+  function draw(){ctx.clearRect(0,0,cv.width,cv.height);var o=cur.orb;
+    for(var i=0;i<parts.length;i++){var p=parts[i];p.y-=p.v;p.x+=p.d*.3;
+      if(p.y<-20){p.y=cv.height+20;p.x=Math.random()*cv.width;}
+      if(p.orb){var g=ctx.createRadialGradient(p.x-p.r*.35,p.y-p.r*.35,p.r*.08,p.x,p.y,p.r);
+        g.addColorStop(0,'rgba('+o.hi+','+Math.min(p.o*1.6,.6)+')');g.addColorStop(.45,'rgba('+o.body+','+p.o+')');g.addColorStop(1,'rgba('+o.rim+','+p.o*.55+')');ctx.fillStyle=g;}
+      else{ctx.fillStyle='rgba('+cur.pal[i%3]+','+p.o+')';}
+      ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,6.283);ctx.fill();}
+    raf=requestAnimationFrame(draw);}
+  if(!reduce){size();seed();draw();window.addEventListener('resize',function(){cancelAnimationFrame(raf);size();seed();draw();},{passive:true});}
+  document.querySelectorAll('.tone button').forEach(function(b){b.addEventListener('click',function(){
+    var t=b.getAttribute('data-t');document.documentElement.setAttribute('data-theme',t);
+    document.querySelectorAll('.tone button').forEach(function(x){x.classList.toggle('on',x===b);});
+    cur=THEMES[t]||THEMES.dark;if(!reduce){cancelAnimationFrame(raf);seed();draw();}});});
+  var data={peptosome:{pk:'Skin Booster · 보습·주름',name:'Peptosome Skin Booster',kr:'펩토좀 스킨부스터 · 50ml · Revitalized by Peptosome',
+      list:['3중 시너지 펩타이드 콤플렉스 — Copper Tripeptide-1 · Acetyl Hexapeptide-8 · 효모 폴리펩타이드','펩타좀(Peptosome) DDS 기술로 유효 성분을 피부 속으로 전달','천연 보습 인자 — 아쿠아포린 활성(글리세릴글루코사이드) · 히아루론산 · 흰목이버섯 추출물','전성분: Saccharomyces Polypeptides, Copper Tripeptide-1, Acetyl Hexapeptide-8, Sodium Hyaluronate, Tremella Fuciformis Polysaccharide, Glyceryl Glucoside']},
+    spicule:{pk:'Glow Serum · 미백·주름개선 2중 기능성',name:'Spicule Wrinkle-Free Glow Serum',kr:'스피큘 링클 글로우 세럼 · Radiant Renewal',
+      list:['초저분자 펩타이드(약 500Da)로 섬세한 케어','코어 스피큘 — Hollow 구조로 유효 성분 전달, 자극은 적게','미백·주름개선 2중 기능성 — 나이아신아마이드 · 아데노신','장벽 강화 — 세라마이드 NP · 판테놀','전성분: Acetyl D-Lysinyl D-asparaginyl D-Leucine, Calcium Aluminum Borosilicate, Ceramide NP, Panthenol, Biotin, Niacinamide, Adenosin, Ascorbic acid, Tocopherol']}};
+  var modal=document.getElementById('modal');
+  function open(k){var d=data[k];if(!d)return;document.getElementById('m-pk').textContent=d.pk;
+    document.getElementById('m-name').textContent=d.name;document.getElementById('m-kr').textContent=d.kr;
+    var ul=document.getElementById('m-list');ul.innerHTML='';d.list.forEach(function(t){var li=document.createElement('li');li.textContent=t;ul.appendChild(li);});
+    modal.classList.add('open');}
+  function close(){modal.classList.remove('open');}
+  document.querySelectorAll('.story[data-product]').forEach(function(s){var k=s.getAttribute('data-product');
+    s.querySelectorAll('.imgph,.more').forEach(function(el){el.addEventListener('click',function(){open(k);});});});
+  modal.addEventListener('click',function(e){if(e.target===modal)close();});
+  document.querySelector('.sheet .x').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>
