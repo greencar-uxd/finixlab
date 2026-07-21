@@ -496,6 +496,9 @@
     var t=b.getAttribute('data-t');document.documentElement.setAttribute('data-theme',t);
     document.querySelectorAll('.tone button').forEach(function(x){x.classList.toggle('on',x===b);});
     cur=THEMES[t]||THEMES.dark;if(!reduce){cancelAnimationFrame(raf);seed();draw();}});});
+  // URL 해시(#cb/#dn/#ln/#light/#dark)로 진입 톤 지정 — 내용·디자인 불변, 초기 톤만 선택
+  (function(){var h=(location.hash||'').replace('#','');
+    if(['cb','dn','ln','light','dark'].indexOf(h)>=0){var b0=document.querySelector('.tone button[data-t="'+h+'"]');if(b0)b0.click();}})();
   var data={
     peptosome:{ch:'Chapter 01',cat:'스킨부스터 · 보습 · 50ml',name:'Peptosome Skin Booster',kr:'펩토좀 스킨부스터',
       tagline:'주름과 결을 동시에, 부드럽게.',
