@@ -274,6 +274,27 @@
   @media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
   /* 상품 상세는 카드 밖에 노출하지 않음 — 성분 리스트·성분 태그는 '상품 상세 보기' 클릭 시 풀스크린 detail 안에서만 보인다. 카드는 제품컷+이름+한 줄 카피만. */
   .story .chap-copy .ingr, .story .chap-copy .pill{ display:none; }
+  /* ── 브랜드 소개 확장: Recovery Skin Science + Our Line ── */
+  .philos{background:var(--bg-brands);transition:background .6s}
+  .philos .wrap{text-align:center}
+  .philos .k{font-family:var(--serif);font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent)}
+  .philos h2{margin-top:18px;font-family:var(--serif);font-weight:300;font-size:clamp(25px,4vw,46px);line-height:1.3;color:var(--head)}
+  .philos h2 em{font-style:normal;color:var(--accent)}
+  .philos .plead{margin:24px auto 0;max-width:62ch;font-size:clamp(14.5px,1.6vw,16.5px);line-height:1.95;color:var(--fg);opacity:.88}
+  .philos .p3{margin-top:clamp(40px,5vw,62px);display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);text-align:left}
+  @media(max-width:820px){.philos .p3{grid-template-columns:1fr;gap:26px}}
+  .philos .pc{border-top:1px solid color-mix(in oklab,var(--head) 24%,transparent);padding-top:20px}
+  .philos .pc .no{font-family:var(--serif);font-size:11px;letter-spacing:.18em;color:var(--brand-red)}
+  .philos .pc h3{margin:12px 0 10px;font-family:var(--serif);font-weight:400;font-size:clamp(17px,2.1vw,22px);line-height:1.3;color:var(--head)}
+  .philos .pc p{font-size:13px;line-height:1.85;color:var(--muted)}
+  .brands .lineup{margin-top:clamp(38px,5vw,54px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.6vw,26px);text-align:left}
+  @media(max-width:820px){.brands .lineup{grid-template-columns:1fr}}
+  .brands .bcard{border:1px solid var(--line);padding:clamp(22px,3vw,30px);display:flex;flex-direction:column;gap:11px;background:color-mix(in oklab,var(--head) 3%,transparent)}
+  .brands .bcard .tag{font-family:var(--serif);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--brand-red)}
+  .brands .bcard h3{font-family:var(--serif);font-weight:500;font-size:clamp(19px,2.4vw,25px);letter-spacing:.03em;color:var(--head)}
+  .brands .bcard .bp{font-size:13px;line-height:1.85;color:var(--muted);margin:0}
+  .brands .bcard .meta{margin-top:auto;padding-top:6px;font-size:11px;letter-spacing:.05em;color:var(--accent);opacity:.9}
+  .brands .orgline{margin-top:clamp(26px,3vw,34px);font-size:12.5px;line-height:1.95;color:var(--muted);opacity:.82;max-width:72ch;margin-left:auto;margin-right:auto}
 </style>
 </head>
 <body class="ko">
@@ -312,7 +333,33 @@
     <div>
       <h2><span class="ko">되돌림이 아니라, <em>회복</em>입니다.</span><span class="en">Not a reversal. A <em>recovery</em>.</span></h2>
       <p><span class="ko">우리는, 변화가 특별한 순간이 아니라 매일의 작은 실천에서 시작된다고 믿습니다. 시간을 되돌리려 하지 않고, 피부가 스스로의 회복력을 되찾도록 곁에서 돕습니다.</span><span class="en">We believe change begins not in a single special moment, but in small daily practice. We don't try to turn back time — we help skin regain its own resilience.</span></p>
+      <p><span class="ko">피닉스랩이라는 이름은 재 속에서 다시 날아오르는 불사조에서 시작되었습니다. 지치고 무너진 순간에도, 다시 일어설 힘은 피부 안에 있다고 믿습니다.</span><span class="en">The name Finixlab begins with the phoenix that rises from its own ashes. Even when skin feels tired and worn, we believe the strength to rise again remains within it.</span></p>
       <p class="promise"><span class="ko">매일의 작은 실천이, 새로운 나를 일으킵니다.</span><span class="en">Small daily care, raising a new you.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="philos">
+  <div class="wrap reveal">
+    <div class="k">Recovery Skin Science · 회복 스킨 사이언스</div>
+    <h2><span class="ko">피부가 스스로 <em>다시 일어서도록</em>.</span><span class="en">Helping skin <em>rise on its own</em>.</span></h2>
+    <p class="plead"><span class="ko">불사조가 재 속에서 다시 피어나듯, 피닉스랩은 피부가 잃어버린 회복력을 되찾는 과정에 집중합니다. 자연에서 온 원료와 연구소의 기술을 나란히 두고, 매일의 루틴 안에서 천천히 그러나 분명하게.</span><span class="en">As a phoenix rises from ashes, Finixlab focuses on helping skin regain the resilience it has lost — natural-derived ingredients alongside laboratory science, slowly yet surely, within the daily routine.</span></p>
+    <div class="p3">
+      <div class="pc">
+        <div class="no">01</div>
+        <h3><span class="ko">자연주의 × 연구소</span><span class="en">Naturalism × Laboratory</span></h3>
+        <p><span class="ko">자연에서 온 원료와 연구소의 정제된 신뢰감을 함께 담습니다. 과함 없이, 정갈하게.</span><span class="en">Natural-derived ingredients meet the quiet credibility of the lab — nothing excessive, everything considered.</span></p>
+      </div>
+      <div class="pc">
+        <div class="no">02</div>
+        <h3><span class="ko">슬로우 에이징</span><span class="en">Slow Aging</span></h3>
+        <p><span class="ko">빠른 효과가 아니라 매일의 축적. 30대 이후 변화하는 피부의 리듬을 존중합니다.</span><span class="en">Not a quick fix, but daily accumulation — respecting the changing rhythm of skin from your thirties onward.</span></p>
+      </div>
+      <div class="pc">
+        <div class="no">03</div>
+        <h3><span class="ko">의존하지 않는 케어</span><span class="en">Care Without Dependence</span></h3>
+        <p><span class="ko">강한 자극에 기대지 않습니다. 피부가 스스로의 균형과 컨디션을 되찾도록 곁에서 돕습니다.</span><span class="en">We don't rely on harsh stimulation — we help skin find its own balance and condition.</span></p>
+      </div>
     </div>
   </div>
 </section>
@@ -336,6 +383,21 @@
       </svg>
     </div>
     <p><span class="ko">전문가에게 인정받아 국내외 에스테틱샵에서 판매되는 홈케어 라인. 하나의 철학, 두 개의 챕터 — 보습에서 표정 케어까지, 매일의 회복 루틴.</span><span class="en">An expert-trusted home-care line, stocked in aesthetic shops at home and abroad. One philosophy, two chapters — from hydration to expression care.</span></p>
+    <div class="lineup">
+      <div class="bcard">
+        <div class="tag">Home Care · Now</div>
+        <h3>FINIXLAB</h3>
+        <p class="bp"><span class="ko">매일의 루틴 안에서 피부 컨디션을 끌어올리는 홈케어 라인. 보습의 Peptosome, 표정 케어의 Spicule — 하나의 철학, 두 개의 챕터.</span><span class="en">A home-care line that lifts skin condition within the daily routine. Peptosome for moisture, Spicule for expression care — one philosophy, two chapters.</span></p>
+        <div class="meta"><span class="ko">국내외 에스테틱샵 입점</span><span class="en">In aesthetic shops, home &amp; abroad</span></div>
+      </div>
+      <div class="bcard">
+        <div class="tag">Professional · Coming Soon</div>
+        <h3>PureRX</h3>
+        <p class="bp"><span class="ko">전문가·파트너 채널을 위한 회복 집중 라인. PDRN RX 앰플을 준비하고 있습니다.</span><span class="en">A recovery-focused line for professional and partner channels. The PDRN RX ampoule is in preparation.</span></p>
+        <div class="meta"><span class="ko">B2B · 출시 예정</span><span class="en">B2B · Coming soon</span></div>
+      </div>
+    </div>
+    <p class="orgline"><span class="ko">주식회사 피닉스랩은 회사이자 하나의 브랜드입니다. 자연주의와 연구소의 감성을 함께 담아, 30대 이후의 피부를 위한 슬로우 에이징을 연구합니다. 국내 피부과·에스테틱 전문 채널과 해외 시장(중국·일본·베트남)을 향합니다.</span><span class="en">Finixlab Co., Ltd. is at once a company and a brand. Blending naturalism with the sensibility of the lab, we study slow aging for skin from the thirties onward — reaching toward domestic clinical &amp; aesthetic channels and overseas markets (China, Japan, Vietnam).</span></p>
   </div>
 </section>
 
